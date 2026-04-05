@@ -8,9 +8,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-<!-- Firebase SDKs (Compat Version) -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+
 <style>
 /* ── THEME SYSTEM ── */
 :root, [data-theme="blue"] {
@@ -331,9 +329,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .history-del{cursor:pointer;color:var(--er);font-size:12px;border:none;background:none;padding:0 2px;flex-shrink:0}
 .history-empty{padding:12px;text-align:center;color:var(--tm);font-size:12px;font-style:italic}
 
-/* Firebase */
-.firebase-banner{background:linear-gradient(135deg,rgba(255,247,237,.85),rgba(254,243,199,.85));border:1px solid #fcd34d;border-radius:var(--r-md);padding:12px 16px;margin-bottom:12px;font-size:13px;color:#92400e}
-.firebase-banner strong{color:#78350f;font-weight:600}
+
 
 /* ══════════ GREEN LIST PAGE ══════════ */
 .gl-container{max-width:100%;padding:0}
@@ -428,12 +424,6 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 
 <!-- ════════════════ PAGE 1 — DASHBOARD ════════════════ -->
 <div id="p1" class="page-view active">
-  <div class="firebase-banner" id="fb-banner">
-    <span id="fb-banner-text">&#9888; <strong>Live sync not configured.</strong> Data is stored locally in this browser.</span>
-    <button class="btn btn-sm" style="margin-left:10px;border-color:#fcd34d;color:#92400e;background:rgba(252,211,77,.2)" onclick="showPage('p4')">Set up Live Sync</button>
-    <button class="btn btn-sm" style="margin-left:4px;border-color:#fcd34d;color:#92400e;background:rgba(252,211,77,.2)" onclick="document.getElementById('fb-banner').style.display='none'">Dismiss</button>
-  </div>
-
   <!-- Dashboard Header -->
   <div class="glass dash-header">
     <div>
@@ -591,21 +581,6 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
     </div>
   </div>
 
-  <div class="glass" id="fb-guide" style="padding:20px 24px;margin-bottom:14px">
-    <div style="font-size:13px;font-weight:600;color:var(--tp);margin-bottom:10px">&#9889; Firebase Live Sync Setup (Free — 5 minutes)</div>
-    <div style="font-size:13px;color:var(--ts);line-height:1.7">
-      <strong>Step 1:</strong> Go to <a href="https://console.firebase.google.com" target="_blank" style="color:var(--b600)">console.firebase.google.com</a> → Create a free project<br>
-      <strong>Step 2:</strong> Add a Web App → Copy your <code style="background:var(--b50);padding:1px 5px;border-radius:4px;font-family:'DM Mono',monospace">firebaseConfig</code> object<br>
-      <strong>Step 3:</strong> Go to Firestore Database → Create database (Start in test mode)<br>
-      <strong>Step 4:</strong> Paste your config below and click Connect<br><br>
-      <div style="display:flex;gap:8px;align-items:flex-start;flex-wrap:wrap">
-        <textarea id="fb-config-input" placeholder='Paste your firebaseConfig JSON here...' style="flex:1;min-width:260px;height:72px;font-family:DM Mono,monospace;font-size:12px;border:1.5px solid var(--b200);border-radius:8px;padding:8px;color:var(--tp);background:var(--b50);outline:none;resize:none"></textarea>
-        <button class="btn btn-primary" onclick="connectFirebase()">&#9889; Connect</button>
-        <button class="btn btn-sm" style="border-color:#d1d5db;color:#6b7280" onclick="document.getElementById('fb-guide').style.display='none'">Hide</button>
-      </div>
-      <div id="fb-status" style="margin-top:8px;font-size:12px;color:var(--tm)"></div>
-    </div>
-  </div>
 </div>
 
 <!-- ════════════════ PAGE 3 — NZ GREEN LIST ════════════════ -->
@@ -802,18 +777,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
   <div class="glass" style="padding:24px;max-width:800px;margin:20px auto">
     <div style="font-size:22px;font-weight:700;margin-bottom:20px;color:var(--b600);display:flex;align-items:center;gap:10px">&#9881; Settings</div>
     
-    <div class="fsep" style="margin-top:0">Firebase Live Sync</div>
-    <div style="font-size:12px;color:var(--ts);margin-bottom:12px;line-height:1.4">
-      Configure real-time cloud synchronization to keep your data updated across multiple devices.
-    </div>
-    <div class="fgroup" style="margin-bottom:12px">
-      <label>Configuration JSON</label>
-      <textarea id="fb-config-input" placeholder='{"apiKey": "...", "authDomain": "...", ...}' style="min-height:140px;font-family:'DM Mono',monospace;font-size:11px"></textarea>
-    </div>
-    <div id="fb-status" style="font-size:11px;margin-bottom:12px;min-height:1.4em"></div>
-    <button class="btn btn-primary" onclick="connectFirebase()">Connect &amp; Reload App</button>
-
-    <div class="fsep" style="margin-top:30px">Data &amp; Backup</div>
+    <div class="fsep" style="margin-top:0">Data &amp; Backup</div>
     <div style="font-size:12px;color:var(--ts);margin-bottom:15px;line-height:1.4">
       Export your current dataset to a JSON file for manual backup, or import a previously saved file.
     </div>
@@ -840,18 +804,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 // ════════════════════════════════════════════════════════════
 // CONSTANTS
 // ════════════════════════════════════════════════════════════
-const SK='hbd_v7_data',LOGK='hbd_v7_log',NK='hbd_v7_notes',TK='hbd_v7_tasks',THK='hbd_v7_theme',FBK='hbd_v7_fb_config';
-const HARDCODED_FB_CONFIG = {
-  "apiKey": "AIzaSyDSgOgoEUa-u7FAsvViOGVg4skTM2mn9yI",
-  "authDomain": "hbd-student-report.firebaseapp.com",
-  "databaseURL": "https://hbd-student-report-default-rtdb.asia-southeast1.firebasedatabase.app",
-  "projectId": "hbd-student-report",
-  "storageBucket": "hbd-student-report.firebasestorage.app",
-  "messagingSenderId": "760800982555",
-  "appId": "1:760800982555:web:4d052cd9fbfab9a47d2abe",
-  "measurementId": "G-RFNJM9346T"
-};
-let fbApp=null,fbDb=null;
+const SK='hbd_v7_data',LOGK='hbd_v7_log',NK='hbd_v7_notes',TK='hbd_v7_tasks',THK='hbd_v7_theme';
 const MOS=['January','February','March','April','May','June','July','August','September','October','November','December'];
 const INTAKES=['', ...MOS.flatMap(m=>['2026','2027'].map(y=>m+' '+y))];
 const COUNTRIES=['','Australia','New Zealand','United Kingdom','Canada','Malaysia'];
@@ -949,7 +902,6 @@ function persist(label){
   localStorage.setItem(TK,JSON.stringify(pendingTasks));
   localStorage.setItem(NK,JSON.stringify(quickNotes));
   addLog(label||'Auto-saved');setDirty(false);
-  pushToFirebase();
 }
 function manualSave(){persist('Manual save — '+fmtTime(new Date()));const el=document.getElementById('save-pill');el.textContent='Saved '+fmtTime(new Date());el.className='save-pill saved';}
 function setDirty(v){isDirty=v;const el=document.getElementById('save-pill');if(v){el.textContent='Unsaved changes';el.className='save-pill dirty';}else{el.textContent='All saved';el.className='save-pill saved';}}
@@ -988,13 +940,8 @@ function blankStudent(name){
   return{id:Date.now()+Math.random(),name:name||'New Student',country:'',intake:'',status:'Active',appStage:'',phone:'',uniCount:0,moreUni:'N',moreUniDate:'',bankMatured:'',bankMonths:'',bankExpectedDate:'',defer:'N',gsApplied:'N',gsStatus:'',coe:'N',visaPrep:'',visaNext:'',lastUpdated:Date.now(),remarks:'',situation:'',remarksHistory:[],situationHistory:[],uniApplications:[]};
 }
 function initDefault(){
-  const names=['Amrito Kumar','Argha Das','Ashfaque Hossain','Fatema Siddika','Farhana Rini','Gazi MD Shahabuddin','Hafsa Islam Oyshe','JH Baijet','Jannatul Fardhous','Limon Ahmed','MD Kawsar Khan','MD Modasirul Haque Prince','MD Nafij Iqbal Sazid','MD Rakibul Islam','Mahadi Basar','Mahin Ahmed','Md Hasan Molla','Md Saidul Islam Saeed','Moon Sarkar','Nusrat Jahan Eva','Qazi Zulfiquer Ahmed Jafree','Sadek Mahbub Sunny','Saira Sadia','Saiyda Hossin Hafsa','Shampa Banik','Snigdha Islam Santa','Tanjima Tuba','Tanjedul Sarker'];
-  students=names.map(n=>blankStudent(n));
-  const saira=students.find(s=>s.name==='Saira Sadia');
-  if(saira)Object.assign(saira,{country:'New Zealand',intake:'July 2026',uniCount:1,bankMatured:'N',bankExpectedDate:'2026-04-22',defer:'N',visaNext:'Y',remarks:'Bank matures Apr 22',situation:'Unconditional received, bank maturing',remarksHistory:[{ts:Date.now(),text:'Bank matures Apr 22'}],situationHistory:[{ts:Date.now(),text:'Unconditional received, bank maturing'}]});
-  const hafsa=students.find(s=>s.name==='Hafsa Islam Oyshe');
-  if(hafsa)Object.assign(hafsa,{country:'New Zealand',intake:'July 2026',uniCount:1,bankMatured:'N',bankExpectedDate:'2026-05-01',defer:'N',visaNext:'Y',remarks:'Bank matures May 1',situation:'Waiting for interview and unconditional',remarksHistory:[{ts:Date.now(),text:'Bank matures May 1'}],situationHistory:[{ts:Date.now(),text:'Waiting for interview and unconditional'}]});
-  persist('Initial data loaded');
+  students=[];
+  persist('Ready');
 }
 
 // ════════════════════════════════════════════════════════════
@@ -1468,58 +1415,7 @@ function confirmImport(){
   persist('Data imported');renderAll();closeMo('imp-mo');pendingImport=null;
 }
 
-function openFBModal(){
-  showPage('p4');
-}
-function connectFirebase(){
-  const cfg=document.getElementById('fb-config-input').value.trim();
-  const st=document.getElementById('fb-status');
-  if(!cfg){st.textContent='Please paste your Firebase config first.';st.style.color='#dc2626';return;}
-  try{
-    const parsed=JSON.parse(cfg);
-    if(!parsed.apiKey||!parsed.projectId)throw new Error();
-    localStorage.setItem(FBK,cfg);
-    st.innerHTML='&#9989; Configuration saved! Reloading for activation...';
-    st.style.color='#059669';
-    setTimeout(()=>location.reload(),1500);
-  }catch(e){st.textContent='Invalid JSON configuration.';st.style.color='#dc2626';}
-}
-function initFirebase(){
-  let cfg = localStorage.getItem(FBK);
-  if(!cfg && typeof HARDCODED_FB_CONFIG !== 'undefined') cfg = JSON.stringify(HARDCODED_FB_CONFIG);
-  if(!cfg)return;
-  try{
-    const parsed=JSON.parse(cfg);
-    fbApp=firebase.initializeApp(parsed);fbDb=firebase.database();
-    const banner=document.getElementById('fb-banner');
-    const bannerText=document.getElementById('fb-banner-text');
-    if(banner){banner.style.background='var(--okbg)';banner.style.borderColor='var(--ok)';banner.style.color='var(--ok)';}
-    if(bannerText)bannerText.innerHTML='&#9989; <strong>Live Sync Active.</strong> Data is synchronized with Firebase Realtime Database.';
-    // Pull initial data
-    fbDb.ref('hbd_report/data').once('value',snap=>{
-      const d=snap.val();
-      if(d){
-        students=d.students||[];pendingTasks=d.pendingTasks||[];quickNotes=d.quickNotes||[];
-        migrateData();renderAll();
-      }
-    });
-    // Realtime listen
-    fbDb.ref('hbd_report/data').on('value',snap=>{
-      const d=snap.val();
-      if(d && d.lastUpdated > studentsLastUpdated){
-        students=d.students||[];pendingTasks=d.pendingTasks||[];quickNotes=d.quickNotes||[];
-        renderAll();
-      }
-    });
-  }catch(e){console.error('FB Init Error:',e);}
-}
-let studentsLastUpdated=0;
-function pushToFirebase(){
-  if(!fbDb)return;
-  studentsLastUpdated=Date.now();
-  fbDb.ref('hbd_report/data').update({students,pendingTasks,quickNotes,lastUpdated:studentsLastUpdated});
-}
-initFirebase();
+
 
 // ════════════════════════════════════════════════════════════
 // UTILITIES
