@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-06T03:47:54.258Z",
+    "saved": "2026-04-06T03:50:45.074Z",
     "version": 7,
     "count": 27
   },
@@ -965,9 +965,23 @@
       "uniApplications": []
     }
   ],
-  "pendingTasks": [],
+  "pendingTasks": [
+    {
+      "id": 1775447440875,
+      "studentName": "Ashfaque Hossain",
+      "desc": "Call him to visit office to finish his gs work",
+      "priority": "red",
+      "deadline": "2026-04-06",
+      "done": false,
+      "ts": 1775447440875
+    }
+  ],
   "quickNotes": [],
   "log": [
+    {
+      "ts": 1775447445072,
+      "msg": "Manual save — 09:50 AM"
+    },
     {
       "ts": 1775447274256,
       "msg": "Manual save — 09:47 AM"
