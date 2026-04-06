@@ -1,0 +1,1004 @@
+{
+  "_meta": {
+    "saved": "2026-04-06T03:46:29.917Z",
+    "version": 7,
+    "count": 27
+  },
+  "students": [
+    {
+      "appStage": "Looking for Universities",
+      "bankExpectedDate": "2026-07-05",
+      "bankMatured": "Y",
+      "bankMonths": "More than 3 months",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.8447,
+      "intake": "July 2026",
+      "lastUpdated": 1775425917618,
+      "moreUni": "Y",
+      "moreUniDate": "2026-04-07",
+      "name": "Amrito Kumar",
+      "phone": "+880 1720-305924",
+      "remarks": "I have to look for universities for him ",
+      "remarksHistory": [
+        {
+          "text": "I have to look for universities for him ",
+          "ts": 1775390621048
+        }
+      ],
+      "situation": "Tried for Aus through lumos but rejected ",
+      "situationHistory": [
+        {
+          "text": "Tried for Aus through lumos but rejected ",
+          "ts": 1775390621048
+        }
+      ],
+      "status": "Active",
+      "uniCount": 0,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "Havent made up his mind yet",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "3 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "Y",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.3816,
+      "intake": "July 2026",
+      "lastUpdated": 1775440608753,
+      "moreUni": "Y",
+      "moreUniDate": "2026-04-30",
+      "name": "Argha Das",
+      "phone": "",
+      "remarks": "Student is most probably applying through other agency ",
+      "remarksHistory": [
+        {
+          "text": "Student is most probably applying through other agency ",
+          "ts": 1775390622423
+        }
+      ],
+      "situation": "According to him, he couldn't decide whether he or his spouse would be main applicant ",
+      "situationHistory": [
+        {
+          "text": "According to him, he couldn't decide whether he or his spouse would be main applicant ",
+          "ts": 1775390622423
+        }
+      ],
+      "status": "Active but Unsure",
+      "uniCount": 0,
+      "visaNext": "N",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "GS Preparation Ongoing",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 3 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.4783,
+      "intake": "June 2026",
+      "lastUpdated": 1775440619358,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Ashfaque Hossain",
+      "phone": "",
+      "remarks": "Documentation haven't been ready yet",
+      "remarksHistory": [
+        {
+          "text": "Documentation haven't been ready yet",
+          "ts": 1775390624118
+        }
+      ],
+      "situation": "According to the office documentation team, the student is not compaying but student is saying they confirmed that all is ready before eid ul ftr 2026",
+      "situationHistory": [
+        {
+          "text": "According to the office documentation team, the student is not compaying but student is saying they confirmed that all is ready before eid ul ftr 2026",
+          "ts": 1775390624118
+        }
+      ],
+      "status": "Active",
+      "uniCount": 2,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "Cond. Offer Received",
+      "bankExpectedDate": "2026-09-30",
+      "bankMatured": "N",
+      "bankMonths": "",
+      "coe": "N",
+      "country": "Canada",
+      "defer": "Y",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.4805,
+      "intake": "September 2026",
+      "lastUpdated": 1775440627021,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Farhana Rini",
+      "phone": "",
+      "remarks": "Student will defer to Jan 2026",
+      "remarksHistory": [
+        {
+          "text": "Student will defer to Jan 2026",
+          "ts": 1775390628951
+        }
+      ],
+      "situation": "Her bank and annual income maturity started in April, hence the deferral ",
+      "situationHistory": [
+        {
+          "text": "Her bank and annual income maturity started in April, hence the deferral ",
+          "ts": 1775390628951
+        }
+      ],
+      "status": "Active",
+      "uniCount": 1,
+      "visaNext": "N",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "Cond. Offer Received",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "6 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.403,
+      "intake": "July 2026",
+      "lastUpdated": 1775440630862,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Fatema Siddika Arpita",
+      "phone": "",
+      "remarks": "Student has previous Australia Rejection ",
+      "remarksHistory": [
+        {
+          "text": "Student has previous Australia Rejection ",
+          "ts": 1775390632215
+        }
+      ],
+      "situation": "I expected that since the visa refusal was more than 2 years/tourist (was under 18) may not be an issue, but student cannot find the refusal letter, which is why I am waiting to submit GS ",
+      "situationHistory": [
+        {
+          "text": "I expected that since the visa refusal was more than 2 years/tourist (was under 18) may not be an issue, but student cannot find the refusal letter, which is why I am waiting to submit GS ",
+          "ts": 1775390632215
+        }
+      ],
+      "status": "Active",
+      "uniCount": 3,
+      "visaNext": "N",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "GS Preparation Ongoing",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "3 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.747,
+      "intake": "July 2026",
+      "lastUpdated": 1775440638576,
+      "moreUni": "Y",
+      "moreUniDate": "2026-04-07",
+      "name": "Gazi MD Shahabuddin",
+      "phone": "",
+      "remarks": "Need to bring an updated language score ",
+      "remarksHistory": [
+        {
+          "text": "Need to bring an updated language score ",
+          "ts": 1775390634278
+        }
+      ],
+      "situation": "need to retake speaking in IELTS again ",
+      "situationHistory": [
+        {
+          "text": "need to retake speaking in IELTS again ",
+          "ts": 1775390634278
+        }
+      ],
+      "status": "Active",
+      "uniCount": 2,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "1st Intrv Pending",
+      "bankExpectedDate": "2026-05-01",
+      "bankMatured": "Y",
+      "bankMonths": "3 months",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.704,
+      "intake": "July 2026",
+      "lastUpdated": 1775440670225,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Hafsa Islam Oyshe",
+      "phone": "",
+      "remarks": "Has AUS rejection & lost all rejected related documents, so she is trying to collect them & preparing for University Interview",
+      "remarksHistory": [
+        {
+          "text": "Has AUS rejection & lost all rejected related documents, so she is trying to collect them & preparing for University Interview",
+          "ts": 1775390637591
+        }
+      ],
+      "situation": "Waiting for interview and unconditional",
+      "situationHistory": [
+        {
+          "text": "Waiting for interview and unconditional",
+          "ts": 1775390637591
+        }
+      ],
+      "status": "Active",
+      "uniCount": 1,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "GS Preparation Ongoing",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "6 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.2964,
+      "intake": "July 2026",
+      "lastUpdated": 1775440690987,
+      "moreUni": "Y",
+      "moreUniDate": "2026-04-07",
+      "name": "Hasan Molla",
+      "phone": "",
+      "remarks": "Need to prepare GS documents ",
+      "remarksHistory": [
+        {
+          "text": "Need to prepare GS documents ",
+          "ts": 1775390638761
+        }
+      ],
+      "situation": "With Rajib Bhai",
+      "situationHistory": [
+        {
+          "text": "With Rajib Bhai",
+          "ts": 1775390638761
+        }
+      ],
+      "status": "Active",
+      "uniCount": 2,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "GS Submitted",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "6 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "Y",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.7937,
+      "intake": "July 2026",
+      "lastUpdated": 1775440705905,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Jannatul Fardhous",
+      "phone": "",
+      "remarks": "Gs for Torrens submitted, application to Swinburn is submitted ",
+      "remarksHistory": [
+        {
+          "text": "Gs for Torrens submitted, application to Swinburn is submitted ",
+          "ts": 1775390640840
+        }
+      ],
+      "situation": "Waiting for GS decision ",
+      "situationHistory": [
+        {
+          "text": "Waiting for GS decision ",
+          "ts": 1775390640840
+        }
+      ],
+      "status": "Active",
+      "uniCount": 2,
+      "visaNext": "Y",
+      "visaPrep": "Started",
+      "uniApplications": []
+    },
+    {
+      "appStage": "Documents from student are pending",
+      "bankExpectedDate": "2026-06-30",
+      "bankMatured": "N",
+      "bankMonths": "",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "Y",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.5547,
+      "intake": "July 2026",
+      "lastUpdated": 1775440711388,
+      "moreUni": "Y",
+      "moreUniDate": "2026-04-30",
+      "name": "JH Baijet",
+      "phone": "",
+      "remarks": "Student want to apply for July intake but he will only apply for Social work which is not available for July anywhere and has low IELTS SCORE ",
+      "remarksHistory": [
+        {
+          "text": "Student want to apply for July intake but he will only apply for Social work which is not available for July anywhere and has low IELTS SCORE ",
+          "ts": 1775390657001
+        }
+      ],
+      "situation": "Suggested to consider for Foundation, but he hasn't made up his mind  ",
+      "situationHistory": [
+        {
+          "text": "Suggested to consider for Foundation, but he hasn't made up his mind  ",
+          "ts": 1775390657001
+        }
+      ],
+      "status": "Active",
+      "uniCount": 0,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "GS Submitted",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "3 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "Y",
+      "gsStatus": "",
+      "id": 1775372567768.7424,
+      "intake": "July 2026",
+      "lastUpdated": 1775440717427,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Kawsar Khan",
+      "phone": "",
+      "remarks": "Waiting for Torrens to clear GS  ",
+      "remarksHistory": [
+        {
+          "text": "Waiting for Torrens to clear GS  ",
+          "ts": 1775396144491
+        }
+      ],
+      "situation": "Need to collect and attach ownership document ",
+      "situationHistory": [
+        {
+          "text": "Need to collect and attach ownership document ",
+          "ts": 1775396144491
+        }
+      ],
+      "status": "Active",
+      "uniCount": 1,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "Tuition Fee & OSHC Paid",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 6 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "Y",
+      "gsStatus": "Cleared",
+      "id": 1775372567768.6907,
+      "intake": "July 2026",
+      "lastUpdated": 1775440727736,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Limon Ahmed",
+      "phone": "",
+      "remarks": "Waiting for COE ",
+      "remarksHistory": [
+        {
+          "text": "Waiting for COE ",
+          "ts": 1775390661495
+        }
+      ],
+      "situation": "Need to write visa SOP",
+      "situationHistory": [
+        {
+          "text": "Need to write visa SOP",
+          "ts": 1775390661495
+        }
+      ],
+      "status": "Active",
+      "uniCount": 3,
+      "visaNext": "Y",
+      "visaPrep": "Pending from Counsellor",
+      "uniApplications": []
+    },
+    {
+      "appStage": "Under Review",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 6 months",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.666,
+      "intake": "July 2026",
+      "lastUpdated": 1775440744720,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Mahadi Basar",
+      "phone": "",
+      "remarks": "Cannot submit GS in australia as gpa is poor 3.44, and received offer for Diploma Program ",
+      "remarksHistory": [
+        {
+          "text": "Cannot submit GS in australia as gpa is poor 3.44, and received offer for Diploma Program ",
+          "ts": 1775390663911
+        }
+      ],
+      "situation": "Due to a low HSC score, we had to apply to multiple universities in New Zealand for a diploma, but none have accepted us. We are still trying for a foundation program.  ",
+      "situationHistory": [
+        {
+          "text": "Due to a low HSC score, we had to apply to multiple universities in New Zealand for a diploma, but none have accepted us. We are still trying for a foundation program.  ",
+          "ts": 1775390663911
+        }
+      ],
+      "status": "Active",
+      "uniCount": 5,
+      "visaNext": "Y",
+      "visaPrep": "Started",
+      "uniApplications": []
+    },
+    {
+      "appStage": "Visa Submitted",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 6 months",
+      "coe": "Y",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "Y",
+      "gsStatus": "Cleared",
+      "id": 1775372567768.3384,
+      "intake": "July 2026",
+      "lastUpdated": 1775440751374,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Mahin Ahmed",
+      "phone": "",
+      "remarks": "Visa Submitted on 2nd April ",
+      "remarksHistory": [
+        {
+          "text": "Visa Submitted on 2nd April ",
+          "ts": 1775390665719
+        }
+      ],
+      "situation": "",
+      "status": "Active",
+      "uniCount": 3,
+      "visaNext": "Y",
+      "visaPrep": "Ready",
+      "situationHistory": [],
+      "uniApplications": []
+    },
+    {
+      "appStage": "Looking for Universities",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "3 months",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.3599,
+      "intake": "July 2026",
+      "lastUpdated": 1775440756435,
+      "moreUni": "Y",
+      "moreUniDate": "2026-04-07",
+      "name": "Modasirul Haque Prince",
+      "phone": "",
+      "remarks": "Need to apply to university ",
+      "remarksHistory": [
+        {
+          "text": "Need to apply to university ",
+          "ts": 1775390668567
+        }
+      ],
+      "situation": "Received university application documents very lately ",
+      "situationHistory": [
+        {
+          "text": "Received university application documents very lately ",
+          "ts": 1775390668567
+        }
+      ],
+      "status": "Active",
+      "uniCount": 0,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "Cond. Offer Received",
+      "bankExpectedDate": "2026-07-31",
+      "bankMatured": "N",
+      "bankMonths": "3 months",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "Y",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.0063,
+      "intake": "July 2026",
+      "lastUpdated": 1775440764998,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Moon Sarkar",
+      "phone": "",
+      "remarks": "Bank haven't started ",
+      "remarksHistory": [
+        {
+          "text": "Bank haven't started ",
+          "ts": 1775390672647
+        }
+      ],
+      "situation": "Student couldn't get financial support fromthe bank before April, hence the delay ",
+      "situationHistory": [
+        {
+          "text": "Student couldn't get financial support fromthe bank before April, hence the delay ",
+          "ts": 1775390672647
+        }
+      ],
+      "status": "Active",
+      "uniCount": 2,
+      "visaNext": "N",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "Under Review",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 3 months",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.6958,
+      "intake": "July 2026",
+      "lastUpdated": 1775440770900,
+      "moreUni": "Y",
+      "moreUniDate": "2026-04-07",
+      "name": "Nafij Iqbal Sazid",
+      "phone": "",
+      "remarks": "New to apply to new universities ",
+      "remarksHistory": [
+        {
+          "text": "New to apply to new universities ",
+          "ts": 1775390675487
+        }
+      ],
+      "situation": "",
+      "status": "Active",
+      "uniCount": 1,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "situationHistory": [],
+      "uniApplications": []
+    },
+    {
+      "appStage": "Documentation Stage",
+      "bankExpectedDate": "2026-04-22",
+      "bankMatured": "N",
+      "bankMonths": "3 months",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.296,
+      "intake": "July 2026",
+      "lastUpdated": 1775440782466,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Nusrat Jahan Eva",
+      "phone": "",
+      "remarks": "Waiting for visa documents to get ready and bank solvency to mature ",
+      "remarksHistory": [
+        {
+          "text": "Waiting for visa documents to get ready and bank solvency to mature ",
+          "ts": 1775390677039
+        }
+      ],
+      "situation": "Need to Start Visa Documentation ",
+      "situationHistory": [
+        {
+          "text": "Need to Start Visa Documentation ",
+          "ts": 1775390677039
+        }
+      ],
+      "status": "Active",
+      "uniCount": 1,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "Documentation Stage",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "3 months",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.8186,
+      "intake": "July 2026",
+      "lastUpdated": 1775440789430,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Rakibul Islam",
+      "phone": "",
+      "remarks": "Waiting for visa documents to get ready ",
+      "remarksHistory": [
+        {
+          "text": "Waiting for visa documents to get ready ",
+          "ts": 1775390679792
+        }
+      ],
+      "situation": "",
+      "status": "Active",
+      "uniCount": 3,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "situationHistory": [],
+      "uniApplications": []
+    },
+    {
+      "appStage": "Visa Preparation Ongoing",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "6 months",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.3218,
+      "intake": "July 2026",
+      "lastUpdated": 1775440796595,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Sadek Mahbub Sunny",
+      "phone": "",
+      "remarks": "",
+      "situation": "need to write SOP ",
+      "situationHistory": [
+        {
+          "text": "need to write SOP ",
+          "ts": 1775390681824
+        }
+      ],
+      "status": "Active",
+      "uniCount": 2,
+      "visaNext": "Y",
+      "visaPrep": "Pending from Counsellor",
+      "remarksHistory": [],
+      "uniApplications": []
+    },
+    {
+      "appStage": "GS Submitted",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 6 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "Y",
+      "gsStatus": "Rejected",
+      "id": 1775372567768.202,
+      "intake": "July 2026",
+      "lastUpdated": 1775440802823,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Saidul Islam Saeed",
+      "phone": "",
+      "remarks": "",
+      "situation": "Waiting for GS Decisions",
+      "situationHistory": [
+        {
+          "text": "Waiting for GS Decisions",
+          "ts": 1775390684888
+        }
+      ],
+      "status": "Active",
+      "uniCount": 5,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "remarksHistory": [],
+      "uniApplications": []
+    },
+    {
+      "appStage": "Documentation Stage",
+      "bankExpectedDate": "2026-04-22",
+      "bankMatured": "N",
+      "bankMonths": "",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.7246,
+      "intake": "July 2026",
+      "lastUpdated": 1775440812058,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Saira Sadia",
+      "phone": "",
+      "remarks": "Bank matures Apr 22",
+      "remarksHistory": [
+        {
+          "text": "Bank matures Apr 22",
+          "ts": 1775390687072
+        }
+      ],
+      "situation": "Need to write SOP and start visa documentation ",
+      "situationHistory": [
+        {
+          "text": "Need to write SOP and start visa documentation ",
+          "ts": 1775390687072
+        }
+      ],
+      "status": "Active",
+      "uniCount": 1,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "GS Rejected",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 6 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "Y",
+      "gsStatus": "Rejected",
+      "id": 1775372567768.766,
+      "intake": "July 2026",
+      "lastUpdated": 1775440821268,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Shampa Banik",
+      "phone": "",
+      "remarks": "Student spouse has visa refusal from USA so VU ECA rejected their GS ",
+      "remarksHistory": [
+        {
+          "text": "Student spouse has visa refusal from USA so VU ECA rejected their GS ",
+          "ts": 1775390692095
+        }
+      ],
+      "situation": "Need to submit Latrobe GS ",
+      "situationHistory": [
+        {
+          "text": "Need to submit Latrobe GS ",
+          "ts": 1775390692095
+        }
+      ],
+      "status": "Active",
+      "uniCount": 3,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "Looking for Universities",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 3 months",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.7961,
+      "intake": "July 2026",
+      "lastUpdated": 1775440825961,
+      "moreUni": "Y",
+      "moreUniDate": "2026-04-07",
+      "name": "Snigdha Islam Santa",
+      "phone": "",
+      "remarks": "Has Australia GS rejection (UOW)",
+      "remarksHistory": [
+        {
+          "text": "Has Australia GS rejection (UOW)",
+          "ts": 1775390695959
+        }
+      ],
+      "situation": "",
+      "status": "Active",
+      "uniCount": 0,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "situationHistory": [],
+      "uniApplications": []
+    },
+    {
+      "appStage": "GS Preparation Ongoing",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 3 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "Y",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.9941,
+      "intake": "July 2026",
+      "lastUpdated": 1775440831160,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Tanjedul Sarker",
+      "phone": "",
+      "remarks": "Student couldn't made up his mind ",
+      "remarksHistory": [
+        {
+          "text": "Student couldn't made up his mind ",
+          "ts": 1775390702703
+        }
+      ],
+      "situation": "Started GS documents recently ",
+      "situationHistory": [
+        {
+          "text": "Started GS documents recently ",
+          "ts": 1775390702703
+        }
+      ],
+      "status": "Active",
+      "uniCount": 3,
+      "visaNext": "Y",
+      "visaPrep": "On Hold",
+      "uniApplications": []
+    },
+    {
+      "appStage": "GS Preparation Ongoing",
+      "bankExpectedDate": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 3 months",
+      "coe": "N",
+      "country": "Australia",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775372567768.7288,
+      "intake": "July 2026",
+      "lastUpdated": 1775440838009,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "name": "Tanjima Tuba",
+      "phone": "",
+      "remarks": "",
+      "situation": "Student is attempting PTE again to meet requirement ",
+      "situationHistory": [
+        {
+          "text": "Student is attempting PTE again to meet requirement ",
+          "ts": 1775390715255
+        }
+      ],
+      "status": "Active",
+      "uniCount": 2,
+      "visaNext": "N",
+      "visaPrep": "On Hold",
+      "remarksHistory": [],
+      "uniApplications": []
+    },
+    {
+      "appStage": "Documents from student are pending",
+      "bankExpectedDate": "2026-09-30",
+      "bankMatured": "N",
+      "bankMonths": "",
+      "coe": "N",
+      "country": "New Zealand",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "Not Applied",
+      "id": 1775389019605.4626,
+      "intake": "February 2027",
+      "lastUpdated": 1775440848262,
+      "moreUni": "Y",
+      "moreUniDate": "2026-04-15",
+      "name": "Urmi Akter",
+      "phone": "",
+      "remarks": "",
+      "situation": "waiting for documents ",
+      "situationHistory": [
+        {
+          "text": "waiting for documents ",
+          "ts": 1775390708327
+        }
+      ],
+      "status": "Active",
+      "uniCount": 0,
+      "visaNext": "N",
+      "visaPrep": "On Hold",
+      "remarksHistory": [],
+      "uniApplications": []
+    }
+  ],
+  "pendingTasks": [],
+  "quickNotes": [],
+  "log": [
+    {
+      "ts": 1775447189914,
+      "msg": "Data imported"
+    },
+    {
+      "ts": 1775440857978,
+      "msg": "Manual save — 08:00 AM"
+    },
+    {
+      "ts": 1775440812623,
+      "msg": "Auto-saved"
+    },
+    {
+      "ts": 1775440752620,
+      "msg": "Auto-saved"
+    },
+    {
+      "ts": 1775440692622,
+      "msg": "Auto-saved"
+    },
+    {
+      "ts": 1775440632619,
+      "msg": "Auto-saved"
+    },
+    {
+      "ts": 1775425927799,
+      "msg": "Manual save — 03:52 AM"
+    },
+    {
+      "ts": 1775425057195,
+      "msg": "Initial data loaded"
+    }
+  ]
+}
