@@ -945,7 +945,7 @@ function persist(label){
   localStorage.setItem(TK,JSON.stringify(pendingTasks));
   localStorage.setItem(NK,JSON.stringify(quickNotes));
   addLog(label||'Auto-saved');setDirty(false);
-  pushToGitHub();
+  debouncedPush();
 }
 async function pushToGitHub(){
   const token=localStorage.getItem(GHK_TOKEN);
@@ -1061,8 +1061,9 @@ function clearGHConfig(){
   ghFileSha=null;
 }
 function manualSave(){persist('Manual save — '+fmtTime(new Date()));}
-function setDirty(v){isDirty=v;const el=document.getElementById('save-pill');if(v){el.textContent='Unsaved changes';el.className='save-pill dirty';}else{el.textContent='All saved';el.className='save-pill saved';}}
+function setDirty(v){isDirty=v;const el=document.getElementById('save-pill');if(v){el.textContent='Unsaved changes';el.className='save-pill dirty';}else if(!localStorage.getItem(GHK_TOKEN)){el.textContent='All saved';el.className='save-pill saved';}}
 function markDirty(){setDirty(true);}
+const debouncedPush=debounce(()=>pushToGitHub(),2000);
 setInterval(()=>{if(isDirty)persist('Auto-saved');},60000);
 window.addEventListener('beforeunload',e=>{if(isDirty){e.preventDefault();e.returnValue='';}});
 
@@ -1102,19 +1103,32 @@ function initDefault(){
 }
 
 // ════════════════════════════════════════════════════════════
-// FIELD UPDATE
+// DEBOUNCE UTILITY
+// ════════════════════════════════════════════════════════════
+function debounce(fn,ms){let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>fn(...a),ms);};}
+const debouncedRenderDash=debounce(()=>{renderIntakeTabs();updateSummary();renderReminders();renderTasks();renderProgress();renderQuickNotes();renderActionHistory();},300);
+const debouncedRenderCharts=debounce(()=>renderCharts(),600);
+const debouncedRenderList=debounce(()=>renderStudentList(),150);
+
+// ════════════════════════════════════════════════════════════
+// FIELD UPDATE — lightweight, no chart rebuild on every keystroke
 // ════════════════════════════════════════════════════════════
 function uf(idx,field,val){
   students[idx][field]=val;students[idx].lastUpdated=Date.now();
   const el2=document.getElementById('last-student');if(el2)el2.textContent='Last student worked on: '+students[idx].name;
-  renderAll();markDirty();
+  // Only re-render what's needed — never rebuild charts on field change
+  debouncedRenderDash();
+  debouncedRenderList();
+  if(field==='country'||field==='intake'||field==='appStage')debouncedRenderCharts();
+  markDirty();
 }
 
 // ════════════════════════════════════════════════════════════
-// RENDER ALL
+// RENDER ALL — charts only on dashboard or explicit request
 // ════════════════════════════════════════════════════════════
 function renderAll(){
-  renderIntakeTabs();updateSummary();renderReminders();renderTasks();renderProgress();renderCharts();renderQuickNotes();renderActionHistory();
+  renderIntakeTabs();updateSummary();renderReminders();renderTasks();renderProgress();renderQuickNotes();renderActionHistory();
+  if(activePage==='p1')renderCharts();
   if(activePage==='p2'){renderStudentList();renderDetail();if(studentView==='cards')renderCardsP2();}
 }
 
