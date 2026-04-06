@@ -777,7 +777,31 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
   <div class="glass" style="padding:24px;max-width:800px;margin:20px auto">
     <div style="font-size:22px;font-weight:700;margin-bottom:20px;color:var(--b600);display:flex;align-items:center;gap:10px">&#9881; Settings</div>
     
-    <div class="fsep" style="margin-top:0">Data &amp; Backup</div>
+    <div class="fsep" style="margin-top:0">&#128279; GitHub Sync</div>
+    <div style="font-size:12px;color:var(--ts);margin-bottom:14px;line-height:1.6">
+      Enter your GitHub details once per device. All saves will push to your repo so every device stays in sync automatically.
+    </div>
+    <div class="frow" style="margin-bottom:10px">
+      <div class="fgroup">
+        <label>GitHub Username</label>
+        <input type="text" id="gh-owner" placeholder="e.g. tausif" style="font-family:'DM Mono',monospace;font-size:12px">
+      </div>
+      <div class="fgroup">
+        <label>Repository Name</label>
+        <input type="text" id="gh-repo" placeholder="e.g. hbd-report" style="font-family:'DM Mono',monospace;font-size:12px">
+      </div>
+    </div>
+    <div class="fgroup" style="margin-bottom:10px">
+      <label>Personal Access Token <span style="font-weight:400;color:var(--tm)">(GitHub → Settings → Developer Settings → Tokens → Classic → repo scope)</span></label>
+      <input type="password" id="gh-token" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="font-family:'DM Mono',monospace;font-size:12px">
+    </div>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+      <button class="btn btn-primary" onclick="saveGHConfig()">&#128279; Save &amp; Test Connection</button>
+      <button class="btn btn-sm" style="border-color:#d1d5db;color:#dc2626" onclick="clearGHConfig()">Clear</button>
+    </div>
+    <div id="gh-status" style="margin-top:10px;font-size:12px;min-height:1.4em;color:var(--tm)"></div>
+
+    <div class="fsep" style="margin-top:28px">Data &amp; Backup</div>
     <div style="font-size:12px;color:var(--ts);margin-bottom:15px;line-height:1.4">
       Export your current dataset to a JSON file for manual backup, or import a previously saved file.
     </div>
@@ -805,6 +829,9 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 // CONSTANTS
 // ════════════════════════════════════════════════════════════
 const SK='hbd_v7_data',LOGK='hbd_v7_log',NK='hbd_v7_notes',TK='hbd_v7_tasks',THK='hbd_v7_theme';
+const GHK_TOKEN='hbd_gh_token',GHK_OWNER='hbd_gh_owner',GHK_REPO='hbd_gh_repo';
+const GH_FILE='data.json', GH_BRANCH='main';
+let ghFileSha=null; // tracks current SHA of data.json in repo (required for updates)
 const MOS=['January','February','March','April','May','June','July','August','September','October','November','December'];
 const INTAKES=['', ...MOS.flatMap(m=>['2026','2027'].map(y=>m+' '+y))];
 const COUNTRIES=['','Australia','New Zealand','United Kingdom','Canada','Malaysia'];
@@ -862,15 +889,31 @@ function showPage(id){
 // ════════════════════════════════════════════════════════════
 // LOAD / SAVE
 // ════════════════════════════════════════════════════════════
-function load(){
+async function load(){
+  // Always load from localStorage first so UI appears instantly
   try{const d=localStorage.getItem(SK);if(d)students=JSON.parse(d);}catch(e){}
   if(!students.length){try{const old=localStorage.getItem('hbd_v6_data');if(old){students=JSON.parse(old);migrateData();}}catch(e){}}
-  if(!students.length)initDefault();
-  else{migrateData();students.sort((a,b)=>a.name.localeCompare(b.name));}
   try{pendingTasks=JSON.parse(localStorage.getItem(TK)||'[]');}catch(e){pendingTasks=[];}
   try{quickNotes=JSON.parse(localStorage.getItem(NK)||'[]');}catch(e){quickNotes=[];}
   populateEditIntakes();populateEditStages();
+  // If GitHub configured, fetch latest from repo (overrides localStorage)
+  const ghToken=localStorage.getItem(GHK_TOKEN);
+  const ghOwner=localStorage.getItem(GHK_OWNER);
+  const ghRepo=localStorage.getItem(GHK_REPO);
+  if(ghToken&&ghOwner&&ghRepo){
+    setSyncStatus('fetching');
+    const ok=await fetchFromGitHub(ghToken,ghOwner,ghRepo);
+    if(!ok&&!students.length)initDefault();
+    else if(!ok){migrateData();students.sort((a,b)=>a.name.localeCompare(b.name));}
+  } else {
+    if(!students.length)initDefault();
+    else{migrateData();students.sort((a,b)=>a.name.localeCompare(b.name));}
+  }
   renderAll();setDirty(false);
+  // Pre-fill Settings fields if configured
+  if(ghOwner)document.getElementById('gh-owner').value=ghOwner;
+  if(ghRepo)document.getElementById('gh-repo').value=ghRepo;
+  if(ghToken)document.getElementById('gh-token').value=ghToken;
 }
 function migrateData(){
   students.forEach(s=>{
@@ -902,8 +945,122 @@ function persist(label){
   localStorage.setItem(TK,JSON.stringify(pendingTasks));
   localStorage.setItem(NK,JSON.stringify(quickNotes));
   addLog(label||'Auto-saved');setDirty(false);
+  pushToGitHub();
 }
-function manualSave(){persist('Manual save — '+fmtTime(new Date()));const el=document.getElementById('save-pill');el.textContent='Saved '+fmtTime(new Date());el.className='save-pill saved';}
+async function pushToGitHub(){
+  const token=localStorage.getItem(GHK_TOKEN);
+  const owner=localStorage.getItem(GHK_OWNER);
+  const repo=localStorage.getItem(GHK_REPO);
+  if(!token||!owner||!repo)return;
+  setSyncStatus('syncing');
+  try{
+    const payload={
+      _meta:{saved:new Date().toISOString(),version:7,count:students.length},
+      students,pendingTasks,quickNotes,
+      log:(()=>{try{return JSON.parse(localStorage.getItem(LOGK)||'[]');}catch(e){return[];}})()
+    };
+    const content=btoa(unescape(encodeURIComponent(JSON.stringify(payload,null,2))));
+    const body={message:'HBD sync — '+new Date().toISOString(),content,branch:GH_BRANCH};
+    if(ghFileSha)body.sha=ghFileSha;
+    const res=await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${GH_FILE}`,{
+      method:'PUT',
+      headers:{'Authorization':'token '+token,'Content-Type':'application/json','Accept':'application/vnd.github+json'},
+      body:JSON.stringify(body)
+    });
+    if(res.ok){
+      const data=await res.json();
+      ghFileSha=data.content.sha;
+      setSyncStatus('ok');
+    } else {
+      const err=await res.json();
+      console.error('GitHub push failed:',err);
+      setSyncStatus('error',err.message||res.status);
+    }
+  }catch(e){
+    console.error('GitHub push error:',e);
+    setSyncStatus('error','Network error');
+  }
+}
+async function fetchFromGitHub(token,owner,repo){
+  try{
+    const res=await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${GH_FILE}?ref=${GH_BRANCH}&t=${Date.now()}`,{
+      headers:{'Authorization':'token '+token,'Accept':'application/vnd.github+json'}
+    });
+    if(res.status===404){setSyncStatus('nofile');return false;}
+    if(!res.ok){setSyncStatus('error','Fetch failed: '+res.status);return false;}
+    const meta=await res.json();
+    ghFileSha=meta.sha;
+    const decoded=decodeURIComponent(escape(atob(meta.content.replace(/\n/g,''))));
+    const data=JSON.parse(decoded);
+    if(data.students&&Array.isArray(data.students)){
+      students=data.students;
+      if(data.pendingTasks)pendingTasks=data.pendingTasks;
+      if(data.quickNotes)quickNotes=data.quickNotes;
+      if(data.log)localStorage.setItem(LOGK,JSON.stringify(data.log));
+      localStorage.setItem(SK,JSON.stringify(students));
+      localStorage.setItem(TK,JSON.stringify(pendingTasks));
+      localStorage.setItem(NK,JSON.stringify(quickNotes));
+      migrateData();students.sort((a,b)=>a.name.localeCompare(b.name));
+      setSyncStatus('ok');
+      return true;
+    }
+    return false;
+  }catch(e){
+    console.error('GitHub fetch error:',e);
+    setSyncStatus('error','Parse error');
+    return false;
+  }
+}
+function setSyncStatus(state,detail){
+  const pill=document.getElementById('save-pill');
+  const ghst=document.getElementById('gh-status');
+  if(state==='fetching'){
+    if(pill){pill.textContent='⟳ Fetching from GitHub...';pill.className='save-pill';}
+  } else if(state==='syncing'){
+    if(pill){pill.textContent='⟳ Syncing to GitHub...';pill.className='save-pill';}
+  } else if(state==='ok'){
+    const t=fmtTime(new Date());
+    if(pill){pill.textContent='☁ Synced '+t;pill.className='save-pill saved';}
+    if(ghst)ghst.innerHTML='<span style="color:var(--ok)">✅ Connected & syncing. Last sync: '+t+'</span>';
+  } else if(state==='error'){
+    if(pill){pill.textContent='⚠ Sync failed';pill.className='save-pill dirty';}
+    if(ghst)ghst.innerHTML='<span style="color:var(--er)">⚠ '+esc(detail||'Error')+'</span>';
+  } else if(state==='nofile'){
+    if(pill){pill.textContent='☁ No file yet — will create on first save';pill.className='save-pill';}
+    if(ghst)ghst.innerHTML='<span style="color:var(--wn)">⚠ data.json not found in repo. It will be created on your first save.</span>';
+  }
+}
+async function saveGHConfig(){
+  const owner=document.getElementById('gh-owner').value.trim();
+  const repo=document.getElementById('gh-repo').value.trim();
+  const token=document.getElementById('gh-token').value.trim();
+  const st=document.getElementById('gh-status');
+  if(!owner||!repo||!token){st.innerHTML='<span style="color:var(--er)">Fill in all three fields.</span>';return;}
+  st.innerHTML='<span style="color:var(--tm)">Testing connection...</span>';
+  try{
+    const res=await fetch(`https://api.github.com/repos/${owner}/${repo}`,{
+      headers:{'Authorization':'token '+token,'Accept':'application/vnd.github+json'}
+    });
+    if(!res.ok){st.innerHTML='<span style="color:var(--er)">❌ Could not reach repo. Check username, repo name, and token permissions (needs repo scope).</span>';return;}
+    localStorage.setItem(GHK_TOKEN,token);
+    localStorage.setItem(GHK_OWNER,owner);
+    localStorage.setItem(GHK_REPO,repo);
+    st.innerHTML='<span style="color:var(--ok)">✅ Connected! Fetching latest data from GitHub...</span>';
+    const ok=await fetchFromGitHub(token,owner,repo);
+    if(ok){renderAll();st.innerHTML='<span style="color:var(--ok)">✅ Connected & data loaded from GitHub.</span>';}
+    else st.innerHTML='<span style="color:var(--ok)">✅ Repo connected. No data.json yet — it will be created on your first save.</span>';
+  }catch(e){st.innerHTML='<span style="color:var(--er)">❌ Network error. Check your connection.</span>';}
+}
+function clearGHConfig(){
+  ['GHK_TOKEN','GHK_OWNER','GHK_REPO'].forEach(k=>localStorage.removeItem(localStorage.key(k)));
+  localStorage.removeItem(GHK_TOKEN);localStorage.removeItem(GHK_OWNER);localStorage.removeItem(GHK_REPO);
+  document.getElementById('gh-owner').value='';
+  document.getElementById('gh-repo').value='';
+  document.getElementById('gh-token').value='';
+  document.getElementById('gh-status').innerHTML='<span style="color:var(--tm)">GitHub sync cleared. App will use local storage only.</span>';
+  ghFileSha=null;
+}
+function manualSave(){persist('Manual save — '+fmtTime(new Date()));}
 function setDirty(v){isDirty=v;const el=document.getElementById('save-pill');if(v){el.textContent='Unsaved changes';el.className='save-pill dirty';}else{el.textContent='All saved';el.className='save-pill saved';}}
 function markDirty(){setDirty(true);}
 setInterval(()=>{if(isDirty)persist('Auto-saved');},60000);
