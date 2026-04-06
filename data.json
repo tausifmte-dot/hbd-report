@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-06T03:46:38.371Z",
+    "saved": "2026-04-06T03:47:54.258Z",
     "version": 7,
     "count": 27
   },
@@ -17,9 +17,9 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.8447,
       "intake": "July 2026",
-      "lastUpdated": 1775425917618,
+      "lastUpdated": 1775447271703,
       "moreUni": "Y",
-      "moreUniDate": "2026-04-07",
+      "moreUniDate": "2026-04-10",
       "name": "Amrito Kumar",
       "phone": "+880 1720-305924",
       "remarks": "I have to look for universities for him ",
@@ -968,6 +968,10 @@
   "pendingTasks": [],
   "quickNotes": [],
   "log": [
+    {
+      "ts": 1775447274256,
+      "msg": "Manual save — 09:47 AM"
+    },
     {
       "ts": 1775447198368,
       "msg": "Manual save — 09:46 AM"
