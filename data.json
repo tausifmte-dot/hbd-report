@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-06T05:02:51.870Z",
+    "saved": "2026-04-06T05:03:51.874Z",
     "version": 7,
     "count": 27
   },
@@ -324,7 +324,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.7937,
       "intake": "July 2026",
-      "lastUpdated": 1775440705905,
+      "lastUpdated": 1775451827260,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Jannatul Fardhous",
@@ -347,7 +347,18 @@
       "uniCount": 2,
       "visaNext": "Y",
       "visaPrep": "Started",
-      "uniApplications": []
+      "uniApplications": [
+        {
+          "country": "Australia",
+          "university": "Torrens University Australia (Torrens)",
+          "program": "Master of Design"
+        },
+        {
+          "country": "Australia",
+          "university": "Swinburne University of Technology (Swinburne)",
+          "program": "Master of Design"
+        }
+      ]
     },
     {
       "appStage": "Documents from student are pending",
@@ -989,6 +1000,10 @@
   ],
   "quickNotes": [],
   "log": [
+    {
+      "ts": 1775451831871,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775451771866,
       "msg": "Auto-saved"
