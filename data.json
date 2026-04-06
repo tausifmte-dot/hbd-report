@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-06T05:01:51.880Z",
+    "saved": "2026-04-06T05:02:51.870Z",
     "version": 7,
     "count": 27
   },
@@ -91,7 +91,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.4783,
       "intake": "June 2026",
-      "lastUpdated": 1775451710498,
+      "lastUpdated": 1775451737653,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Ashfaque Hossain",
@@ -114,7 +114,18 @@
       "uniCount": 2,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [
+        {
+          "country": "Australia",
+          "university": "Victoria University (VU)",
+          "program": "AI"
+        },
+        {
+          "country": "Australia",
+          "university": "Macquarie University (Macquarie)",
+          "program": "AI"
+        }
+      ]
     },
     {
       "appStage": "Cond. Offer Received",
@@ -978,6 +989,10 @@
   ],
   "quickNotes": [],
   "log": [
+    {
+      "ts": 1775451771866,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775451711876,
       "msg": "Auto-saved"
