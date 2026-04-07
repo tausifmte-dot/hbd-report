@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-06T23:50:52.742Z",
+    "saved": "2026-04-07T03:59:03.656Z",
     "version": 7,
     "count": 27
   },
@@ -40,7 +40,8 @@
       "uniCount": 0,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Havent made up his mind yet",
@@ -77,7 +78,8 @@
       "uniCount": 0,
       "visaNext": "N",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "GS Preparation Ongoing",
@@ -135,7 +137,8 @@
           "university": "University of Newcastle (UON)",
           "program": ""
         }
-      ]
+      ],
+      "applicationCompletions": []
     },
     {
       "appStage": "Cond. Offer Received",
@@ -172,7 +175,8 @@
       "uniCount": 1,
       "visaNext": "N",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Cond. Offer Received",
@@ -225,7 +229,8 @@
           "university": "Southern Cross University (SCU)",
           "program": ""
         }
-      ]
+      ],
+      "applicationCompletions": []
     },
     {
       "appStage": "GS Preparation Ongoing",
@@ -262,7 +267,8 @@
       "uniCount": 2,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "1st Intrv Pending",
@@ -299,7 +305,8 @@
       "uniCount": 1,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "GS Preparation Ongoing",
@@ -336,7 +343,8 @@
       "uniCount": 2,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "GS Submitted",
@@ -388,7 +396,8 @@
           "university": "Swinburne University of Technology (Swinburne)",
           "program": "Master of Design"
         }
-      ]
+      ],
+      "applicationCompletions": []
     },
     {
       "appStage": "Documents from student are pending",
@@ -425,7 +434,8 @@
       "uniCount": 0,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "GS Submitted",
@@ -472,7 +482,8 @@
           "university": "Torrens University Australia (Torrens)",
           "program": "Bachelor in Community Development"
         }
-      ]
+      ],
+      "applicationCompletions": []
     },
     {
       "appStage": "Tuition Fee & OSHC Paid",
@@ -509,7 +520,8 @@
       "uniCount": 3,
       "visaNext": "Y",
       "visaPrep": "Pending from Counsellor",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Under Review",
@@ -546,7 +558,8 @@
       "uniCount": 5,
       "visaNext": "Y",
       "visaPrep": "Started",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Visa Submitted",
@@ -578,7 +591,8 @@
       "visaNext": "Y",
       "visaPrep": "Ready",
       "situationHistory": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Looking for Universities",
@@ -615,7 +629,8 @@
       "uniCount": 0,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Cond. Offer Received",
@@ -652,7 +667,8 @@
       "uniCount": 2,
       "visaNext": "N",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Under Review",
@@ -684,7 +700,8 @@
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "situationHistory": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Documentation Stage",
@@ -721,7 +738,8 @@
       "uniCount": 1,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Documentation Stage",
@@ -753,7 +771,8 @@
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "situationHistory": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Visa Preparation Ongoing",
@@ -785,7 +804,8 @@
       "visaNext": "Y",
       "visaPrep": "Pending from Counsellor",
       "remarksHistory": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "GS Submitted",
@@ -817,7 +837,8 @@
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "remarksHistory": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Documentation Stage",
@@ -854,7 +875,8 @@
       "uniCount": 1,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "GS Rejected",
@@ -891,7 +913,8 @@
       "uniCount": 3,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Looking for Universities",
@@ -923,7 +946,8 @@
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "situationHistory": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "GS Preparation Ongoing",
@@ -960,7 +984,8 @@
       "uniCount": 3,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "GS Preparation Ongoing",
@@ -992,7 +1017,8 @@
       "visaNext": "N",
       "visaPrep": "On Hold",
       "remarksHistory": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     },
     {
       "appStage": "Documents from student are pending",
@@ -1024,7 +1050,8 @@
       "visaNext": "N",
       "visaPrep": "On Hold",
       "remarksHistory": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "applicationCompletions": []
     }
   ],
   "pendingTasks": [
@@ -1064,6 +1091,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775534341633,
+      "msg": "Data imported"
+    },
     {
       "ts": 1775519450716,
       "msg": "Manual save — 05:50 AM"
