@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-07T04:51:40.980Z",
+    "saved": "2026-04-07T05:08:53.155Z",
     "version": 8,
     "count": 27
   },
@@ -411,7 +411,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.5547,
       "intake": "July 2026",
-      "lastUpdated": 1775440711388,
+      "lastUpdated": 1775538490912,
       "moreUni": "Y",
       "moreUniDate": "2026-04-30",
       "name": "JH Baijet",
@@ -423,8 +423,12 @@
           "ts": 1775390657001
         }
       ],
-      "situation": "Suggested to consider for Foundation, but he hasn't made up his mind  ",
+      "situation": "Documents are still pending",
       "situationHistory": [
+        {
+          "ts": 1775538490912,
+          "text": "Documents are still pending"
+        },
         {
           "text": "Suggested to consider for Foundation, but he hasn't made up his mind  ",
           "ts": 1775390657001
@@ -1056,6 +1060,16 @@
   ],
   "pendingTasks": [
     {
+      "id": 1775538490912.0105,
+      "studentName": "JH Baijet",
+      "studentId": "1775372567768.5547",
+      "desc": "need to apply to university",
+      "priority": "red",
+      "deadline": "2026-04-10",
+      "done": false,
+      "ts": 1775538490912
+    },
+    {
       "id": 1775518858560,
       "studentName": "Ashfaque Hossain",
       "desc": "I have to collect two form from the student and submit application do Australian vocational institute tafe NSW",
@@ -1091,6 +1105,14 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775538530154,
+      "msg": "Auto-saved"
+    },
+    {
+      "ts": 1775538490912,
+      "msg": "Present situation updated: JH Baijet"
+    },
     {
       "ts": 1775537498959,
       "msg": "Data imported"
