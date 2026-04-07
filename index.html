@@ -12,66 +12,68 @@
 <style>
 /* ── THEME SYSTEM ── */
 :root, [data-theme="blue"] {
-  --glass:rgba(255,255,255,0.72);--glass2:rgba(255,255,255,0.55);
-  --gb:rgba(147,197,253,0.45);
-  --gs:0 4px 24px rgba(59,130,246,0.09),0 1px 4px rgba(59,130,246,0.06);
-  --gs-hover:0 8px 32px rgba(59,130,246,0.16),0 2px 8px rgba(59,130,246,0.1);
-  --b50:#eff6ff;--b100:#dbeafe;--b200:#bfdbfe;--b400:#60a5fa;
-  --b500:#3b82f6;--b600:#2563eb;--b700:#1d4ed8;
-  --tp:#1e3a5f;--ts:#4a7098;--tm:#8aabc8;
-  --ok:#059669;--okbg:#d1fae5;--wn:#d97706;--wnbg:#fef3c7;
-  --er:#dc2626;--erbg:#fee2e2;--na:#9ca3af;--nabg:#f3f4f6;
-  --page:linear-gradient(135deg,#e0f0ff 0%,#f0f7ff 40%,#e8f4fd 70%,#dbeafe 100%);
-  --modal-bg:#fff;--input-bg:rgba(255,255,255,.85);
-  --r-md:12px;--r-lg:16px;--r-xl:20px;
-  --chart-bg:rgba(255,255,255,0.9);
+  --glass:#0b5d8f;
+  --glass2:#0a5480;
+  --gb:#1a7ab8;
+  --gs:0 4px 16px rgba(0,0,0,0.3);
+  --gs-hover:0 8px 24px rgba(0,0,0,0.4);
+  --b50:#0e4d78;--b100:#1a6ba8;--b200:#2d8fd6;--b400:#7ec8f0;
+  --b500:#3b82f6;--b600:#38bdf8;--b700:#7dd3fc;
+  --tp:#ffffff;--ts:#e0f2fe;--tm:#bae6fd;
+  --ok:#10b981;--okbg:#065f46;--wn:#f59e0b;--wnbg:#78350f;
+  --er:#ef4444;--erbg:#7f1d1d;--na:#9ca3af;--nabg:#374151;
+  --page:linear-gradient(135deg,#0284c7 0%,#0369a1 40%,#082f49 100%);
+  --modal-bg:#0c4a6e;--input-bg:#1e6a9a;
+  --r-md:18px;--r-lg:24px;--r-xl:30px;
+  --chart-bg:#0f5a8a;
 }
 [data-theme="light"]{
-  --glass:rgba(255,255,255,0.9);--glass2:rgba(255,255,255,0.75);
-  --gb:rgba(200,200,200,0.4);
+  --glass:#ffffff;--glass2:#f9fafb;
+  --gb:#d1d5db;
   --gs:0 4px 24px rgba(0,0,0,0.06),0 1px 4px rgba(0,0,0,0.04);
   --gs-hover:0 8px 32px rgba(0,0,0,0.1),0 2px 8px rgba(0,0,0,0.06);
   --b50:#f9fafb;--b100:#f3f4f6;--b200:#e5e7eb;--b400:#9ca3af;
   --b500:#6b7280;--b600:#4b5563;--b700:#374151;
   --tp:#111827;--ts:#4b5563;--tm:#9ca3af;
   --page:linear-gradient(135deg,#f8f9fa 0%,#ffffff 40%,#f3f4f6 70%,#e5e7eb 100%);
-  --modal-bg:#fff;--input-bg:#f9fafb;--chart-bg:rgba(255,255,255,0.95);
+  --modal-bg:#fff;--input-bg:#f9fafb;--chart-bg:#ffffff;
 }
 [data-theme="dark"]{
-  --glass:rgba(30,41,59,0.85);--glass2:rgba(30,41,59,0.7);
-  --gb:rgba(71,85,105,0.5);
-  --gs:0 4px 24px rgba(0,0,0,0.3),0 1px 4px rgba(0,0,0,0.2);
-  --gs-hover:0 8px 32px rgba(0,0,0,0.4),0 2px 8px rgba(0,0,0,0.3);
-  --b50:#1e293b;--b100:#334155;--b200:#475569;--b400:#60a5fa;
+  --glass:#2c3749;--glass2:#242f41;
+  --gb:#3d5068;
+  --gs:0 4px 24px rgba(0,0,0,0.22),0 1px 4px rgba(0,0,0,0.14);
+  --gs-hover:0 8px 32px rgba(0,0,0,0.3),0 2px 8px rgba(0,0,0,0.2);
+  --b50:#28374f;--b100:#374d68;--b200:#4e6480;--b400:#60a5fa;
   --b500:#3b82f6;--b600:#60a5fa;--b700:#93bbfd;
-  --tp:#f1f5f9;--ts:#94a3b8;--tm:#64748b;
-  --ok:#34d399;--okbg:rgba(5,150,105,0.2);--wn:#fbbf24;--wnbg:rgba(217,119,6,0.2);
-  --er:#f87171;--erbg:rgba(220,38,38,0.2);--na:#64748b;--nabg:rgba(100,116,139,0.2);
-  --page:linear-gradient(135deg,#0f172a 0%,#1e293b 40%,#0f172a 70%,#1e293b 100%);
-  --modal-bg:#1e293b;--input-bg:rgba(51,65,85,0.8);--chart-bg:rgba(30,41,59,0.9);
+  --tp:#eef2f8;--ts:#a8b8cc;--tm:#7a91a8;
+  --ok:#34d399;--okbg:#064e3b;--wn:#fbbf24;--wnbg:#451a03;
+  --er:#f87171;--erbg:#450a0a;--na:#7a91a8;--nabg:#1e293b;
+  --page:linear-gradient(135deg,#1a2540 0%,#243354 40%,#1a2540 70%,#243354 100%);
+  --modal-bg:#243354;--input-bg:#2d4060;--chart-bg:#2c3749;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'DM Sans',system-ui,sans-serif;background:var(--page);min-height:100vh;color:var(--tp);font-size:14px;overflow-x:hidden;transition:background .3s,color .3s}
-body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;height:500px;background:radial-gradient(circle,rgba(147,197,253,.15) 0%,transparent 70%);border-radius:50%;pointer-events:none;z-index:0}
-.app{position:relative;z-index:1;max-width:1800px;margin:0 auto;padding:0 14px 24px}
-.glass{background:var(--glass);border:1px solid var(--gb);border-radius:var(--r-lg);box-shadow:var(--gs);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);transition:background .3s,border-color .3s}
-.glass2{background:var(--glass2);border:1px solid rgba(147,197,253,0.3);border-radius:var(--r-md);box-shadow:0 2px 12px rgba(59,130,246,0.06);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);transition:background .3s}
+body::before,body::after{display:none}
+[data-theme="blue"] ::placeholder{color:#bae6fd!important}
+.app{position:relative;z-index:1;width:100%;margin:0 auto;padding:0 14px 24px}
+.glass{background:var(--glass);border:1px solid var(--gb);border-radius:var(--r-lg);box-shadow:var(--gs);transition:all .3s}
+.glass2{background:var(--glass2);border:1px solid var(--gb);border-radius:var(--r-md);box-shadow:var(--gs);transition:all .3s}
 
 /* ── TOP NAV ── */
 .topnav{display:flex;align-items:center;justify-content:space-between;padding:12px 20px;margin-bottom:14px;flex-wrap:wrap;gap:10px;position:sticky;top:0;z-index:100}
 .brand{display:flex;align-items:center;gap:12px}
-.logo{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,var(--b500),var(--b700));display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0;box-shadow:0 4px 12px rgba(37,99,235,.3)}
+.logo{width:42px;height:42px;border-radius:11px;background:linear-gradient(135deg,var(--b500),var(--b700));display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;flex-shrink:0;box-shadow:0 4px 12px #1e40af}
 .brand-text .title{font-size:16px;font-weight:600;color:var(--tp);line-height:1.2}
 .brand-text .sub{font-size:12px;color:var(--ts);margin-top:1px}
-.nav-tabs{display:flex;gap:4px;background:rgba(219,234,254,.3);border-radius:30px;padding:4px;backdrop-filter:blur(8px)}
+.nav-tabs{display:flex;gap:4px;background:var(--b50);border-radius:30px;padding:4px}
 .nav-tab{padding:7px 16px;border-radius:24px;font-size:12px;font-weight:500;cursor:pointer;border:none;background:transparent;color:var(--ts);transition:all .2s;white-space:nowrap;font-family:inherit}
-.nav-tab.active{background:var(--modal-bg);color:var(--b600);box-shadow:0 2px 8px rgba(59,130,246,.15)}
+.nav-tab.active{background:var(--modal-bg);color:var(--b600);box-shadow:0 2px 8px #93c5fd}
 .nav-right{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 .clock-sm{font-family:'DM Mono',monospace;font-size:16px;font-weight:500;color:var(--b600);white-space:nowrap}
 .date-sm{font-size:11px;color:var(--tm)}
-.save-pill{font-size:12px;color:var(--ts);background:rgba(219,234,254,.6);border:1px solid var(--b200);border-radius:16px;padding:4px 10px;white-space:nowrap}
-.save-pill.dirty{color:var(--wn);background:var(--wnbg);border-color:rgba(217,119,6,.3)}
-.save-pill.saved{color:var(--ok);background:var(--okbg);border-color:rgba(5,150,105,.3)}
+.save-pill{font-size:12px;color:var(--ts);background:#dbeafe;border:1px solid var(--b200);border-radius:16px;padding:4px 10px;white-space:nowrap}
+.save-pill.dirty{color:var(--wn);background:var(--wnbg);border-color:#d97706}
+.save-pill.saved{color:var(--ok);background:var(--okbg);border-color:#059669}
 
 /* Theme toggle */
 .theme-toggle{display:flex;gap:2px;background:var(--b50);border-radius:20px;padding:2px;border:1px solid var(--gb)}
@@ -82,23 +84,23 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .btn{padding:7px 14px;border-radius:8px;font-size:12px;font-weight:500;cursor:pointer;border:1.5px solid;transition:all .18s;font-family:inherit;display:inline-flex;align-items:center;gap:5px;white-space:nowrap;line-height:1.3}
 .btn-sm{padding:5px 10px;font-size:11px}
 .btn-primary{background:var(--b600);color:#fff;border-color:var(--b600)}
-.btn-primary:hover{background:var(--b700);box-shadow:0 4px 12px rgba(37,99,235,.25)}
-.btn-save{background:rgba(5,150,105,.1);color:var(--ok);border-color:rgba(5,150,105,.3)}
-.btn-pdf{background:rgba(220,38,38,.07);color:#dc2626;border-color:rgba(220,38,38,.25)}
-.btn-txt{background:rgba(5,150,105,.07);color:var(--ok);border-color:rgba(5,150,105,.25)}
-.btn-json{background:rgba(37,99,235,.08);color:var(--b600);border-color:rgba(37,99,235,.28)}
-.btn-import{background:rgba(124,58,237,.08);color:#7c3aed;border-color:rgba(124,58,237,.28)}
-.btn-del{background:rgba(220,38,38,.06);color:#dc2626;border-color:rgba(220,38,38,.2);padding:4px 9px;font-size:11px;border-radius:6px}
-.btn-del:hover{background:rgba(220,38,38,.14)}
-.btn-log{background:rgba(107,114,128,.07);color:var(--ts);border-color:rgba(107,114,128,.22);font-size:11px}
-.btn-edit{background:rgba(37,99,235,.08);color:var(--b600);border-color:rgba(37,99,235,.25);font-size:11px;padding:4px 10px}
-.btn-edit:hover{background:rgba(37,99,235,.16)}
-.btn-addinfo{background:rgba(124,58,237,.08);color:#7c3aed;border-color:rgba(124,58,237,.2);font-size:11px;padding:4px 10px;border-radius:6px}
-.btn-addinfo:hover{background:rgba(124,58,237,.16)}
-.btn-wa{background:rgba(37,211,102,.1);color:#128c7e;border-color:rgba(37,211,102,.3);font-size:11px;padding:3px 8px;border-radius:6px;text-decoration:none}
-.btn-wa:hover{background:rgba(37,211,102,.2)}
-.btn-uni{background:rgba(139,92,246,.08);color:#7c3aed;border-color:rgba(139,92,246,.25);font-size:11px;padding:4px 10px;border-radius:6px}
-.btn-uni:hover{background:rgba(139,92,246,.18)}
+.btn-primary:hover{background:var(--b700);box-shadow:0 4px 12px #93c5fd}
+.btn-save{background:#d1fae5;color:var(--ok);border-color:#6ee7b7}
+.btn-pdf{background:#fee2e2;color:#dc2626;border-color:#fca5a5}
+.btn-txt{background:#d1fae5;color:var(--ok);border-color:#6ee7b7}
+.btn-json{background:#dbeafe;color:var(--b600);border-color:#93c5fd}
+.btn-import{background:#ede9fe;color:#7c3aed;border-color:#c4b5fd}
+.btn-del{background:#fee2e2;color:#dc2626;border-color:#fca5a5;padding:4px 9px;font-size:11px;border-radius:6px}
+.btn-del:hover{background:#fecaca}
+.btn-log{background:#f3f4f6;color:var(--ts);border-color:#d1d5db;font-size:11px}
+.btn-edit{background:#dbeafe;color:var(--b600);border-color:#93c5fd;font-size:11px;padding:4px 10px}
+.btn-edit:hover{background:#bfdbfe}
+.btn-addinfo{background:#ede9fe;color:#7c3aed;border-color:#c4b5fd;font-size:11px;padding:4px 10px;border-radius:6px}
+.btn-addinfo:hover{background:#ddd6fe}
+.btn-wa{background:#d1fae5;color:#128c7e;border-color:#6ee7b7;font-size:11px;padding:3px 8px;border-radius:6px;text-decoration:none}
+.btn-wa:hover{background:#a7f3d0}
+.btn-uni{background:#ede9fe;color:#7c3aed;border-color:#c4b5fd;font-size:11px;padding:4px 10px;border-radius:6px}
+.btn-uni:hover{background:#ddd6fe}
 
 /* PAGES */
 .page-view{display:none}.page-view.active{display:block}
@@ -109,9 +111,16 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .dash-header .dash-date{font-size:12px;color:var(--ts)}
 .dash-header .last-action{font-size:11px;color:var(--tm);margin-top:2px}
 
-/* Dashboard 3-col: left=main, right=sidebar */
-.dash-layout{display:grid;grid-template-columns:1fr 380px;gap:14px;margin-bottom:14px}
-@media(max-width:1100px){.dash-layout{grid-template-columns:1fr}}
+/* Dashboard new 3-col: left=stats, center=tasks/reminders/stale, right=charts+tools */
+.dash-layout{display:grid;grid-template-columns:280px 1fr 380px;gap:14px;margin-bottom:14px}
+@media(max-width:1400px){.dash-layout{grid-template-columns:260px 1fr 340px}}
+@media(max-width:1100px){.dash-layout{grid-template-columns:1fr 320px}}
+@media(max-width:800px){.dash-layout{grid-template-columns:1fr}}
+
+/* Center 3-column panel for tasks/reminders/stale */
+.dash-center-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:start}
+@media(max-width:1100px){.dash-center-3col{grid-template-columns:1fr 1fr}}
+@media(max-width:700px){.dash-center-3col{grid-template-columns:1fr}}
 
 /* Sidebar */
 .dash-sidebar{display:flex;flex-direction:column;gap:10px}
@@ -127,7 +136,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 
 /* Pending tasks */
 .slbl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--tm);margin-bottom:6px}
-.task-grid{display:flex;flex-direction:column;gap:6px;max-height:300px;overflow-y:auto}
+.task-grid{display:flex;flex-direction:column;gap:6px;max-height:500px;overflow-y:auto}
 .task-item{display:flex;align-items:center;gap:10px;padding:8px 12px;border-radius:9px;background:var(--glass);border:1px solid var(--gb);font-size:12px}
 .task-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .task-dot.red{background:var(--er)}.task-dot.amber{background:var(--wn)}.task-dot.blue{background:var(--b500)}.task-dot.green{background:var(--ok)}
@@ -138,9 +147,9 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .task-item.done{opacity:.5;text-decoration:line-through}
 
 /* Remind */
-.remind-section{display:flex;flex-direction:column;gap:6px;max-height:200px;overflow-y:auto}
-.remind-item{display:flex;align-items:flex-start;gap:10px;padding:9px 14px;border-radius:9px;border-left:4px solid var(--wn);background:var(--wnbg);font-size:12px;color:#92400e}
-.remind-item.urgent{border-color:var(--er);background:var(--erbg);color:#991b1b}
+.remind-section{display:flex;flex-direction:column;gap:6px;max-height:500px;overflow-y:auto}
+.remind-item{display:flex;align-items:flex-start;gap:10px;padding:9px 14px;border-radius:9px;border-left:4px solid var(--wn);background:var(--wnbg);font-size:12px;color:var(--ts)}
+.remind-item.urgent{border-color:var(--er);background:var(--erbg);color:var(--ts)}
 
 /* Quick notes */
 .quick-notes{padding:12px 16px;display:flex;flex-direction:column;gap:6px}
@@ -154,9 +163,9 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .note-del{cursor:pointer;color:var(--er);font-size:12px;border:none;background:none;padding:0 2px;flex-shrink:0}
 
 /* Search popup */
-.search-overlay{display:none;position:fixed;inset:0;background:rgba(20,40,80,.3);backdrop-filter:blur(4px);z-index:1200;align-items:flex-start;justify-content:center;padding:80px 14px 14px}
+.search-overlay{display:none;position:fixed;inset:0;background:rgba(10,25,50,.75);z-index:1200;align-items:flex-start;justify-content:center;padding:80px 14px 14px}
 .search-overlay.open{display:flex}
-.search-popup{background:var(--modal-bg);border-radius:var(--r-xl);width:100%;max-width:680px;box-shadow:0 24px 64px rgba(20,40,80,.3);max-height:70vh;display:flex;flex-direction:column;overflow:hidden}
+.search-popup{background:var(--modal-bg);border-radius:var(--r-xl);width:100%;max-width:680px;box-shadow:0 24px 64px #0a1932;max-height:70vh;display:flex;flex-direction:column;overflow:hidden}
 .search-popup-input{font-family:'DM Sans',sans-serif;font-size:16px;padding:16px 20px;border:none;outline:none;background:transparent;color:var(--tp);border-bottom:1px solid var(--b100)}
 .search-results{overflow-y:auto;flex:1;padding:8px}
 .search-result-item{padding:10px 16px;border-radius:8px;cursor:pointer;transition:background .12s;display:flex;align-items:center;gap:10px}
@@ -167,18 +176,18 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 /* Stats & Charts */
 .stats-section{margin-bottom:14px}
 .filter-bar{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
-.filter-btn{padding:4px 12px;border-radius:16px;font-size:11px;font-weight:500;cursor:pointer;border:1.5px solid var(--b200);background:rgba(255,255,255,.4);color:var(--ts);transition:all .14s}
+.filter-btn{padding:4px 12px;border-radius:16px;font-size:11px;font-weight:500;cursor:pointer;border:1.5px solid var(--gb);background:var(--b50);color:var(--ts);transition:all .14s}
 .filter-btn.active{background:var(--b600);color:#fff;border-color:var(--b600)}
-.info-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
-.sc{background:var(--glass);border:1px solid var(--gb);border-radius:var(--r-md);box-shadow:var(--gs);padding:12px 14px;position:relative;overflow:hidden}
+.info-grid{display:flex;flex-direction:column;gap:8px}
+.sc{background:var(--glass);border:1px solid var(--gb);border-radius:var(--r-md);box-shadow:var(--gs);padding:10px 14px;position:relative;overflow:hidden}
 .sc::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--r-md) var(--r-md) 0 0}
 .sc.def::after{background:linear-gradient(90deg,var(--b400),var(--b600))}
 .sc.ok::after{background:linear-gradient(90deg,#34d399,#059669)}
 .sc.wn::after{background:linear-gradient(90deg,#fbbf24,#d97706)}
 .sc.er::after{background:linear-gradient(90deg,#f87171,#dc2626)}
 .sc.pu::after{background:linear-gradient(90deg,#a78bfa,#7c3aed)}
-.sv{font-size:24px;font-weight:600;color:var(--b600);line-height:1}
-.sc.ok .sv{color:var(--ok)}.sc.wn .sv{color:var(--wn)}.sc.er .sv{color:var(--er)}.sc.pu .sv{color:#7c3aed}
+.sv{font-size:22px;font-weight:700;color:var(--tp);line-height:1}
+.sc.ok .sv{color:var(--ok)}.sc.wn .sv{color:var(--wn)}.sc.er .sv{color:var(--er)}.sc.pu .sv{color:#c4b5fd}
 .sc-lbl{font-size:11px;color:var(--ts);margin-top:4px;line-height:1.3}
 
 .charts-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:14px}
@@ -186,10 +195,10 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .chart-box{padding:14px;min-height:250px}
 .chart-box.tall{min-height:290px}
 .chart-box canvas{max-height:220px}
-.center-action-wrap{display:flex;justify-content:center;align-items:center;margin-bottom:14px}
-.center-action-card{padding:18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;min-height:120px;width:100%}
-.center-action-card p{font-size:12px;color:var(--ts);max-width:620px;line-height:1.5}
-.btn-hero{padding:12px 24px;font-size:14px;font-weight:700;border-radius:999px;box-shadow:0 10px 24px rgba(37,99,235,.18)}
+.center-action-wrap{display:flex;justify-content:center;align-items:center}
+.center-action-card{padding:18px 20px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;text-align:left;gap:8px;min-height:100px;width:100%}
+.center-action-card p{font-size:12px;color:var(--ts);max-width:420px;line-height:1.5;margin-bottom:4px}
+.btn-hero{padding:10px 20px;font-size:13px;font-weight:700;border-radius:999px;box-shadow:0 6px 16px #93c5fd}
 .info-grid .sc.clickable{cursor:pointer;transition:transform .18s,box-shadow .18s}
 .info-grid .sc.clickable:hover{transform:translateY(-2px);box-shadow:var(--gs-hover)}
 .stat-modal-list,.overview-list{display:flex;flex-direction:column;gap:8px;max-height:420px;overflow-y:auto}
@@ -199,9 +208,9 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .stat-item-sub,.overview-item-sub{font-size:11px;color:var(--ts);line-height:1.45}
 .remind-main{flex:1;min-width:0}
 .remind-actions{display:flex;gap:6px;align-items:center;flex-shrink:0}
-.btn-remind-done{background:rgba(5,150,105,.1);color:var(--ok);border:1px solid rgba(5,150,105,.25);padding:4px 9px;font-size:11px;border-radius:7px;cursor:pointer}
-.btn-remind-done:hover{background:rgba(5,150,105,.16)}
-.stale-section{display:flex;flex-direction:column;gap:6px;max-height:280px;overflow-y:auto}
+.btn-remind-done{background:var(--okbg);color:var(--ok);border:1px solid #059669;padding:4px 9px;font-size:11px;border-radius:7px;cursor:pointer}
+.btn-remind-done:hover{background:#047857;color:#fff}
+.stale-section{display:flex;flex-direction:column;gap:6px;max-height:500px;overflow-y:auto}
 .stale-item{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:10px 12px;border-radius:10px;background:var(--glass);border:1px solid var(--gb)}
 .stale-main{min-width:0;flex:1}
 .stale-name{font-size:12px;font-weight:700;color:var(--tp)}
@@ -210,20 +219,20 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .stale-days.fresh{background:var(--okbg);color:var(--ok)}
 .stale-days.warn{background:var(--wnbg);color:var(--wn)}
 .stale-days.old{background:var(--erbg);color:var(--er)}
-.scard-latest{margin-top:8px;padding:8px 10px;border-radius:10px;background:rgba(219,234,254,.18);border:1px solid rgba(191,219,254,.45)}
+.scard-latest{margin-top:8px;padding:8px 10px;border-radius:10px;background:#dbeafe;border:1px solid #93c5fd}
 .scard-latest .item{font-size:11px;color:var(--ts);line-height:1.45;margin-bottom:5px}
 .scard-latest .item:last-child{margin-bottom:0}
 .scard-latest strong{color:var(--tp)}
 .mobile-dbl-hint{display:none;font-size:10px;color:var(--tm);margin-top:3px}
 .workflow-summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin:0 0 12px 0}
-.workflow-chip{padding:10px 12px;border-radius:10px;background:var(--b50);border:1px solid var(--b100)}
-.workflow-chip .v{font-size:22px;font-weight:700;color:var(--b600);line-height:1}
+.workflow-chip{padding:10px 12px;border-radius:10px;background:var(--glass);border:1px solid var(--gb)}
+.workflow-chip .v{font-size:22px;font-weight:700;color:var(--tp);line-height:1}
 .workflow-chip .l{font-size:11px;color:var(--ts);margin-top:4px}
 
 
 /* Intake tabs */
 .intake-tabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
-.itab{padding:4px 13px;border-radius:16px;font-size:11px;font-weight:500;cursor:pointer;border:1.5px solid var(--b200);background:rgba(255,255,255,.4);color:var(--ts);transition:all .14s}
+.itab{padding:4px 13px;border-radius:16px;font-size:11px;font-weight:500;cursor:pointer;border:1.5px solid var(--gb);background:var(--b50);color:var(--ts);transition:all .14s}
 .itab.active{background:var(--b600);color:#fff;border-color:var(--b600)}
 
 /* Country Summary */
@@ -232,9 +241,9 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .country-block-hdr{display:flex;align-items:center;gap:8px;margin-bottom:10px}
 .country-flag{font-size:18px}.country-name{font-size:14px;font-weight:600;color:var(--tp)}
 .country-mini-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:7px}
-.mini-stat{background:rgba(219,234,254,.2);border-radius:8px;padding:8px 10px}
-.mini-val{font-size:20px;font-weight:600;color:var(--b600);line-height:1}
-.mini-lbl{font-size:10px;color:var(--ts);margin-top:2px;line-height:1.3}
+.mini-stat{background:var(--b50);border-radius:8px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center}
+.mini-val{font-size:16px;font-weight:600;color:var(--tp);line-height:1}
+.mini-lbl{font-size:12px;color:var(--ts);line-height:1}
 
 /* Action history */
 .action-history{max-height:200px;overflow-y:auto}
@@ -252,7 +261,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:12px}
 .scard{background:var(--glass);border:1px solid var(--gb);border-radius:var(--r-lg);box-shadow:var(--gs);overflow:hidden;transition:all .2s;cursor:pointer}
 .scard:hover{box-shadow:var(--gs-hover);transform:translateY(-2px)}
-.scard-top{padding:14px 16px 10px;border-bottom:1px solid rgba(191,219,254,.3)}
+.scard-top{padding:14px 16px 10px;border-bottom:1px solid var(--b100)}
 .scard-namerow{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:6px}
 .scard-name{font-size:14px;font-weight:600;color:var(--tp);line-height:1.3}
 .scard-badges{display:flex;gap:4px;flex-wrap:wrap;flex-shrink:0}
@@ -274,7 +283,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .scard-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;gap:8px}
 .scard-row .lbl{color:var(--tm);flex-shrink:0;min-width:90px}
 .scard-row .val{color:var(--tp);font-weight:500;text-align:right;flex:1}
-.scard-foot{padding:8px 16px;border-top:1px solid rgba(191,219,254,.3);display:flex;justify-content:space-between;align-items:center;background:rgba(219,234,254,.08)}
+.scard-foot{padding:8px 16px;border-top:1px solid var(--b100);display:flex;justify-content:space-between;align-items:center;background:var(--b50)}
 .age-badge{display:inline-block;font-size:10px;padding:2px 7px;border-radius:8px;font-weight:500}
 .age-fresh{background:var(--okbg);color:var(--ok)}
 .age-warn{background:var(--wnbg);color:var(--wn)}
@@ -283,12 +292,12 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 /* ══════════ PAGE 2 — STUDENT FILES ══════════ */
 .p2-layout{display:grid;grid-template-columns:380px 1fr;gap:14px;margin-bottom:14px}
 .p2-list-panel{max-height:calc(100vh - 140px);overflow-y:auto}
-.p2-list-hdr{padding:12px 16px;border-bottom:1px solid var(--b100);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;position:sticky;top:0;background:var(--glass);backdrop-filter:blur(14px);z-index:2}
+.p2-list-hdr{padding:12px 16px;border-bottom:1px solid var(--b100);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;position:sticky;top:0;background:var(--glass);z-index:2}
 .p2-search{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--tp);background:var(--b50);border:1.5px solid var(--b200);border-radius:8px;padding:6px 10px;width:100%;outline:none;margin-top:6px}
 .p2-search:focus{border-color:var(--b500)}
-.stu-list-item{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid rgba(191,219,254,.15);cursor:pointer;transition:background .12s}
-.stu-list-item:hover{background:rgba(219,234,254,.2)}
-.stu-list-item.selected{background:rgba(219,234,254,.4);border-left:3px solid var(--b600)}
+.stu-list-item{display:flex;align-items:center;gap:10px;padding:10px 16px;border-bottom:1px solid var(--b100);cursor:pointer;transition:background .12s}
+.stu-list-item:hover{background:var(--b50)}
+.stu-list-item.selected{background:var(--b100);border-left:3px solid var(--b600)}
 .stu-list-name{font-size:13px;font-weight:500;color:var(--tp);flex:1}
 .stu-list-country{font-size:11px;color:var(--ts)}
 .stu-list-stage{font-size:10px;padding:2px 6px;border-radius:8px;background:var(--b100);color:var(--b600);white-space:nowrap;max-width:100px;overflow:hidden;text-overflow:ellipsis}
@@ -303,7 +312,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .detail-field{margin-bottom:2px}
 .detail-field label{display:block;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--tm);margin-bottom:3px}
 .detail-field input,.detail-field select,.detail-field textarea{font-family:'DM Sans',sans-serif;font-size:13px;color:var(--tp);background:var(--input-bg);border:1.5px solid var(--b200);border-radius:7px;padding:6px 9px;width:100%;outline:none;transition:border-color .15s}
-.detail-field input:focus,.detail-field select:focus,.detail-field textarea:focus{border-color:var(--b500);box-shadow:0 0 0 3px rgba(59,130,246,.1)}
+.detail-field input:focus,.detail-field select:focus,.detail-field textarea:focus{border-color:var(--b500);box-shadow:0 0 0 3px #bfdbfe}
 .detail-field select{cursor:pointer}
 .detail-sep{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.07em;color:var(--tm);margin:12px 0 6px;padding-bottom:4px;border-bottom:1px solid var(--b100);grid-column:1/-1}
 .na-cell{background:var(--nabg);color:var(--na);font-size:11px;padding:4px 8px;border-radius:5px;text-align:center;font-style:italic;display:block}
@@ -317,9 +326,9 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .uni-apps-table tr:hover td{background:var(--b50)}
 
 /* ── MODALS ── */
-.mo{display:none;position:fixed;inset:0;background:rgba(20,40,80,.35);backdrop-filter:blur(5px);z-index:1000;align-items:center;justify-content:center;padding:14px}
+.mo{display:none;position:fixed;inset:0;background:rgba(10,25,50,.75);z-index:1000;align-items:center;justify-content:center;padding:14px}
 .mo.open{display:flex}
-.modal{background:var(--modal-bg);border-radius:var(--r-xl);padding:0;width:100%;max-width:560px;box-shadow:0 24px 64px rgba(20,40,80,.24);max-height:92vh;display:flex;flex-direction:column;overflow:hidden}
+.modal{background:var(--modal-bg);border-radius:var(--r-xl);padding:0;width:100%;max-width:560px;box-shadow:0 24px 64px #0a1932;max-height:92vh;display:flex;flex-direction:column;overflow:hidden}
 .modal-hdr{padding:18px 22px 14px;border-bottom:1px solid var(--b100);display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
 .modal-hdr h3{font-size:16px;font-weight:600;color:var(--tp)}
 .modal-close{background:none;border:none;font-size:20px;color:var(--tm);cursor:pointer;line-height:1;padding:2px 6px}
@@ -344,9 +353,9 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .log-time{color:var(--tm);font-family:'DM Mono',monospace;font-size:11px;white-space:nowrap;flex-shrink:0}
 
 /* Additional info modal */
-.addinfo-overlay{display:none;position:fixed;inset:0;background:rgba(20,40,80,.3);backdrop-filter:blur(4px);z-index:1100;align-items:center;justify-content:center;padding:14px}
+.addinfo-overlay{display:none;position:fixed;inset:0;background:rgba(10,25,50,.75);z-index:1100;align-items:center;justify-content:center;padding:14px}
 .addinfo-overlay.open{display:flex}
-.addinfo-modal{background:var(--modal-bg);border-radius:var(--r-xl);width:100%;max-width:620px;box-shadow:0 24px 64px rgba(20,40,80,.24);max-height:85vh;display:flex;flex-direction:column;overflow:hidden}
+.addinfo-modal{background:var(--modal-bg);border-radius:var(--r-xl);width:100%;max-width:620px;box-shadow:0 24px 64px #0a1932;max-height:85vh;display:flex;flex-direction:column;overflow:hidden}
 .addinfo-hdr{padding:16px 20px 12px;border-bottom:1px solid var(--b100);display:flex;justify-content:space-between;align-items:center}
 .addinfo-hdr h3{font-size:15px;font-weight:600;color:var(--tp)}
 .addinfo-body{padding:16px 20px;overflow-y:auto;flex:1}
@@ -356,7 +365,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .addinfo-input-row textarea{flex:1;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--tp);background:var(--b50);border:1.5px solid var(--b200);border-radius:8px;padding:8px 11px;outline:none;resize:none;min-height:50px}
 .addinfo-input-row textarea:focus{border-color:var(--b500)}
 .history-log{max-height:220px;overflow-y:auto;border:1px solid var(--b100);border-radius:8px}
-.history-entry{padding:8px 12px;border-bottom:1px solid rgba(191,219,254,.15);font-size:12px;display:flex;align-items:flex-start;gap:8px}
+.history-entry{padding:8px 12px;border-bottom:1px solid var(--b100);font-size:12px;display:flex;align-items:flex-start;gap:8px}
 .history-entry:last-child{border-bottom:none}
 .history-entry:nth-child(even){background:var(--b50)}
 .history-time{font-family:'DM Mono',monospace;font-size:10px;color:var(--tm);margin-bottom:2px;flex-shrink:0}
@@ -372,7 +381,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .gl-header h2{font-size:1.6rem;font-weight:700}
 .gl-header p{opacity:.85;font-size:.9rem;margin-top:.3rem}
 .gl-badge-row{display:flex;justify-content:center;gap:.8rem;margin-top:.8rem;flex-wrap:wrap}
-.gl-badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:.3rem .9rem;font-size:.8rem;font-weight:600}
+.gl-badge{background:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.9);border-radius:20px;padding:.3rem .9rem;font-size:.8rem;font-weight:600;color:#1a6b3a}
 .gl-search-card{padding:16px;margin-bottom:14px}
 .gl-search-row{display:flex;gap:8px}
 .gl-search-input{flex:1;padding:10px 14px;border:1.5px solid var(--b200);border-radius:10px;font-size:14px;color:var(--tp);background:var(--input-bg);outline:none;font-family:inherit}
@@ -380,12 +389,12 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .gl-search-btn{padding:10px 20px;background:#1a6b3a;color:white;border:none;border-radius:10px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit}
 .gl-search-btn:hover{background:#27ae60}
 .gl-filter-row{display:flex;gap:6px;margin-top:10px;flex-wrap:wrap}
-.gl-filter-btn{padding:4px 12px;border-radius:20px;border:1.5px solid var(--b200);background:transparent;font-size:12px;font-weight:600;cursor:pointer;color:var(--ts);transition:all .2s;font-family:inherit}
+.gl-filter-btn{padding:4px 12px;border-radius:20px;border:1.5px solid var(--b200);background:var(--b50);font-size:12px;font-weight:600;cursor:pointer;color:var(--ts);transition:all .2s;font-family:inherit}
 .gl-filter-btn:hover,.gl-filter-btn.active{border-color:#27ae60;background:#d4edda;color:#1a6b3a}
 .gl-result-card{background:var(--glass);border:1.5px solid var(--gb);border-radius:14px;overflow:hidden;margin-bottom:8px;box-shadow:var(--gs)}
 .gl-result-card:hover{box-shadow:var(--gs-hover)}
 .gl-card-header{display:flex;align-items:center;gap:10px;padding:12px 16px;cursor:pointer;user-select:none}
-.gl-card-header:hover{background:rgba(212,237,218,.2)}
+.gl-card-header:hover{background:#d4edda}
 .gl-tier-badge{padding:3px 10px;border-radius:20px;font-size:11px;font-weight:800;flex-shrink:0}
 .gl-tier1{background:#d4edda;color:#1a6b3a;border:1.5px solid #27ae60}
 .gl-tier2{background:#dbeafe;color:#1e40af;border:1.5px solid #3b82f6}
@@ -407,7 +416,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .gl-group-list{background:var(--glass);border:1px solid var(--gb);border-top:none;border-radius:0 0 8px 8px}
 .gl-group-item{display:flex;align-items:center;gap:8px;padding:6px 12px;border-bottom:1px solid var(--b100);font-size:12px;cursor:pointer;transition:background .15s}
 .gl-group-item:last-child{border-bottom:none}
-.gl-group-item:hover{background:rgba(212,237,218,.15)}
+.gl-group-item:hover{background:#d4edda}
 
 .foot{text-align:center;color:var(--tm);font-size:11px;margin-top:14px;padding-bottom:6px}
 
@@ -476,99 +485,108 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
     </div>
   </div>
 
-  <!-- Dashboard Layout: Main + Sidebar -->
+  <!-- Dashboard Layout: Left=Stats | Center=Tasks/Reminders/Stale | Right=Charts+Tools -->
   <div class="dash-layout">
-    <!-- LEFT: Main content -->
-    <div>
-      <!-- Progress bars -->
-      <div class="glass2 progress-section" style="margin-bottom:14px">
-        <div class="slbl">&#128200; Completion Progress</div>
-        <div class="progress-bar-wrap">
-          <div class="progress-label"><span>Pending Tasks Completion</span><span id="prog-task-pct">0%</span></div>
-          <div class="progress-track"><div class="progress-fill green" id="prog-task-bar" style="width:0%"></div></div>
-        </div>
-      </div>
 
-      <div class="center-action-wrap">
-        <div class="glass2 center-action-card">
-          <div class="slbl" style="margin-bottom:0">&#128221; Quick Case Update</div>
-          <p>Collect a student's present situation instantly, add a task with deadline, and update the dashboard and student file areas automatically.</p>
-          <button class="btn btn-primary btn-hero" onclick="openSituationCollector()">Update Present Situation</button>
-        </div>
-      </div>
-
-      <!-- Statistics with filters -->
-      <div class="stats-section">
-        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;flex-wrap:wrap">
-          <div class="slbl" style="margin-bottom:0">&#128202; Statistics</div>
-          <div class="intake-tabs" id="intake-tabs" style="margin-bottom:0"></div>
-        </div>
-        <div class="filter-bar" id="sum-filter-bar">
+    <!-- ═══ LEFT COLUMN: Statistics ═══ -->
+    <div style="position:sticky;top:70px;align-self:start;max-height:calc(100vh - 80px);overflow-y:auto;padding-right:4px">
+      <div class="glass2" style="padding:14px 16px">
+        <div class="slbl" style="margin-bottom:8px">&#128202; Statistics</div>
+        <div class="intake-tabs" id="intake-tabs" style="margin-bottom:10px"></div>
+        <div class="filter-bar" id="sum-filter-bar" style="margin-bottom:12px">
           <span class="filter-btn active" data-f="all" onclick="setSumFilter('all')">All</span>
           <span class="filter-btn" data-f="bank" onclick="setSumFilter('bank')">Bank</span>
           <span class="filter-btn" data-f="gs" onclick="setSumFilter('gs')">GS</span>
           <span class="filter-btn" data-f="visa" onclick="setSumFilter('visa')">Visa</span>
-          <span class="filter-btn" data-f="uni" onclick="setSumFilter('uni')">University</span>
+          <span class="filter-btn" data-f="uni" onclick="setSumFilter('uni')">Uni</span>
           <span class="filter-btn" data-f="stage" onclick="setSumFilter('stage')">Stage</span>
         </div>
-        <div class="info-grid" id="info-grid"></div>
+        <div class="info-grid" id="info-grid" style="padding-bottom:8px"></div>
+      </div>
+    </div>
+
+    <!-- ═══ CENTER COLUMN: Tasks | Reminders | Stale ═══ -->
+    <div>
+      <!-- Top action row -->
+      <div style="display:flex;gap:12px;margin-bottom:14px;flex-wrap:wrap">
+        <div class="glass2 center-action-card" style="flex:1;min-width:220px">
+          <div class="slbl" style="margin-bottom:0">&#128221; Quick Case Update</div>
+          <p>Instantly document a student's present situation and set a task with a deadline.</p>
+          <button class="btn btn-primary btn-hero" onclick="openSituationCollector()">Update Present Situation</button>
+        </div>
+        <div class="glass2 progress-section" style="flex:1;min-width:220px">
+          <div class="slbl" style="margin-bottom:6px">&#128200; Completion Progress</div>
+          <div class="progress-bar-wrap" style="width:100%;margin-bottom:0">
+            <div class="progress-label"><span>Pending Tasks</span><span id="prog-task-pct">0%</span></div>
+            <div class="progress-track"><div class="progress-fill green" id="prog-task-bar" style="width:0%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 equal columns: Pending Tasks | Application Reminders | Days Since Last Worked On -->
+      <div class="dash-center-3col">
+
+        <!-- Column 1: Pending Tasks -->
+        <div class="glass2" style="padding:14px 16px;display:flex;flex-direction:column">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <div class="slbl" style="margin-bottom:0">&#9888; Pending Tasks</div>
+            <button class="btn btn-primary btn-sm" onclick="openAddTask()">+ Add</button>
+          </div>
+          <div class="task-grid" id="task-grid" style="flex:1;overflow-y:auto"></div>
+        </div>
+
+        <!-- Column 2: Application Reminders -->
+        <div class="glass2" style="padding:14px 16px;overflow-y:auto">
+          <div class="slbl" style="margin-bottom:6px">&#128276; Application Reminders</div>
+          <div class="remind-section" id="remind-sec"><div style="color:var(--tm);font-size:12px;font-style:italic">No reminders</div></div>
+        </div>
+
+        <!-- Column 3: Days Since Last Worked On -->
+        <div class="glass2" style="padding:14px 16px;overflow-y:auto">
+          <div class="slbl" style="margin-bottom:6px">&#9200; Days Since Last Worked On</div>
+          <div class="stale-section" id="stale-sec"><div style="color:var(--tm);font-size:12px;font-style:italic">No students yet</div></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══ RIGHT COLUMN: Charts + Tools ═══ -->
+    <div class="dash-sidebar">
+      <!-- WhatsApp Document Request Form -->
+      <div class="glass2" style="padding:16px">
+        <div class="slbl" style="margin-bottom:8px">&#128242; Request Documents via WhatsApp</div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <input type="text" id="wa-student-name" placeholder="Student Name" style="font-family:'DM Sans',sans-serif;font-size:12px;padding:8px 10px;border:1px solid var(--gb);border-radius:8px;background:var(--input-bg);color:var(--tp);outline:none">
+          <input type="text" id="wa-phone-num" placeholder="Phone Number (e.g. +614...)" style="font-family:'DM Sans',sans-serif;font-size:12px;padding:8px 10px;border:1px solid var(--gb);border-radius:8px;background:var(--input-bg);color:var(--tp);outline:none">
+          <button class="btn btn-wa" style="justify-content:center;padding:8px;font-weight:bold;font-size:12px" onclick="sendWhatsAppDocRequest()">&#128222; Send WhatsApp Message</button>
+        </div>
       </div>
 
       <!-- Charts -->
-      <div class="charts-row">
-        <div class="glass2 chart-box">
-          <div class="slbl">&#127758; Country Distribution</div>
-          <canvas id="chart-country"></canvas>
-        </div>
-        <div class="glass2 chart-box">
-          <div class="slbl">&#128203; Stage Distribution</div>
-          <canvas id="chart-stage"></canvas>
-        </div>
-        <div class="glass2 chart-box tall">
-          <div class="slbl">&#9989; Task Completion Flow</div>
-          <canvas id="chart-task-flow"></canvas>
-        </div>
-        <div class="glass2 chart-box tall">
-          <div class="slbl">&#128260; Workflow Timeline Snapshot</div>
-          <div class="workflow-summary-grid" id="workflow-summary-grid"></div>
-          <canvas id="chart-workflow"></canvas>
-        </div>
+      <div class="glass2 chart-box">
+        <div class="slbl">&#128203; Stage Distribution</div>
+        <canvas id="chart-stage"></canvas>
+      </div>
+      <div class="glass2 chart-box tall">
+        <div class="slbl">&#9989; Task Completion Flow</div>
+        <canvas id="chart-task-flow"></canvas>
+      </div>
+      <div class="glass2 chart-box tall">
+        <div class="slbl">&#128260; Workflow Timeline</div>
+        <div class="workflow-summary-grid" id="workflow-summary-grid"></div>
+        <canvas id="chart-workflow"></canvas>
       </div>
 
       <!-- Country Summary -->
-      <div class="glass2" style="padding:14px 16px;margin-bottom:14px">
+      <div class="glass2" style="padding:14px 16px">
         <div class="slbl">Country Summary</div>
         <div class="sum-countries" id="sum-countries"></div>
       </div>
 
       <!-- Action History -->
-      <div class="glass2" style="padding:14px 16px;margin-bottom:14px">
+      <div class="glass2" style="padding:14px 16px">
         <div class="slbl">&#128337; Action History</div>
         <div class="action-history" id="action-history"></div>
-      </div>
-    </div>
-
-    <!-- RIGHT: Sidebar -->
-    <div class="dash-sidebar">
-      <!-- Pending Tasks (manual) -->
-      <div class="glass2" style="padding:14px 16px;display:flex;flex-direction:column;max-height:400px">
-        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-          <div class="slbl" style="margin-bottom:0">&#9888; Pending Tasks</div>
-          <button class="btn btn-primary btn-sm" onclick="openAddTask()">+ Add</button>
-        </div>
-        <div class="task-grid" id="task-grid" style="flex:1;overflow-y:auto"></div>
-      </div>
-
-      <!-- Application Reminders -->
-      <div class="glass2" style="padding:14px 16px;max-height:250px;overflow-y:auto">
-        <div class="slbl" style="margin-bottom:6px">&#128276; Application Reminders</div>
-        <div class="remind-section" id="remind-sec"><div style="color:var(--tm);font-size:12px;font-style:italic">No reminders</div></div>
-      </div>
-
-      <!-- Case inactivity -->
-      <div class="glass2" style="padding:14px 16px;max-height:320px;overflow-y:auto">
-        <div class="slbl" style="margin-bottom:6px">&#9200; Days Since Last Worked On</div>
-        <div class="stale-section" id="stale-sec"><div style="color:var(--tm);font-size:12px;font-style:italic">No students yet</div></div>
       </div>
 
       <!-- Quick Notes -->
@@ -581,6 +599,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
         <div class="note-list" id="note-list"></div>
       </div>
     </div>
+
   </div>
 </div>
 
@@ -1308,27 +1327,28 @@ function openStatModal(key){
 // ════════════════════════════════════════════════════════════
 function renderCharts(){
   const pool=students.filter(s=>s.status!=='Discontinued');
-  const isDark=document.body.getAttribute('data-theme')==='dark';
-  const textColor=isDark?'#94a3b8':'#4a7098';
-  const gridColor=isDark?'rgba(100,116,139,.2)':'rgba(191,219,254,.4)';
-  const countryData={};['Australia','New Zealand','United Kingdom','Canada','Malaysia'].forEach(c=>{const n=pool.filter(s=>s.country===c).length;if(n)countryData[c]=n;});
-  const noCountry=pool.filter(s=>!s.country).length;if(noCountry)countryData['Not Set']=noCountry;
-  const cCanvas=document.getElementById('chart-country');
-  if(chartCountry)chartCountry.destroy();
-  chartCountry=new Chart(cCanvas,{type:'doughnut',data:{labels:Object.keys(countryData),datasets:[{data:Object.values(countryData),backgroundColor:['#3b82f6','#10b981','#8b5cf6','#ef4444','#f59e0b','#6b7280'],borderWidth:2,borderColor:isDark?'#1e293b':'#fff'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:textColor,font:{size:11}}}}}});
+  const theme=document.body.getAttribute('data-theme')||'blue';
+  const isDark=theme==='dark';
+  const isBlue=theme==='blue';
+  const textColor=isDark?'#a8b8cc':isBlue?'#e0f2fe':'#4a7098';
+  const gridColor=isDark?'#374d68':isBlue?'#1a6ba8':'#bfdbfe';
+  const borderColor=isDark?'#243354':isBlue?'#1a6ba8':'#fff';
+
+  // Destroy old country chart if exists (canvas removed from layout)
+  if(typeof chartCountry !== 'undefined' && chartCountry){chartCountry.destroy();chartCountry=null;}
 
   const stageData={};pool.forEach(s=>{const st=s.appStage||'Not Set';stageData[st]=(stageData[st]||0)+1;});
   const topStages=Object.entries(stageData).sort((a,b)=>b[1]-a[1]).slice(0,8);
   const sCanvas=document.getElementById('chart-stage');
   if(chartStage)chartStage.destroy();
-  chartStage=new Chart(sCanvas,{type:'bar',data:{labels:topStages.map(s=>s[0].length>20?s[0].slice(0,18)+'..':s[0]),datasets:[{data:topStages.map(s=>s[1]),backgroundColor:'rgba(59,130,246,0.6)',borderRadius:6,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{ticks:{color:textColor},grid:{color:gridColor}},y:{ticks:{color:textColor,font:{size:10}},grid:{display:false}}}}});
+  chartStage=new Chart(sCanvas,{type:'bar',data:{labels:topStages.map(s=>s[0].length>20?s[0].slice(0,18)+'..':s[0]),datasets:[{data:topStages.map(s=>s[1]),backgroundColor:isBlue?'#7dd3fc':'#3b82f6',borderRadius:6,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{ticks:{color:textColor},grid:{color:gridColor}},y:{ticks:{color:textColor,font:{size:10}},grid:{display:false}}}}});
 
   const taskCanvas=document.getElementById('chart-task-flow');
   const doneTasks=pendingTasks.filter(t=>t.done).length;
   const openTasks=pendingTasks.filter(t=>!t.done).length;
   const autoReminders=students.filter(s=>s.status!=='Discontinued'&&s.moreUni==='Y').length;
   if(chartTaskFlow)chartTaskFlow.destroy();
-  chartTaskFlow=new Chart(taskCanvas,{type:'pie',data:{labels:['Completed Tasks','Open Tasks','Active Application Reminders'],datasets:[{data:[doneTasks,openTasks,autoReminders],backgroundColor:['#10b981','#f59e0b','#3b82f6'],borderColor:isDark?'#1e293b':'#fff',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:textColor,font:{size:11}}}}}});
+  chartTaskFlow=new Chart(taskCanvas,{type:'pie',data:{labels:['Completed Tasks','Open Tasks','Active Application Reminders'],datasets:[{data:[doneTasks,openTasks,autoReminders],backgroundColor:['#10b981','#f59e0b','#3b82f6'],borderColor:borderColor,borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:textColor,font:{size:11}}}}}});
 
   const wfCanvas=document.getElementById('chart-workflow');
   const workflowCounts={
@@ -1339,7 +1359,9 @@ function renderCharts(){
   };
   document.getElementById('workflow-summary-grid').innerHTML=Object.entries(workflowCounts).map(([k,v])=>`<div class="workflow-chip"><div class="v">${v}</div><div class="l">${esc(k)}</div></div>`).join('');
   if(chartWorkflow)chartWorkflow.destroy();
-  chartWorkflow=new Chart(wfCanvas,{type:'radar',data:{labels:Object.keys(workflowCounts),datasets:[{label:'Students',data:Object.values(workflowCounts),backgroundColor:'rgba(59,130,246,.16)',borderColor:'#2563eb',pointBackgroundColor:'#2563eb',pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{r:{angleLines:{color:gridColor},grid:{color:gridColor},pointLabels:{color:textColor,font:{size:11}},ticks:{color:textColor,backdropColor:'transparent'}}}}});
+  const radarBorderColor=isBlue?'#7dd3fc':'#2563eb';
+  const radarBgColor=isBlue?'#1a6ba8':'#dbeafe';
+  chartWorkflow=new Chart(wfCanvas,{type:'radar',data:{labels:Object.keys(workflowCounts),datasets:[{label:'Students',data:Object.values(workflowCounts),backgroundColor:radarBgColor,borderColor:radarBorderColor,pointBackgroundColor:radarBorderColor,pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{r:{angleLines:{color:gridColor},grid:{color:gridColor},pointLabels:{color:textColor,font:{size:11}},ticks:{color:textColor,backdropColor:'transparent'}}}}});
 }
 
 // ════════════════════════════════════════════════════════════
@@ -1460,7 +1482,7 @@ function renderTasks(){
       return `<span class="badge ${cls}" style="font-size:9px;margin-left:4px;padding:1px 5px">${text}</span>`;
     })() : '';
     return `<div class="task-item${t.done?' done':''}"><span class="task-dot ${t.priority}"></span><span class="task-name">${esc(t.studentName)}</span><span class="task-desc">${esc(t.desc)}${dHtml}</span><button class="task-check" onclick="toggleTask(${i})" title="${t.done?'Undo':'Complete'}">&#${t.done?'10226':'10003'};</button><button class="task-del" onclick="deleteTask(${i})" title="Delete">&#215;</button></div>`;
-  }).join(''):'<div style="padding:10px 14px;font-size:12px;color:var(--ok);background:var(--okbg);border-radius:9px;border:1px solid rgba(5,150,105,.2)">&#10003; No pending tasks — click + Add to create one</div>';
+  }).join(''):'<div style="padding:10px 14px;font-size:12px;color:var(--ok);background:var(--okbg);border-radius:9px;border:1px solid #059669">&#10003; No pending tasks — click + Add to create one</div>';
 }
 function toggleTask(i){pendingTasks[i].done=!pendingTasks[i].done;renderTasks();renderProgress();renderCharts();markDirty();}
 function deleteTask(i){pendingTasks.splice(i,1);renderTasks();renderProgress();renderCharts();markDirty();}
