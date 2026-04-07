@@ -181,10 +181,45 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 .sc.ok .sv{color:var(--ok)}.sc.wn .sv{color:var(--wn)}.sc.er .sv{color:var(--er)}.sc.pu .sv{color:#7c3aed}
 .sc-lbl{font-size:11px;color:var(--ts);margin-top:4px;line-height:1.3}
 
-.charts-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.charts-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:14px}
 @media(max-width:900px){.charts-row{grid-template-columns:1fr}}
 .chart-box{padding:14px;min-height:250px}
+.chart-box.tall{min-height:290px}
 .chart-box canvas{max-height:220px}
+.center-action-wrap{display:flex;justify-content:center;align-items:center;margin-bottom:14px}
+.center-action-card{padding:18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:8px;min-height:120px;width:100%}
+.center-action-card p{font-size:12px;color:var(--ts);max-width:620px;line-height:1.5}
+.btn-hero{padding:12px 24px;font-size:14px;font-weight:700;border-radius:999px;box-shadow:0 10px 24px rgba(37,99,235,.18)}
+.info-grid .sc.clickable{cursor:pointer;transition:transform .18s,box-shadow .18s}
+.info-grid .sc.clickable:hover{transform:translateY(-2px);box-shadow:var(--gs-hover)}
+.stat-modal-list,.overview-list{display:flex;flex-direction:column;gap:8px;max-height:420px;overflow-y:auto}
+.stat-item,.overview-item{padding:10px 12px;border-radius:10px;background:var(--b50);border:1px solid var(--b100)}
+.stat-item-head,.overview-item-head{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;margin-bottom:4px}
+.stat-item-title,.overview-item-title{font-size:13px;font-weight:700;color:var(--tp)}
+.stat-item-sub,.overview-item-sub{font-size:11px;color:var(--ts);line-height:1.45}
+.remind-main{flex:1;min-width:0}
+.remind-actions{display:flex;gap:6px;align-items:center;flex-shrink:0}
+.btn-remind-done{background:rgba(5,150,105,.1);color:var(--ok);border:1px solid rgba(5,150,105,.25);padding:4px 9px;font-size:11px;border-radius:7px;cursor:pointer}
+.btn-remind-done:hover{background:rgba(5,150,105,.16)}
+.stale-section{display:flex;flex-direction:column;gap:6px;max-height:280px;overflow-y:auto}
+.stale-item{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;padding:10px 12px;border-radius:10px;background:var(--glass);border:1px solid var(--gb)}
+.stale-main{min-width:0;flex:1}
+.stale-name{font-size:12px;font-weight:700;color:var(--tp)}
+.stale-meta{font-size:11px;color:var(--ts);margin-top:2px;line-height:1.45}
+.stale-days{font-size:11px;font-weight:700;padding:4px 8px;border-radius:999px;white-space:nowrap}
+.stale-days.fresh{background:var(--okbg);color:var(--ok)}
+.stale-days.warn{background:var(--wnbg);color:var(--wn)}
+.stale-days.old{background:var(--erbg);color:var(--er)}
+.scard-latest{margin-top:8px;padding:8px 10px;border-radius:10px;background:rgba(219,234,254,.18);border:1px solid rgba(191,219,254,.45)}
+.scard-latest .item{font-size:11px;color:var(--ts);line-height:1.45;margin-bottom:5px}
+.scard-latest .item:last-child{margin-bottom:0}
+.scard-latest strong{color:var(--tp)}
+.mobile-dbl-hint{display:none;font-size:10px;color:var(--tm);margin-top:3px}
+.workflow-summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:8px;margin:0 0 12px 0}
+.workflow-chip{padding:10px 12px;border-radius:10px;background:var(--b50);border:1px solid var(--b100)}
+.workflow-chip .v{font-size:22px;font-weight:700;color:var(--b600);line-height:1}
+.workflow-chip .l{font-size:11px;color:var(--ts);margin-top:4px}
+
 
 /* Intake tabs */
 .intake-tabs{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:8px}
@@ -384,7 +419,7 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
 /* Responsive */
 @media(max-width:1100px){.p2-layout{grid-template-columns:1fr}.p2-list-panel,.p2-detail-panel{max-height:none}}
 @media(max-width:900px){.cards-grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}.frow,.frow3{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}.charts-row{grid-template-columns:1fr}}
-@media(max-width:600px){.app{padding:0 8px 20px}.topnav{padding:10px 12px}.brand-text .title{font-size:14px}.nav-tab{padding:6px 10px;font-size:11px}.cards-grid{grid-template-columns:1fr}.p2-layout{grid-template-columns:1fr}.dash-layout{grid-template-columns:1fr}}
+@media(max-width:600px){.app{padding:0 8px 20px}.topnav{padding:10px 12px}.brand-text .title{font-size:14px}.nav-tab{padding:6px 10px;font-size:11px}.cards-grid{grid-template-columns:1fr}.p2-layout{grid-template-columns:1fr}.dash-layout{grid-template-columns:1fr}.mobile-dbl-hint{display:block}}
 </style>
 </head>
 <body data-theme="blue">
@@ -452,9 +487,13 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
           <div class="progress-label"><span>Pending Tasks Completion</span><span id="prog-task-pct">0%</span></div>
           <div class="progress-track"><div class="progress-fill green" id="prog-task-bar" style="width:0%"></div></div>
         </div>
-        <div class="progress-bar-wrap">
-          <div class="progress-label"><span>Application Submitted</span><span id="prog-app-pct">0%</span></div>
-          <div class="progress-track"><div class="progress-fill blue" id="prog-app-bar" style="width:0%"></div></div>
+      </div>
+
+      <div class="center-action-wrap">
+        <div class="glass2 center-action-card">
+          <div class="slbl" style="margin-bottom:0">&#128221; Quick Case Update</div>
+          <p>Collect a student's present situation instantly, add a task with deadline, and update the dashboard and student file areas automatically.</p>
+          <button class="btn btn-primary btn-hero" onclick="openSituationCollector()">Update Present Situation</button>
         </div>
       </div>
 
@@ -484,6 +523,15 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
         <div class="glass2 chart-box">
           <div class="slbl">&#128203; Stage Distribution</div>
           <canvas id="chart-stage"></canvas>
+        </div>
+        <div class="glass2 chart-box tall">
+          <div class="slbl">&#9989; Task Completion Flow</div>
+          <canvas id="chart-task-flow"></canvas>
+        </div>
+        <div class="glass2 chart-box tall">
+          <div class="slbl">&#128260; Workflow Timeline Snapshot</div>
+          <div class="workflow-summary-grid" id="workflow-summary-grid"></div>
+          <canvas id="chart-workflow"></canvas>
         </div>
       </div>
 
@@ -517,6 +565,12 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
         <div class="remind-section" id="remind-sec"><div style="color:var(--tm);font-size:12px;font-style:italic">No reminders</div></div>
       </div>
 
+      <!-- Case inactivity -->
+      <div class="glass2" style="padding:14px 16px;max-height:320px;overflow-y:auto">
+        <div class="slbl" style="margin-bottom:6px">&#9200; Days Since Last Worked On</div>
+        <div class="stale-section" id="stale-sec"><div style="color:var(--tm);font-size:12px;font-style:italic">No students yet</div></div>
+      </div>
+
       <!-- Quick Notes -->
       <div class="glass2 quick-notes">
         <div class="slbl">&#128221; Quick Notes</div>
@@ -536,8 +590,8 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
     <div style="display:flex;align-items:center;gap:12px">
       <div style="font-size:15px;font-weight:600;color:var(--tp)">Student Files</div>
       <div class="view-toggle" id="view-toggle">
-        <button class="view-toggle-btn" onclick="setStudentView('cards')" id="vt-cards">&#9635; Cards</button>
-        <button class="view-toggle-btn active" onclick="setStudentView('detail')" id="vt-detail">&#9776; Detail</button>
+        <button class="view-toggle-btn active" onclick="setStudentView('cards')" id="vt-cards">&#9635; Cards</button>
+        <button class="view-toggle-btn" onclick="setStudentView('detail')" id="vt-detail">&#9776; Detail</button>
       </div>
     </div>
     <div style="display:flex;gap:7px;flex-wrap:wrap;align-items:center">
@@ -551,17 +605,17 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
   </div>
 
   <!-- Cards view -->
-  <div id="p2-cards-view" style="display:none">
+  <div id="p2-cards-view" style="display:block">
     <div class="cards-outer" id="cards-outer-p2"></div>
   </div>
 
   <!-- Detail view -->
-  <div id="p2-detail-view">
+  <div id="p2-detail-view" style="display:none">
     <div class="p2-layout">
       <div class="p2-list-panel">
         <div class="glass" style="overflow:hidden">
           <div class="p2-list-hdr">
-            <div style="font-size:13px;font-weight:600;color:var(--tp)">Students <span id="p2-count" style="font-weight:400;color:var(--tm)"></span></div>
+            <div><div style="font-size:13px;font-weight:600;color:var(--tp)">Students <span id="p2-count" style="font-weight:400;color:var(--tm)"></span></div><div class="mobile-dbl-hint">Double tap a student name on mobile to jump to details</div></div>
             <input class="p2-search" id="p2-search" type="text" placeholder="&#128269; Search students..." oninput="renderStudentList()">
           </div>
           <div id="p2-student-list" style="max-height:calc(100vh - 260px);overflow-y:auto"></div>
@@ -764,6 +818,46 @@ body::before{content:'';position:fixed;top:-120px;right:-120px;width:500px;heigh
   </div>
 </div>
 
+<!-- Statistic Details Modal -->
+<div class="mo" id="stat-mo">
+  <div class="modal modal-lg">
+    <div class="modal-hdr"><h3 id="stat-mo-title">Statistic Details</h3><button class="modal-close" onclick="closeMo('stat-mo')">&#215;</button></div>
+    <div class="modal-body"><div class="stat-modal-list" id="stat-mo-list"></div></div>
+    <div class="modal-foot"><button class="btn" style="border-color:#d1d5db;color:#6b7280" onclick="closeMo('stat-mo')">Close</button></div>
+  </div>
+</div>
+
+<!-- Quick Situation Collector -->
+<div class="mo" id="situation-mo">
+  <div class="modal">
+    <div class="modal-hdr"><h3>Update Present Situation</h3><button class="modal-close" onclick="closeMo('situation-mo')">&#215;</button></div>
+    <div class="modal-body">
+      <div class="fgroup"><label>Student</label><select id="sit-student"></select></div>
+      <div class="fgroup"><label>Present Situation</label><textarea id="sit-text" placeholder="Write the latest present situation..." style="min-height:90px"></textarea></div>
+      <div class="fsep">Optional Task</div>
+      <div class="fgroup"><label>Task Description</label><textarea id="sit-task-desc" placeholder="Create a follow-up task (optional)..." style="min-height:70px"></textarea></div>
+      <div class="frow">
+        <div class="fgroup"><label>Priority</label><select id="sit-task-priority"><option value="blue">Normal</option><option value="amber">Medium</option><option value="red">Urgent</option></select></div>
+        <div class="fgroup"><label>Deadline</label><input id="sit-task-deadline" type="date"></div>
+      </div>
+    </div>
+    <div class="modal-foot"><button class="btn" style="border-color:#d1d5db;color:#6b7280" onclick="closeMo('situation-mo')">Cancel</button><button class="btn btn-primary" onclick="saveSituationCollector()">Save Update</button></div>
+  </div>
+</div>
+
+<!-- Reminder Completion Modal -->
+<div class="mo" id="remind-complete-mo">
+  <div class="modal modal-lg">
+    <div class="modal-hdr"><h3>Complete Application Reminder</h3><button class="modal-close" onclick="closeMo('remind-complete-mo')">&#215;</button></div>
+    <div class="modal-body">
+      <div class="fgroup"><label>Student</label><input id="remind-student-name" type="text" readonly></div>
+      <div class="fgroup"><label>How many application entries do you want to add?</label><select id="remind-entry-count" onchange="renderReminderCompletionRows()"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></div>
+      <div id="remind-complete-rows"></div>
+    </div>
+    <div class="modal-foot"><button class="btn" style="border-color:#d1d5db;color:#6b7280" onclick="closeMo('remind-complete-mo')">Cancel</button><button class="btn btn-primary" onclick="saveReminderCompletion()">Mark Completed</button></div>
+  </div>
+</div>
+
 <!-- Global Search Overlay -->
 <div class="search-overlay" id="search-overlay" onclick="if(event.target===this)closeGlobalSearch()">
   <div class="search-popup">
@@ -858,8 +952,11 @@ let students=[], pendingTasks=[], quickNotes=[];
 let delIdx=null,editIdx=null,pendingImport=null,isDirty=false;
 let activePage='p1',sumIntake='ALL',sumFilter='all';
 let selectedStudentId=null,addInfoIdx=null,uniModalIdx=null;
-let studentView='detail';
-let chartCountry=null,chartStage=null;
+let studentView='cards';
+let chartCountry=null,chartStage=null,chartTaskFlow=null,chartWorkflow=null;
+let currentStatKey='';
+let reminderCompleteIdx=null;
+let studentTapTimer=null;
 
 // ════════════════════════════════════════════════════════════
 // THEME
@@ -924,7 +1021,7 @@ function migrateData(){
     if(s.coe==='Yes')s.coe='Y';if(s.coe==='No')s.coe='N';
     if(s.visaNext==='Yes')s.visaNext='Y';if(s.visaNext==='No')s.visaNext='N';
     if(!s.phone)s.phone='';if(!s.appStage)s.appStage='';
-    if(!s.remarksHistory)s.remarksHistory=[];if(!s.situationHistory)s.situationHistory=[];
+    if(!s.remarksHistory)s.remarksHistory=[];if(!s.situationHistory)s.situationHistory=[];if(!s.applicationCompletions)s.applicationCompletions=[];
     // Migrate old uni data to uniApplications array
     if(!s.uniApplications)s.uniApplications=[];
     if(s.universities&&typeof s.universities==='object'){
@@ -955,7 +1052,7 @@ async function pushToGitHub(){
   setSyncStatus('syncing');
   try{
     const payload={
-      _meta:{saved:new Date().toISOString(),version:7,count:students.length},
+      _meta:{saved:new Date().toISOString(),version:8,count:students.length},
       students,pendingTasks,quickNotes,
       log:(()=>{try{return JSON.parse(localStorage.getItem(LOGK)||'[]');}catch(e){return[];}})()
     };
@@ -1095,7 +1192,7 @@ function updateLastAction(msg){
 // DEFAULT DATA
 // ════════════════════════════════════════════════════════════
 function blankStudent(name){
-  return{id:Date.now()+Math.random(),name:name||'New Student',country:'',intake:'',status:'Active',appStage:'',phone:'',uniCount:0,moreUni:'N',moreUniDate:'',bankMatured:'',bankMonths:'',bankExpectedDate:'',defer:'N',gsApplied:'N',gsStatus:'',coe:'N',visaPrep:'',visaNext:'',lastUpdated:Date.now(),remarks:'',situation:'',remarksHistory:[],situationHistory:[],uniApplications:[]};
+  return{id:Date.now()+Math.random(),name:name||'New Student',country:'',intake:'',status:'Active',appStage:'',phone:'',uniCount:0,moreUni:'N',moreUniDate:'',bankMatured:'',bankMonths:'',bankExpectedDate:'',defer:'N',gsApplied:'N',gsStatus:'',coe:'N',visaPrep:'',visaNext:'',lastUpdated:Date.now(),remarks:'',situation:'',remarksHistory:[],situationHistory:[],applicationCompletions:[],uniApplications:[]};
 }
 function initDefault(){
   students=[];
@@ -1106,7 +1203,7 @@ function initDefault(){
 // DEBOUNCE UTILITY
 // ════════════════════════════════════════════════════════════
 function debounce(fn,ms){let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>fn(...a),ms);};}
-const debouncedRenderDash=debounce(()=>{renderIntakeTabs();updateSummary();renderReminders();renderTasks();renderProgress();renderQuickNotes();renderActionHistory();},300);
+const debouncedRenderDash=debounce(()=>{renderIntakeTabs();updateSummary();renderReminders();renderTasks();renderProgress();renderQuickNotes();renderActionHistory();renderStaleStudents();},300);
 const debouncedRenderCharts=debounce(()=>renderCharts(),600);
 const debouncedRenderList=debounce(()=>renderStudentList(),150);
 
@@ -1127,7 +1224,7 @@ function uf(idx,field,val){
 // RENDER ALL — charts only on dashboard or explicit request
 // ════════════════════════════════════════════════════════════
 function renderAll(){
-  renderIntakeTabs();updateSummary();renderReminders();renderTasks();renderProgress();renderQuickNotes();renderActionHistory();
+  renderIntakeTabs();updateSummary();renderReminders();renderTasks();renderProgress();renderQuickNotes();renderActionHistory();renderStaleStudents();
   if(activePage==='p1')renderCharts();
   if(activePage==='p2'){renderStudentList();renderDetail();if(studentView==='cards')renderCardsP2();}
 }
@@ -1145,7 +1242,6 @@ function setSumFilter(f){sumFilter=f;document.querySelectorAll('#sum-filter-bar 
 function updateSummary(){
   const pool=sumIntake==='ALL'?students.filter(s=>s.status!=='Discontinued'):students.filter(s=>s.status!=='Discontinued'&&s.intake===sumIntake);
   const auPool=pool.filter(s=>s.country==='Australia');
-  // Country blocks
   const cblock=document.getElementById('sum-countries');
   const countryOrder=['Australia','New Zealand','United Kingdom','Canada','Malaysia'];
   cblock.innerHTML=countryOrder.map(c=>{
@@ -1154,26 +1250,57 @@ function updateSummary(){
     return `<div class="country-block"><div class="country-block-hdr"><span class="country-flag">${FLAGS[c]||''}</span><span class="country-name">${c}</span><span style="margin-left:auto;font-size:12px;color:var(--tm);background:var(--b100);padding:2px 8px;border-radius:8px">${cp.length}</span></div><div class="country-mini-grid">${aup?`<div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.gsApplied==='Y').length}</div><div class="mini-lbl">GS Applied</div></div><div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.gsStatus==='Cleared').length}</div><div class="mini-lbl">GS Cleared</div></div><div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.coe==='Y').length}</div><div class="mini-lbl">CoE Received</div></div>`:''}<div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.bankMatured==='Y').length}</div><div class="mini-lbl">Bank Matured</div></div><div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.visaNext==='Y').length}</div><div class="mini-lbl">Visa Next</div></div><div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.defer==='Y').length}</div><div class="mini-lbl">Deferrals</div></div></div></div>`;
   }).join('')||'<div style="color:var(--tm);font-size:12px;font-style:italic;padding:8px">No country data yet</div>';
 
-  // Stat cards
-  const stageCards=APP_STAGES.filter(s=>s).map(stage=>{const c=pool.filter(s=>s.appStage===stage).length;return c?{cls:'pu',val:c,lbl:stage,f:'stage'}:null;}).filter(Boolean);
+  const stageCards=APP_STAGES.filter(s=>s).map(stage=>{const c=pool.filter(st=>st.appStage===stage).length;return c?{cls:'pu',val:c,lbl:stage,f:'stage',key:'stage::'+stage}:null;}).filter(Boolean);
   const sections={all:[
-    {cls:'def',val:pool.length,lbl:'Total Active',f:'all'},
-    {cls:'ok',val:pool.filter(s=>s.bankMatured==='Y').length,lbl:'Bank Matured',f:'bank'},
-    {cls:'wn',val:pool.filter(s=>s.bankMatured==='N'||s.bankMatured==='havent opened yet').length,lbl:'Bank Pending',f:'bank'},
-    {cls:'def',val:auPool.filter(s=>s.gsApplied==='Y').length,lbl:'GS Applied (AU)',f:'gs'},
-    {cls:'ok',val:auPool.filter(s=>s.gsStatus==='Cleared').length,lbl:'GS Cleared (AU)',f:'gs'},
-    {cls:'er',val:auPool.filter(s=>s.gsStatus==='Rejected').length,lbl:'GS Rejected (AU)',f:'gs'},
-    {cls:'def',val:auPool.filter(s=>s.coe==='Y').length,lbl:'CoE Received (AU)',f:'gs'},
-    {cls:'ok',val:pool.filter(s=>s.visaNext==='Y').length,lbl:'Visa Next Intake',f:'visa'},
-    {cls:'er',val:pool.filter(s=>s.visaNext==='N').length,lbl:'Not Next Intake',f:'visa'},
-    {cls:'wn',val:pool.filter(s=>s.defer==='Y').length,lbl:'Deferrals',f:'visa'},
-    {cls:'ok',val:pool.filter(s=>s.visaPrep==='Ready').length,lbl:'Visa Ready',f:'visa'},
-    {cls:'def',val:pool.reduce((a,s)=>a+(+s.uniCount||0),0),lbl:'Unis Applied',f:'uni'},
-    {cls:'wn',val:pool.filter(s=>s.moreUni==='Y').length,lbl:'Will Apply More',f:'uni'},
+    {cls:'def',val:pool.length,lbl:'Total Active',f:'all',key:'all::total'},
+    {cls:'ok',val:pool.filter(s=>s.bankMatured==='Y').length,lbl:'Bank Matured',f:'bank',key:'bank::matured'},
+    {cls:'wn',val:pool.filter(s=>s.bankMatured==='N'||s.bankMatured==='havent opened yet').length,lbl:'Bank Pending',f:'bank',key:'bank::pending'},
+    {cls:'def',val:auPool.filter(s=>s.gsApplied==='Y').length,lbl:'GS Applied (AU)',f:'gs',key:'gs::applied'},
+    {cls:'ok',val:auPool.filter(s=>s.gsStatus==='Cleared').length,lbl:'GS Cleared (AU)',f:'gs',key:'gs::cleared'},
+    {cls:'er',val:auPool.filter(s=>s.gsStatus==='Rejected').length,lbl:'GS Rejected (AU)',f:'gs',key:'gs::rejected'},
+    {cls:'def',val:auPool.filter(s=>s.coe==='Y').length,lbl:'CoE Received (AU)',f:'gs',key:'gs::coe'},
+    {cls:'ok',val:pool.filter(s=>s.visaNext==='Y').length,lbl:'Visa Next Intake',f:'visa',key:'visa::next'},
+    {cls:'er',val:pool.filter(s=>s.visaNext==='N').length,lbl:'Not Next Intake',f:'visa',key:'visa::notnext'},
+    {cls:'wn',val:pool.filter(s=>s.defer==='Y').length,lbl:'Deferrals',f:'visa',key:'visa::defer'},
+    {cls:'ok',val:pool.filter(s=>s.visaPrep==='Ready').length,lbl:'Visa Ready',f:'visa',key:'visa::ready'},
+    {cls:'def',val:pool.reduce((a,s)=>a+(+s.uniCount||0),0),lbl:'Unis Applied',f:'uni',key:'uni::count'},
+    {cls:'wn',val:pool.filter(s=>s.moreUni==='Y').length,lbl:'Will Apply More',f:'uni',key:'uni::more'},
     ...stageCards
   ]};
   const cards=sumFilter==='all'?sections.all.filter(c=>c.f!=='stage'):sections.all.filter(c=>c.f===sumFilter||c.f==='all');
-  document.getElementById('info-grid').innerHTML=cards.map(c=>`<div class="sc ${c.cls}"><div class="sv">${c.val}</div><div class="sc-lbl">${esc(c.lbl)}</div></div>`).join('');
+  document.getElementById('info-grid').innerHTML=cards.map(c=>`<div class="sc ${c.cls} clickable" onclick="openStatModal('${esc(c.key)}')"><div class="sv">${c.val}</div><div class="sc-lbl">${esc(c.lbl)}</div></div>`).join('');
+}
+
+function getStatEntries(key){
+  const pool=sumIntake==='ALL'?students.filter(s=>s.status!=='Discontinued'):students.filter(s=>s.status!=='Discontinued'&&s.intake===sumIntake);
+  const make=(arr, title, getCondition)=>({title, items:arr.map(s=>({name:s.name, meta:[s.country||'No country', s.intake||'No intake', s.appStage||'No stage'].join(' · '), condition:getCondition(s)}))});
+  if(key==='all::total') return make(pool,'Active Students',s=>`Current situation: ${s.situation||'Not updated'}`);
+  if(key==='bank::matured') return make(pool.filter(s=>s.bankMatured==='Y'),'Bank Matured',s=>`Bank matured${s.bankMonths?` (${s.bankMonths})`:''}`);
+  if(key==='bank::pending') return make(pool.filter(s=>s.bankMatured==='N'||s.bankMatured==='havent opened yet'),'Bank Pending',s=>s.bankMatured==='havent opened yet'?'Bank not opened yet':`Expected maturity: ${s.bankExpectedDate||'Not set'}`);
+  if(key==='gs::applied') return make(pool.filter(s=>s.country==='Australia'&&s.gsApplied==='Y'),'GS Applied (AU)',s=>`GS status: ${s.gsStatus||'Applied'}`);
+  if(key==='gs::cleared') return make(pool.filter(s=>s.country==='Australia'&&s.gsStatus==='Cleared'),'GS Cleared (AU)',s=>`GS cleared · CoE: ${s.coe||'N'}`);
+  if(key==='gs::rejected') return make(pool.filter(s=>s.country==='Australia'&&s.gsStatus==='Rejected'),'GS Rejected (AU)',s=>`GS rejected · Situation: ${s.situation||'Not updated'}`);
+  if(key==='gs::coe') return make(pool.filter(s=>s.country==='Australia'&&s.coe==='Y'),'CoE Received (AU)',s=>`CoE received · GS: ${s.gsStatus||s.gsApplied}`);
+  if(key==='visa::next') return make(pool.filter(s=>s.visaNext==='Y'),'Visa Next Intake',s=>`Visa readiness: ${s.visaPrep||'Not set'}`);
+  if(key==='visa::notnext') return make(pool.filter(s=>s.visaNext==='N'),'Not Next Intake',s=>`Visa readiness: ${s.visaPrep||'Not set'}`);
+  if(key==='visa::defer') return make(pool.filter(s=>s.defer==='Y'),'Deferrals',s=>`Deferred · Stage: ${s.appStage||'Not set'}`);
+  if(key==='visa::ready') return make(pool.filter(s=>s.visaPrep==='Ready'),'Visa Ready',s=>`Ready for visa · Next intake: ${s.visaNext||'Not set'}`);
+  if(key==='uni::count') return {title:'University Applications Count', items:pool.filter(s=>(+s.uniCount||0)>0 || (s.uniApplications||[]).length>0).map(s=>({name:s.name, meta:[s.country||'No country', s.intake||'No intake'].join(' · '), condition:`${(+s.uniCount||0) || s.uniApplications.length} counted application(s)`}))};
+  if(key==='uni::more') return make(pool.filter(s=>s.moreUni==='Y'),'Will Apply More',s=>`More applications due by: ${s.moreUniDate||'No deadline set'}`);
+  if(key.indexOf('stage::')===0){
+    const stage=key.split('stage::')[1];
+    return make(pool.filter(s=>s.appStage===stage),stage,s=>`Present situation: ${s.situation||'Not updated'}`);
+  }
+  return {title:'Statistic Details', items:[]};
+}
+
+function openStatModal(key){
+  currentStatKey=key;
+  const data=getStatEntries(key);
+  document.getElementById('stat-mo-title').textContent=data.title;
+  const list=document.getElementById('stat-mo-list');
+  list.innerHTML=data.items.length?data.items.map(item=>`<div class="stat-item"><div class="stat-item-head"><div class="stat-item-title">${esc(item.name)}</div></div><div class="stat-item-sub">${esc(item.meta)}</div><div class="stat-item-sub" style="margin-top:4px"><strong>Condition:</strong> ${esc(item.condition)}</div></div>`).join(''):'<div style="padding:16px;text-align:center;color:var(--tm)">No students found in this group</div>';
+  document.getElementById('stat-mo').classList.add('open');
 }
 
 // ════════════════════════════════════════════════════════════
@@ -1183,38 +1310,48 @@ function renderCharts(){
   const pool=students.filter(s=>s.status!=='Discontinued');
   const isDark=document.body.getAttribute('data-theme')==='dark';
   const textColor=isDark?'#94a3b8':'#4a7098';
-  // Country chart
+  const gridColor=isDark?'rgba(100,116,139,.2)':'rgba(191,219,254,.4)';
   const countryData={};['Australia','New Zealand','United Kingdom','Canada','Malaysia'].forEach(c=>{const n=pool.filter(s=>s.country===c).length;if(n)countryData[c]=n;});
   const noCountry=pool.filter(s=>!s.country).length;if(noCountry)countryData['Not Set']=noCountry;
   const cCanvas=document.getElementById('chart-country');
   if(chartCountry)chartCountry.destroy();
   chartCountry=new Chart(cCanvas,{type:'doughnut',data:{labels:Object.keys(countryData),datasets:[{data:Object.values(countryData),backgroundColor:['#3b82f6','#10b981','#8b5cf6','#ef4444','#f59e0b','#6b7280'],borderWidth:2,borderColor:isDark?'#1e293b':'#fff'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:textColor,font:{size:11}}}}}});
 
-  // Stage chart
   const stageData={};pool.forEach(s=>{const st=s.appStage||'Not Set';stageData[st]=(stageData[st]||0)+1;});
   const topStages=Object.entries(stageData).sort((a,b)=>b[1]-a[1]).slice(0,8);
   const sCanvas=document.getElementById('chart-stage');
   if(chartStage)chartStage.destroy();
-  chartStage=new Chart(sCanvas,{type:'bar',data:{labels:topStages.map(s=>s[0].length>20?s[0].slice(0,18)+'..':s[0]),datasets:[{data:topStages.map(s=>s[1]),backgroundColor:'rgba(59,130,246,0.6)',borderRadius:6,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{ticks:{color:textColor},grid:{color:isDark?'rgba(100,116,139,.2)':'rgba(191,219,254,.4)'}},y:{ticks:{color:textColor,font:{size:10}},grid:{display:false}}}}});
+  chartStage=new Chart(sCanvas,{type:'bar',data:{labels:topStages.map(s=>s[0].length>20?s[0].slice(0,18)+'..':s[0]),datasets:[{data:topStages.map(s=>s[1]),backgroundColor:'rgba(59,130,246,0.6)',borderRadius:6,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',plugins:{legend:{display:false}},scales:{x:{ticks:{color:textColor},grid:{color:gridColor}},y:{ticks:{color:textColor,font:{size:10}},grid:{display:false}}}}});
+
+  const taskCanvas=document.getElementById('chart-task-flow');
+  const doneTasks=pendingTasks.filter(t=>t.done).length;
+  const openTasks=pendingTasks.filter(t=>!t.done).length;
+  const autoReminders=students.filter(s=>s.status!=='Discontinued'&&s.moreUni==='Y').length;
+  if(chartTaskFlow)chartTaskFlow.destroy();
+  chartTaskFlow=new Chart(taskCanvas,{type:'pie',data:{labels:['Completed Tasks','Open Tasks','Active Application Reminders'],datasets:[{data:[doneTasks,openTasks,autoReminders],backgroundColor:['#10b981','#f59e0b','#3b82f6'],borderColor:isDark?'#1e293b':'#fff',borderWidth:2}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{color:textColor,font:{size:11}}}}}});
+
+  const wfCanvas=document.getElementById('chart-workflow');
+  const workflowCounts={
+    'New / Pending': pool.filter(s=>!s.appStage || ['Documents from student are pending','Looking for Universities','Havent made up his mind yet'].includes(s.appStage)).length,
+    'Application Moving': pool.filter(s=>['With Agent','Submitted to Uni','Under Review','Cond. Offer Received','Uncond Offer Received','Scholarship Applied'].includes(s.appStage)).length,
+    'Visa / Finalization': pool.filter(s=>['GS Preparation Ongoing','GS Interview Pending','GS Submitted','Revised inf requested for GS','Tuition Fee & OSHC Paid','Tuition Fee & OHSC payment Pending','COE Received','Visa Preparation Ongoing','Documentation Stage','Visa Submitted'].includes(s.appStage)).length,
+    'Issues / Hold': pool.filter(s=>['Rejected by University','Student Left HBD','Misinformed counsellor','GS Rejected','Refund Requested','Refund Processed','Refund Under Review','Language test retake required','Agent asked for new inf.'].includes(s.appStage)).length,
+  };
+  document.getElementById('workflow-summary-grid').innerHTML=Object.entries(workflowCounts).map(([k,v])=>`<div class="workflow-chip"><div class="v">${v}</div><div class="l">${esc(k)}</div></div>`).join('');
+  if(chartWorkflow)chartWorkflow.destroy();
+  chartWorkflow=new Chart(wfCanvas,{type:'radar',data:{labels:Object.keys(workflowCounts),datasets:[{label:'Students',data:Object.values(workflowCounts),backgroundColor:'rgba(59,130,246,.16)',borderColor:'#2563eb',pointBackgroundColor:'#2563eb',pointRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{r:{angleLines:{color:gridColor},grid:{color:gridColor},pointLabels:{color:textColor,font:{size:11}},ticks:{color:textColor,backdropColor:'transparent'}}}}});
 }
 
 // ════════════════════════════════════════════════════════════
 // PROGRESS BARS
 // ════════════════════════════════════════════════════════════
 function renderProgress(){
-  // Task completion (Manual + Application Reminders)
   const moreAppsCount = students.filter(s => s.status !== 'Discontinued' && s.moreUni === 'Y').length;
   const total = pendingTasks.length + moreAppsCount;
   const done = pendingTasks.filter(t => t.done).length;
   const taskPct=total?Math.round(done/total*100):100;
   document.getElementById('prog-task-pct').textContent=taskPct+'%';
   document.getElementById('prog-task-bar').style.width=taskPct+'%';
-  // App submitted (Main stages)
-  const active=students.filter(s=>s.status!=='Discontinued');
-  const submitted=active.filter(s=>s.appStage&&s.appStage!=='With Agent'&&s.appStage!=='').length;
-  const appPct=active.length?Math.round(submitted/active.length*100):0;
-  document.getElementById('prog-app-pct').textContent=appPct+'%';
-  document.getElementById('prog-app-bar').style.width=appPct+'%';
 }
 
 // ════════════════════════════════════════════════════════════
@@ -1225,10 +1362,69 @@ function renderReminders(){
   const pending=students.filter(s=>s.status!=='Discontinued'&&s.moreUni==='Y');
   if(!pending.length){sec.innerHTML='<div style="color:var(--tm);font-size:12px;font-style:italic">No reminders</div>';return;}
   sec.innerHTML=pending.map(s=>{
+    const idx=students.findIndex(x=>x.id===s.id);
     let info='',urgent=false;
-    if(s.moreUniDate){const diff=Math.floor((new Date(s.moreUniDate)-Date.now())/(86400000));if(diff<0){info=` — <strong>${Math.abs(diff)}d overdue</strong>`;urgent=true;}else if(diff===0){info=' — <strong>due today!</strong>';urgent=true;}else{info=` — <strong>${diff}d left</strong> (${s.moreUniDate})`;if(diff<=7)urgent=true;}}
-    return `<div class="remind-item${urgent?' urgent':''}">&#128276; <span><strong>${esc(s.name)}</strong> — need to submit application${info}</span></div>`;
+    if(s.moreUniDate){const diff=Math.floor((new Date(s.moreUniDate)-Date.now())/(86400000));if(diff<0){info=`<strong>${Math.abs(diff)}d overdue</strong>`;urgent=true;}else if(diff===0){info='<strong>due today!</strong>';urgent=true;}else{info=`<strong>${diff}d left</strong> (${s.moreUniDate})`;if(diff<=7)urgent=true;}}
+    return `<div class="remind-item${urgent?' urgent':''}"><div class="remind-main"><div><strong>${esc(s.name)}</strong> — need to submit application${info?` · ${info}`:''}</div><div style="font-size:11px;margin-top:4px">Country: ${esc(s.country||'Not set')} · Intake: ${esc(s.intake||'Not set')}</div></div><div class="remind-actions"><button class="btn-remind-done" onclick="openReminderCompletion(${idx})">Mark completed</button></div></div>`;
   }).join('');
+}
+
+function renderStaleStudents(){
+  const sec=document.getElementById('stale-sec');
+  if(!sec)return;
+  const active=students.filter(s=>s.status!=='Discontinued').sort((a,b)=>(a.lastUpdated||0)-(b.lastUpdated||0));
+  if(!active.length){sec.innerHTML='<div style="color:var(--tm);font-size:12px;font-style:italic">No students yet</div>';return;}
+  sec.innerHTML=active.map(s=>{
+    const days=Math.floor((Date.now()-(s.lastUpdated||Date.now()))/86400000);
+    const cls=days<3?'fresh':days<7?'warn':'old';
+    const idx=students.findIndex(x=>x.id===s.id);
+    return `<div class="stale-item"><div class="stale-main"><div class="stale-name">${esc(s.name)}</div><div class="stale-meta">${esc(s.country||'No country')} · ${esc(s.intake||'No intake')} · Last note: ${esc(s.situation||s.remarks||'No update yet')}</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px"><span class="stale-days ${cls}">${days} day${days!==1?'s':''}</span><button class="btn btn-primary btn-sm" onclick="openAddInfo(${idx})">Update</button></div></div>`;
+  }).join('');
+}
+
+function openReminderCompletion(idx){
+  reminderCompleteIdx=idx;
+  const s=students[idx];
+  document.getElementById('remind-student-name').value=s.name;
+  document.getElementById('remind-entry-count').value='1';
+  renderReminderCompletionRows();
+  document.getElementById('remind-complete-mo').classList.add('open');
+}
+function renderReminderCompletionRows(){
+  const count=parseInt(document.getElementById('remind-entry-count').value,10)||1;
+  const wrap=document.getElementById('remind-complete-rows');
+  wrap.innerHTML=Array.from({length:count},(_,i)=>`<div style="padding:12px;border:1px solid var(--b100);border-radius:10px;margin-bottom:10px"><div class="fsep" style="margin-top:0">Application ${i+1}</div><div class="frow3"><div class="fgroup"><label>Country</label><select id="rc-country-${i}">${COUNTRIES.map(o=>`<option value="${o}">${o||'-- Select --'}</option>`).join('')}</select></div><div class="fgroup"><label>University</label><input id="rc-uni-${i}" type="text" placeholder="University name"></div><div class="fgroup"><label>Intake</label><select id="rc-intake-${i}">${INTAKES.map(o=>`<option value="${o}">${o||'-- Select --'}</option>`).join('')}</select></div></div><div class="fgroup"><label>Subject / Program</label><input id="rc-subject-${i}" type="text" placeholder="Subject or program"></div></div>`).join('');
+}
+function saveReminderCompletion(){
+  if(reminderCompleteIdx===null)return;
+  const s=students[reminderCompleteIdx];
+  const count=parseInt(document.getElementById('remind-entry-count').value,10)||1;
+  const items=[];
+  for(let i=0;i<count;i++){
+    const country=document.getElementById(`rc-country-${i}`).value;
+    const university=document.getElementById(`rc-uni-${i}`).value.trim();
+    const intake=document.getElementById(`rc-intake-${i}`).value;
+    const subject=document.getElementById(`rc-subject-${i}`).value.trim();
+    if(!university || !subject){alert('Please enter university and subject for each application entry.');return;}
+    items.push({country:country||s.country||'', university, intake:intake||s.intake||'', subject, ts:Date.now()});
+  }
+  if(!s.applicationCompletions)s.applicationCompletions=[];
+  if(!s.uniApplications)s.uniApplications=[];
+  items.forEach(item=>{
+    s.applicationCompletions.unshift(item);
+    s.uniApplications.push({country:item.country||s.country||'', university:item.university, program:item.subject});
+  });
+  s.uniCount = Math.max(+s.uniCount||0, s.uniApplications.length);
+  s.moreUni='N';
+  s.moreUniDate='';
+  s.lastUpdated=Date.now();
+  s.remarks=`Application reminder completed for ${items.map(i=>`${i.university} (${i.subject})`).join(', ')}`;
+  if(!s.remarksHistory)s.remarksHistory=[];
+  s.remarksHistory.unshift({ts:Date.now(),text:s.remarks});
+  addLog('Application reminder completed: '+s.name);
+  closeMo('remind-complete-mo');
+  renderAll();
+  markDirty();
 }
 
 // ════════════════════════════════════════════════════════════
@@ -1248,8 +1444,8 @@ function saveNewTask(){
   const priority=document.getElementById('task-priority').value;
   const deadline=document.getElementById('task-deadline').value;
   const studentName=studentId?students.find(s=>String(s.id)===studentId)?.name:'General';
-  pendingTasks.unshift({id:Date.now(),studentName:studentName||'General',desc,priority,deadline,done:false,ts:Date.now()});
-  closeMo('task-mo');renderTasks();renderProgress();markDirty();
+  pendingTasks.unshift({id:Date.now(),studentName:studentName||'General',studentId:studentId||'',desc,priority,deadline,done:false,ts:Date.now()});
+  closeMo('task-mo');renderTasks();renderProgress();renderCharts();markDirty();
 }
 function renderTasks(){
   const tg=document.getElementById('task-grid');
@@ -1266,8 +1462,41 @@ function renderTasks(){
     return `<div class="task-item${t.done?' done':''}"><span class="task-dot ${t.priority}"></span><span class="task-name">${esc(t.studentName)}</span><span class="task-desc">${esc(t.desc)}${dHtml}</span><button class="task-check" onclick="toggleTask(${i})" title="${t.done?'Undo':'Complete'}">&#${t.done?'10226':'10003'};</button><button class="task-del" onclick="deleteTask(${i})" title="Delete">&#215;</button></div>`;
   }).join(''):'<div style="padding:10px 14px;font-size:12px;color:var(--ok);background:var(--okbg);border-radius:9px;border:1px solid rgba(5,150,105,.2)">&#10003; No pending tasks — click + Add to create one</div>';
 }
-function toggleTask(i){pendingTasks[i].done=!pendingTasks[i].done;renderTasks();renderProgress();markDirty();}
-function deleteTask(i){pendingTasks.splice(i,1);renderTasks();renderProgress();markDirty();}
+function toggleTask(i){pendingTasks[i].done=!pendingTasks[i].done;renderTasks();renderProgress();renderCharts();markDirty();}
+function deleteTask(i){pendingTasks.splice(i,1);renderTasks();renderProgress();renderCharts();markDirty();}
+
+function openSituationCollector(){
+  const sel=document.getElementById('sit-student');
+  sel.innerHTML=students.filter(s=>s.status!=='Discontinued').sort((a,b)=>a.name.localeCompare(b.name)).map(s=>`<option value="${s.id}">${esc(s.name)} · ${esc(s.country||'No country')} · ${esc(s.intake||'No intake')}</option>`).join('');
+  document.getElementById('sit-text').value='';
+  document.getElementById('sit-task-desc').value='';
+  document.getElementById('sit-task-priority').value='blue';
+  document.getElementById('sit-task-deadline').value='';
+  document.getElementById('situation-mo').classList.add('open');
+}
+function saveSituationCollector(){
+  const studentId=document.getElementById('sit-student').value;
+  const textVal=document.getElementById('sit-text').value.trim();
+  const taskDesc=document.getElementById('sit-task-desc').value.trim();
+  const taskPriority=document.getElementById('sit-task-priority').value;
+  const taskDeadline=document.getElementById('sit-task-deadline').value;
+  if(!studentId)return alert('Please select a student.');
+  if(!textVal)return alert('Please write the present situation.');
+  const idx=students.findIndex(s=>String(s.id)===String(studentId));
+  if(idx===-1)return;
+  const s=students[idx];
+  if(!s.situationHistory)s.situationHistory=[];
+  s.situationHistory.unshift({ts:Date.now(),text:textVal});
+  s.situation=textVal;
+  s.lastUpdated=Date.now();
+  if(taskDesc){
+    pendingTasks.unshift({id:Date.now()+Math.random(),studentName:s.name,studentId:String(s.id),desc:taskDesc,priority:taskPriority,deadline:taskDeadline,done:false,ts:Date.now()});
+  }
+  addLog('Present situation updated: '+s.name);
+  closeMo('situation-mo');
+  renderAll();
+  markDirty();
+}
 
 // ════════════════════════════════════════════════════════════
 // QUICK NOTES (Requirement #14)
@@ -1341,7 +1570,7 @@ function buildCard(s){
       <div class="scard-row"><span class="lbl">Stage</span><span class="val">${s.appStage||'—'}</span></div>
       <div class="scard-row"><span class="lbl">Bank</span><span class="val">${s.bankMatured?`<span class="badge ${s.bankMatured==='Y'?'b-yes':'b-warn'}">${s.bankMatured}</span>`:'—'}</span></div>
       <div class="scard-row"><span class="lbl">Unis</span><span class="val">${s.uniApplications.length} app${s.uniApplications.length!==1?'s':''}</span></div>
-    </div></div>
+    </div><div class="scard-latest"><div class="item"><strong>Latest Remark:</strong> ${esc(s.remarks||'No remark yet')}</div><div class="item"><strong>Present Situation:</strong> ${esc(s.situation||'No situation update yet')}</div></div></div>
     <div class="scard-foot"><span class="age-badge ${age.cls}">${age.label}</span><div style="display:flex;gap:4px" onclick="event.stopPropagation()"><button class="btn btn-uni" onclick="openUniModal(${origIdx})">&#127891; Unis</button><button class="btn btn-edit" onclick="openEdit(${origIdx})">&#9998;</button></div></div>
   </div>`;
 }
@@ -1405,10 +1634,16 @@ function renderStudentList(){
   document.getElementById('p2-count').textContent=`(${filtered.length})`;
   list.innerHTML=filtered.map(s=>{
     const origIdx=students.findIndex(x=>x.id===s.id);const sel=selectedStudentId===s.id;
-    return `<div class="stu-list-item${sel?' selected':''}" onclick="selectStudent(${origIdx})"><div style="font-size:14px">${FLAGS[s.country]||'🌐'}</div><div style="flex:1;min-width:0"><div class="stu-list-name">${esc(s.name)}</div><div class="stu-list-country">${s.country||'No country'} · ${s.intake||'No intake'}</div></div>${s.appStage?`<div class="stu-list-stage">${esc(s.appStage)}</div>`:''}</div>`;
+    return `<div class="stu-list-item${sel?' selected':''}" onclick="selectStudent(${origIdx})"><div style="font-size:14px">${FLAGS[s.country]||'🌐'}</div><div style="flex:1;min-width:0"><div class="stu-list-name" ondblclick="jumpToStudentDetail(${origIdx})" ontouchend="handleStudentNameTouch(event,${origIdx})">${esc(s.name)}</div><div class="stu-list-country">${s.country||'No country'} · ${s.intake||'No intake'}</div></div>${s.appStage?`<div class="stu-list-stage">${esc(s.appStage)}</div>`:''}</div>`;
   }).join('')||'<div style="padding:20px;text-align:center;color:var(--tm);font-size:13px">No students found</div>';
 }
 function selectStudent(idx){selectedStudentId=students[idx].id;renderStudentList();renderDetail();}
+function jumpToStudentDetail(idx){selectStudent(idx);setStudentView('detail');setTimeout(()=>{const panel=document.getElementById('p2-detail');if(panel)panel.scrollIntoView({behavior:'smooth',block:'start'});},80);}
+function handleStudentNameTouch(event,idx){
+  if(window.innerWidth>768)return;
+  if(studentTapTimer){clearTimeout(studentTapTimer);studentTapTimer=null;event.preventDefault();jumpToStudentDetail(idx);return;}
+  studentTapTimer=setTimeout(()=>{studentTapTimer=null;},320);
+}
 
 // ════════════════════════════════════════════════════════════
 // PAGE 2 — DETAIL PANEL
@@ -1430,7 +1665,7 @@ function renderDetail(){
     uniHtml=`<table class="uni-apps-table"><thead><tr><th>Country</th><th>University</th><th>Program</th></tr></thead><tbody>${s.uniApplications.map(a=>`<tr><td>${FLAGS[a.country]||''} ${esc(a.country)}</td><td>${esc(a.university)}</td><td>${esc(a.program)||'—'}</td></tr>`).join('')}</tbody></table>`;
   }
   document.getElementById('detail-content').innerHTML=`
-    <div class="detail-hdr"><div><div class="detail-name">${esc(s.name)}</div><div style="font-size:12px;color:var(--ts);margin-top:2px">${FLAGS[s.country]||'🌐'} ${s.country||'No country'} · ${s.intake||'No intake'}</div></div><div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap"><button class="btn btn-primary btn-sm" onclick="openAddTask('${s.id}')">+ Task</button><button class="btn btn-uni" onclick="openUniModal(${idx})">&#127891; Universities</button><button class="btn btn-addinfo" onclick="openAddInfo(${idx})">&#128221; Info</button><button class="btn btn-edit btn-sm" onclick="openEdit(${idx})">&#9998; Edit</button><button class="btn btn-del" onclick="askDel(${idx})">&#215; Remove</button></div></div>
+    <div class="detail-hdr"><div><div class="detail-name">${esc(s.name)}</div><div style="font-size:12px;color:var(--ts);margin-top:2px">${FLAGS[s.country]||'🌐'} ${s.country||'No country'} · ${s.intake||'No intake'}</div></div><div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap"><button class="btn btn-primary btn-sm" onclick="openAddTask('${s.id}')">+ Task</button><button class="btn btn-uni" onclick="openUniModal(${idx})">&#127891; Universities</button><button class="btn btn-addinfo" onclick="openAddInfo(${idx})">&#128221; Info</button><button class="btn btn-primary btn-sm" onclick="openSituationCollectorPrefill('${s.id}')">&#128204; Situation</button><button class="btn btn-edit btn-sm" onclick="openEdit(${idx})">&#9998; Edit</button><button class="btn btn-del" onclick="askDel(${idx})">&#215; Remove</button></div></div>
     <div class="detail-body"><div class="detail-grid">
       <div class="detail-field"><label>Name</label><input type="text" value="${esc(s.name)}" onchange="uf(${idx},'name',this.value)"></div>
       <div class="detail-field"><label>Status</label><select onchange="uf(${idx},'status',this.value)">${STATUSES.map(o=>`<option${s.status===o?' selected':''}>${o}</option>`).join('')}</select></div>
@@ -1482,6 +1717,8 @@ function saveEdit(){
 function addStudent(){students.push(blankStudent('New Student'));students.sort((a,b)=>a.name.localeCompare(b.name));persist('Added new student');renderAll();}
 function askDel(idx){delIdx=idx;document.getElementById('del-name').textContent=students[idx].name;document.getElementById('del-mo').classList.add('open');}
 function confirmDel(){if(delIdx!==null){const n=students[delIdx].name;if(selectedStudentId===students[delIdx].id)selectedStudentId=null;students.splice(delIdx,1);persist('Removed: '+n);renderAll();}closeMo('del-mo');delIdx=null;}
+
+function openSituationCollectorPrefill(studentId){openSituationCollector();setTimeout(()=>{document.getElementById('sit-student').value=String(studentId);},20);}
 
 function openAddInfo(idx){
   addInfoIdx=idx;const s=students[idx];
@@ -1570,7 +1807,7 @@ function exportPDF(){
 
 function exportJSON(){
   const now=new Date();
-  const payload={_meta:{exported:now.toISOString(),counsellor:'Tausif Jaman',version:7,count:students.length},students,pendingTasks,quickNotes,log:(()=>{try{return JSON.parse(localStorage.getItem(LOGK)||'[]');}catch(e){return[];}})()};
+  const payload={_meta:{exported:now.toISOString(),counsellor:'Tausif Jaman',version:8,count:students.length},students,pendingTasks,quickNotes,log:(()=>{try{return JSON.parse(localStorage.getItem(LOGK)||'[]');}catch(e){return[];}})()};
   dl(JSON.stringify(payload,null,2),`HBD_Data_Backup_${iso(now)}.json`,'application/json');addLog('Data exported');
 }
 function importJSON(input){
@@ -1591,7 +1828,7 @@ function confirmImport(){
 // ════════════════════════════════════════════════════════════
 // UTILITIES
 // ════════════════════════════════════════════════════════════
-function closeMo(id){document.getElementById(id).classList.remove('open');}
+function closeMo(id){document.getElementById(id).classList.remove('open');if(id==='remind-complete-mo')reminderCompleteIdx=null;}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function dl(content,filename,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([content],{type}));a.download=filename;a.click();}
 function iso(d){return d.toISOString().slice(0,10);}
