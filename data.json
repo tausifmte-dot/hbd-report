@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-10T10:29:47.808Z",
+    "saved": "2026-04-10T10:30:03.365Z",
     "version": 8,
     "count": 27
   },
@@ -895,10 +895,10 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
-      "gsStatus": "Rejected",
+      "gsStatus": "Applied",
       "id": 1775372567768.766,
       "intake": "July 2026",
-      "lastUpdated": 1775816980969,
+      "lastUpdated": 1775816991025,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Shampa Banik",
@@ -1115,6 +1115,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775817001349,
+      "msg": "Manual save — 04:30 PM"
+    },
     {
       "ts": 1775816985800,
       "msg": "Auto-saved"
