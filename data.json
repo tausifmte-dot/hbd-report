@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-07T05:08:53.155Z",
+    "saved": "2026-04-10T03:16:50.735Z",
     "version": 8,
     "count": 27
   },
@@ -820,17 +820,21 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
-      "gsStatus": "Rejected",
+      "gsStatus": "Cleared",
       "id": 1775372567768.202,
       "intake": "July 2026",
-      "lastUpdated": 1775440802823,
+      "lastUpdated": 1775791001709,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Saidul Islam Saeed",
       "phone": "",
       "remarks": "",
-      "situation": "Waiting for GS Decisions",
+      "situation": "Wollongong GS cleared",
       "situationHistory": [
+        {
+          "ts": 1775790976754,
+          "text": "Wollongong GS cleared"
+        },
         {
           "text": "Waiting for GS Decisions",
           "ts": 1775390684888
@@ -1105,6 +1109,18 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775791008733,
+      "msg": "Manual save — 09:16 AM"
+    },
+    {
+      "ts": 1775791008471,
+      "msg": "Auto-saved"
+    },
+    {
+      "ts": 1775790976754,
+      "msg": "Present situation updated: Saidul Islam Saeed"
+    },
     {
       "ts": 1775538530154,
       "msg": "Auto-saved"
