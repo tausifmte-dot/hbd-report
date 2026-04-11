@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:41:19.489Z",
+    "saved": "2026-04-11T09:41:59.338Z",
     "version": 8,
     "count": 39
   },
@@ -456,7 +456,7 @@
       "uniApplications": []
     },
     {
-      "appStage": "GS Submitted",
+      "appStage": "GS assessment applied",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "6 months",
@@ -464,15 +464,15 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
-      "gsStatus": "Not Applied",
+      "gsStatus": "Applied",
       "id": 1775372567768.7937,
-      "intake": "February 2026",
-      "lastUpdated": 1775451867541,
+      "intake": "June 2026",
+      "lastUpdated": 1775900517337,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Jannatul Fardhous",
       "phone": "8801772721921",
-      "remarks": "Gs for Torrens submitted, application to Swinburn is submitted ",
+      "remarks": "Gs for Torrens submitted, application to Swinburn is submitted",
       "remarksHistory": [
         {
           "text": "Gs for Torrens submitted, application to Swinburn is submitted ",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900517337,
+      "msg": "Updated: Jannatul Fardhous"
+    },
     {
       "ts": 1775900477474,
       "msg": "Updated: Hasan Molla"
