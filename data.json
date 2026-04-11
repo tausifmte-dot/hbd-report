@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T13:39:03.272Z",
+    "saved": "2026-04-11T13:39:50.265Z",
     "version": 8,
     "count": 39
   },
@@ -1554,9 +1554,9 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775389019605.4626,
-      "intake": "June 2026",
-      "lastUpdated": 1775914736147,
-      "moreUni": "Y",
+      "intake": "February 2027",
+      "lastUpdated": 1775914762892,
+      "moreUni": "N",
       "moreUniDate": "2026-04-15",
       "name": "Urmi Akter",
       "phone": "8801404393186",
@@ -1639,6 +1639,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775914788236,
+      "msg": "Manual save — 07:39 PM"
+    },
     {
       "ts": 1775914741269,
       "msg": "Auto-saved"
