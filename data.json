@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T11:12:57.427Z",
+    "saved": "2026-04-11T13:39:03.272Z",
     "version": 8,
     "count": 39
   },
@@ -1458,7 +1458,12 @@
       "uniCount": 2,
       "visaNext": "N",
       "visaPrep": "On Hold",
-      "remarksHistory": [],
+      "remarksHistory": [
+        {
+          "ts": 1775905727807,
+          "text": "She will take her English language test at the end of April"
+        }
+      ],
       "uniApplications": [],
       "applicationCompletions": [],
       "email": "tanzimtuba90@gmail.com"
@@ -1550,14 +1555,18 @@
       "gsStatus": "Not Applied",
       "id": 1775389019605.4626,
       "intake": "June 2026",
-      "lastUpdated": 1775440848262,
+      "lastUpdated": 1775914736147,
       "moreUni": "Y",
       "moreUniDate": "2026-04-15",
       "name": "Urmi Akter",
       "phone": "8801404393186",
       "remarks": "",
-      "situation": "waiting for documents ",
+      "situation": "Main applicant will get the provisional certificate on the 1st of May. We are waiting for the document to submit the application",
       "situationHistory": [
+        {
+          "ts": 1775914736147,
+          "text": "Main applicant will get the provisional certificate on the 1st of May. We are waiting for the document to submit the application"
+        },
         {
           "text": "waiting for documents ",
           "ts": 1775390708327
@@ -1630,6 +1639,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775914741269,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775905975423,
       "msg": "Auto-saved"
