@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:30:52.741Z",
+    "saved": "2026-04-11T09:31:59.965Z",
     "version": 8,
     "count": 39
   },
@@ -876,9 +876,9 @@
     {
       "id": 31712282400,
       "name": "Noor Alam Siddiqui Jiku",
-      "country": "",
+      "country": "Australia",
       "intake": "June 2026",
-      "status": "Active",
+      "status": "Discontinued",
       "appStage": "Not yet",
       "phone": "8801779447924",
       "email": "alam.jiku11@gmail.com",
@@ -894,7 +894,7 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 0,
+      "lastUpdated": 1775899879194,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1570,6 +1570,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775899917962,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775899850727,
       "msg": "Removed: Md. Saidul Islam Saeed"
