@@ -849,22 +849,13 @@ body.dark .gl-group-item:hover{background:rgba(52,211,153,0.08)}
     <div class="glass2" style="padding:14px 16px">
       <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
         <div class="slbl" style="margin-bottom:0">&#128202; Statistics</div>
-        <div style="display:flex;gap:6px">
-          <button class="btn btn-primary btn-sm" onclick="toggleStageDistribution()" id="tog-stage-btn">▼ Stages</button>
-          <button class="btn btn-primary btn-sm" onclick="toggleCountrySummary()" id="tog-country-btn">▼ Countries</button>
-        </div>
+        <button onclick="toggleCountrySummary()" style="padding:6px 12px;font-size:11px;border:1px solid var(--b400);background:var(--bg);border-radius:6px;cursor:pointer;color:var(--tp);font-weight:600;transition:all 0.2s">Countries</button>
       </div>
       <div class="intake-tabs" id="intake-tabs" style="margin-bottom:14px;display:flex;gap:5px;flex-wrap:wrap"></div>
       <div class="info-grid" id="info-grid" style="padding-bottom:8px;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px"></div>
-      <div id="stage-dist-sec" style="display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--b100)">
-        <div class="slbl" style="margin-bottom:8px">&#128203; Stage Distribution</div>
-        <div class="info-grid" id="stage-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px"></div>
-      </div>
-    </div>
-
-    <div id="country-sum-sec" style="display:none;background:var(--glass);border:1px solid var(--gb);border-radius:11px;box-shadow:var(--gs);padding:16px">
-      <div class="slbl" style="margin-bottom:16px">🌍 Country Summary</div>
-      <div class="sum-countries" id="sum-countries" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px"></div>
+      <div id="au-stats-container" style="margin-top:14px;padding-top:14px;border-top:1px solid var(--b100)"></div>
+      <div id="ca-stats-container" style="margin-top:14px;padding-top:14px;border-top:1px solid var(--b100)"></div>
+      <div id="nz-stats-container" style="margin-top:14px;padding-top:14px;border-top:1px solid var(--b100)"></div>
     </div>
   </div>
 
@@ -1072,6 +1063,9 @@ body.dark .gl-group-item:hover{background:rgba(52,211,153,0.08)}
       </div>
       <div class="frow">
         <div class="fgroup"><label>Phone Number</label><input id="e-phone" type="text" placeholder="+880..."></div>
+        <div class="fgroup"><label>Email Address</label><input id="e-email" type="email" placeholder="email@example.com"></div>
+      </div>
+      <div class="frow">
         <div class="fgroup"><label>Application Stage</label><select id="e-appStage"><option value="">-- Select --</option></select></div>
       </div>
       <div class="frow">
@@ -1250,6 +1244,19 @@ body.dark .gl-group-item:hover{background:rgba(52,211,153,0.08)}
   </div>
 </div>
 
+<!-- Stage History Modal -->
+<div class="mo" id="stage-history-mo">
+  <div class="modal" style="max-width:600px">
+    <div class="modal-hdr"><h3 id="sh-title">Stage History — </h3><button class="modal-close" onclick="closeMo('stage-history-mo')">&#215;</button></div>
+    <div class="modal-body" style="max-height:600px;overflow-y:auto">
+      <div id="stage-history-content" style="font-size:13px"></div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn" style="border-color:#d1d5db;color:#6b7280" onclick="closeMo('stage-history-mo')">Close</button>
+    </div>
+  </div>
+</div>
+
 <!-- ════════════════ PAGE 4 — SETTINGS ════════════════ -->
 
 <script>
@@ -1270,6 +1277,14 @@ const BANK_MO=['3 months','More than 3 months','6 months','More than 6 months'];
 const YN=['N','Y'];
 const GS_STAT=['Applied','Cleared','Rejected'];
 const APP_STAGES=['','Documents from student are pending','Looking for Universities','Havent made up his mind yet','Language test retake required','With Agent','Submitted to Uni','Agent asked for new inf.','Under Review','Cond. Offer Received','GS Preparation Ongoing','GS Interview Pending','GS Submitted','Revised inf requested for GS','Uncond Offer Received','Tuition Fee & OSHC Paid','Tuition Fee & OHSC payment Pending','COE Received','1st Intrv Pending','Visa Preparation Ongoing','Documentation Stage','Visa Submitted','Rejected by University','Student Left HBD','Misinformed counsellor','GS Rejected','Refund Requested','Scholarship Applied','Refund Processed','Refund Under Review'];
+
+const COUNTRY_STAGES={
+  'Australia':['University shortlisting ongoing','Application submitted directly','Application given to agent','Application submitted by agent','Additional information requested by agent','Conditional offer letter received','GS assessment documentation requested','GS assessment preparation started','GS assessment completed','GS assessment applied','GS assessment rejected','GS assessment reapplied for another university','GS assessment cleared','Unconditional offer letter received','Tuition fees and OSHC paid','Confirmation of enrollment received','Visa SOP writing','Visa lodged','Visa refused','Visa granted'],
+  'Canada':['Looking for university','Waiting for student to provide documents','Writing admission statement of purpose','Receiving conditional offer letter','Making tuition deposit','Receiving letter of acceptance','Writing visa statement of purpose','Preparing documentations for visa submission','Submitting this application','Confirming biometrics','Receiving passport request','Visa rejected'],
+  'New Zealand':['Waiting for documents from student side to submit application','Need to look for universities','Applications are with agents for review','New information requested by the agent','Application submitted','Conditional offer letter issued','All conditions are met & submitted','Unconditional offer letter issued','Waiting for bank solvency to get matured','Preparing documents Visa submission','Writing visa SOP','Visa lodged','New information requested by the visa officer','Visa Interview Schedule','This is an interview attended','Visa Refused','Approve in principle has been issued','Need to make tuition deposit','Tuition fee paid','Electronic visa document received','Visa issued'],
+  'United Kingdom':APP_STAGES,
+  'Malaysia':APP_STAGES
+};
 
 const UNIS={
 'Australia':['Australian Catholic University (ACU)','Australian National University (ANU)','Bond University (Bond)','Central Queensland University (CQU)','Charles Darwin University (CDU)','Charles Sturt University (CSU)','Curtin University (Curtin)','Deakin University (Deakin)','Edith Cowan University (ECU)','Federation University Australia (FedUni)','Flinders University (Flinders)','Griffith University (Griffith)','James Cook University (JCU)','La Trobe University (La Trobe)','Macquarie University (Macquarie)','Monash University (Monash)','Murdoch University (Murdoch)','Queensland University of Technology (QUT)','RMIT University (RMIT)','Southern Cross University (SCU)','Swinburne University of Technology (Swinburne)','Torrens University Australia (Torrens)','University of Adelaide (Adelaide)','University of Canberra (UC)','University of Melbourne (UniMelb)','University of New South Wales (UNSW)','University of Newcastle (UON)','University of Queensland (UQ)','University of South Australia (UniSA)','University of Southern Queensland (USQ)','University of Sydney (USyd)','University of Tasmania (UTAS)','University of Technology Sydney (UTS)','University of Western Australia (UWA)','Western Sydney University (WSU)','University of Wollongong (UOW)','Victoria University (VU)','SIBT Foundation Program (SIBT)','TAFE NSW (TAFE NSW)','Sydney Metropolitan Institute of Technology (Sydney Met)'],
@@ -1295,6 +1310,7 @@ let studentTapTimer=null;
 let editMode='edit';
 let waSelectedStudentId='';
 let waTemplates=[];
+let stageHistoryIdx=null;
 
 // ════════════════════════════════════════════════════════════
 // PAGE NAVIGATION
@@ -1534,7 +1550,7 @@ function updateLastAction(msg){
 // DEFAULT DATA
 // ════════════════════════════════════════════════════════════
 function blankStudent(name){
-  return{id:Date.now()+Math.random(),name:name||'New Student',country:'',intake:'',status:'Active',appStage:'',phone:'',uniCount:0,moreUni:'N',moreUniDate:'',bankMatured:'',bankMonths:'',bankExpectedDate:'',defer:'N',gsApplied:'N',gsStatus:'',coe:'N',visaPrep:'',visaNext:'',lastUpdated:Date.now(),remarks:'',situation:'',remarksHistory:[],situationHistory:[],applicationCompletions:[],uniApplications:[]};
+  return{id:Date.now()+Math.random(),name:name||'New Student',country:'',intake:'',status:'Active',appStage:'',phone:'',email:'',uniCount:0,moreUni:'N',moreUniDate:'',bankMatured:'',bankMonths:'',bankExpectedDate:'',defer:'N',gsApplied:'N',gsStatus:'',coe:'N',visaPrep:'',visaNext:'',lastUpdated:Date.now(),remarks:'',situation:'',remarksHistory:[],situationHistory:[],applicationCompletions:[],uniApplications:[],stageHistory:[]};
 }
 function initDefault(){
   students=[];
@@ -1553,8 +1569,19 @@ const debouncedRenderList=debounce(()=>{renderStudentList();renderDashboardStude
 // FIELD UPDATE — lightweight, no chart rebuild on every keystroke
 // ════════════════════════════════════════════════════════════
 function uf(idx,field,val){
-  students[idx][field]=val;students[idx].lastUpdated=Date.now();
-  const el2=document.getElementById('last-student');if(el2)el2.textContent='Last student worked on: '+students[idx].name;
+  const student=students[idx];
+  // Track stage changes
+  if(field==='appStage'&&val!==student.appStage){
+    if(!student.stageHistory)student.stageHistory=[];
+    student.stageHistory.unshift({stage:val,enteredDate:Date.now(),duration:0});
+    // Calculate duration of previous stage
+    if(student.stageHistory.length>1){
+      const prev=student.stageHistory[1];
+      prev.duration=Math.floor((Date.now()-prev.enteredDate)/86400000);
+    }
+  }
+  student[field]=val;student.lastUpdated=Date.now();
+  const el2=document.getElementById('last-student');if(el2)el2.textContent='Last student worked on: '+student.name;
   // Only re-render what's needed — never rebuild charts on field change
   debouncedRenderDash();
   debouncedRenderList();
@@ -1585,57 +1612,123 @@ function setSumFilter(f){sumFilter=f;document.querySelectorAll('#sum-filter-bar 
 
 function updateSummary(){
   const pool=sumIntake==='ALL'?students.filter(s=>s.status!=='Discontinued'):students.filter(s=>s.status!=='Discontinued'&&s.intake===sumIntake);
-  const auPool=pool.filter(s=>s.country==='Australia');
-  const cblock=document.getElementById('sum-countries');
-  const countryOrder=['Australia','New Zealand','United Kingdom','Canada','Malaysia'];
-  const countryCards=countryOrder.map(c=>{
-    const cp=pool.filter(s=>s.country===c);if(!cp.length)return null;
-    return {cls:'def',val:cp.length,lbl:c,f:'country',key:'country::'+c};
-  }).filter(x=>x);
-  cblock.innerHTML=countryCards.map(c=>`<div class="sc ${c.cls} clickable" onclick="openStatModal('${esc(c.key)}')" title="${c.lbl}: ${c.val} students"><div class="sv">${c.val}</div><div class="sc-lbl">${FLAGS[c.lbl]||''} ${esc(c.lbl)}</div></div>`).join('')||'<div style="color:var(--tm);font-size:12px;font-style:italic;padding:8px">No country data yet</div>';
-
-  const stageData = {}; 
-  pool.forEach(s => { const st = s.appStage || 'Not Set'; stageData[st] = (stageData[st] || 0) + 1; });
-  const stageColors = ['st1','st2','st3','st4','st5','st6','st7','st8'];
-  const stageCards = Object.entries(stageData).sort((a,b)=>b[1]-a[1]).map((stage, idx)=>{
-    return {cls:stageColors[idx%stageColors.length],val:stage[1],lbl:stage[0],f:'stage',key:'stage::'+stage[0]};
-  });
-  const sections={all:[
+  const discontinued=students.filter(s=>s.status==='Discontinued');
+  
+  // OVERALL STATISTICS (6 cards - always visible)
+  const overallStats=[
     {cls:'def',val:pool.length,lbl:'Total Active',f:'all',key:'all::total'},
     {cls:'ok',val:pool.filter(s=>s.bankMatured==='Y').length,lbl:'Bank Matured',f:'bank',key:'bank::matured'},
-    {cls:'def',val:auPool.filter(s=>s.gsApplied==='Y'&&s.gsStatus!=='Cleared'&&s.gsStatus!=='Rejected'&&s.coe!=='Y').length,lbl:'GS Applied (AU)',f:'gs',key:'gs::applied'},
-    {cls:'ok',val:auPool.filter(s=>s.gsStatus==='Cleared').length,lbl:'GS Cleared (AU)',f:'gs',key:'gs::cleared'},
-    {cls:'def',val:auPool.filter(s=>s.coe==='Y').length,lbl:'CoE Received (AU)',f:'gs',key:'gs::coe'},
-    {cls:'ok',val:pool.filter(s=>s.visaNext==='Y').length,lbl:'Visa This Intake',f:'visa',key:'visa::next'},
+    {cls:'ok',val:pool.filter(s=>s.visaNext==='Y').length,lbl:'Expecting Visa This Intake',f:'visa',key:'visa::next'},
     {cls:'wn',val:pool.filter(s=>s.defer==='Y').length,lbl:'Deferrals',f:'visa',key:'visa::defer'},
-    {cls:'ok',val:pool.filter(s=>s.visaPrep==='Ready').length,lbl:'Ready to Submit Visa Application',f:'visa',key:'visa::ready'},
-    {cls:'def',val:pool.reduce((a,s)=>a+(+s.uniCount||0),0),lbl:'Unis Applied',f:'uni',key:'uni::count'},
-    {cls:'wn',val:pool.filter(s=>s.moreUni==='Y').length,lbl:'Will Apply More',f:'uni',key:'uni::more'}
-  ],
-  stages:stageCards};
-  const cards=sections.all;
-  document.getElementById('info-grid').innerHTML=cards.map(c=>`<div class="sc ${c.cls} clickable" onclick="openStatModal('${esc(c.key)}')"><div class="sv">${c.val}</div><div class="sc-lbl">${esc(c.lbl)}</div></div>`).join('');
-  const stageGrid=document.getElementById('stage-grid');
-  if(stageGrid) stageGrid.innerHTML=sections.stages.map(c=>`<div class="sc ${c.cls} clickable" onclick="openStatModal('${esc(c.key)}')"><div class="sv">${c.val}</div><div class="sc-lbl">${esc(c.lbl)}</div></div>`).join('')||'<div style="color:var(--tm);font-size:12px">No stages yet</div>';
+    {cls:'ok',val:pool.filter(s=>s.visaPrep==='Ready').length,lbl:'Ready to Submit Visa',f:'visa',key:'visa::ready'},
+    {cls:'wn',val:discontinued.length,lbl:'Discontinued',f:'disc',key:'disc::all'}
+  ];
+  
+  document.getElementById('info-grid').innerHTML=overallStats.map(c=>`<div class="sc ${c.cls} clickable" onclick="openStatModal('${esc(c.key)}')"><div class="sv">${c.val}</div><div class="sc-lbl">${esc(c.lbl)}</div></div>`).join('');
+  
+  // Country-specific statistics containers - populate and display
+  const auContainer=document.getElementById('au-stats-container');
+  const caContainer=document.getElementById('ca-stats-container');
+  const nzContainer=document.getElementById('nz-stats-container');
+  
+  const auStats=buildAustraliaStats(pool);
+  const caStats=buildCanadaStats(pool);
+  const nzStats=buildNewZealandStats(pool);
+  
+  if(auStats) auContainer.innerHTML=auStats; else auContainer.innerHTML='<div style="color:var(--tm);padding:12px">No Australia students for selected intake.</div>';
+  if(caStats) caContainer.innerHTML=caStats; else caContainer.innerHTML='<div style="color:var(--tm);padding:12px">No Canada students for selected intake.</div>';
+  if(nzStats) nzContainer.innerHTML=nzStats; else nzContainer.innerHTML='<div style="color:var(--tm);padding:12px">No New Zealand students for selected intake.</div>';
+  
+  // Make containers visible by default
+  auContainer.style.display='block';
+  caContainer.style.display='block';
+  nzContainer.style.display='block';
+}
+
+// AUSTRALIA STATS BUILDER
+function buildAustraliaStats(pool){
+  const auPool=pool.filter(s=>s.country==='Australia');
+  if(!auPool.length)return null;
+  
+  const stats=[
+    {lbl:'Total Active AU',val:auPool.length},
+    {lbl:'Conditional Offer Received',val:auPool.filter(s=>s.appStage==='Conditional offer letter received').length},
+    {lbl:'Preparing GS Documents',val:auPool.filter(s=>['GS assessment documentation requested','GS assessment preparation started','GS assessment completed'].includes(s.appStage)).length},
+    {lbl:'Fund >3 Months Matured',val:auPool.filter(s=>s.bankMatured==='Y'&&s.bankMonths&&(s.bankMonths.includes('More than')||s.bankMonths.includes('6'))).length},
+    {lbl:'GS Applications Submitted',val:auPool.filter(s=>s.appStage==='GS assessment applied').length},
+    {lbl:'GS Cleared',val:auPool.filter(s=>s.appStage==='GS assessment cleared').length},
+    {lbl:'Visa SOP Pending',val:auPool.filter(s=>s.appStage==='Visa SOP writing').length},
+    {lbl:'Visa Lodged',val:auPool.filter(s=>s.appStage==='Visa lodged').length},
+    {lbl:'Visa Refused',val:auPool.filter(s=>s.appStage==='Visa refused').length},
+    {lbl:'Visa Granted',val:auPool.filter(s=>s.appStage==='Visa granted').length}
+  ];
+  
+  return `<div style="margin:16px 0"><div style="font-weight:700;color:var(--tp);margin-bottom:12px;font-size:14px">🇦🇺 Australia — Destination Statistics</div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px">${stats.map(s=>`<div class="sc def" style="background:rgba(37,99,235,0.08);border-left:3px solid var(--b600)"><div class="sv">${s.val}</div><div class="sc-lbl">${s.lbl}</div></div>`).join('')}</div></div>`;
+}
+
+// CANADA STATS BUILDER
+function buildCanadaStats(pool){
+  const caPool=pool.filter(s=>s.country==='Canada');
+  if(!caPool.length)return null;
+  
+  const stats=[
+    {lbl:'Total Active CA',val:caPool.length},
+    {lbl:'Offer Letters Received',val:caPool.filter(s=>s.appStage==='Receiving conditional offer letter').length},
+    {lbl:'Tuition Deposit Made',val:caPool.filter(s=>s.appStage==='Making tuition deposit').length},
+    {lbl:'Letter of Acceptance',val:caPool.filter(s=>s.appStage==='Receiving letter of acceptance').length},
+    {lbl:'Documentation Prepared',val:caPool.filter(s=>s.appStage==='Preparing documentations for visa submission').length},
+    {lbl:'Visa SOP Pending',val:caPool.filter(s=>s.appStage==='Writing visa statement of purpose').length},
+    {lbl:'Visa Applications Submitted',val:caPool.filter(s=>s.appStage==='Submitting this application').length},
+    {lbl:'Passport Request/Visa Granted',val:caPool.filter(s=>s.appStage==='Receiving passport request').length},
+    {lbl:'Visa Rejected',val:caPool.filter(s=>s.appStage==='Visa rejected').length}
+  ];
+  
+  return `<div style="margin:16px 0"><div style="font-weight:700;color:var(--tp);margin-bottom:12px;font-size:14px">🇨🇦 Canada — Destination Statistics</div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px">${stats.map(s=>`<div class="sc def" style="background:rgba(5,150,105,0.08);border-left:3px solid var(--ok)"><div class="sv">${s.val}</div><div class="sc-lbl">${s.lbl}</div></div>`).join('')}</div></div>`;
+}
+
+// NEW ZEALAND STATS BUILDER
+function buildNewZealandStats(pool){
+  const nzPool=pool.filter(s=>s.country==='New Zealand');
+  if(!nzPool.length)return null;
+  
+  const stats=[
+    {lbl:'Total Active NZ',val:nzPool.length},
+    {lbl:'Conditional Offer Issued',val:nzPool.filter(s=>s.appStage==='Conditional offer letter issued').length},
+    {lbl:'Visa Interview Pending',val:nzPool.filter(s=>s.appStage==='Visa Interview Schedule').length},
+    {lbl:'Unconditional Offer Issued',val:nzPool.filter(s=>s.appStage==='Unconditional offer letter issued').length},
+    {lbl:'Visa Lodged',val:nzPool.filter(s=>s.appStage==='Visa lodged').length},
+    {lbl:'Approve in Principle Issued',val:nzPool.filter(s=>s.appStage==='Approve in principle has been issued').length},
+    {lbl:'Tuition Fee Paid',val:nzPool.filter(s=>s.appStage==='Tuition fee paid').length}
+  ];
+  
+  return `<div style="margin:16px 0"><div style="font-weight:700;color:var(--tp);margin-bottom:12px;font-size:14px">🇳🇿 New Zealand — Destination Statistics</div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px">${stats.map(s=>`<div class="sc def" style="background:rgba(217,119,6,0.08);border-left:3px solid var(--wn)"><div class="sv">${s.val}</div><div class="sc-lbl">${s.lbl}</div></div>`).join('')}</div></div>`;
+}
+
+function toggleCountryStats(country){
+  const block=document.getElementById(country.toLowerCase().replace(/\s+/g,'-')+'-stats-container');
+  if(block)block.style.display=block.style.display==='none'?'block':'none';
+}
+
+function toggleCountrySummary(){
+  const auContainer=document.getElementById('au-stats-container');
+  const caContainer=document.getElementById('ca-stats-container');
+  const nzContainer=document.getElementById('nz-stats-container');
+  const isHidden=auContainer.style.display==='none';
+  auContainer.style.display=isHidden?'block':'none';
+  caContainer.style.display=isHidden?'block':'none';
+  nzContainer.style.display=isHidden?'block':'none';
 }
 
 function getStatEntries(key){
   const pool=sumIntake==='ALL'?students.filter(s=>s.status!=='Discontinued'):students.filter(s=>s.status!=='Discontinued'&&s.intake===sumIntake);
+  const all=students;
   const make=(arr, title, getCondition)=>({title, items:arr.map(s=>({id:s.id, name:s.name, meta:[s.country||'No country', s.intake||'No intake', s.appStage||'No stage'].join(' · '), condition:getCondition(s)}))});
   if(key==='all::total') return make(pool,'Active Students',s=>`Current situation: ${s.situation||'Not updated'}`);
   if(key==='bank::matured') return make(pool.filter(s=>s.bankMatured==='Y'),'Bank Matured',s=>`Bank matured${s.bankMonths?` (${s.bankMonths})`:''}`);
-  if(key==='gs::applied') return make(pool.filter(s=>s.country==='Australia'&&s.gsApplied==='Y'&&s.gsStatus!=='Cleared'&&s.gsStatus!=='Rejected'&&s.coe!=='Y'),'GS Applied (AU)',s=>`GS status: ${s.gsStatus||'Applied'}`);
-  if(key==='gs::cleared') return make(pool.filter(s=>s.country==='Australia'&&s.gsStatus==='Cleared'),'GS Cleared (AU)',s=>`GS cleared · CoE: ${s.coe||'N'}`);
-  if(key==='gs::coe') return make(pool.filter(s=>s.country==='Australia'&&s.coe==='Y'),'CoE Received (AU)',s=>`CoE received · GS: ${s.gsStatus||s.gsApplied}`);
-  if(key==='visa::next') return make(pool.filter(s=>s.visaNext==='Y'),'Visa This Intake',s=>`Visa readiness: ${s.visaPrep||'Not set'}`);
+  if(key==='visa::next') return make(pool.filter(s=>s.visaNext==='Y'),'Expecting Visa This Intake',s=>`Visa readiness: ${s.visaPrep||'Not set'}`);
   if(key==='visa::defer') return make(pool.filter(s=>s.defer==='Y'),'Deferrals',s=>`Deferred · Stage: ${s.appStage||'Not set'}`);
-  if(key==='visa::ready') return make(pool.filter(s=>s.visaPrep==='Ready'),'Ready to Submit Visa Application',s=>`Ready for visa · Next intake: ${s.visaNext||'Not set'}`);
-  if(key==='uni::count') return {title:'University Applications Count', items:pool.filter(s=>(+s.uniCount||0)>0 || (s.uniApplications||[]).length>0).map(s=>({id:s.id, name:s.name, meta:[s.country||'No country', s.intake||'No intake'].join(' · '), condition:`${(+s.uniCount||0) || s.uniApplications.length} counted application(s)`}))};
-  if(key==='uni::more') return make(pool.filter(s=>s.moreUni==='Y'),'Will Apply More',s=>`More applications due by: ${s.moreUniDate||'No deadline set'}`);
-  if(key.indexOf('stage::')===0){
-    const stage=key.split('stage::')[1];
-    return make(pool.filter(s=>s.appStage===stage),stage,s=>`Present situation: ${s.situation||'Not updated'}`);
-  }
+  if(key==='visa::ready') return make(pool.filter(s=>s.visaPrep==='Ready'),'Ready to Submit Visa',s=>`Ready for visa · Next intake: ${s.visaNext||'Not set'}`);
+  if(key==='disc::all') return make(all.filter(s=>s.status==='Discontinued'),'Discontinued',s=>`Status: ${s.status}`);
   if(key.indexOf('country::')===0){
     const country=key.split('country::')[1];
     return make(pool.filter(s=>s.country===country),country,s=>`Intake: ${s.intake||'Not set'} · Stage: ${s.appStage||'Not set'}`);
@@ -1717,21 +1810,7 @@ function renderStaleStudents(){
   }).join('');
 }
 
-function toggleStageDistribution(){
-  const sec = document.getElementById('stage-dist-sec');
-  const btn = document.getElementById('tog-stage-btn');
-  const isHidden = sec.style.display === 'none';
-  sec.style.display = isHidden ? 'block' : 'none';
-  btn.textContent = isHidden ? '▲ Stages' : '▼ Stages';
-}
-
-function toggleCountrySummary(){
-  const sec = document.getElementById('country-sum-sec');
-  const btn = document.getElementById('tog-country-btn');
-  const isHidden = sec.style.display === 'none';
-  sec.style.display = isHidden ? 'block' : 'none';
-  btn.textContent = isHidden ? '▲ Countries' : '▼ Countries';
-}
+// Country Summary section removed (duplicate info already in overall stats)
 
 function openReminderCompletion(idx){
   reminderCompleteIdx=idx;
@@ -2132,13 +2211,14 @@ function renderDetail(){
     uniHtml=`<table class="uni-apps-table"><thead><tr><th>Country</th><th>University</th><th>Program</th></tr></thead><tbody>${s.uniApplications.map(a=>`<tr><td>${FLAGS[a.country]||''} ${esc(a.country)}</td><td>${esc(a.university)}</td><td>${esc(a.program)||'—'}</td></tr>`).join('')}</tbody></table>`;
   }
   document.getElementById('detail-content').innerHTML=`
-    <div class="detail-hdr"><div><div class="detail-name">${esc(s.name)}</div><div style="font-size:12px;color:var(--ts);margin-top:2px">${FLAGS[s.country]||'🌐'} ${s.country||'No country'} · ${s.intake||'No intake'}</div></div><div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap"><button class="btn btn-primary btn-sm" onclick="openAddTask('${s.id}')">+ Task</button><button class="btn btn-uni" onclick="openUniModal(${idx})">&#127891; Universities</button><button class="btn btn-addinfo" onclick="openAddInfo(${idx})">&#128221; Info</button><button class="btn btn-primary btn-sm" onclick="openSituationCollectorPrefill('${s.id}')">&#128204; Situation</button><button class="btn btn-sm" style="border-color:#25D366;color:#128C7E;background:rgba(37,211,102,0.08)" onclick="openStudentWhatsApp(${idx})">Send WhatsApp message</button><button class="btn btn-edit btn-sm" onclick="openEdit(${idx})">&#9998; Edit</button><button class="btn btn-del" onclick="askDel(${idx})">&#215; Remove</button></div></div>
+    <div class="detail-hdr"><div><div class="detail-name">${esc(s.name)}</div><div style="font-size:12px;color:var(--ts);margin-top:2px">${FLAGS[s.country]||'🌐'} ${s.country||'No country'} · ${s.intake||'No intake'}</div></div><div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap"><button class="btn btn-primary btn-sm" onclick="openAddTask('${s.id}')">+ Task</button><button class="btn btn-uni" onclick="openUniModal(${idx})">&#127891; Universities</button><button class="btn btn-addinfo" onclick="openAddInfo(${idx})">&#128221; Info</button><button class="btn btn-primary btn-sm" onclick="openSituationCollectorPrefill('${s.id}')">&#128204; Situation</button><button class="btn btn-sm" style="border-color:#2563eb;color:#2563eb;background:rgba(37,99,235,0.08)" onclick="openStageHistoryModal(${idx})">📊 Stage History</button><button class="btn btn-sm" style="border-color:#25D366;color:#128C7E;background:rgba(37,211,102,0.08)" onclick="openStudentWhatsApp(${idx})">Send WhatsApp message</button><button class="btn btn-edit btn-sm" onclick="openEdit(${idx})">&#9998; Edit</button><button class="btn btn-del" onclick="askDel(${idx})">&#215; Remove</button></div></div>
 
     <div class="detail-body"><div class="detail-grid">
       <div class="detail-field"><label>Name</label><input type="text" value="${esc(s.name)}" onchange="uf(${idx},'name',this.value)"></div>
       <div class="detail-field"><label>Status</label><select onchange="uf(${idx},'status',this.value)">${STATUSES.map(o=>`<option${s.status===o?' selected':''}>${o}</option>`).join('')}</select></div>
       <div class="detail-field"><label>Phone</label><div class="detail-phone-wrap"><input type="text" value="${esc(s.phone)}" placeholder="+880..." onchange="uf(${idx},'phone',this.value)"><button class="btn btn-sm" style="border-color:#25D366;color:#128C7E;background:rgba(37,211,102,0.08)" onclick="openStudentWhatsApp(${idx})">Send WhatsApp message</button></div></div>
-      <div class="detail-field"><label>App Stage</label><select onchange="uf(${idx},'appStage',this.value)">${APP_STAGES.map(o=>`<option value="${esc(o)}"${s.appStage===o?' selected':''}>${o||'-- Select --'}</option>`).join('')}</select></div>
+      <div class="detail-field"><label>Email</label><input type="email" value="${esc(s.email)}" placeholder="email@example.com" onchange="uf(${idx},'email',this.value)"></div>
+      <div class="detail-field"><label>App Stage</label><select onchange="uf(${idx},'appStage',this.value)">${getStagesForCountry(s.country).map(o=>`<option value="${esc(o)}"${s.appStage===o?' selected':''}>${o||'-- Select --'}</option>`).join('')}</select></div>
       <div class="detail-sep">Location & Intake</div>
       <div class="detail-field"><label>Country</label><select onchange="uf(${idx},'country',this.value);renderDetail()">${COUNTRIES.map(o=>`<option value="${o}"${s.country===o?' selected':''}>${o||'-- Select --'}</option>`).join('')}</select></div>
       <div class="detail-field"><label>Intake</label><select onchange="uf(${idx},'intake',this.value)">${INTAKES.map(o=>`<option value="${o}"${s.intake===o?' selected':''}>${o||'-- Select --'}</option>`).join('')}</select></div>
@@ -2162,11 +2242,18 @@ function renderDetail(){
 // EDIT MODAL
 // ════════════════════════════════════════════════════════════
 function populateEditIntakes(){document.getElementById('e-intake').innerHTML=INTAKES.map(o=>`<option value="${o}">${o||'-- Select --'}</option>`).join('');}
-function populateEditStages(){document.getElementById('e-appStage').innerHTML=APP_STAGES.map(o=>`<option value="${o}">${o||'-- Select --'}</option>`).join('');}
+function getStagesForCountry(country){
+  return COUNTRY_STAGES[country]||APP_STAGES;
+}
+function populateEditStages(country){
+  const stages=getStagesForCountry(country||'Australia');
+  document.getElementById('e-appStage').innerHTML=stages.map(o=>`<option value="${esc(o)}">${o||'-- Select --'}</option>`).join('');
+}
 function fillStudentForm(s){
   document.getElementById('e-name').value=s.name||'';
   document.getElementById('e-status').value=s.status||'Active';
   document.getElementById('e-phone').value=s.phone||'';
+  document.getElementById('e-email').value=s.email||'';
   document.getElementById('e-appStage').value=s.appStage||'';
   document.getElementById('e-country').value=s.country||'';
   document.getElementById('e-intake').value=s.intake||'';
@@ -2195,7 +2282,7 @@ function openEdit(idx){
   fillStudentForm(s);
   document.getElementById('edit-mo').classList.add('open');
 }
-function toggleEditAU(){document.getElementById('e-gs-section').style.display=document.getElementById('e-country').value==='Australia'?'block':'none';}
+function toggleEditAU(){document.getElementById('e-gs-section').style.display=document.getElementById('e-country').value==='Australia'?'block':'none';populateEditStages(document.getElementById('e-country').value);}
 function toggleBankDetail(){const v=document.getElementById('e-bankMatured').value;document.getElementById('e-bankmo-wrap').style.display=v==='Y'?'block':'none';document.getElementById('e-bankdate-wrap').style.display=(v==='N'||v==='havent opened yet')?'block':'none';}
 function toggleMoreUniDate(){document.getElementById('e-moreDate-wrap').style.display=document.getElementById('e-moreUni').value==='Y'?'block':'none';}
 function toggleGSStatus(){document.getElementById('e-gsstatus-wrap').style.display=document.getElementById('e-gsApplied').value==='Y'?'block':'none';}
@@ -2206,6 +2293,7 @@ function readStudentForm(){
     name:document.getElementById('e-name').value.trim()||'New Student',
     status:document.getElementById('e-status').value,
     phone:document.getElementById('e-phone').value.trim(),
+    email:document.getElementById('e-email').value.trim(),
     appStage:document.getElementById('e-appStage').value,
     country,
     intake:document.getElementById('e-intake').value,
@@ -2279,54 +2367,129 @@ function delRemark(i){if(addInfoIdx===null)return;students[addInfoIdx].remarksHi
 function delSituation(i){if(addInfoIdx===null)return;students[addInfoIdx].situationHistory.splice(i,1);students[addInfoIdx].lastUpdated=Date.now();renderAddInfoHistories();markDirty();}
 
 // ════════════════════════════════════════════════════════════
-// EXPORT TXT (Requirement #11 — exact format)
+// STAGE HISTORY TRACKING
+// ════════════════════════════════════════════════════════════
+function openStageHistoryModal(idx){
+  stageHistoryIdx=idx;
+  const s=students[idx];
+  document.getElementById('sh-title').textContent='Stage History — '+s.name;
+  renderStageHistoryModal();
+  document.getElementById('stage-history-mo').classList.add('open');
+}
+function renderStageHistoryModal(){
+  if(stageHistoryIdx===null)return;
+  const s=students[stageHistoryIdx];
+  const history=s.stageHistory||[];
+  const country=s.country||'Unknown';
+  
+  if(!history.length){
+    document.getElementById('stage-history-content').innerHTML='<div style="text-align:center;color:var(--tm);padding:20px">No stage history recorded yet. Stages will be tracked as you update them.</div>';
+    return;
+  }
+  
+  let totalDays=0;
+  if(history.length>0&&history[0].enteredDate){
+    totalDays=Math.floor((Date.now()-history[history.length-1].enteredDate)/86400000);
+  }
+  
+  const html=`
+    <div style="background:var(--b100);padding:12px;border-radius:8px;margin-bottom:16px">
+      <div style="font-weight:600;color:var(--tp);margin-bottom:4px">📊 Overall Progress</div>
+      <div style="display:flex;gap:16px;font-size:12px">
+        <div><span style="color:var(--tm)">Total Days</span><br><strong style="font-size:16px;color:var(--b600)">${totalDays}</strong></div>
+        <div><span style="color:var(--tm)">Stages Completed</span><br><strong style="font-size:16px;color:var(--b600)">${history.length}</strong></div>
+        <div><span style="color:var(--tm)">Current Stage</span><br><strong style="font-size:13px;color:var(--b600)">${esc(history[0].stage||'Not Set')}</strong></div>
+      </div>
+    </div>
+    
+    <div style="font-weight:600;color:var(--tp);margin-bottom:12px;font-size:13px">Stage Progression</div>
+    <div style="display:flex;flex-direction:column;gap:8px">
+      ${history.map((entry,idx)=>{
+        const daysInStage=entry.duration||0;
+        const enteredDate=new Date(entry.enteredDate);
+        const dateStr=fmtDateTime(enteredDate);
+        const isFirst=idx===0;
+        return `<div style="display:flex;gap:10px;padding:10px;background:${isFirst?'rgba(37,99,235,0.08)':'var(--b50)'};border-left:3px solid ${isFirst?'var(--b600)':'var(--b200)'};border-radius:6px">
+          <div style="flex-shrink:0;font-weight:700;color:var(--b600);min-width:24px;text-align:center">${idx+1}</div>
+          <div style="flex:1;min-width:0">
+            <div style="font-weight:600;color:var(--tp);word-wrap:break-word">${esc(entry.stage||'Not Set')}</div>
+            <div style="font-size:11px;color:var(--tm);margin-top:2px">${dateStr}</div>
+            ${!isFirst?`<div style="font-size:12px;color:var(--ok);margin-top:4px;font-weight:500">⏱️ Duration: ${daysInStage} day${daysInStage!==1?'s':''}</div>`:'<div style="font-size:12px;color:var(--wn);margin-top:4px;font-weight:500">⏳ Currently in this stage</div>'}
+          </div>
+        </div>`;
+      }).join('')}
+    </div>
+  `;
+  
+  document.getElementById('stage-history-content').innerHTML=html;
+}
+
+// ════════════════════════════════════════════════════════════
+// EXPORT TXT (Requirement #11 — country-grouped format)
 // ════════════════════════════════════════════════════════════
 function exportTXT(){
   const now=new Date(),ac=students.filter(s=>s.status!=='Discontinued');
-  const au=ac.filter(s=>s.country==='Australia');
-  const nz=ac.filter(s=>s.country==='New Zealand');
-  const uk=ac.filter(s=>s.country==='United Kingdom');
-  const ca=ac.filter(s=>s.country==='Canada');
-  const my=ac.filter(s=>s.country==='Malaysia');
-  const other=nz.length+uk.length+ca.length+my.length;
+  // Group by country, only include countries with students
+  const byCountry={};
+  ac.forEach(s=>{
+    const c=s.country||'No Country';
+    if(!byCountry[c])byCountry[c]=[];
+    byCountry[c].push(s);
+  });
+  // Sort countries by order of appearance in the system
+  const countryOrder=['Australia','New Zealand','United Kingdom','Canada','Malaysia'];
+  const countries=Object.keys(byCountry).sort((a,b)=>{
+    const aIdx=countryOrder.indexOf(a);
+    const bIdx=countryOrder.indexOf(b);
+    if(aIdx!==-1&&bIdx!==-1)return aIdx-bIdx;
+    if(aIdx!==-1)return -1;
+    if(bIdx!==-1)return 1;
+    return a.localeCompare(b);
+  });
   const lines=['============================================================','       HBD SERVICES — STUDENT FILE STATUS REPORT','============================================================',
     `Generated: ${fmtDateTime(now)}`,
     '',` SUMMARY`,'------------------------------------------------------------',
     `Counsellor Name                          : Tausif Jaman`,
     `Total Active Files                       : ${ac.length}`,
-    `Australia (AU) Applications              : ${au.length}`,
-    `Other Destinations (UK, NZ, Canada, MY)  : ${other}`,
-    `Genuine Student (GS) Approved            : ${au.filter(s=>s.gsStatus==='Cleared').length}`,
-    `Confirmation of Enrolment (CoE) Received : ${au.filter(s=>s.coe==='Y').length}`,
-    `Visa Ready Students                      : ${ac.filter(s=>s.visaPrep==='Ready').length}`,
-    `Visa Possible Next Intake                : ${ac.filter(s=>s.visaNext==='Y').length}`,
     ''];
-  lines.push('============================================================');
+  // Add country totals for countries that exist
+  countries.forEach(c=>{
+    lines.push(`${c}                                   : ${byCountry[c].length}`.substring(0,60));
+  });
+  lines.push('');lines.push('Visa Ready Students                      : '+ac.filter(s=>s.visaPrep==='Ready').length);
+  lines.push('Visa Possible Next Intake                : '+ac.filter(s=>s.visaNext==='Y').length);
+  lines.push('');lines.push('============================================================');
   lines.push(' STUDENT DETAILS');
   lines.push('============================================================');
-  ac.sort((a,b)=>a.name.localeCompare(b.name)).forEach((s,i)=>{
+  let idx=1;
+  countries.forEach(country=>{
     lines.push('');
-    lines.push(`${String(i+1).padStart(2,'0')}. ${s.name}`);
-    lines.push(`    Country          : ${s.country||'—'}`);
-    lines.push(`    Intake           : ${s.intake||'—'}`);
-    lines.push(`    Stage            : ${s.appStage||'—'}`);
-    lines.push(`    Bank             : ${s.bankMatured==='Y'?'Matured'+(s.bankMonths?' ('+s.bankMonths+')':''):(s.bankMatured==='N'||s.bankMatured==='havent opened yet')?(s.bankMatured==='N'?'Pending':'Pending (Not Opened)')+(s.bankExpectedDate?' (Exp: '+s.bankExpectedDate+')':''):'—'}`);
-    lines.push(`    Visa Readiness   : ${s.visaPrep||'—'}`);
-    lines.push(`    Present Situation: ${s.situation||'—'}`);
-    if(s.uniApplications&&s.uniApplications.length){
-      lines.push(`    Universities     :`);
-      s.uniApplications.forEach((u,j)=>{
-        lines.push(`      ${j+1}. ${u.university} (${u.country}) — ${u.program||'N/A'}`);
-      });
-    }
+    lines.push('─── '+country+' ('+byCountry[country].length+') ───');
+    lines.push('');
+    byCountry[country].sort((a,b)=>a.name.localeCompare(b.name)).forEach(s=>{
+      lines.push(`${String(idx).padStart(2,'0')}. ${s.name}`);
+      lines.push(`    Intake           : ${s.intake||'—'}`);
+      lines.push(`    Stage            : ${s.appStage||'—'}`);
+      lines.push(`    Bank             : ${s.bankMatured==='Y'?'Matured'+(s.bankMonths?' ('+s.bankMonths+')':''):(s.bankMatured==='N'||s.bankMatured==='havent opened yet')?(s.bankMatured==='N'?'Pending':'Pending (Not Opened)')+(s.bankExpectedDate?' (Exp: '+s.bankExpectedDate+')':''):'—'}`);
+      lines.push(`    Visa Readiness   : ${s.visaPrep||'—'}`);
+      lines.push(`    Present Situation: ${s.situation||'—'}`);
+      if(s.uniApplications&&s.uniApplications.length){
+        lines.push(`    Universities     :`);
+        s.uniApplications.forEach((u,j)=>{
+          lines.push(`      ${j+1}. ${u.university} (${u.country}) — ${u.program||'N/A'}`);
+        });
+      }
+      lines.push('');
+      idx++;
+    });
   });
-  lines.push('');lines.push('============================================================');lines.push('End of Report');lines.push('');
+  lines.push('============================================================');lines.push('End of Report');lines.push('');
   dl(lines.join('\n'),`HBD_Summary_${iso(now)}.txt`,'text/plain');addLog('Exported TXT');
 }
 
 
 // ════════════════════════════════════════════════════════════
-// EXPORT PDF (Requirement #13 — auto-download via jsPDF)
+// EXPORT PDF (Requirement #13 — dashboard-style stats cards + student overview)
 // ════════════════════════════════════════════════════════════
 function exportPDF(){
   const now=new Date();
@@ -2337,8 +2500,36 @@ function exportPDF(){
   const margin=40;
   let y=margin;
 
-  const active=[...students].filter(s=>s.status!=='Discontinued').sort((a,b)=>a.name.localeCompare(b.name));
+  // PAGE 1: HEADER WITH NAME & DESIGNATION
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(24);
+  doc.setTextColor(29,78,216);
+  doc.text('Tausif Jaman',margin,y);
+  y+=24;
+  doc.setFont('helvetica','normal');
+  doc.setFontSize(14);
+  doc.setTextColor(74,112,152);
+  doc.text('Educational Counsellor',margin,y);
+  y+=16;
+  doc.setDrawColor(37,99,235);
+  doc.setLineWidth(2);
+  doc.line(margin,y,pageWidth-margin,y);
+  y+=24;
+
+  const active=[...students].filter(s=>s.status!=='Discontinued').sort((a,b)=>{
+    // Sort by country first, then by name within each country
+    const countryOrder=['Australia','New Zealand','United Kingdom','Canada','Malaysia',''];
+    const aCountryIdx=countryOrder.indexOf(a.country);
+    const bCountryIdx=countryOrder.indexOf(b.country);
+    const aIdx=aCountryIdx!==-1?aCountryIdx:countryOrder.length;
+    const bIdx=bCountryIdx!==-1?bCountryIdx:countryOrder.length;
+    if(aIdx!==bIdx)return aIdx-bIdx;
+    // If same country, sort by name
+    return a.name.localeCompare(b.name);
+  });
   const auActive=active.filter(s=>s.country==='Australia');
+  const caActive=active.filter(s=>s.country==='Canada');
+  const nzActive=active.filter(s=>s.country==='New Zealand');
   const safe=v=>v===undefined||v===null||v===''?'—':String(v);
   const bankText=s=>{
     if(s.bankMatured==='Y')return 'Matured'+(s.bankMonths?' ('+s.bankMonths+')':'');
@@ -2360,129 +2551,141 @@ function exportPDF(){
   const dateStr=dayNames[now.getDay()]+', '+now.getDate()+' '+monthNames[now.getMonth()]+' '+now.getFullYear();
   const timeStr=String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0');
 
-  // Header
+  // OVERALL STATISTICS SECTION
   doc.setFont('helvetica','bold');
-  doc.setFontSize(22);
-  doc.setTextColor(29,78,216);
-  doc.text('HBD Services',margin,y);
-  y+=22;
-  doc.setFontSize(14);
+  doc.setFontSize(12);
   doc.setTextColor(30,58,95);
-  doc.text('Student File Report',margin,y);
-  y+=18;
-  doc.setFont('helvetica','normal');
-  doc.setFontSize(10);
-  doc.setTextColor(74,112,152);
-  doc.text('Counsellor: Tausif Jaman  |  '+dateStr+' at '+timeStr,margin,y);
-  y+=20;
-  doc.setDrawColor(37,99,235);
-  doc.setLineWidth(2);
-  doc.line(margin,y,pageWidth-margin,y);
-  y+=24;
+  doc.text('Overall Statistics',margin,y);
+  y+=16;
 
-  // Dashboard summary cards
-  doc.setFont('helvetica','bold');
-  doc.setFontSize(13);
-  doc.setTextColor(30,58,95);
-  doc.text('Dashboard Summary',margin,y);
-  y+=18;
-
-  const summaryStats=[
+  // Overall stats cards (6 main ones)
+  const overallStats=[
     {label:'Total Active',val:active.length,color:[37,99,235]},
     {label:'Bank Matured',val:active.filter(s=>s.bankMatured==='Y').length,color:[5,150,105]},
-    {label:'GS Applied (AU)',val:auActive.filter(s=>s.gsApplied==='Y'&&s.gsStatus!=='Cleared'&&s.gsStatus!=='Rejected'&&s.coe!=='Y').length,color:[37,99,235]},
     {label:'GS Cleared (AU)',val:auActive.filter(s=>s.gsStatus==='Cleared').length,color:[5,150,105]},
     {label:'CoE Received (AU)',val:auActive.filter(s=>s.coe==='Y').length,color:[147,51,234]},
-    {label:'Visa This Intake',val:active.filter(s=>s.visaNext==='Y').length,color:[5,150,105]},
-    {label:'Deferrals',val:active.filter(s=>s.defer==='Y').length,color:[217,119,6]},
-    {label:'Visa Ready',val:active.filter(s=>s.visaPrep==='Ready').length,color:[5,150,105]},
-    {label:'Pending Tasks',val:pendingTasks.filter(t=>!t.done).length,color:[220,38,38]},
-    {label:'Unis Applied',val:active.reduce((a,s)=>a+((s.uniApplications&&s.uniApplications.length)?s.uniApplications.length:(+s.uniCount||0)),0),color:[37,99,235]}
-  ].filter(st=>st.val>0 || st.label==='Total Active');
+    {label:'Expecting Visa This Intake',val:active.filter(s=>s.visaNext==='Y').length,color:[5,150,105]},
+    {label:'Visa Ready',val:active.filter(s=>s.visaPrep==='Ready').length,color:[5,150,105]}
+  ];
 
-  const cardW=120,cardH=55,cardGap=12,cardsPerRow=Math.max(1,Math.floor((pageWidth-margin*2+cardGap)/(cardW+cardGap)));
-  summaryStats.forEach((st,i)=>{
+  const cardW=110,cardH=50,cardGap=10,cardsPerRow=Math.max(1,Math.floor((pageWidth-margin*2+cardGap)/(cardW+cardGap)));
+  let cardStartY=y;
+  overallStats.forEach((st,i)=>{
     const col=i%cardsPerRow,row=Math.floor(i/cardsPerRow);
-    const cx=margin+col*(cardW+cardGap),cy=y+row*(cardH+cardGap);
-    ensureSpace(cardH+20);
+    const cx=margin+col*(cardW+cardGap),cy=cardStartY+row*(cardH+cardGap);
     doc.setFillColor(248,251,255);
     doc.setDrawColor(...st.color);
     doc.setLineWidth(1.5);
-    doc.roundedRect(cx,cy,cardW,cardH,5,5,'FD');
+    doc.roundedRect(cx,cy,cardW,cardH,4,4,'FD');
     doc.setFillColor(...st.color);
-    doc.rect(cx,cy,cardW,4,'F');
+    doc.rect(cx,cy,cardW,3,'F');
     doc.setFont('helvetica','bold');
-    doc.setFontSize(20);
+    doc.setFontSize(18);
     doc.setTextColor(...st.color);
-    doc.text(String(st.val),cx+cardW/2,cy+28,{align:'center'});
-    doc.setFont('helvetica','normal');
-    doc.setFontSize(8);
-    doc.setTextColor(74,112,152);
-    doc.text(st.label,cx+cardW/2,cy+42,{align:'center'});
-  });
-  y+=Math.ceil(summaryStats.length/cardsPerRow)*(cardH+cardGap)+10;
-
-  // Country summary cards
-  ensureSpace(120);
-  doc.setFont('helvetica','bold');
-  doc.setFontSize(13);
-  doc.setTextColor(30,58,95);
-  doc.text('Country Summary',margin,y);
-  y+=18;
-  const countryData=Object.entries(active.reduce((acc,s)=>{if(s.country)acc[s.country]=(acc[s.country]||0)+1;return acc;},{})).sort((a,b)=>b[1]-a[1]);
-  const cColors=[[37,99,235],[5,150,105],[217,119,6],[147,51,234],[220,38,38]];
-  countryData.forEach((cd,i)=>{
-    const col=i%cardsPerRow,row=Math.floor(i/cardsPerRow);
-    const cx=margin+col*(cardW+cardGap),cy=y+row*(cardH+cardGap),clr=cColors[i%cColors.length];
-    doc.setFillColor(248,251,255);
-    doc.setDrawColor(...clr);
-    doc.setLineWidth(1.5);
-    doc.roundedRect(cx,cy,cardW,cardH,5,5,'FD');
-    doc.setFillColor(...clr);
-    doc.rect(cx,cy,cardW,4,'F');
-    doc.setFont('helvetica','bold');
-    doc.setFontSize(20);
-    doc.setTextColor(...clr);
-    doc.text(String(cd[1]),cx+cardW/2,cy+28,{align:'center'});
-    doc.setFont('helvetica','normal');
-    doc.setFontSize(8);
-    doc.setTextColor(74,112,152);
-    doc.text(cd[0],cx+cardW/2,cy+42,{align:'center'});
-  });
-  y+=Math.ceil(Math.max(countryData.length,1)/cardsPerRow)*(cardH+cardGap)+10;
-
-  // Stage distribution cards
-  ensureSpace(120);
-  doc.setFont('helvetica','bold');
-  doc.setFontSize(13);
-  doc.setTextColor(30,58,95);
-  doc.text('Stage Distribution',margin,y);
-  y+=18;
-  const stageData=Object.entries(active.reduce((acc,s)=>{const k=s.appStage||'Not Set';acc[k]=(acc[k]||0)+1;return acc;},{})).sort((a,b)=>b[1]-a[1]);
-  const sColors=[[88,166,255],[63,185,80],[210,153,34],[248,81,73],[188,142,249],[121,192,255],[86,211,100],[255,166,87]];
-  const stCardW=140,stCardH=45,stPerRow=Math.max(1,Math.floor((pageWidth-margin*2+cardGap)/(stCardW+cardGap)));
-  stageData.forEach((sd,i)=>{
-    const col=i%stPerRow,row=Math.floor(i/stPerRow);
-    const cx=margin+col*(stCardW+cardGap),cy=y+row*(stCardH+cardGap),clr=sColors[i%sColors.length];
-    doc.setFillColor(248,251,255);
-    doc.setDrawColor(...clr);
-    doc.setLineWidth(1);
-    doc.roundedRect(cx,cy,stCardW,stCardH,4,4,'FD');
-    doc.setFillColor(...clr);
-    doc.rect(cx,cy,stCardW,3,'F');
-    doc.setFont('helvetica','bold');
-    doc.setFontSize(16);
-    doc.setTextColor(...clr);
-    doc.text(String(sd[1]),cx+8,cy+22);
+    doc.text(String(st.val),cx+cardW/2,cy+24,{align:'center'});
     doc.setFont('helvetica','normal');
     doc.setFontSize(7);
     doc.setTextColor(74,112,152);
-    const stLabel=sd[0].length>24?sd[0].slice(0,24)+'...':sd[0];
-    doc.text(stLabel,cx+8,cy+34);
+    doc.text(st.label,cx+cardW/2,cy+40,{align:'center'});
   });
-  y+=Math.ceil(Math.max(stageData.length,1)/stPerRow)*(stCardH+cardGap)+10;
+  y+=Math.ceil(overallStats.length/cardsPerRow)*(cardH+cardGap)+16;
 
-  // Student overview page
+  // COUNTRY-WISE STATISTICS SECTION
+  if(y+120>pageHeight-60){
+    doc.addPage();
+    y=margin;
+  }
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(12);
+  doc.setTextColor(30,58,95);
+  doc.text('Country-Wise Statistics',margin,y);
+  y+=16;
+
+  // Build country stats directly (inline data without HTML generation)
+  const countryStats=[];
+  // Australia stats
+  if(auActive.length>0){
+    const auStatsArr=[
+      {label:'Total Active AU',val:auActive.length,color:[37,99,235]},
+      {label:'Conditional Offer Received',val:auActive.filter(s=>s.appStage==='Conditional offer letter received').length,color:[37,99,235]},
+      {label:'Preparing GS Documents',val:auActive.filter(s=>['GS assessment documentation requested','GS assessment preparation started','GS assessment completed'].includes(s.appStage)).length,color:[37,99,235]},
+      {label:'Fund >3 Months Matured',val:auActive.filter(s=>s.bankMatured==='Y'&&s.bankMonths&&(s.bankMonths.includes('More than')||s.bankMonths.includes('6'))).length,color:[37,99,235]},
+      {label:'GS Applications Submitted',val:auActive.filter(s=>s.appStage==='GS assessment applied').length,color:[37,99,235]},
+      {label:'GS Cleared',val:auActive.filter(s=>s.appStage==='GS assessment cleared').length,color:[37,99,235]},
+      {label:'Visa SOP Pending',val:auActive.filter(s=>s.appStage==='Visa SOP writing').length,color:[37,99,235]},
+      {label:'Visa Lodged',val:auActive.filter(s=>s.appStage==='Visa lodged').length,color:[37,99,235]},
+      {label:'Visa Refused',val:auActive.filter(s=>s.appStage==='Visa refused').length,color:[37,99,235]},
+      {label:'Visa Granted',val:auActive.filter(s=>s.appStage==='Visa granted').length,color:[37,99,235]}
+    ];
+    auStatsArr.forEach(st=>countryStats.push(st));
+  }
+  // Canada stats
+  if(caActive.length>0){
+    const caStatsArr=[
+      {label:'Total Active CA',val:caActive.length,color:[147,51,234]},
+      {label:'Offer Letters Received',val:caActive.filter(s=>s.appStage==='Receiving conditional offer letter').length,color:[147,51,234]},
+      {label:'Tuition Deposit Made',val:caActive.filter(s=>s.appStage==='Making tuition deposit').length,color:[147,51,234]},
+      {label:'Letter of Acceptance',val:caActive.filter(s=>s.appStage==='Receiving letter of acceptance').length,color:[147,51,234]},
+      {label:'Documentation Prepared',val:caActive.filter(s=>s.appStage==='Preparing documentations for visa submission').length,color:[147,51,234]},
+      {label:'Visa SOP Pending',val:caActive.filter(s=>s.appStage==='Writing visa statement of purpose').length,color:[147,51,234]},
+      {label:'Visa Applications Submitted',val:caActive.filter(s=>s.appStage==='Submitting this application').length,color:[147,51,234]},
+      {label:'Passport Request/Visa Granted',val:caActive.filter(s=>s.appStage==='Receiving passport request').length,color:[147,51,234]},
+      {label:'Visa Rejected',val:caActive.filter(s=>s.appStage==='Visa rejected').length,color:[147,51,234]}
+    ];
+    caStatsArr.forEach(st=>countryStats.push(st));
+  }
+  // New Zealand stats
+  if(nzActive.length>0){
+    const nzStatsArr=[
+      {label:'Total Active NZ',val:nzActive.length,color:[217,119,6]},
+      {label:'Conditional Offer Issued',val:nzActive.filter(s=>s.appStage==='Conditional offer letter issued').length,color:[217,119,6]},
+      {label:'Visa Interview Pending',val:nzActive.filter(s=>s.appStage==='Visa Interview Schedule').length,color:[217,119,6]},
+      {label:'Unconditional Offer Issued',val:nzActive.filter(s=>s.appStage==='Unconditional offer letter issued').length,color:[217,119,6]},
+      {label:'Visa Lodged',val:nzActive.filter(s=>s.appStage==='Visa lodged').length,color:[217,119,6]},
+      {label:'Approve in Principle Issued',val:nzActive.filter(s=>s.appStage==='Approve in principle has been issued').length,color:[217,119,6]},
+      {label:'Tuition Fee Paid',val:nzActive.filter(s=>s.appStage==='Tuition fee paid').length,color:[217,119,6]}
+    ];
+    nzStatsArr.forEach(st=>countryStats.push(st));
+  }
+
+  // Display country stats in a compact layout
+  const countryCardW=100,countryCardH=45;
+  let countryCardRow=0,countryCardCol=0;
+  countryStats.forEach((st)=>{
+    if(countryCardCol>=cardsPerRow){
+      countryCardCol=0;
+      countryCardRow++;
+    }
+    const cx=margin+countryCardCol*(countryCardW+cardGap),cy=y+countryCardRow*(countryCardH+cardGap);
+    if(cy+countryCardH>pageHeight-60){
+      doc.addPage();
+      y=margin;
+      countryCardRow=0;
+      countryCardCol=0;
+    }
+    const cx2=margin+countryCardCol*(countryCardW+cardGap),cy2=y+countryCardRow*(countryCardH+cardGap);
+    doc.setFillColor(248,251,255);
+    doc.setDrawColor(...st.color);
+    doc.setLineWidth(1);
+    doc.roundedRect(cx2,cy2,countryCardW,countryCardH,3,3,'FD');
+    doc.setFillColor(...st.color);
+    doc.rect(cx2,cy2,countryCardW,3,'F');
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(16);
+    doc.setTextColor(...st.color);
+    doc.text(String(st.val),cx2+countryCardW/2,cy2+20,{align:'center'});
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(6.5);
+    doc.setTextColor(74,112,152);
+    doc.text(st.label,cx2+countryCardW/2,cy2+37,{align:'center',maxWidth:countryCardW-4});
+    countryCardCol++;
+  });
+  y+=Math.ceil(Math.max(countryStats.length,1)/cardsPerRow)*(countryCardH+cardGap)+16;
+  y+=12;
+
+
+
+  // STUDENT OVERVIEW PAGE
   doc.addPage();
   y=margin;
   doc.setFont('helvetica','bold');
