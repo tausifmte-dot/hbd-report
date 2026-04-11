@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:38:51.077Z",
+    "saved": "2026-04-11T09:39:15.011Z",
     "version": 8,
     "count": 39
   },
@@ -109,7 +109,7 @@
       "email": "argha.das@northsouth.edu"
     },
     {
-      "appStage": "University shortlisting ongoing",
+      "appStage": "GS assessment preparation started",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "3 months",
@@ -120,7 +120,7 @@
       "gsStatus": "",
       "id": 1775372567768.4783,
       "intake": "June 2026",
-      "lastUpdated": 1775900329066,
+      "lastUpdated": 1775900353009,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Ashfaque Hossain",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900353009,
+      "msg": "Updated: Ashfaque Hossain"
+    },
     {
       "ts": 1775900329067,
       "msg": "Updated: Ashfaque Hossain"
