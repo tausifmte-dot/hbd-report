@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:30:48.649Z",
+    "saved": "2026-04-11T09:30:52.741Z",
     "version": 8,
-    "count": 40
+    "count": 39
   },
   "students": [
     {
@@ -724,35 +724,6 @@
       "visaPrep": "",
       "visaNext": "",
       "lastUpdated": 1775899692314,
-      "remarks": "",
-      "situation": "",
-      "remarksHistory": [],
-      "situationHistory": [],
-      "applicationCompletions": [],
-      "uniApplications": []
-    },
-    {
-      "id": 22712282400,
-      "name": "Md. Saidul Islam Saeed",
-      "country": "",
-      "intake": "June 2026",
-      "status": "Active",
-      "appStage": "Submitted",
-      "phone": "8801521562502",
-      "email": "saeedthekestrel@gmail.com",
-      "uniCount": 0,
-      "moreUni": "N",
-      "moreUniDate": "",
-      "bankMatured": "",
-      "bankMonths": "",
-      "bankExpectedDate": "",
-      "defer": "N",
-      "gsApplied": "N",
-      "gsStatus": "",
-      "coe": "N",
-      "visaPrep": "",
-      "visaNext": "",
-      "lastUpdated": 0,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1599,6 +1570,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775899850727,
+      "msg": "Removed: Md. Saidul Islam Saeed"
+    },
     {
       "ts": 1775899846648,
       "msg": "Removed: Md. Munsur Alam"
