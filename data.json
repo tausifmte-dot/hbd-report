@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T13:45:26.506Z",
+    "saved": "2026-04-11T13:47:03.436Z",
     "version": 8,
     "count": 39
   },
@@ -1286,28 +1286,35 @@
       "country": "New Zealand",
       "intake": "June 2026",
       "status": "Active",
-      "appStage": "Not yet",
+      "appStage": "Applications are with agents for review",
       "phone": "8801855571426",
       "email": "sharairhossenhere17@gmail.com",
       "uniCount": 0,
       "moreUni": "N",
       "moreUniDate": "",
-      "bankMatured": "",
-      "bankMonths": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 3 months",
       "bankExpectedDate": "",
       "defer": "N",
       "gsApplied": "N",
       "gsStatus": "",
       "coe": "N",
-      "visaPrep": "",
-      "visaNext": "",
-      "lastUpdated": 1775900007146,
+      "visaPrep": "On Hold",
+      "visaNext": "Y",
+      "lastUpdated": 1775915219464,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
       "situationHistory": [],
       "applicationCompletions": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "stageHistory": [
+        {
+          "stage": "Applications are with agents for review",
+          "enteredDate": 1775915192105,
+          "duration": 0
+        }
+      ]
     },
     {
       "id": 35712282400,
@@ -1678,6 +1685,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775915221434,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775915124505,
       "msg": "Manual save — 07:45 PM"
