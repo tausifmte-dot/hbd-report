@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "saved": "2026-04-11T02:29:12.355Z",
+    "saved": "2026-04-11T09:01:50.554Z",
     "version": 8,
-    "count": 27
+    "count": 42
   },
   "students": [
     {
@@ -16,14 +16,18 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.8447,
-      "intake": "July 2026",
-      "lastUpdated": 1775447271703,
-      "moreUni": "Y",
-      "moreUniDate": "2026-04-10",
+      "intake": "June 2026",
+      "lastUpdated": 1775784563679,
+      "moreUni": "N",
+      "moreUniDate": "",
       "name": "Amrito Kumar",
       "phone": "+880 1720-305924",
-      "remarks": "I have to look for universities for him ",
+      "remarks": "Application reminder completed for OTAGO poly (IT)",
       "remarksHistory": [
+        {
+          "ts": 1775784563679,
+          "text": "Application reminder completed for OTAGO poly (IT)"
+        },
         {
           "text": "I have to look for universities for him ",
           "ts": 1775390621048
@@ -37,11 +41,26 @@
         }
       ],
       "status": "Active",
-      "uniCount": 0,
+      "uniCount": 1,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": [],
-      "applicationCompletions": []
+      "uniApplications": [
+        {
+          "country": "Australia",
+          "university": "OTAGO poly",
+          "program": "IT"
+        }
+      ],
+      "applicationCompletions": [
+        {
+          "country": "Australia",
+          "university": "OTAGO poly",
+          "intake": "July 2026",
+          "subject": "IT",
+          "ts": 1775784563679
+        }
+      ],
+      "email": "amritokumar943@gmail.com"
     },
     {
       "appStage": "Havent made up his mind yet",
@@ -54,12 +73,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.3816,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440608753,
       "moreUni": "Y",
       "moreUniDate": "2026-04-30",
       "name": "Argha Das",
-      "phone": "",
+      "phone": "8801893771211",
       "remarks": "Student is most probably applying through other agency ",
       "remarksHistory": [
         {
@@ -79,7 +98,8 @@
       "visaNext": "N",
       "visaPrep": "On Hold",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "argha.das@northsouth.edu"
     },
     {
       "appStage": "GS Preparation Ongoing",
@@ -138,7 +158,8 @@
           "program": ""
         }
       ],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "ratuljap@gmail.com"
     },
     {
       "appStage": "Cond. Offer Received",
@@ -151,12 +172,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.4805,
-      "intake": "September 2026",
+      "intake": "October 2026",
       "lastUpdated": 1775440627021,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Farhana Rini",
-      "phone": "",
+      "phone": "8801313814057",
       "remarks": "Student will defer to Jan 2026",
       "remarksHistory": [
         {
@@ -176,7 +197,8 @@
       "visaNext": "N",
       "visaPrep": "On Hold",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "farhanarini899@gmail.com"
     },
     {
       "appStage": "Cond. Offer Received",
@@ -189,7 +211,7 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.403,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775519424995,
       "moreUni": "N",
       "moreUniDate": "",
@@ -230,7 +252,8 @@
           "program": ""
         }
       ],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "siddikaarpita@gmail.com"
     },
     {
       "appStage": "GS Preparation Ongoing",
@@ -243,12 +266,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.747,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440638576,
       "moreUni": "Y",
       "moreUniDate": "2026-04-07",
       "name": "Gazi MD Shahabuddin",
-      "phone": "",
+      "phone": "8801687877853",
       "remarks": "Need to bring an updated language score ",
       "remarksHistory": [
         {
@@ -268,7 +291,37 @@
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "shahabuddin33-1339@diu.edu.bd"
+    },
+    {
+      "id": 33712282400,
+      "name": "Habibur Rahman",
+      "country": "",
+      "intake": "February 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801537540644",
+      "email": "habibur.rahman09@northsouth.edu",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
     },
     {
       "appStage": "1st Intrv Pending",
@@ -281,12 +334,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.704,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440670225,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Hafsa Islam Oyshe",
-      "phone": "",
+      "phone": "8801306908984",
       "remarks": "Has AUS rejection & lost all rejected related documents, so she is trying to collect them & preparing for University Interview",
       "remarksHistory": [
         {
@@ -306,7 +359,8 @@
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "hafsaoyshe121@gmail.com"
     },
     {
       "appStage": "GS Preparation Ongoing",
@@ -319,14 +373,18 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.2964,
-      "intake": "July 2026",
-      "lastUpdated": 1775440690987,
-      "moreUni": "Y",
-      "moreUniDate": "2026-04-07",
+      "intake": "June 2026",
+      "lastUpdated": 1775784533215,
+      "moreUni": "N",
+      "moreUniDate": "",
       "name": "Hasan Molla",
-      "phone": "",
-      "remarks": "Need to prepare GS documents ",
+      "phone": "8801700782825",
+      "remarks": "Application reminder completed for La trobe (EEE)",
       "remarksHistory": [
+        {
+          "ts": 1775784533215,
+          "text": "Application reminder completed for La trobe (EEE)"
+        },
         {
           "text": "Need to prepare GS documents ",
           "ts": 1775390638761
@@ -343,8 +401,52 @@
       "uniCount": 2,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": [],
-      "applicationCompletions": []
+      "uniApplications": [
+        {
+          "country": "Australia",
+          "university": "La trobe",
+          "program": "EEE"
+        }
+      ],
+      "applicationCompletions": [
+        {
+          "country": "Australia",
+          "university": "La trobe",
+          "intake": "June 2027",
+          "subject": "EEE",
+          "ts": 1775784533215
+        }
+      ],
+      "email": "hasanmollandc@gmail.com"
+    },
+    {
+      "id": 40712282400,
+      "name": "Himel Babu",
+      "country": "",
+      "intake": "February 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801686768829",
+      "email": "fxchimel70@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
     },
     {
       "appStage": "GS Submitted",
@@ -357,12 +459,12 @@
       "gsApplied": "Y",
       "gsStatus": "Not Applied",
       "id": 1775372567768.7937,
-      "intake": "July 2026",
+      "intake": "February 2026",
       "lastUpdated": 1775451867541,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Jannatul Fardhous",
-      "phone": "",
+      "phone": "8801772721921",
       "remarks": "Gs for Torrens submitted, application to Swinburn is submitted ",
       "remarksHistory": [
         {
@@ -397,7 +499,8 @@
           "program": "Master of Design"
         }
       ],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "jannatulfardhous15@gmail.com"
     },
     {
       "appStage": "Documents from student are pending",
@@ -410,12 +513,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.5547,
-      "intake": "July 2026",
-      "lastUpdated": 1775538490912,
+      "intake": "June 2026",
+      "lastUpdated": 1775440711388,
       "moreUni": "Y",
       "moreUniDate": "2026-04-30",
       "name": "JH Baijet",
-      "phone": "",
+      "phone": "8801648255930",
       "remarks": "Student want to apply for July intake but he will only apply for Social work which is not available for July anywhere and has low IELTS SCORE ",
       "remarksHistory": [
         {
@@ -423,12 +526,8 @@
           "ts": 1775390657001
         }
       ],
-      "situation": "Documents are still pending",
+      "situation": "Suggested to consider for Foundation, but he hasn't made up his mind  ",
       "situationHistory": [
-        {
-          "ts": 1775538490912,
-          "text": "Documents are still pending"
-        },
         {
           "text": "Suggested to consider for Foundation, but he hasn't made up his mind  ",
           "ts": 1775390657001
@@ -439,7 +538,8 @@
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "jhbaijet@gmail.com"
     },
     {
       "appStage": "GS Submitted",
@@ -452,7 +552,7 @@
       "gsApplied": "Y",
       "gsStatus": "",
       "id": 1775372567768.7424,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775453794239,
       "moreUni": "N",
       "moreUniDate": "",
@@ -487,25 +587,26 @@
           "program": "Bachelor in Community Development"
         }
       ],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "mdkawsarkhan4941@gmail.com"
     },
     {
       "appStage": "Tuition Fee & OSHC Paid",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
-      "coe": "Y",
+      "coe": "N",
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
       "gsStatus": "Cleared",
       "id": 1775372567768.6907,
-      "intake": "July 2026",
-      "lastUpdated": 1775874548534,
+      "intake": "June 2026",
+      "lastUpdated": 1775440727736,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Limon Ahmed",
-      "phone": "",
+      "phone": "8801317152973",
       "remarks": "Waiting for COE ",
       "remarksHistory": [
         {
@@ -525,7 +626,8 @@
       "visaNext": "Y",
       "visaPrep": "Pending from Counsellor",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "limonahmed134500@gmail.com"
     },
     {
       "appStage": "Under Review",
@@ -538,12 +640,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.666,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440744720,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Mahadi Basar",
-      "phone": "",
+      "phone": "8801314040585",
       "remarks": "Cannot submit GS in australia as gpa is poor 3.44, and received offer for Diploma Program ",
       "remarksHistory": [
         {
@@ -563,7 +665,8 @@
       "visaNext": "Y",
       "visaPrep": "Started",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "masud1808@gmail.com"
     },
     {
       "appStage": "Visa Submitted",
@@ -576,12 +679,12 @@
       "gsApplied": "Y",
       "gsStatus": "Cleared",
       "id": 1775372567768.3384,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440751374,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Mahin Ahmed",
-      "phone": "",
+      "phone": "8801877670530",
       "remarks": "Visa Submitted on 2nd April ",
       "remarksHistory": [
         {
@@ -596,7 +699,124 @@
       "visaPrep": "Ready",
       "situationHistory": [],
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "mahinsnx100@gmail.com"
+    },
+    {
+      "id": 34712282400,
+      "name": "Mahin Prodhan",
+      "country": "",
+      "intake": "February 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801938797201",
+      "email": "mdmahin24252627@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
+    },
+    {
+      "id": 37712282400,
+      "name": "Mahmudul Hasan Mahi",
+      "country": "",
+      "intake": "June 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801521728716",
+      "email": "mahmudullhassan2005@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
+    },
+    {
+      "id": 39712282400,
+      "name": "Md. Munsur Alam",
+      "country": "",
+      "intake": "February 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801988316307",
+      "email": "mdmunsuralamcou@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
+    },
+    {
+      "id": 22712282400,
+      "name": "Md. Saidul Islam Saeed",
+      "country": "",
+      "intake": "June 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801521562502",
+      "email": "saeedthekestrel@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
     },
     {
       "appStage": "Looking for Universities",
@@ -609,12 +829,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.3599,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440756435,
       "moreUni": "Y",
       "moreUniDate": "2026-04-07",
       "name": "Modasirul Haque Prince",
-      "phone": "",
+      "phone": "8801706978555",
       "remarks": "Need to apply to university ",
       "remarksHistory": [
         {
@@ -634,7 +854,8 @@
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "bhuiyanp03@gmail.com"
     },
     {
       "appStage": "Cond. Offer Received",
@@ -647,12 +868,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.0063,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440764998,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Moon Sarkar",
-      "phone": "",
+      "phone": "8801915933978",
       "remarks": "Bank haven't started ",
       "remarksHistory": [
         {
@@ -672,7 +893,8 @@
       "visaNext": "N",
       "visaPrep": "On Hold",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "moonsarkar612@gmail.com"
     },
     {
       "appStage": "Under Review",
@@ -685,14 +907,18 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.6958,
-      "intake": "July 2026",
-      "lastUpdated": 1775440770900,
-      "moreUni": "Y",
-      "moreUniDate": "2026-04-07",
+      "intake": "February 2026",
+      "lastUpdated": 1775784473002,
+      "moreUni": "N",
+      "moreUniDate": "",
       "name": "Nafij Iqbal Sazid",
-      "phone": "",
-      "remarks": "New to apply to new universities ",
+      "phone": "8801911795416",
+      "remarks": "Application reminder completed for otago polytechnic (IT), AIS (IT)",
       "remarksHistory": [
+        {
+          "ts": 1775784473002,
+          "text": "Application reminder completed for otago polytechnic (IT), AIS (IT)"
+        },
         {
           "text": "New to apply to new universities ",
           "ts": 1775390675487
@@ -700,12 +926,68 @@
       ],
       "situation": "",
       "status": "Active",
-      "uniCount": 1,
+      "uniCount": 2,
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "situationHistory": [],
-      "uniApplications": [],
-      "applicationCompletions": []
+      "uniApplications": [
+        {
+          "country": "New Zealand",
+          "university": "otago polytechnic",
+          "program": "IT"
+        },
+        {
+          "country": "New Zealand",
+          "university": "AIS",
+          "program": "IT"
+        }
+      ],
+      "applicationCompletions": [
+        {
+          "country": "New Zealand",
+          "university": "AIS",
+          "intake": "July 2026",
+          "subject": "IT",
+          "ts": 1775784473002
+        },
+        {
+          "country": "New Zealand",
+          "university": "otago polytechnic",
+          "intake": "July 2026",
+          "subject": "IT",
+          "ts": 1775784473002
+        }
+      ],
+      "email": "nafijsazid1234@gmail.com"
+    },
+    {
+      "id": 31712282400,
+      "name": "Noor Alam Siddiqui Jiku",
+      "country": "",
+      "intake": "June 2026",
+      "status": "Active",
+      "appStage": "Not yet",
+      "phone": "8801779447924",
+      "email": "alam.jiku11@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
     },
     {
       "appStage": "Documentation Stage",
@@ -718,12 +1000,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.296,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440782466,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Nusrat Jahan Eva",
-      "phone": "",
+      "phone": "8801581104212",
       "remarks": "Waiting for visa documents to get ready and bank solvency to mature ",
       "remarksHistory": [
         {
@@ -743,7 +1025,37 @@
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "nusrate228@gmail.com"
+    },
+    {
+      "id": 38712282400,
+      "name": "Qazi Zulfiquer Ahmed Jafree",
+      "country": "",
+      "intake": "February 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801622659286",
+      "email": "qaziahmeed123@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
     },
     {
       "appStage": "Documentation Stage",
@@ -756,12 +1068,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.8186,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440789430,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Rakibul Islam",
-      "phone": "",
+      "phone": "8801304581550",
       "remarks": "Waiting for visa documents to get ready ",
       "remarksHistory": [
         {
@@ -776,7 +1088,8 @@
       "visaPrep": "On Hold",
       "situationHistory": [],
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "jrrakib2003@gmail.com"
     },
     {
       "appStage": "Visa Preparation Ongoing",
@@ -789,12 +1102,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.3218,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440796595,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Sadek Mahbub Sunny",
-      "phone": "",
+      "phone": "8801923222193",
       "remarks": "",
       "situation": "need to write SOP ",
       "situationHistory": [
@@ -809,10 +1122,11 @@
       "visaPrep": "Pending from Counsellor",
       "remarksHistory": [],
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "otzsunny555@gmail.com"
     },
     {
-      "appStage": "GS Interview Pending",
+      "appStage": "GS Submitted",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
@@ -820,21 +1134,17 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
-      "gsStatus": "Cleared",
+      "gsStatus": "Rejected",
       "id": 1775372567768.202,
-      "intake": "July 2026",
-      "lastUpdated": 1775791079965,
+      "intake": "June 2026",
+      "lastUpdated": 1775440802823,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Saidul Islam Saeed",
-      "phone": "",
+      "phone": "8801887896612",
       "remarks": "",
-      "situation": "Wollongong GS cleared",
+      "situation": "Waiting for GS Decisions",
       "situationHistory": [
-        {
-          "ts": 1775790976754,
-          "text": "Wollongong GS cleared"
-        },
         {
           "text": "Waiting for GS Decisions",
           "ts": 1775390684888
@@ -846,7 +1156,8 @@
       "visaPrep": "On Hold",
       "remarksHistory": [],
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "fahadsart.bd2@gmail.com"
     },
     {
       "appStage": "Documentation Stage",
@@ -859,12 +1170,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.7246,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440812058,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Saira Sadia",
-      "phone": "",
+      "phone": "8801982408519",
       "remarks": "Bank matures Apr 22",
       "remarksHistory": [
         {
@@ -884,10 +1195,69 @@
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "sadiasaira791@gmail.com"
     },
     {
-      "appStage": "GS Submitted",
+      "id": 36712282400,
+      "name": "Saiyda hossin hafsa",
+      "country": "",
+      "intake": "February 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801609178145",
+      "email": "saiydahossin019@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
+    },
+    {
+      "id": 14712282400,
+      "name": "Samiha Akhter",
+      "country": "",
+      "intake": "June 2026",
+      "status": "Active",
+      "appStage": "Not yet",
+      "phone": "8801755677657",
+      "email": "samiha.akhter92@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
+    },
+    {
+      "appStage": "GS Rejected",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
@@ -895,14 +1265,14 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
-      "gsStatus": "Applied",
+      "gsStatus": "Rejected",
       "id": 1775372567768.766,
-      "intake": "July 2026",
-      "lastUpdated": 1775816991025,
+      "intake": "June 2026",
+      "lastUpdated": 1775440821268,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Shampa Banik",
-      "phone": "+880 1868-651359",
+      "phone": "8801727211428",
       "remarks": "Student spouse has visa refusal from USA so VU ECA rejected their GS ",
       "remarksHistory": [
         {
@@ -921,14 +1291,96 @@
       "uniCount": 3,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "uniApplications": [
-        {
-          "country": "Australia",
-          "university": "La Trobe University (La Trobe)",
-          "program": "MASTER OF INFORMATION TECHNOLOGY SMIT"
-        }
-      ],
-      "applicationCompletions": []
+      "uniApplications": [],
+      "applicationCompletions": [],
+      "email": "shampabanik13@gmail.com"
+    },
+    {
+      "id": 44712282400,
+      "name": "Shams Arefin Rimon",
+      "country": "",
+      "intake": "February 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801818375748",
+      "email": "msalam1764@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
+    },
+    {
+      "id": 9712282400,
+      "name": "Sharair Hossen Emon",
+      "country": "",
+      "intake": "June 2026",
+      "status": "Active",
+      "appStage": "Not yet",
+      "phone": "8801855571426",
+      "email": "sharairhossenhere17@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
+    },
+    {
+      "id": 35712282400,
+      "name": "Sheikh Fahim Islam Fahim",
+      "country": "",
+      "intake": "February 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801610583803",
+      "email": "thesheikhfahim@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
     },
     {
       "appStage": "Looking for Universities",
@@ -941,14 +1393,18 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.7961,
-      "intake": "July 2026",
-      "lastUpdated": 1775440825961,
-      "moreUni": "Y",
-      "moreUniDate": "2026-04-07",
+      "intake": "June 2026",
+      "lastUpdated": 1775784499252,
+      "moreUni": "N",
+      "moreUniDate": "",
       "name": "Snigdha Islam Santa",
-      "phone": "",
-      "remarks": "Has Australia GS rejection (UOW)",
+      "phone": "8801567875760",
+      "remarks": "Application reminder completed for AUC (MSC IN CIVIL)",
       "remarksHistory": [
+        {
+          "ts": 1775784499252,
+          "text": "Application reminder completed for AUC (MSC IN CIVIL)"
+        },
         {
           "text": "Has Australia GS rejection (UOW)",
           "ts": 1775390695959
@@ -956,12 +1412,27 @@
       ],
       "situation": "",
       "status": "Active",
-      "uniCount": 0,
+      "uniCount": 1,
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "situationHistory": [],
-      "uniApplications": [],
-      "applicationCompletions": []
+      "uniApplications": [
+        {
+          "country": "New Zealand",
+          "university": "AUC",
+          "program": "MSC IN CIVIL"
+        }
+      ],
+      "applicationCompletions": [
+        {
+          "country": "New Zealand",
+          "university": "AUC",
+          "intake": "July 2026",
+          "subject": "MSC IN CIVIL",
+          "ts": 1775784499251
+        }
+      ],
+      "email": "snigdhaislamsanta@gmail.com"
     },
     {
       "appStage": "GS Preparation Ongoing",
@@ -974,12 +1445,12 @@
       "gsApplied": "Y",
       "gsStatus": "Not Applied",
       "id": 1775372567768.9941,
-      "intake": "July 2026",
+      "intake": "June 2026",
       "lastUpdated": 1775440831160,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Tanjedul Sarker",
-      "phone": "",
+      "phone": "8801757391739",
       "remarks": "Student couldn't made up his mind ",
       "remarksHistory": [
         {
@@ -999,7 +1470,8 @@
       "visaNext": "Y",
       "visaPrep": "On Hold",
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "tanjedulsarker03@gmail.com"
     },
     {
       "appStage": "GS Preparation Ongoing",
@@ -1012,12 +1484,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.7288,
-      "intake": "July 2026",
+      "intake": "June 2025",
       "lastUpdated": 1775440838009,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Tanjima Tuba",
-      "phone": "",
+      "phone": "8801618391398",
       "remarks": "",
       "situation": "Student is attempting PTE again to meet requirement ",
       "situationHistory": [
@@ -1032,7 +1504,66 @@
       "visaPrep": "On Hold",
       "remarksHistory": [],
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "tanzimtuba90@gmail.com"
+    },
+    {
+      "id": 42712282400,
+      "name": "TANVIN JAHAN",
+      "country": "",
+      "intake": "June 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801973763509",
+      "email": "tanvinjahan123@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
+    },
+    {
+      "id": 41712282400,
+      "name": "TOUHIDUL ISLAM PARVEZ",
+      "country": "",
+      "intake": "February 2026",
+      "status": "Active",
+      "appStage": "Submitted",
+      "phone": "8801640010102",
+      "email": "itahidul391@gmail.com",
+      "uniCount": 0,
+      "moreUni": "N",
+      "moreUniDate": "",
+      "bankMatured": "",
+      "bankMonths": "",
+      "bankExpectedDate": "",
+      "defer": "N",
+      "gsApplied": "N",
+      "gsStatus": "",
+      "coe": "N",
+      "visaPrep": "",
+      "visaNext": "",
+      "lastUpdated": 0,
+      "remarks": "",
+      "situation": "",
+      "remarksHistory": [],
+      "situationHistory": [],
+      "applicationCompletions": [],
+      "uniApplications": []
     },
     {
       "appStage": "Documents from student are pending",
@@ -1045,12 +1576,12 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775389019605.4626,
-      "intake": "February 2027",
+      "intake": "June 2026",
       "lastUpdated": 1775440848262,
       "moreUni": "Y",
       "moreUniDate": "2026-04-15",
       "name": "Urmi Akter",
-      "phone": "",
+      "phone": "8801404393186",
       "remarks": "",
       "situation": "waiting for documents ",
       "situationHistory": [
@@ -1065,19 +1596,30 @@
       "visaPrep": "On Hold",
       "remarksHistory": [],
       "uniApplications": [],
-      "applicationCompletions": []
+      "applicationCompletions": [],
+      "email": "sabithossain616@gmail.com"
     }
   ],
   "pendingTasks": [
     {
-      "id": 1775538490912.0105,
-      "studentName": "JH Baijet",
-      "studentId": "1775372567768.5547",
-      "desc": "need to apply to university",
+      "id": 1775848554684.7466,
+      "studentName": "Modasirul Haque Prince",
+      "studentId": "1775372567768.3599",
+      "desc": "What is the update status of the- Modasirul Haque Prince?",
       "priority": "red",
-      "deadline": "2026-04-10",
+      "deadline": "2026-04-07",
       "done": false,
-      "ts": 1775538490912
+      "ts": 1775848554684
+    },
+    {
+      "id": 1775848554684.9146,
+      "studentName": "Gazi MD Shahabuddin",
+      "studentId": "1775372567768.747",
+      "desc": "What is the update status of the- Gazi MD Shahabuddin?",
+      "priority": "red",
+      "deadline": "2026-04-07",
+      "done": false,
+      "ts": 1775848554684
     },
     {
       "id": 1775518858560,
@@ -1116,43 +1658,111 @@
   ],
   "log": [
     {
-      "ts": 1775874550354,
+      "ts": 1775898108546,
+      "msg": "Data imported"
+    },
+    {
+      "ts": 1775870609950,
+      "msg": "Removed: New Student"
+    },
+    {
+      "ts": 1775870602019,
+      "msg": "Added new student"
+    },
+    {
+      "ts": 1775869604144,
+      "msg": "Removed: New Student"
+    },
+    {
+      "ts": 1775869568949,
+      "msg": "Removed: New Student"
+    },
+    {
+      "ts": 1775869563482,
+      "msg": "Removed: New Student"
+    },
+    {
+      "ts": 1775869547660,
+      "msg": "Added new student"
+    },
+    {
+      "ts": 1775869541783,
+      "msg": "Added new student"
+    },
+    {
+      "ts": 1775869537807,
+      "msg": "Added new student"
+    },
+    {
+      "ts": 1775869441489,
+      "msg": "Removed: New Student"
+    },
+    {
+      "ts": 1775869431443,
+      "msg": "Removed: New Student"
+    },
+    {
+      "ts": 1775849089027,
+      "msg": "Exported PDF"
+    },
+    {
+      "ts": 1775848982064,
+      "msg": "Added new student"
+    },
+    {
+      "ts": 1775848979555,
+      "msg": "Added new student"
+    },
+    {
+      "ts": 1775784906317,
+      "msg": "Exported PDF"
+    },
+    {
+      "ts": 1775784663071,
+      "msg": "Exported PDF"
+    },
+    {
+      "ts": 1775784614838,
       "msg": "Auto-saved"
     },
     {
-      "ts": 1775817001349,
-      "msg": "Manual save — 04:30 PM"
+      "ts": 1775784563679,
+      "msg": "Application reminder completed: Amrito Kumar"
     },
     {
-      "ts": 1775816985800,
+      "ts": 1775784554839,
       "msg": "Auto-saved"
     },
     {
-      "ts": 1775791081600,
-      "msg": "Manual save — 09:18 AM"
+      "ts": 1775784533216,
+      "msg": "Application reminder completed: Hasan Molla"
     },
     {
-      "ts": 1775791008733,
-      "msg": "Manual save — 09:16 AM"
+      "ts": 1775784499252,
+      "msg": "Application reminder completed: Snigdha Islam Santa"
     },
     {
-      "ts": 1775791008471,
+      "ts": 1775784494832,
       "msg": "Auto-saved"
     },
     {
-      "ts": 1775790976754,
-      "msg": "Present situation updated: Saidul Islam Saeed"
+      "ts": 1775784473003,
+      "msg": "Application reminder completed: Nafij Iqbal Sazid"
     },
     {
-      "ts": 1775538530154,
-      "msg": "Auto-saved"
+      "ts": 1775782840167,
+      "msg": "Exported PDF"
     },
     {
-      "ts": 1775538490912,
-      "msg": "Present situation updated: JH Baijet"
+      "ts": 1775782690977,
+      "msg": "Exported PDF"
     },
     {
-      "ts": 1775537498959,
+      "ts": 1775782659963,
+      "msg": "Data exported"
+    },
+    {
+      "ts": 1775782639132,
       "msg": "Data imported"
     },
     {
