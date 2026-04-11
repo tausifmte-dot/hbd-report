@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T11:08:25.574Z",
+    "saved": "2026-04-11T11:08:49.810Z",
     "version": 8,
     "count": 39
   },
@@ -1430,7 +1430,7 @@
       "email": "tanjedulsarker03@gmail.com"
     },
     {
-      "appStage": "Conditional offer letter received",
+      "appStage": "University shortlisting ongoing",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 3 months",
@@ -1441,12 +1441,12 @@
       "gsStatus": "",
       "id": 1775372567768.7288,
       "intake": "February 2027",
-      "lastUpdated": 1775905703572,
+      "lastUpdated": 1775905727807,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Tanjima Tuba",
       "phone": "8801618391398",
-      "remarks": "",
+      "remarks": "She will take her English language test at the end of April",
       "situation": "Since the student doesn't have the required P.T. score, she is attempting again to get her G.S. cleared.",
       "situationHistory": [
         {
@@ -1613,6 +1613,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775905727808,
+      "msg": "Updated: Tanjima Tuba"
+    },
     {
       "ts": 1775905703573,
       "msg": "Updated: Tanjima Tuba"
