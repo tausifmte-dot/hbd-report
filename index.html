@@ -399,11 +399,8 @@ html {
 .dash-header .dash-date{font-size:12px;color:var(--ts)}
 .dash-header .last-action{font-size:11px;color:var(--tm);margin-top:2px}
 
-/* Dashboard new 3-col: left=stats, center=tasks/reminders/stale, right=charts+tools */
-.dash-layout{display:grid;grid-template-columns:280px 1fr 380px;gap:14px;margin-bottom:14px}
-@media(max-width:1400px){.dash-layout{grid-template-columns:260px 1fr 340px}}
-@media(max-width:1100px){.dash-layout{grid-template-columns:1fr 320px}}
-@media(max-width:800px){.dash-layout{grid-template-columns:1fr}}
+/* Dashboard new layout: Row 1 (Stats | Stage) Row 2 (Center | Right Sidebar) */
+.dash-layout{display:flex;flex-direction:column;gap:14px;margin-bottom:14px}
 
 /* Center 3-column panel for tasks/reminders/stale */
 .dash-center-3col{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:start}
@@ -475,8 +472,17 @@ html {
 .sc.wn::after{background:linear-gradient(90deg,#fbbf24,#d97706)}
 .sc.er::after{background:linear-gradient(90deg,#f87171,#dc2626)}
 .sc.pu::after{background:linear-gradient(90deg,#a78bfa,#7c3aed)}
+.sc.st1::after{background:linear-gradient(90deg,#58a6ff,#1f6feb)}
+.sc.st2::after{background:linear-gradient(90deg,#3fb950,#238636)}
+.sc.st3::after{background:linear-gradient(90deg,#d29922,#9e6a03)}
+.sc.st4::after{background:linear-gradient(90deg,#f85149,#da3633)}
+.sc.st5::after{background:linear-gradient(90deg,#bc8ef9,#8957e5)}
+.sc.st6::after{background:linear-gradient(90deg,#79c0ff,#0969da)}
+.sc.st7::after{background:linear-gradient(90deg,#56d364,#1a7f37)}
+.sc.st8::after{background:linear-gradient(90deg,#ffa657,#fb8500)}
 .sv{font-size:22px;font-weight:700;color:var(--tp);line-height:1}
 .sc.ok .sv{color:var(--ok)}.sc.wn .sv{color:var(--wn)}.sc.er .sv{color:var(--er)}.sc.pu .sv{color:#c4b5fd}
+.sc.st1 .sv{color:#58a6ff}.sc.st2 .sv{color:#3fb950}.sc.st3 .sv{color:#d29922}.sc.st4 .sv{color:#f85149}.sc.st5 .sv{color:#bc8ef9}.sc.st6 .sv{color:#79c0ff}.sc.st7 .sv{color:#56d364}.sc.st8 .sv{color:#ffa657}
 .sc-lbl{font-size:11px;color:var(--ts);margin-top:4px;line-height:1.3}
 
 .charts-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-bottom:14px}
@@ -525,14 +531,7 @@ html {
 .itab.active{background:var(--b600);color:#fff;border-color:var(--b600)}
 
 /* Country Summary */
-.sum-countries{display:flex;flex-direction:column;gap:8px}
-.country-block{background:var(--glass);border:1px solid var(--gb);border-radius:var(--r-md);padding:12px 15px;box-shadow:var(--gs)}
-.country-block-hdr{display:flex;align-items:center;gap:8px;margin-bottom:10px}
-.country-flag{font-size:18px}.country-name{font-size:14px;font-weight:600;color:var(--tp)}
-.country-mini-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(90px,1fr));gap:7px}
-.mini-stat{background:var(--b50);border-radius:8px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center}
-.mini-val{font-size:16px;font-weight:600;color:var(--tp);line-height:1}
-.mini-lbl{font-size:12px;color:var(--ts);line-height:1}
+.sum-countries{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
 
 /* Action history */
 .action-history{max-height:200px;overflow-y:auto}
@@ -715,9 +714,18 @@ html {
 .view-toggle-btn{padding:4px 12px;border-radius:16px;font-size:11px;font-weight:600;cursor:pointer;border:none;background:transparent;color:var(--tm);transition:all .15s;font-family:inherit}
 .view-toggle-btn.active{background:var(--b600);color:#fff}
 
+/* Dashboard embedded student browser */
+.dashboard-header-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;align-items:start}
+.dashboard-student-panel .cards-outer{margin-top:0}
+.dashboard-student-toolbar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px}
+.dashboard-student-note{font-size:12px;color:var(--ts);margin-top:3px}
+.dashboard-student-panel .p2-list-panel,.dashboard-student-panel .p2-detail-panel{max-height:780px}
+.dashboard-student-panel .p2-list-hdr{position:sticky;top:0}
+
 /* Responsive */
 @media(max-width:1100px){.p2-layout{grid-template-columns:1fr}.p2-list-panel,.p2-detail-panel{max-height:none}}
-@media(max-width:900px){.cards-grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}.frow,.frow3{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}.charts-row{grid-template-columns:1fr}}
+@media(max-width:900px){.cards-grid{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}.frow,.frow3{grid-template-columns:1fr}.detail-grid{grid-template-columns:1fr}.charts-row{grid-template-columns:1fr}.dashboard-header-grid{grid-template-columns:1fr 1fr}.dash-center-3col{grid-template-columns:1fr}}
+@media(max-width:700px){.dashboard-header-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.app{padding:0 8px 20px}.topnav{padding:10px 12px}.brand-text .title{font-size:14px}.nav-tab{padding:6px 10px;font-size:11px}.cards-grid{grid-template-columns:1fr}.p2-layout{grid-template-columns:1fr}.dash-layout{grid-template-columns:1fr}.mobile-dbl-hint{display:block}}
 
 /* ══════════ DARK MODE ══════════ */
@@ -746,8 +754,6 @@ body.dark .filter-btn{background:var(--b50);color:var(--ts);border-color:var(--g
 body.dark .filter-btn.active{background:var(--b500);color:#fff;border-color:var(--b500)}
 body.dark .task-item{background:var(--b50);border-color:var(--gb);color:var(--tp)}
 body.dark .remind-item{background:rgba(251,191,36,0.1);color:var(--ts)}
-body.dark .country-block{background:var(--glass);border-color:var(--gb)}
-body.dark .mini-stat{background:var(--b50)}
 body.dark .note-entry{background:var(--b50);border-color:var(--gb)}
 body.dark .stale-item{background:var(--glass);border-color:var(--gb)}
 body.dark .stu-list-item:hover{background:var(--b50)}
@@ -777,6 +783,7 @@ body.dark .gl-group-item:hover{background:rgba(52,211,153,0.08)}
     <button class="nav-tab" onclick="showPage('p4')">&#9881; Settings</button>
   </div>
   <div class="nav-right">
+    <button class="btn btn-primary btn-sm" onclick="openWhatsAppModal()">WhatsApp</button>
     <div>
       <div class="clock-sm" id="clock">00:00:00</div>
       <div class="date-sm" id="cdate"></div>
@@ -794,130 +801,100 @@ body.dark .gl-group-item:hover{background:rgba(52,211,153,0.08)}
 
 <!-- ════════════════ PAGE 1 — DASHBOARD ════════════════ -->
 <div id="p1" class="page-view active">
-  <!-- Dashboard Header -->
-  <div style="display:flex;gap:14px;margin-bottom:14px;flex-wrap:wrap">
-    <!-- Counsellor Box -->
-    <div class="glass2" style="flex:1;min-width:180px;padding:14px 16px">
-      <div class="counselor">&#128100; Counsellor: Tausif Jaman</div>
-      <div class="dash-date" id="dash-date"></div>
-      <div class="last-action" id="last-action">Last action: —</div>
-      <div class="last-action" id="last-student">Last student worked on: —</div>
-    </div>
-    
-    <!-- Quick Case Update Box -->
-    <div class="glass2" style="flex:1;min-width:200px;padding:14px 16px">
-      <div class="slbl" style="margin-bottom:8px">&#128221; Quick Case Update</div>
-      <p style="margin:0 0 8px 0;font-size:13px;line-height:1.4">Instantly document situation & set a task.</p>
-      <button class="btn btn-primary btn-sm" onclick="openSituationCollector()">Update</button>
-    </div>
-    
-    <!-- Pending Tasks Box -->
-    <div class="glass2" style="flex:1;min-width:200px;padding:14px 16px">
-      <div class="slbl" style="margin-bottom:8px">&#128200; Pending Tasks</div>
-      <div class="progress-bar-wrap" style="width:100%;margin-bottom:0">
-        <div class="progress-label"><span style="font-size:12px">Tasks</span><span id="prog-task-pct" style="font-size:12px">0%</span></div>
-        <div class="progress-track"><div class="progress-fill green" id="prog-task-bar" style="width:0%"></div></div>
+  <!-- Dashboard Header - Combined Panel -->
+  <div class="glass2" style="padding:16px 20px;margin-bottom:14px">
+    <div class="dashboard-header-grid">
+      
+      <!-- Counsellor Info -->
+      <div>
+        <div class="counselor" style="margin-bottom:8px">&#128100; Counsellor: Tausif Jaman</div>
+        <div class="dash-date" id="dash-date" style="margin-bottom:6px"></div>
+        <div class="last-action" id="last-action" style="margin-bottom:4px">Last action: —</div>
+        <div class="last-action" id="last-student">Last student worked on: —</div>
       </div>
-    </div>
-    
-    <!-- Export/Import Buttons -->
-    <div style="display:flex;gap:6px;flex-wrap:wrap;align-self:center">
-      <button class="btn btn-txt btn-sm" onclick="exportTXT()">&#8681; TXT</button>
-      <button class="btn btn-pdf btn-sm" onclick="exportPDF()">&#8681; PDF</button>
-      <button class="btn btn-json btn-sm" onclick="exportJSON()">&#8681; Export</button>
-      <button class="btn btn-import btn-sm" onclick="document.getElementById('imp-input').click()">&#8679; Import</button>
-      <input type="file" id="imp-input" accept=".json" style="display:none" onchange="importJSON(this)">
+      
+      <!-- Quick Case Update -->
+      <div>
+        <div class="slbl" style="margin-bottom:10px">&#128221; Quick Case Update</div>
+        <p style="margin:0 0 10px 0;font-size:13px;line-height:1.4;color:var(--ts)">Document & set a task.</p>
+        <button class="btn btn-primary btn-sm" onclick="openSituationCollector()">Update</button>
+      </div>
+      
+      <!-- Pending Tasks -->
+      <div>
+        <div class="slbl" style="margin-bottom:10px">&#128200; Pending Tasks</div>
+        <div class="progress-bar-wrap" style="width:100%;margin-bottom:0">
+          <div class="progress-label"><span style="font-size:12px">Tasks</span><span id="prog-task-pct" style="font-size:12px">0%</span></div>
+          <div class="progress-track"><div class="progress-fill green" id="prog-task-bar" style="width:0%"></div></div>
+        </div>
+      </div>
+      
+      <!-- Export/Import Controls -->
+      <div>
+        <div class="slbl" style="margin-bottom:10px">&#128190; Export / Import</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px">
+          <button class="btn btn-txt btn-sm" onclick="exportTXT()" title="Export to TXT">TXT</button>
+          <button class="btn btn-pdf btn-sm" onclick="exportPDF()" title="Export to PDF">PDF</button>
+          <button class="btn btn-json btn-sm" onclick="exportJSON()" title="Export data">Export</button>
+          <button class="btn btn-import btn-sm" onclick="document.getElementById('imp-input').click()" title="Import data">Import</button>
+          <input type="file" id="imp-input" accept=".json" style="display:none" onchange="importJSON(this)">
+        </div>
+      </div>
+      
     </div>
   </div>
 
-  <!-- Dashboard Layout: Left=Stats | Center=Tasks/Reminders/Stale | Right=Charts+Tools -->
-  <div class="dash-layout">
-
-    <!-- ═══ LEFT COLUMN: Statistics ═══ -->
-    <div style="position:sticky;top:70px;align-self:start;max-height:calc(100vh - 80px);overflow-y:auto;padding-right:4px">
-      <div class="glass2" style="padding:14px 16px">
-        <div class="slbl" style="margin-bottom:8px">&#128202; Statistics</div>
-        <div class="intake-tabs" id="intake-tabs" style="margin-bottom:10px;display:flex;gap:5px;flex-wrap:wrap"></div>
-        <div class="filter-bar" id="sum-filter-bar" style="margin-bottom:12px">
-          <span class="filter-btn active" data-f="all" onclick="setSumFilter('all')">All</span>
-          <span class="filter-btn" data-f="bank" onclick="setSumFilter('bank')">Bank</span>
-          <span class="filter-btn" data-f="gs" onclick="setSumFilter('gs')">GS</span>
-          <span class="filter-btn" data-f="visa" onclick="setSumFilter('visa')">Visa</span>
-          <span class="filter-btn" data-f="uni" onclick="setSumFilter('uni')">Uni</span>
-          <span class="filter-btn" data-f="stage" onclick="setSumFilter('stage')">Stage</span>
+  <!-- Dashboard Layout Row 2: Statistics -->
+  <div style="display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:14px">
+    <div class="glass2" style="padding:14px 16px">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <div class="slbl" style="margin-bottom:0">&#128202; Statistics</div>
+        <div style="display:flex;gap:6px">
+          <button class="btn btn-primary btn-sm" onclick="toggleStageDistribution()" id="tog-stage-btn">▼ Stages</button>
+          <button class="btn btn-primary btn-sm" onclick="toggleCountrySummary()" id="tog-country-btn">▼ Countries</button>
         </div>
-        <div class="info-grid" id="info-grid" style="padding-bottom:8px"></div>
       </div>
-      
-      <!-- Country Summary moved to left column -->
-      <div class="glass2" style="padding:14px 16px;margin-top:14px">
-        <div class="slbl">Country Summary</div>
-        <div class="sum-countries" id="sum-countries"></div>
+      <div class="intake-tabs" id="intake-tabs" style="margin-bottom:14px;display:flex;gap:5px;flex-wrap:wrap"></div>
+      <div class="info-grid" id="info-grid" style="padding-bottom:8px;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px"></div>
+      <div id="stage-dist-sec" style="display:none;margin-top:14px;padding-top:14px;border-top:1px solid var(--b100)">
+        <div class="slbl" style="margin-bottom:8px">&#128203; Stage Distribution</div>
+        <div class="info-grid" id="stage-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px"></div>
       </div>
     </div>
 
-
-    <!-- ═══ CENTER COLUMN: Tasks | Reminders | Stale ═══ -->
-    <div>
-      <!-- 3 equal columns: Pending Tasks | Application Reminders | Days Since Last Worked On -->
-      <div class="dash-center-3col">
-
-        <!-- Column 1: Pending Tasks -->
-        <div class="glass2" style="padding:14px 16px;display:flex;flex-direction:column">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
-            <div class="slbl" style="margin-bottom:0">&#9888; Pending Tasks</div>
-            <button class="btn btn-primary btn-sm" onclick="openAddTask()">+ Add</button>
-          </div>
-          <div class="task-grid" id="task-grid" style="flex:1;overflow-y:auto"></div>
-        </div>
-
-        <!-- Column 2: Application Reminders -->
-        <div class="glass2" style="padding:14px 16px;overflow-y:auto">
-          <div class="slbl" style="margin-bottom:6px">&#128276; Application Reminders</div>
-          <div class="remind-section" id="remind-sec"><div style="color:var(--tm);font-size:12px;font-style:italic">No reminders</div></div>
-        </div>
-
-        <!-- Column 3: Days Since Last Worked On -->
-        <div class="glass2" style="padding:14px 16px;overflow-y:auto">
-          <div class="slbl" style="margin-bottom:6px">&#9200; Days Since Last Worked On</div>
-          <div class="stale-section" id="stale-sec"><div style="color:var(--tm);font-size:12px;font-style:italic">No students yet</div></div>
-        </div>
-
-      </div>
+    <div id="country-sum-sec" style="display:none;background:var(--glass);border:1px solid var(--gb);border-radius:11px;box-shadow:var(--gs);padding:16px">
+      <div class="slbl" style="margin-bottom:16px">🌍 Country Summary</div>
+      <div class="sum-countries" id="sum-countries" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px"></div>
     </div>
-
-    <!-- ═══ RIGHT COLUMN: Charts + Tools ═══ -->
-    <div class="dash-sidebar">
-      
-      <!-- Quick Notes moved up -->
-      <div class="glass2 quick-notes">
-        <div class="slbl">&#128221; Quick Notes</div>
-        <div class="note-input-row">
-          <input type="text" id="quick-note-input" placeholder="Write a quick note..." onkeydown="if(event.key==='Enter')addQuickNote()">
-          <button class="btn btn-primary btn-sm" onclick="addQuickNote()">Add</button>
-        </div>
-        <div class="note-list" id="note-list"></div>
-      </div>
-
-      <!-- Charts -->
-      <div class="glass2 chart-box">
-        <div class="slbl">&#128203; Stage Distribution</div>
-        <canvas id="chart-stage"></canvas>
-      </div>
-      <div class="glass2 chart-box tall">
-        <div class="slbl">&#9989; Task Completion Flow</div>
-        <canvas id="chart-task-flow"></canvas>
-      </div>
-      <div class="glass2 chart-box tall">
-        <div class="slbl">&#128260; Workflow Timeline</div>
-        <div class="workflow-summary-grid" id="workflow-summary-grid"></div>
-        <canvas id="chart-workflow"></canvas>
-      </div>
-    </div>
-
-    </div>
-
   </div>
+
+  <!-- Dashboard Layout Row 3: Pending Tasks | Application Reminders | Days Since Last Worked On -->
+  <div style="display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:14px">
+    <div class="dash-center-3col">
+      <div class="glass2" style="padding:14px 16px;display:flex;flex-direction:column">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+          <div class="slbl" style="margin-bottom:0">&#9888; Pending Tasks</div>
+          <button class="btn btn-primary btn-sm" onclick="openAddTask()">+ Add</button>
+        </div>
+        <div class="task-grid" id="task-grid" style="flex:1;overflow-y:auto"></div>
+      </div>
+
+      <div class="glass2" style="padding:14px 16px;overflow-y:auto">
+        <div class="slbl" style="margin-bottom:6px">&#128276; Application Reminders</div>
+        <div class="remind-section" id="remind-sec"><div style="color:var(--tm);font-size:12px;font-style:italic">No reminders</div></div>
+      </div>
+
+      <div class="glass2" style="padding:14px 16px;overflow-y:auto">
+        <div class="slbl" style="margin-bottom:6px">&#9200; Days Since Last Worked On</div>
+        <div class="stale-section" id="stale-sec"><div style="color:var(--tm);font-size:12px;font-style:italic">No students yet</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboard Layout Row 4: WhatsApp Message Center -->
+  <!-- WhatsApp composer moved to modal. Use topnav WhatsApp button to open. -->
+
+</div>
 
 <!-- ════════════════ PAGE 2 — STUDENT FILES ════════════════ -->
 <div id="p2" class="page-view">
@@ -1014,6 +991,31 @@ body.dark .gl-group-item:hover{background:rgba(52,211,153,0.08)}
 
 
 <!-- ════════════════ PAGE 4 — SETTINGS ════════════════ -->
+
+<!-- WhatsApp Modal -->
+<div class="mo" id="wa-mo">
+  <div class="modal">
+    <div class="modal-hdr"><h3>WhatsApp Message Center</h3><button class="modal-close" onclick="closeMo('wa-mo')">&#215;</button></div>
+    <div class="modal-body">
+      <div class="frow">
+        <div class="fgroup"><label>Choose Active Student</label><select id="wa-student-select" onchange="selectWhatsAppStudent(this.value)"></select></div>
+        <div class="fgroup"><label>Or Enter New Number</label><input id="wa-custom-number" type="text" placeholder="+880..."></div>
+      </div>
+      <div class="frow" style="margin-top:8px">
+        <div class="fgroup"><label>Message Template</label><select id="wa-template-select" onchange="applyWhatsAppTemplate(this.value)"></select></div>
+        <div class="fgroup"><label>Template Name</label><input id="wa-template-name" type="text" placeholder="e.g. Follow-up after offer"></div>
+      </div>
+      <div class="fgroup"><label>Message</label><textarea id="wa-message" placeholder="Write your WhatsApp message here..."></textarea></div>
+    </div>
+    <div class="modal-foot">
+      <button class="btn btn-primary" onclick="saveWhatsAppTemplate()">Save Template</button>
+      <button class="btn" style="border-color:#25D366;color:#128C7E;background:rgba(37,211,102,0.08)" onclick="openWhatsAppFromDashboard()">Send WhatsApp message</button>
+      <button class="btn" onclick="clearWhatsAppComposer()">Clear</button>
+      <button class="btn" style="border-color:#d1d5db;color:#6b7280" onclick="closeMo('wa-mo')">Close</button>
+    </div>
+  </div>
+</div>
+
 <div id="p4" class="page-view">
   <div class="glass" style="padding:24px;max-width:800px;margin:20px auto">
     <div style="font-size:22px;font-weight:700;margin-bottom:20px;color:var(--b600);display:flex;align-items:center;gap:10px">&#9881; Settings</div>
@@ -1095,9 +1097,12 @@ body.dark .gl-group-item:hover{background:rgba(52,211,153,0.08)}
       <div class="fsep">Deferral &amp; Visa</div>
       <div class="frow3">
         <div class="fgroup"><label>Defer?</label><select id="e-defer"><option>N</option><option>Y</option></select></div>
-        <div class="fgroup"><label>Visa Readiness</label><select id="e-visaPrep"><option value="">-- Select --</option><option>Ready</option><option>Started</option><option>On Hold</option><option>Pending from Counsellor</option></select></div>
+        <div class="fgroup"><label>Visa Readiness</label><select id="e-visaPrep"><option value="">-- Select --</option><option>Ready</option><option>Started</option><option>On Hold</option><option>Pending from Counsellor</option><option>Waiting for Unconditional Offer / COE</option></select></div>
         <div class="fgroup"><label>Visa Possible Next Intake?</label><select id="e-visaNext"><option value="">-- Select --</option><option>Y</option><option>N</option></select></div>
       </div>
+      <div class="fsep">Latest Information</div>
+      <div class="fgroup"><label>Latest Remark</label><textarea id="e-remarks" placeholder="Latest remark..."></textarea></div>
+      <div class="fgroup"><label>Present Situation</label><textarea id="e-situation" placeholder="Present situation..."></textarea></div>
       <div id="e-gs-section">
         <div class="fsep">GS &amp; CoE (Australia only)</div>
         <div class="frow3">
@@ -1109,7 +1114,7 @@ body.dark .gl-group-item:hover{background:rgba(52,211,153,0.08)}
     </div>
     <div class="modal-foot">
       <button class="btn" style="border-color:#d1d5db;color:#6b7280" onclick="closeMo('edit-mo')">Cancel</button>
-      <button class="btn btn-primary" onclick="saveEdit()">Save Changes</button>
+      <button class="btn btn-primary" id="edit-save-btn" onclick="saveEdit()">Save Changes</button>
     </div>
   </div>
 </div>
@@ -1260,7 +1265,7 @@ const INTAKES=['', ...MOS.flatMap(m=>['2026','2027'].map(y=>m+' '+y))];
 const COUNTRIES=['','Australia','New Zealand','United Kingdom','Canada','Malaysia'];
 const FLAGS={'Australia':'🇦🇺','New Zealand':'🇳🇿','United Kingdom':'🇬🇧','Canada':'🇨🇦','Malaysia':'🇲🇾'};
 const STATUSES=['Active','Active but Unsure','Discontinued'];
-const VISA_PREP=['','Ready','Started','On Hold','Pending from Counsellor'];
+const VISA_PREP=['','Ready','Started','On Hold','Pending from Counsellor','Waiting for Unconditional Offer / COE'];
 const BANK_MO=['3 months','More than 3 months','6 months','More than 6 months'];
 const YN=['N','Y'];
 const GS_STAT=['Applied','Cleared','Rejected'];
@@ -1282,10 +1287,14 @@ let delIdx=null,editIdx=null,pendingImport=null,isDirty=false;
 let activePage='p1',sumIntake='ALL',sumFilter='all';
 let selectedStudentId=null,addInfoIdx=null,uniModalIdx=null;
 let studentView='cards';
+let dashboardStudentView='cards';
 let chartCountry=null,chartStage=null,chartTaskFlow=null,chartWorkflow=null;
 let currentStatKey='';
 let reminderCompleteIdx=null;
 let studentTapTimer=null;
+let editMode='edit';
+let waSelectedStudentId='';
+let waTemplates=[];
 
 // ════════════════════════════════════════════════════════════
 // PAGE NAVIGATION
@@ -1339,7 +1348,7 @@ async function load(){
     if(!students.length)initDefault();
     else{migrateData();students.sort((a,b)=>a.name.localeCompare(b.name));}
   }
-  renderAll();setDirty(false);
+  renderAll();renderWhatsAppPanel();setDirty(false);initModalClickListeners();
   // Pre-fill Settings fields if configured
   if(ghOwner)document.getElementById('gh-owner').value=ghOwner;
   if(ghRepo)document.getElementById('gh-repo').value=ghRepo;
@@ -1536,9 +1545,9 @@ function initDefault(){
 // DEBOUNCE UTILITY
 // ════════════════════════════════════════════════════════════
 function debounce(fn,ms){let t;return(...a)=>{clearTimeout(t);t=setTimeout(()=>fn(...a),ms);};}
-const debouncedRenderDash=debounce(()=>{renderIntakeTabs();updateSummary();renderReminders();renderTasks();renderProgress();renderQuickNotes();renderActionHistory();renderStaleStudents();},300);
+const debouncedRenderDash=debounce(()=>{renderIntakeTabs();updateSummary();renderReminders();renderTasks();renderProgress();renderQuickNotes();renderActionHistory();renderStaleStudents();renderDashboardStudentSection();renderWhatsAppPanel();},300);
 const debouncedRenderCharts=debounce(()=>renderCharts(),600);
-const debouncedRenderList=debounce(()=>renderStudentList(),150);
+const debouncedRenderList=debounce(()=>{renderStudentList();renderDashboardStudentSection();},150);
 
 // ════════════════════════════════════════════════════════════
 // FIELD UPDATE — lightweight, no chart rebuild on every keystroke
@@ -1558,9 +1567,11 @@ function uf(idx,field,val){
 // ════════════════════════════════════════════════════════════
 function renderAll(){
   renderIntakeTabs();updateSummary();renderReminders();renderTasks();renderProgress();renderQuickNotes();renderActionHistory();renderStaleStudents();
+  renderStudentList();renderDetail();if(studentView==='cards')renderCardsP2();
+  renderDashboardStudentSection();renderWhatsAppPanel();
   if(activePage==='p1')renderCharts();
-  if(activePage==='p2'){renderStudentList();renderDetail();if(studentView==='cards')renderCardsP2();}
 }
+
 
 // ════════════════════════════════════════════════════════════
 // SUMMARY & STATS
@@ -1577,31 +1588,35 @@ function updateSummary(){
   const auPool=pool.filter(s=>s.country==='Australia');
   const cblock=document.getElementById('sum-countries');
   const countryOrder=['Australia','New Zealand','United Kingdom','Canada','Malaysia'];
-  cblock.innerHTML=countryOrder.map(c=>{
-    const cp=pool.filter(s=>s.country===c);if(!cp.length)return '';
-    const aup=c==='Australia';
-    return `<div class="country-block"><div class="country-block-hdr"><span class="country-flag">${FLAGS[c]||''}</span><span class="country-name">${c}</span><span style="margin-left:auto;font-size:12px;color:var(--tm);background:var(--b100);padding:2px 8px;border-radius:8px">${cp.length}</span></div><div class="country-mini-grid">${aup?`<div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.gsApplied==='Y').length}</div><div class="mini-lbl">GS Applied</div></div><div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.gsStatus==='Cleared').length}</div><div class="mini-lbl">GS Cleared</div></div><div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.coe==='Y').length}</div><div class="mini-lbl">CoE Received</div></div>`:''}<div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.bankMatured==='Y').length}</div><div class="mini-lbl">Bank Matured</div></div><div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.visaNext==='Y').length}</div><div class="mini-lbl">Visa Next</div></div><div class="mini-stat"><div class="mini-val">${cp.filter(s=>s.defer==='Y').length}</div><div class="mini-lbl">Deferrals</div></div></div></div>`;
-  }).join('')||'<div style="color:var(--tm);font-size:12px;font-style:italic;padding:8px">No country data yet</div>';
+  const countryCards=countryOrder.map(c=>{
+    const cp=pool.filter(s=>s.country===c);if(!cp.length)return null;
+    return {cls:'def',val:cp.length,lbl:c,f:'country',key:'country::'+c};
+  }).filter(x=>x);
+  cblock.innerHTML=countryCards.map(c=>`<div class="sc ${c.cls} clickable" onclick="openStatModal('${esc(c.key)}')" title="${c.lbl}: ${c.val} students"><div class="sv">${c.val}</div><div class="sc-lbl">${FLAGS[c.lbl]||''} ${esc(c.lbl)}</div></div>`).join('')||'<div style="color:var(--tm);font-size:12px;font-style:italic;padding:8px">No country data yet</div>';
 
-  const stageCards=APP_STAGES.filter(s=>s).map(stage=>{const c=pool.filter(st=>st.appStage===stage).length;return c?{cls:'pu',val:c,lbl:stage,f:'stage',key:'stage::'+stage}:null;}).filter(Boolean);
+  const stageData = {}; 
+  pool.forEach(s => { const st = s.appStage || 'Not Set'; stageData[st] = (stageData[st] || 0) + 1; });
+  const stageColors = ['st1','st2','st3','st4','st5','st6','st7','st8'];
+  const stageCards = Object.entries(stageData).sort((a,b)=>b[1]-a[1]).map((stage, idx)=>{
+    return {cls:stageColors[idx%stageColors.length],val:stage[1],lbl:stage[0],f:'stage',key:'stage::'+stage[0]};
+  });
   const sections={all:[
     {cls:'def',val:pool.length,lbl:'Total Active',f:'all',key:'all::total'},
     {cls:'ok',val:pool.filter(s=>s.bankMatured==='Y').length,lbl:'Bank Matured',f:'bank',key:'bank::matured'},
-    {cls:'wn',val:pool.filter(s=>s.bankMatured==='N'||s.bankMatured==='havent opened yet').length,lbl:'Bank Pending',f:'bank',key:'bank::pending'},
-    {cls:'def',val:auPool.filter(s=>s.gsApplied==='Y').length,lbl:'GS Applied (AU)',f:'gs',key:'gs::applied'},
+    {cls:'def',val:auPool.filter(s=>s.gsApplied==='Y'&&s.gsStatus!=='Cleared'&&s.gsStatus!=='Rejected'&&s.coe!=='Y').length,lbl:'GS Applied (AU)',f:'gs',key:'gs::applied'},
     {cls:'ok',val:auPool.filter(s=>s.gsStatus==='Cleared').length,lbl:'GS Cleared (AU)',f:'gs',key:'gs::cleared'},
-    {cls:'er',val:auPool.filter(s=>s.gsStatus==='Rejected').length,lbl:'GS Rejected (AU)',f:'gs',key:'gs::rejected'},
     {cls:'def',val:auPool.filter(s=>s.coe==='Y').length,lbl:'CoE Received (AU)',f:'gs',key:'gs::coe'},
-    {cls:'ok',val:pool.filter(s=>s.visaNext==='Y').length,lbl:'Visa Next Intake',f:'visa',key:'visa::next'},
-    {cls:'er',val:pool.filter(s=>s.visaNext==='N').length,lbl:'Not Next Intake',f:'visa',key:'visa::notnext'},
+    {cls:'ok',val:pool.filter(s=>s.visaNext==='Y').length,lbl:'Visa This Intake',f:'visa',key:'visa::next'},
     {cls:'wn',val:pool.filter(s=>s.defer==='Y').length,lbl:'Deferrals',f:'visa',key:'visa::defer'},
-    {cls:'ok',val:pool.filter(s=>s.visaPrep==='Ready').length,lbl:'Visa Ready',f:'visa',key:'visa::ready'},
+    {cls:'ok',val:pool.filter(s=>s.visaPrep==='Ready').length,lbl:'Ready to Submit Visa Application',f:'visa',key:'visa::ready'},
     {cls:'def',val:pool.reduce((a,s)=>a+(+s.uniCount||0),0),lbl:'Unis Applied',f:'uni',key:'uni::count'},
-    {cls:'wn',val:pool.filter(s=>s.moreUni==='Y').length,lbl:'Will Apply More',f:'uni',key:'uni::more'},
-    ...stageCards
-  ]};
-  const cards=sumFilter==='all'?sections.all.filter(c=>c.f!=='stage'):sections.all.filter(c=>c.f===sumFilter||c.f==='all');
+    {cls:'wn',val:pool.filter(s=>s.moreUni==='Y').length,lbl:'Will Apply More',f:'uni',key:'uni::more'}
+  ],
+  stages:stageCards};
+  const cards=sections.all;
   document.getElementById('info-grid').innerHTML=cards.map(c=>`<div class="sc ${c.cls} clickable" onclick="openStatModal('${esc(c.key)}')"><div class="sv">${c.val}</div><div class="sc-lbl">${esc(c.lbl)}</div></div>`).join('');
+  const stageGrid=document.getElementById('stage-grid');
+  if(stageGrid) stageGrid.innerHTML=sections.stages.map(c=>`<div class="sc ${c.cls} clickable" onclick="openStatModal('${esc(c.key)}')"><div class="sv">${c.val}</div><div class="sc-lbl">${esc(c.lbl)}</div></div>`).join('')||'<div style="color:var(--tm);font-size:12px">No stages yet</div>';
 }
 
 function getStatEntries(key){
@@ -1609,20 +1624,21 @@ function getStatEntries(key){
   const make=(arr, title, getCondition)=>({title, items:arr.map(s=>({id:s.id, name:s.name, meta:[s.country||'No country', s.intake||'No intake', s.appStage||'No stage'].join(' · '), condition:getCondition(s)}))});
   if(key==='all::total') return make(pool,'Active Students',s=>`Current situation: ${s.situation||'Not updated'}`);
   if(key==='bank::matured') return make(pool.filter(s=>s.bankMatured==='Y'),'Bank Matured',s=>`Bank matured${s.bankMonths?` (${s.bankMonths})`:''}`);
-  if(key==='bank::pending') return make(pool.filter(s=>s.bankMatured==='N'||s.bankMatured==='havent opened yet'),'Bank Pending',s=>s.bankMatured==='havent opened yet'?'Bank not opened yet':`Expected maturity: ${s.bankExpectedDate||'Not set'}`);
-  if(key==='gs::applied') return make(pool.filter(s=>s.country==='Australia'&&s.gsApplied==='Y'),'GS Applied (AU)',s=>`GS status: ${s.gsStatus||'Applied'}`);
+  if(key==='gs::applied') return make(pool.filter(s=>s.country==='Australia'&&s.gsApplied==='Y'&&s.gsStatus!=='Cleared'&&s.gsStatus!=='Rejected'&&s.coe!=='Y'),'GS Applied (AU)',s=>`GS status: ${s.gsStatus||'Applied'}`);
   if(key==='gs::cleared') return make(pool.filter(s=>s.country==='Australia'&&s.gsStatus==='Cleared'),'GS Cleared (AU)',s=>`GS cleared · CoE: ${s.coe||'N'}`);
-  if(key==='gs::rejected') return make(pool.filter(s=>s.country==='Australia'&&s.gsStatus==='Rejected'),'GS Rejected (AU)',s=>`GS rejected · Situation: ${s.situation||'Not updated'}`);
   if(key==='gs::coe') return make(pool.filter(s=>s.country==='Australia'&&s.coe==='Y'),'CoE Received (AU)',s=>`CoE received · GS: ${s.gsStatus||s.gsApplied}`);
-  if(key==='visa::next') return make(pool.filter(s=>s.visaNext==='Y'),'Visa Next Intake',s=>`Visa readiness: ${s.visaPrep||'Not set'}`);
-  if(key==='visa::notnext') return make(pool.filter(s=>s.visaNext==='N'),'Not Next Intake',s=>`Visa readiness: ${s.visaPrep||'Not set'}`);
+  if(key==='visa::next') return make(pool.filter(s=>s.visaNext==='Y'),'Visa This Intake',s=>`Visa readiness: ${s.visaPrep||'Not set'}`);
   if(key==='visa::defer') return make(pool.filter(s=>s.defer==='Y'),'Deferrals',s=>`Deferred · Stage: ${s.appStage||'Not set'}`);
-  if(key==='visa::ready') return make(pool.filter(s=>s.visaPrep==='Ready'),'Visa Ready',s=>`Ready for visa · Next intake: ${s.visaNext||'Not set'}`);
+  if(key==='visa::ready') return make(pool.filter(s=>s.visaPrep==='Ready'),'Ready to Submit Visa Application',s=>`Ready for visa · Next intake: ${s.visaNext||'Not set'}`);
   if(key==='uni::count') return {title:'University Applications Count', items:pool.filter(s=>(+s.uniCount||0)>0 || (s.uniApplications||[]).length>0).map(s=>({id:s.id, name:s.name, meta:[s.country||'No country', s.intake||'No intake'].join(' · '), condition:`${(+s.uniCount||0) || s.uniApplications.length} counted application(s)`}))};
   if(key==='uni::more') return make(pool.filter(s=>s.moreUni==='Y'),'Will Apply More',s=>`More applications due by: ${s.moreUniDate||'No deadline set'}`);
   if(key.indexOf('stage::')===0){
     const stage=key.split('stage::')[1];
     return make(pool.filter(s=>s.appStage===stage),stage,s=>`Present situation: ${s.situation||'Not updated'}`);
+  }
+  if(key.indexOf('country::')===0){
+    const country=key.split('country::')[1];
+    return make(pool.filter(s=>s.country===country),country,s=>`Intake: ${s.intake||'Not set'} · Stage: ${s.appStage||'Not set'}`);
   }
   return {title:'Statistic Details', items:[]};
 }
@@ -1656,112 +1672,18 @@ function renderCharts(){
   const barColor = isDark ? '#3498db' : '#2563eb';
   const pieColors = isDark ? ['#27ae60', '#f39c12', '#3498db'] : ['#059669', '#d97706', '#2563eb'];
 
-  // Destroy old country chart if exists (canvas removed from layout)
-  if(typeof chartCountry !== 'undefined' && chartCountry){chartCountry.destroy();chartCountry=null;}
-
-  const stageData = {}; pool.forEach(s => { const st = s.appStage || 'Not Set'; stageData[st] = (stageData[st] || 0) + 1; });
-  const topStages = Object.entries(stageData).sort((a,b)=>b[1]-a[1]).slice(0,8);
-  const sCanvas = document.getElementById('chart-stage');
-  if(chartStage) chartStage.destroy();
-  chartStage = new Chart(sCanvas, {
-    type: 'bar',
-    data: {
-      labels: topStages.map(s => s[0].length > 20 ? s[0].slice(0,18) + '..' : s[0]),
-      datasets: [{
-        data: topStages.map(s => s[1]),
-        backgroundColor: barColor,
-        borderRadius: 6,
-        borderSkipped: false
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      indexAxis: 'y',
-      plugins: { legend: { display: false } },
-      scales: {
-        x: { ticks: { color: textColor }, grid: { color: gridColor } },
-        y: { ticks: { color: textColor, font: { size: 10 } }, grid: { display: false } }
-      }
-    }
-  });
-
-  const taskCanvas = document.getElementById('chart-task-flow');
-  const doneTasks = pendingTasks.filter(t => t.done).length;
-  const openTasks = pendingTasks.filter(t => !t.done).length;
-  const autoReminders = students.filter(s => s.status !== 'Discontinued' && s.moreUni === 'Y').length;
-  if(chartTaskFlow) chartTaskFlow.destroy();
-  chartTaskFlow = new Chart(taskCanvas, {
-    type: 'pie',
-    data: {
-      labels: ['Completed Tasks', 'Open Tasks', 'Active Application Reminders'],
-      datasets: [{
-        data: [doneTasks, openTasks, autoReminders],
-        backgroundColor: pieColors,
-        borderColor: borderColor,
-        borderWidth: 2
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: 'bottom',
-          labels: { color: textColor, font: { size: 11 } }
-        }
-      }
-    }
-  });
-
-  const wfCanvas=document.getElementById('chart-workflow');
-  const workflowCounts={
-    'New / Pending': pool.filter(s=>!s.appStage || ['Documents from student are pending','Looking for Universities','Havent made up his mind yet'].includes(s.appStage)).length,
-    'Application Moving': pool.filter(s=>['With Agent','Submitted to Uni','Under Review','Cond. Offer Received','Uncond Offer Received','Scholarship Applied'].includes(s.appStage)).length,
-    'Visa / Finalization': pool.filter(s=>['GS Preparation Ongoing','GS Interview Pending','GS Submitted','Revised inf requested for GS','Tuition Fee & OSHC Paid','Tuition Fee & OHSC payment Pending','COE Received','Visa Preparation Ongoing','Documentation Stage','Visa Submitted'].includes(s.appStage)).length,
-    'Issues / Hold': pool.filter(s=>['Rejected by University','Student Left HBD','Misinformed counsellor','GS Rejected','Refund Requested','Refund Processed','Refund Under Review','Language test retake required','Agent asked for new inf.'].includes(s.appStage)).length,
-  };
-  document.getElementById('workflow-summary-grid').innerHTML = Object.entries(workflowCounts).map(([k,v]) => `<div class="workflow-chip"><div class="v">${v}</div><div class="l">${esc(k)}</div></div>`).join('');
-  if(chartWorkflow) chartWorkflow.destroy();
-  const radarBorderColor = isDark ? '#3498db' : '#2563eb';
-  const radarBgColor = isDark ? 'rgba(52, 152, 219, 0.2)' : '#eff6ff';
-  chartWorkflow = new Chart(wfCanvas, {
-    type: 'radar',
-    data: {
-      labels: Object.keys(workflowCounts),
-      datasets: [{
-        label: 'Students',
-        data: Object.values(workflowCounts),
-        backgroundColor: radarBgColor,
-        borderColor: radarBorderColor,
-        pointBackgroundColor: radarBorderColor,
-        pointRadius: 4
-      }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
-      scales: {
-        r: {
-          angleLines: { color: gridColor },
-          grid: { color: gridColor },
-          pointLabels: { color: textColor, font: { size: 11 } },
-          ticks: { color: textColor, backdropColor: 'transparent' }
-        }
-      }
-    }
-  });
+  // Stage Distribution — dynamically show all stages in statistics grid (chart removed)
+  // This is now handled by the updateSummary() function which creates stage cards
+  // Task Completion Flow and Workflow Timeline charts have been removed
 }
 
 // ════════════════════════════════════════════════════════════
 // PROGRESS BARS
 // ════════════════════════════════════════════════════════════
 function renderProgress(){
-  const moreAppsCount = students.filter(s => s.status !== 'Discontinued' && s.moreUni === 'Y').length;
-  const total = pendingTasks.length + moreAppsCount;
-  const done = pendingTasks.filter(t => t.done).length;
-  const taskPct=total?Math.round(done/total*100):100;
+  const total=pendingTasks.length;
+  const done=pendingTasks.filter(t=>t.done).length;
+  const taskPct=total?Math.round(done/total*100):0;
   document.getElementById('prog-task-pct').textContent=taskPct+'%';
   document.getElementById('prog-task-bar').style.width=taskPct+'%';
 }
@@ -1789,9 +1711,26 @@ function renderStaleStudents(){
   sec.innerHTML=active.map(s=>{
     const days=Math.floor((Date.now()-(s.lastUpdated||Date.now()))/86400000);
     const cls=days<3?'fresh':days<7?'warn':'old';
+    const isOverdue=days>5;
     const idx=students.findIndex(x=>x.id===s.id);
-    return `<div class="stale-item"><div class="stale-main"><div class="stale-name">${esc(s.name)}</div><div class="stale-meta">${esc(s.country||'No country')} · ${esc(s.intake||'No intake')} · Last note: ${esc(s.situation||s.remarks||'No update yet')}</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px"><span class="stale-days ${cls}">${days} day${days!==1?'s':''}</span><button class="btn btn-primary btn-sm" onclick="openAddInfo(${idx})">Update</button></div></div>`;
+    return `<div class="stale-item"><div class="stale-main"><div class="stale-name" style="${isOverdue?'color:var(--er);font-weight:700':''}">${esc(s.name)}</div><div class="stale-meta">${esc(s.country||'No country')} · ${esc(s.intake||'No intake')} · Last note: ${esc(s.situation||s.remarks||'No update yet')}</div></div><div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px"><span class="stale-days ${cls}">${days} day${days!==1?'s':''}</span><button class="btn btn-primary btn-sm" onclick="openAddInfo(${idx})">Update</button></div></div>`;
   }).join('');
+}
+
+function toggleStageDistribution(){
+  const sec = document.getElementById('stage-dist-sec');
+  const btn = document.getElementById('tog-stage-btn');
+  const isHidden = sec.style.display === 'none';
+  sec.style.display = isHidden ? 'block' : 'none';
+  btn.textContent = isHidden ? '▲ Stages' : '▼ Stages';
+}
+
+function toggleCountrySummary(){
+  const sec = document.getElementById('country-sum-sec');
+  const btn = document.getElementById('tog-country-btn');
+  const isHidden = sec.style.display === 'none';
+  sec.style.display = isHidden ? 'block' : 'none';
+  btn.textContent = isHidden ? '▲ Countries' : '▼ Countries';
 }
 
 function openReminderCompletion(idx){
@@ -1915,6 +1854,7 @@ function saveSituationCollector(){
 // ════════════════════════════════════════════════════════════
 function addQuickNote(){
   const input=document.getElementById('quick-note-input');
+  if(!input)return;
   const text=input.value.trim();if(!text)return;
   quickNotes.unshift({id:Date.now(),text,ts:Date.now()});
   input.value='';renderQuickNotes();markDirty();
@@ -1922,6 +1862,7 @@ function addQuickNote(){
 function deleteNote(id){quickNotes=quickNotes.filter(n=>n.id!==id);renderQuickNotes();markDirty();}
 function renderQuickNotes(){
   const nl=document.getElementById('note-list');
+  if(!nl)return;
   nl.innerHTML=quickNotes.length?quickNotes.map(n=>`<div class="note-entry"><span class="note-time">${fmtDateTime(new Date(n.ts))}</span><span class="note-text">${esc(n.text)}</span><button class="note-del" onclick="deleteNote(${n.id})" title="Delete">&#215;</button></div>`).join(''):'<div style="padding:8px;text-align:center;color:var(--tm);font-size:11px">No notes yet</div>';
 }
 
@@ -1940,7 +1881,7 @@ function runGlobalSearch(q){
 }
 function goToStudent(idx){
   closeGlobalSearch();selectedStudentId=students[idx].id;
-  setStudentView('detail');showPage('p2');
+  setStudentView('detail');showPage('p2');renderDashboardStudentSection();
 }
 
 // ════════════════════════════════════════════════════════════
@@ -2036,6 +1977,119 @@ function renderUniApps(){
   el.innerHTML=`<table class="uni-apps-table"><thead><tr><th>#</th><th>Country</th><th>University</th><th>Program</th><th></th></tr></thead><tbody>${apps.map((a,i)=>`<tr><td>${i+1}</td><td>${FLAGS[a.country]||''} ${esc(a.country)}</td><td>${esc(a.university)}</td><td>${esc(a.program)||'—'}</td><td><button class="btn-del" onclick="removeUniApp(${i})">&#215;</button></td></tr>`).join('')}</tbody></table>`;
 }
 
+function setDashboardStudentView(v){
+  dashboardStudentView=v;
+  const cardsBtn=document.getElementById('dash-vt-cards');
+  const detailBtn=document.getElementById('dash-vt-detail');
+  const cardsView=document.getElementById('dash-student-cards-view');
+  const detailView=document.getElementById('dash-student-detail-view');
+  if(cardsBtn)cardsBtn.classList.toggle('active',v==='cards');
+  if(detailBtn)detailBtn.classList.toggle('active',v==='detail');
+  if(cardsView)cardsView.style.display=v==='cards'?'block':'none';
+  if(detailView)detailView.style.display=v==='detail'?'block':'none';
+  renderDashboardStudentSection();
+}
+
+function buildDashboardCard(s){
+  const origIdx=students.findIndex(x=>x.id===s.id);
+  const age=fmtAge(s.lastUpdated);
+  const sbadge=s.status==='Active'?'b-active':s.status==='Discontinued'?'b-disc':'b-unsure';
+  const phoneHtml=s.phone?`<div class="scard-phone">📱 <a href="https://wa.me/${s.phone.replace(/[^0-9]/g,'')}" target="_blank" onclick="event.stopPropagation()">${esc(s.phone)}</a></div>`:'';
+  return `<div class="scard" onclick="goToDashboardStudent(${origIdx})">
+    <div class="scard-top"><div class="scard-namerow"><div class="scard-name">${esc(s.name)}</div><div class="scard-badges">${s.appStage?`<span class="badge b-active" style="font-size:9px">${esc(s.appStage)}</span>`:''}<span class="badge ${sbadge}">${s.status}</span></div></div><div class="scard-meta"><span>${FLAGS[s.country]||'🌐'} ${s.country||'—'}</span><span>&#128197; ${s.intake||'—'}</span></div>${phoneHtml}</div>
+    <div class="scard-body"><div class="scard-rows">
+      <div class="scard-row"><span class="lbl">Intake</span><span class="val">${s.intake||'—'}</span></div>
+      <div class="scard-row"><span class="lbl">Stage</span><span class="val">${s.appStage||'—'}</span></div>
+      <div class="scard-row"><span class="lbl">Bank</span><span class="val">${s.bankMatured?`<span class="badge ${s.bankMatured==='Y'?'b-yes':'b-warn'}">${s.bankMatured}</span>`:'—'}</span></div>
+      <div class="scard-row"><span class="lbl">Unis</span><span class="val">${s.uniApplications.length} app${s.uniApplications.length!==1?'s':''}</span></div>
+    </div><div class="scard-latest"><div class="item"><strong>Latest Remark:</strong> ${esc(s.remarks||'No remark yet')}</div><div class="item"><strong>Present Situation:</strong> ${esc(s.situation||'No situation update yet')}</div></div></div>
+    <div class="scard-foot"><span class="age-badge ${age.cls}">${age.label}</span><div style="display:flex;gap:4px" onclick="event.stopPropagation()"><button class="btn btn-uni" onclick="openUniModal(${origIdx})">&#127891; Unis</button><button class="btn btn-edit" onclick="openEdit(${origIdx})">&#9998;</button></div></div>
+  </div>`;
+}
+
+function goToDashboardStudent(idx){
+  selectedStudentId=students[idx].id;
+  setDashboardStudentView('detail');
+  renderStudentList();
+  renderDetail();
+  renderDashboardStudentList();
+  renderDashboardStudentDetail();
+  const panel=document.getElementById('dash-student-detail');
+  if(panel)panel.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+function renderDashboardStudentCards(){
+  const outer=document.getElementById('dash-cards-outer');
+  if(!outer)return;
+  const query=((document.getElementById('dash-student-search')||{}).value||'').toLowerCase();
+  const countryOrder=['Australia','New Zealand','United Kingdom','Canada','Malaysia',''];
+  let html='';
+  countryOrder.forEach(c=>{
+    const group=students.filter(s=>s.country===c && (!query || s.name.toLowerCase().includes(query) || (s.country||'').toLowerCase().includes(query) || (s.appStage||'').toLowerCase().includes(query) || (s.intake||'').toLowerCase().includes(query))).sort((a,b)=>a.name.localeCompare(b.name));
+    if(!group.length)return;
+    html+=`<div class="country-section"><div class="country-section-hdr"><span class="country-section-flag">${FLAGS[c]||'🌐'}</span><span class="country-section-name">${c||'Country not set'}</span><span class="country-section-count">${group.length}</span></div><div class="cards-grid">${group.map(s=>buildDashboardCard(s)).join('')}</div></div>`;
+  });
+  const uncategorized=students.filter(s=>!countryOrder.includes(s.country) && (!query || s.name.toLowerCase().includes(query) || (s.country||'').toLowerCase().includes(query) || (s.appStage||'').toLowerCase().includes(query) || (s.intake||'').toLowerCase().includes(query))).sort((a,b)=>a.name.localeCompare(b.name));
+  if(uncategorized.length){
+    html+=`<div class="country-section"><div class="country-section-hdr"><span class="country-section-flag">🌐</span><span class="country-section-name">Other / Unset</span><span class="country-section-count">${uncategorized.length}</span></div><div class="cards-grid">${uncategorized.map(s=>buildDashboardCard(s)).join('')}</div></div>`;
+  }
+  outer.innerHTML=html||'<div style="padding:20px;text-align:center;color:var(--tm)">No students yet</div>';
+}
+
+function renderDashboardStudentList(){
+  const list=document.getElementById('dash-student-list');
+  const count=document.getElementById('dash-student-count');
+  if(!list || !count)return;
+  const query=(document.getElementById('dash-student-search').value||'').toLowerCase();
+  const sorted=[...students].sort((a,b)=>a.name.localeCompare(b.name));
+  const filtered=query?sorted.filter(s=>s.name.toLowerCase().includes(query)||(s.country||'').toLowerCase().includes(query)||(s.appStage||'').toLowerCase().includes(query)||(s.intake||'').toLowerCase().includes(query)):sorted;
+  count.textContent=`(${filtered.length})`;
+  list.innerHTML=filtered.map(s=>{
+    const origIdx=students.findIndex(x=>x.id===s.id);const sel=selectedStudentId===s.id;
+    return `<div class="stu-list-item${sel?' selected':''}" onclick="selectDashboardStudent(${origIdx})"><div style="font-size:14px">${FLAGS[s.country]||'🌐'}</div><div style="flex:1;min-width:0"><div class="stu-list-name" ondblclick="goToDashboardStudent(${origIdx})" ontouchend="handleDashboardStudentNameTouch(event,${origIdx})">${esc(s.name)}</div><div class="stu-list-country">${s.country||'No country'} · ${s.intake||'No intake'}</div></div>${s.appStage?`<div class="stu-list-stage">${esc(s.appStage)}</div>`:''}</div>`;
+  }).join('')||'<div style="padding:20px;text-align:center;color:var(--tm);font-size:13px">No students found</div>';
+}
+
+function selectDashboardStudent(idx){
+  selectedStudentId=students[idx].id;
+  renderStudentList();
+  renderDetail();
+  renderDashboardStudentList();
+  renderDashboardStudentDetail();
+}
+
+function handleDashboardStudentNameTouch(event,idx){
+  if(window.innerWidth>768)return;
+  if(studentTapTimer){clearTimeout(studentTapTimer);studentTapTimer=null;event.preventDefault();goToDashboardStudent(idx);return;}
+  studentTapTimer=setTimeout(()=>{studentTapTimer=null;},320);
+}
+
+function renderDashboardStudentDetail(){
+  const empty=document.getElementById('dash-detail-empty');
+  const content=document.getElementById('dash-detail-content');
+  if(!empty || !content)return;
+  renderDetail();
+  const source=document.getElementById('detail-content');
+  const sourceEmpty=document.getElementById('detail-empty');
+  const hasSelection=!!selectedStudentId && students.some(s=>s.id===selectedStudentId);
+  if(!hasSelection || !source || sourceEmpty.style.display!=='none'){
+    empty.style.display='flex';
+    content.style.display='none';
+    content.innerHTML='';
+    return;
+  }
+  empty.style.display='none';
+  content.style.display='block';
+  content.innerHTML=source.innerHTML;
+}
+
+function renderDashboardStudentSection(){
+  if(!document.getElementById('dash-cards-outer'))return;
+  if(dashboardStudentView==='cards')renderDashboardStudentCards();
+  else{renderDashboardStudentList();renderDashboardStudentDetail();}
+}
+
+
 // ════════════════════════════════════════════════════════════
 // PAGE 2 — STUDENT LIST
 // ════════════════════════════════════════════════════════════
@@ -2050,7 +2104,7 @@ function renderStudentList(){
     return `<div class="stu-list-item${sel?' selected':''}" onclick="selectStudent(${origIdx})"><div style="font-size:14px">${FLAGS[s.country]||'🌐'}</div><div style="flex:1;min-width:0"><div class="stu-list-name" ondblclick="jumpToStudentDetail(${origIdx})" ontouchend="handleStudentNameTouch(event,${origIdx})">${esc(s.name)}</div><div class="stu-list-country">${s.country||'No country'} · ${s.intake||'No intake'}</div></div>${s.appStage?`<div class="stu-list-stage">${esc(s.appStage)}</div>`:''}</div>`;
   }).join('')||'<div style="padding:20px;text-align:center;color:var(--tm);font-size:13px">No students found</div>';
 }
-function selectStudent(idx){selectedStudentId=students[idx].id;renderStudentList();renderDetail();}
+function selectStudent(idx){selectedStudentId=students[idx].id;renderStudentList();renderDetail();renderDashboardStudentSection();}
 function jumpToStudentDetail(idx){selectStudent(idx);showPage('p2');setStudentView('detail');setTimeout(()=>{const panel=document.getElementById('p2-detail');if(panel)panel.scrollIntoView({behavior:'smooth',block:'start'});},80);}
 function handleStudentNameTouch(event,idx){
   if(window.innerWidth>768)return;
@@ -2078,12 +2132,12 @@ function renderDetail(){
     uniHtml=`<table class="uni-apps-table"><thead><tr><th>Country</th><th>University</th><th>Program</th></tr></thead><tbody>${s.uniApplications.map(a=>`<tr><td>${FLAGS[a.country]||''} ${esc(a.country)}</td><td>${esc(a.university)}</td><td>${esc(a.program)||'—'}</td></tr>`).join('')}</tbody></table>`;
   }
   document.getElementById('detail-content').innerHTML=`
-    <div class="detail-hdr"><div><div class="detail-name">${esc(s.name)}</div><div style="font-size:12px;color:var(--ts);margin-top:2px">${FLAGS[s.country]||'🌐'} ${s.country||'No country'} · ${s.intake||'No intake'}</div></div><div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap"><button class="btn btn-primary btn-sm" onclick="openAddTask('${s.id}')">+ Task</button><button class="btn btn-uni" onclick="openUniModal(${idx})">&#127891; Universities</button><button class="btn btn-addinfo" onclick="openAddInfo(${idx})">&#128221; Info</button><button class="btn btn-primary btn-sm" onclick="openSituationCollectorPrefill('${s.id}')">&#128204; Situation</button><button class="btn btn-edit btn-sm" onclick="openEdit(${idx})">&#9998; Edit</button><button class="btn btn-del" onclick="askDel(${idx})">&#215; Remove</button></div></div>
+    <div class="detail-hdr"><div><div class="detail-name">${esc(s.name)}</div><div style="font-size:12px;color:var(--ts);margin-top:2px">${FLAGS[s.country]||'🌐'} ${s.country||'No country'} · ${s.intake||'No intake'}</div></div><div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap"><button class="btn btn-primary btn-sm" onclick="openAddTask('${s.id}')">+ Task</button><button class="btn btn-uni" onclick="openUniModal(${idx})">&#127891; Universities</button><button class="btn btn-addinfo" onclick="openAddInfo(${idx})">&#128221; Info</button><button class="btn btn-primary btn-sm" onclick="openSituationCollectorPrefill('${s.id}')">&#128204; Situation</button><button class="btn btn-sm" style="border-color:#25D366;color:#128C7E;background:rgba(37,211,102,0.08)" onclick="openStudentWhatsApp(${idx})">Send WhatsApp message</button><button class="btn btn-edit btn-sm" onclick="openEdit(${idx})">&#9998; Edit</button><button class="btn btn-del" onclick="askDel(${idx})">&#215; Remove</button></div></div>
 
     <div class="detail-body"><div class="detail-grid">
       <div class="detail-field"><label>Name</label><input type="text" value="${esc(s.name)}" onchange="uf(${idx},'name',this.value)"></div>
       <div class="detail-field"><label>Status</label><select onchange="uf(${idx},'status',this.value)">${STATUSES.map(o=>`<option${s.status===o?' selected':''}>${o}</option>`).join('')}</select></div>
-      <div class="detail-field"><label>Phone</label><input type="text" value="${esc(s.phone)}" placeholder="+880..." onchange="uf(${idx},'phone',this.value)"></div>
+      <div class="detail-field"><label>Phone</label><div class="detail-phone-wrap"><input type="text" value="${esc(s.phone)}" placeholder="+880..." onchange="uf(${idx},'phone',this.value)"><button class="btn btn-sm" style="border-color:#25D366;color:#128C7E;background:rgba(37,211,102,0.08)" onclick="openStudentWhatsApp(${idx})">Send WhatsApp message</button></div></div>
       <div class="detail-field"><label>App Stage</label><select onchange="uf(${idx},'appStage',this.value)">${APP_STAGES.map(o=>`<option value="${esc(o)}"${s.appStage===o?' selected':''}>${o||'-- Select --'}</option>`).join('')}</select></div>
       <div class="detail-sep">Location & Intake</div>
       <div class="detail-field"><label>Country</label><select onchange="uf(${idx},'country',this.value);renderDetail()">${COUNTRIES.map(o=>`<option value="${o}"${s.country===o?' selected':''}>${o||'-- Select --'}</option>`).join('')}</select></div>
@@ -2109,26 +2163,99 @@ function renderDetail(){
 // ════════════════════════════════════════════════════════════
 function populateEditIntakes(){document.getElementById('e-intake').innerHTML=INTAKES.map(o=>`<option value="${o}">${o||'-- Select --'}</option>`).join('');}
 function populateEditStages(){document.getElementById('e-appStage').innerHTML=APP_STAGES.map(o=>`<option value="${o}">${o||'-- Select --'}</option>`).join('');}
+function fillStudentForm(s){
+  document.getElementById('e-name').value=s.name||'';
+  document.getElementById('e-status').value=s.status||'Active';
+  document.getElementById('e-phone').value=s.phone||'';
+  document.getElementById('e-appStage').value=s.appStage||'';
+  document.getElementById('e-country').value=s.country||'';
+  document.getElementById('e-intake').value=s.intake||'';
+  document.getElementById('e-uniCount').value=s.uniCount||0;
+  document.getElementById('e-moreUni').value=s.moreUni||'N';
+  document.getElementById('e-moreUniDate').value=s.moreUniDate||'';
+  document.getElementById('e-bankMatured').value=s.bankMatured||'';
+  document.getElementById('e-bankMonths').value=s.bankMonths||'';
+  document.getElementById('e-bankExpectedDate').value=s.bankExpectedDate||'';
+  document.getElementById('e-defer').value=s.defer||'N';
+  document.getElementById('e-visaPrep').value=s.visaPrep||'';
+  document.getElementById('e-visaNext').value=s.visaNext||'';
+  document.getElementById('e-remarks').value=s.remarks||'';
+  document.getElementById('e-situation').value=s.situation||'';
+  document.getElementById('e-gsApplied').value=s.gsApplied||'N';
+  document.getElementById('e-gsStatus').value=s.gsStatus||'Applied';
+  document.getElementById('e-coe').value=s.coe||'N';
+  toggleEditAU();toggleBankDetail();toggleMoreUniDate();toggleGSStatus();
+}
 function openEdit(idx){
-  editIdx=idx;const s=students[idx];
+  editMode='edit';
+  editIdx=idx;
+  const s=students[idx];
   document.getElementById('edit-title').textContent='Edit — '+s.name;
-  document.getElementById('e-name').value=s.name||'';document.getElementById('e-status').value=s.status||'Active';document.getElementById('e-phone').value=s.phone||'';document.getElementById('e-appStage').value=s.appStage||'';document.getElementById('e-country').value=s.country||'';document.getElementById('e-intake').value=s.intake||'';document.getElementById('e-uniCount').value=s.uniCount||0;document.getElementById('e-moreUni').value=s.moreUni||'N';document.getElementById('e-moreUniDate').value=s.moreUniDate||'';document.getElementById('e-bankMatured').value=s.bankMatured||'';document.getElementById('e-bankMonths').value=s.bankMonths||'';document.getElementById('e-bankExpectedDate').value=s.bankExpectedDate||'';document.getElementById('e-defer').value=s.defer||'N';document.getElementById('e-visaPrep').value=s.visaPrep||'';document.getElementById('e-visaNext').value=s.visaNext||'';document.getElementById('e-gsApplied').value=s.gsApplied||'N';document.getElementById('e-gsStatus').value=s.gsStatus||'Applied';document.getElementById('e-coe').value=s.coe||'N';
-  toggleEditAU();toggleBankDetail();toggleMoreUniDate();toggleGSStatus();document.getElementById('edit-mo').classList.add('open');
+  document.getElementById('edit-save-btn').textContent='Save Changes';
+  fillStudentForm(s);
+  document.getElementById('edit-mo').classList.add('open');
 }
 function toggleEditAU(){document.getElementById('e-gs-section').style.display=document.getElementById('e-country').value==='Australia'?'block':'none';}
 function toggleBankDetail(){const v=document.getElementById('e-bankMatured').value;document.getElementById('e-bankmo-wrap').style.display=v==='Y'?'block':'none';document.getElementById('e-bankdate-wrap').style.display=(v==='N'||v==='havent opened yet')?'block':'none';}
 function toggleMoreUniDate(){document.getElementById('e-moreDate-wrap').style.display=document.getElementById('e-moreUni').value==='Y'?'block':'none';}
 function toggleGSStatus(){document.getElementById('e-gsstatus-wrap').style.display=document.getElementById('e-gsApplied').value==='Y'?'block':'none';}
+function readStudentForm(){
+  const country=document.getElementById('e-country').value;
+  const gsApplied=document.getElementById('e-gsApplied').value;
+  return {
+    name:document.getElementById('e-name').value.trim()||'New Student',
+    status:document.getElementById('e-status').value,
+    phone:document.getElementById('e-phone').value.trim(),
+    appStage:document.getElementById('e-appStage').value,
+    country,
+    intake:document.getElementById('e-intake').value,
+    uniCount:parseInt(document.getElementById('e-uniCount').value)||0,
+    moreUni:document.getElementById('e-moreUni').value,
+    moreUniDate:document.getElementById('e-moreUniDate').value,
+    bankMatured:document.getElementById('e-bankMatured').value,
+    bankMonths:document.getElementById('e-bankMonths').value,
+    bankExpectedDate:document.getElementById('e-bankExpectedDate').value,
+    defer:document.getElementById('e-defer').value,
+    visaPrep:document.getElementById('e-visaPrep').value,
+    visaNext:document.getElementById('e-visaNext').value,
+    remarks:document.getElementById('e-remarks').value.trim(),
+    situation:document.getElementById('e-situation').value.trim(),
+    gsApplied,
+    gsStatus:country==='Australia'&&gsApplied==='Y'?document.getElementById('e-gsStatus').value:'',
+    coe:country==='Australia'?document.getElementById('e-coe').value:'N'
+  };
+}
 function saveEdit(){
-  if(editIdx===null)return;const s=students[editIdx];
-  s.name=document.getElementById('e-name').value;s.status=document.getElementById('e-status').value;s.phone=document.getElementById('e-phone').value;s.appStage=document.getElementById('e-appStage').value;s.country=document.getElementById('e-country').value;s.intake=document.getElementById('e-intake').value;s.uniCount=parseInt(document.getElementById('e-uniCount').value)||0;s.moreUni=document.getElementById('e-moreUni').value;s.moreUniDate=document.getElementById('e-moreUniDate').value;s.bankMatured=document.getElementById('e-bankMatured').value;s.bankMonths=document.getElementById('e-bankMonths').value;s.bankExpectedDate=document.getElementById('e-bankExpectedDate').value;s.defer=document.getElementById('e-defer').value;s.visaPrep=document.getElementById('e-visaPrep').value;s.visaNext=document.getElementById('e-visaNext').value;s.gsApplied=document.getElementById('e-gsApplied').value;s.gsStatus=s.country==='Australia'&&s.gsApplied==='Y'?document.getElementById('e-gsStatus').value:'';s.coe=s.country==='Australia'?document.getElementById('e-coe').value:'N';s.lastUpdated=Date.now();
-  persist('Updated: '+s.name);renderAll();closeMo('edit-mo');editIdx=null;
+  const payload=readStudentForm();
+  if(editMode==='add'){
+    const s=blankStudent(payload.name||'New Student');
+    Object.assign(s,payload,{lastUpdated:Date.now()});
+    if(s.remarks)s.remarksHistory=[{ts:s.lastUpdated,text:s.remarks}];
+    if(s.situation)s.situationHistory=[{ts:s.lastUpdated,text:s.situation}];
+    students.push(s);
+    students.sort((a,b)=>a.name.localeCompare(b.name));
+    selectedStudentId=s.id;
+    persist('Added: '+s.name);
+  }else{
+    if(editIdx===null)return;
+    const s=students[editIdx];
+    Object.assign(s,payload,{lastUpdated:Date.now()});
+    persist('Updated: '+s.name);
+  }
+  renderAll();closeMo('edit-mo');editIdx=null;editMode='edit';
 }
 
 // ════════════════════════════════════════════════════════════
 // ADD / DELETE / ADDITIONAL INFO
 // ════════════════════════════════════════════════════════════
-function addStudent(){students.push(blankStudent('New Student'));students.sort((a,b)=>a.name.localeCompare(b.name));persist('Added new student');renderAll();}
+function addStudent(){
+  editMode='add';
+  editIdx=null;
+  document.getElementById('edit-title').textContent='Add Student';
+  document.getElementById('edit-save-btn').textContent='Save Student';
+  fillStudentForm(blankStudent(''));
+  document.getElementById('edit-mo').classList.add('open');
+}
 function askDel(idx){delIdx=idx;document.getElementById('del-name').textContent=students[idx].name;document.getElementById('del-mo').classList.add('open');}
 function confirmDel(){if(delIdx!==null){const n=students[delIdx].name;if(selectedStudentId===students[delIdx].id)selectedStudentId=null;students.splice(delIdx,1);persist('Removed: '+n);renderAll();}closeMo('del-mo');delIdx=null;}
 
@@ -2203,103 +2330,221 @@ function exportTXT(){
 // ════════════════════════════════════════════════════════════
 function exportPDF(){
   const now=new Date();
-  const active=students.filter(s=>s.status!=='Discontinued');
-  const auA=active.filter(s=>s.country==='Australia');
-  const other=active.filter(s=>['New Zealand','United Kingdom','Canada','Malaysia'].includes(s.country)).length;
+  const { jsPDF } = window.jspdf;
+  const doc=new jsPDF({orientation:'landscape',unit:'pt',format:'a4'});
+  const pageWidth=doc.internal.pageSize.getWidth();
+  const pageHeight=doc.internal.pageSize.getHeight();
+  const margin=40;
+  let y=margin;
 
-  const summaryCards=[
-    ['Total active',active.length,'def'],
-    ['Australia',auA.length,'au'],
-    ['New Zealand',active.filter(s=>s.country==='New Zealand').length,'nz'],
-    ['UK',active.filter(s=>s.country==='United Kingdom').length,'uk'],
-    ['Canada',active.filter(s=>s.country==='Canada').length,'ca'],
-    ['Malaysia',active.filter(s=>s.country==='Malaysia').length,'my'],
-    ['GS Applied',auA.filter(s=>s.gsApplied==='Y').length,'def'],
-    ['GS Cleared',auA.filter(s=>s.gsStatus==='Cleared').length,'def'],
-    ['GS Rejected',auA.filter(s=>s.gsStatus==='Rejected').length,'rej'],
-    ['CoE Received',auA.filter(s=>s.coe==='Y').length,'def'],
-    ['Deferrals',active.filter(s=>s.defer==='Y').length,'defer'],
-    ['Bank Matured',active.filter(s=>s.bankMatured==='Y').length,'def'],
-    ['Visa Ready',active.filter(s=>s.visaPrep==='Ready').length,'def'],
-    ['Visa Next',active.filter(s=>s.visaNext==='Y').length,'def'],
-  ];
+  const active=[...students].filter(s=>s.status!=='Discontinued').sort((a,b)=>a.name.localeCompare(b.name));
+  const auActive=active.filter(s=>s.country==='Australia');
+  const safe=v=>v===undefined||v===null||v===''?'—':String(v);
+  const bankText=s=>{
+    if(s.bankMatured==='Y')return 'Matured'+(s.bankMonths?' ('+s.bankMonths+')':'');
+    if(s.bankMatured==='N')return 'Pending'+(s.bankExpectedDate?' (Exp: '+s.bankExpectedDate+')':'');
+    if(s.bankMatured==='havent opened yet')return 'Not opened'+(s.bankExpectedDate?' (Exp: '+s.bankExpectedDate+')':'');
+    return '—';
+  };
+  const gsOrCoeText=s=>{
+    if(s.country!=='Australia')return 'N/A';
+    if(s.coe==='Y')return 'COE Received';
+    if(s.gsApplied==='Y')return 'GS: '+(s.gsStatus||'Applied');
+    return 'Not applied';
+  };
+  const intakeStatus=s=>s.visaNext==='Y'?'This intake':s.visaNext==='N'?'Later intake':'—';
+  const ensureSpace=(needed=80)=>{if(y+needed>pageHeight-40){doc.addPage();y=margin;}};
 
-  const rows=[...students].sort((a,b)=>a.name.localeCompare(b.name)).filter(s=>s.status!=='Discontinued').map((s,i)=>{
-    const au=s.country==='Australia';
-    let bank='—';
-    if(s.bankMatured==='Y') bank='Matured'+(s.bankMonths?' — '+s.bankMonths:'');
-    else if(s.bankMatured==='N') bank='Pending'+(s.bankExpectedDate?' — '+s.bankExpectedDate:'');
-    else if(s.bankMatured==='havent opened yet') bank="Haven't opened";
-    const age=fmtAge(s.lastUpdated);
-    const uniCount=s.uniApplications?s.uniApplications.length:0;
-    const uniStr=uniCount>0?uniCount+' / more: '+(s.moreUni==='Y'?'Yes':'No')+(s.moreUniDate?' ('+s.moreUniDate+')':''):'—';
-    return `<tr>
-      <td>${String(i+1).padStart(2,'0')}</td>
-      <td><strong>${esc(s.name)}</strong></td>
-      <td>${esc(s.country)||'—'}</td>
-      <td>${esc(s.intake)||'—'}</td>
-      <td>${esc(s.status)}</td>
-      <td>${esc(s.appStage)||'—'}</td>
-      <td>${uniStr}</td>
-      <td>${bank}</td>
-      <td>${s.defer==='Y'?'Yes':'No'}</td>
-      <td>${au?s.gsApplied==='Y'?'Yes':'No':'N/A'}</td>
-      <td>${au&&s.gsApplied==='Y'?esc(s.gsStatus):au?'Not Applied':'N/A'}</td>
-      <td>${au?s.coe==='Y'?'Yes':'No':'N/A'}</td>
-      <td>${esc(s.visaPrep)||'—'}</td>
-      <td><span class="age-badge ${age.cls}">${age.label}</span></td>
-      <td>${esc(s.situation)||'—'}</td>
-      <td>${esc(s.remarks)||'—'}</td>
-    </tr>`;
-  }).join('');
+  const dayNames=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const monthNames=['January','February','March','April','May','June','July','August','September','October','November','December'];
+  const dateStr=dayNames[now.getDay()]+', '+now.getDate()+' '+monthNames[now.getMonth()]+' '+now.getFullYear();
+  const timeStr=String(now.getHours()).padStart(2,'0')+':'+String(now.getMinutes()).padStart(2,'0');
 
-  const sc=(c,v,l)=>`<div class="sc ${c}"><div class="sv">${v}</div><div class="sl">${l}</div></div>`;
-  const html=`<!DOCTYPE html><html><head><meta charset="UTF-8"><title>HBD Report — ${fmtDateTime(now)}</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:'DM Sans',sans-serif;font-size:11px;color:#1e3a5f;padding:20px}
-    .hdr{display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #3b82f6;padding-bottom:11px;margin-bottom:14px}
-    .ht{font-size:16px;font-weight:600}.hs{font-size:11px;color:#4a7098;margin-top:2px}
-    .meta{text-align:right;font-size:10px;color:#8aabc8}
-    .sg{display:grid;grid-template-columns:repeat(7,1fr);gap:7px;margin-bottom:14px}
-    .sc{background:#eff6ff;border-radius:6px;padding:8px 10px;border-left:3px solid #3b82f6}
-    .sv{font-size:17px;font-weight:600;color:#2563eb}.sl{font-size:10px;color:#4a7098;margin-top:1px}
-    .sc.au{border-color:#d97706}.sc.au .sv{color:#d97706}
-    .sc.nz{border-color:#059669}.sc.nz .sv{color:#059669}
-    .sc.uk{border-color:#7c3aed}.sc.uk .sv{color:#7c3aed}
-    .sc.ca{border-color:#dc2626}.sc.ca .sv{color:#dc2626}
-    .sc.my{border-color:#0891b2}.sc.my .sv{color:#0891b2}
-    .sc.rej{border-color:#dc2626}.sc.rej .sv{color:#dc2626}
-    .sc.defer{border-color:#ea580c}.sc.defer .sv{color:#ea580c}
-    h2{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#1e3a5f;margin-bottom:7px}
-    table{width:100%;border-collapse:collapse}
-    th{background:#dbeafe;color:#1d4ed8;font-weight:600;padding:5px 7px;text-align:left;font-size:9px;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
-    td{padding:5px 7px;border-bottom:1px solid #e0f0ff;vertical-align:top;font-size:10px}
-    tr:nth-child(even) td{background:#f8fbff}
-    .age-badge{display:inline-block;font-size:9px;padding:2px 6px;border-radius:8px;font-weight:500}
-    .age-fresh{background:#d1fae5;color:#059669}.age-warn{background:#fef3c7;color:#d97706}.age-old{background:#fee2e2;color:#dc2626}
-    .ft{margin-top:12px;text-align:center;font-size:9px;color:#8aabc8;border-top:1px solid #dbeafe;padding-top:7px}
-    @media print{body{padding:6px}@page{size:A4 landscape;margin:7mm}}
-  </style></head><body>
-  <div class="hdr">
-    <div><div class="ht">HBD Services — Student File Status Report</div><div class="hs">Counsellor: Tausif Jaman</div></div>
-    <div class="meta">${fmtDateTime(now)}</div>
-  </div>
-  <h2>Summary</h2>
-  <div class="sg">${summaryCards.map(([l,v,c])=>sc(c,v,l)).join('')}</div>
-  <h2>Student Files (Alphabetical)</h2>
-  <table><thead><tr>
-    <th>SL</th><th>Name</th><th>Country</th><th>Intake</th><th>Status</th>
-    <th>Stage</th><th>Unis / More</th><th>Bank</th><th>Defer</th><th>GS Applied</th>
-    <th>GS Status</th><th>CoE</th><th>Visa Prep</th><th>Last Updated</th>
-    <th>Situation</th><th>Remarks</th>
-  </tr></thead><tbody>${rows}</tbody></table>
-  <div class="ft">HBD Services · Tausif Jaman · ${now.toLocaleDateString()}</div>
-  <script>window.onload=()=>window.print()<\/script>
-  </body></html>`;
-  const w=window.open('','_blank'); w.document.write(html); w.document.close();
-  addLog('Exported PDF (print view)');
+  // Header
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(22);
+  doc.setTextColor(29,78,216);
+  doc.text('HBD Services',margin,y);
+  y+=22;
+  doc.setFontSize(14);
+  doc.setTextColor(30,58,95);
+  doc.text('Student File Report',margin,y);
+  y+=18;
+  doc.setFont('helvetica','normal');
+  doc.setFontSize(10);
+  doc.setTextColor(74,112,152);
+  doc.text('Counsellor: Tausif Jaman  |  '+dateStr+' at '+timeStr,margin,y);
+  y+=20;
+  doc.setDrawColor(37,99,235);
+  doc.setLineWidth(2);
+  doc.line(margin,y,pageWidth-margin,y);
+  y+=24;
+
+  // Dashboard summary cards
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(13);
+  doc.setTextColor(30,58,95);
+  doc.text('Dashboard Summary',margin,y);
+  y+=18;
+
+  const summaryStats=[
+    {label:'Total Active',val:active.length,color:[37,99,235]},
+    {label:'Bank Matured',val:active.filter(s=>s.bankMatured==='Y').length,color:[5,150,105]},
+    {label:'GS Applied (AU)',val:auActive.filter(s=>s.gsApplied==='Y'&&s.gsStatus!=='Cleared'&&s.gsStatus!=='Rejected'&&s.coe!=='Y').length,color:[37,99,235]},
+    {label:'GS Cleared (AU)',val:auActive.filter(s=>s.gsStatus==='Cleared').length,color:[5,150,105]},
+    {label:'CoE Received (AU)',val:auActive.filter(s=>s.coe==='Y').length,color:[147,51,234]},
+    {label:'Visa This Intake',val:active.filter(s=>s.visaNext==='Y').length,color:[5,150,105]},
+    {label:'Deferrals',val:active.filter(s=>s.defer==='Y').length,color:[217,119,6]},
+    {label:'Visa Ready',val:active.filter(s=>s.visaPrep==='Ready').length,color:[5,150,105]},
+    {label:'Pending Tasks',val:pendingTasks.filter(t=>!t.done).length,color:[220,38,38]},
+    {label:'Unis Applied',val:active.reduce((a,s)=>a+((s.uniApplications&&s.uniApplications.length)?s.uniApplications.length:(+s.uniCount||0)),0),color:[37,99,235]}
+  ].filter(st=>st.val>0 || st.label==='Total Active');
+
+  const cardW=120,cardH=55,cardGap=12,cardsPerRow=Math.max(1,Math.floor((pageWidth-margin*2+cardGap)/(cardW+cardGap)));
+  summaryStats.forEach((st,i)=>{
+    const col=i%cardsPerRow,row=Math.floor(i/cardsPerRow);
+    const cx=margin+col*(cardW+cardGap),cy=y+row*(cardH+cardGap);
+    ensureSpace(cardH+20);
+    doc.setFillColor(248,251,255);
+    doc.setDrawColor(...st.color);
+    doc.setLineWidth(1.5);
+    doc.roundedRect(cx,cy,cardW,cardH,5,5,'FD');
+    doc.setFillColor(...st.color);
+    doc.rect(cx,cy,cardW,4,'F');
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(20);
+    doc.setTextColor(...st.color);
+    doc.text(String(st.val),cx+cardW/2,cy+28,{align:'center'});
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(8);
+    doc.setTextColor(74,112,152);
+    doc.text(st.label,cx+cardW/2,cy+42,{align:'center'});
+  });
+  y+=Math.ceil(summaryStats.length/cardsPerRow)*(cardH+cardGap)+10;
+
+  // Country summary cards
+  ensureSpace(120);
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(13);
+  doc.setTextColor(30,58,95);
+  doc.text('Country Summary',margin,y);
+  y+=18;
+  const countryData=Object.entries(active.reduce((acc,s)=>{if(s.country)acc[s.country]=(acc[s.country]||0)+1;return acc;},{})).sort((a,b)=>b[1]-a[1]);
+  const cColors=[[37,99,235],[5,150,105],[217,119,6],[147,51,234],[220,38,38]];
+  countryData.forEach((cd,i)=>{
+    const col=i%cardsPerRow,row=Math.floor(i/cardsPerRow);
+    const cx=margin+col*(cardW+cardGap),cy=y+row*(cardH+cardGap),clr=cColors[i%cColors.length];
+    doc.setFillColor(248,251,255);
+    doc.setDrawColor(...clr);
+    doc.setLineWidth(1.5);
+    doc.roundedRect(cx,cy,cardW,cardH,5,5,'FD');
+    doc.setFillColor(...clr);
+    doc.rect(cx,cy,cardW,4,'F');
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(20);
+    doc.setTextColor(...clr);
+    doc.text(String(cd[1]),cx+cardW/2,cy+28,{align:'center'});
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(8);
+    doc.setTextColor(74,112,152);
+    doc.text(cd[0],cx+cardW/2,cy+42,{align:'center'});
+  });
+  y+=Math.ceil(Math.max(countryData.length,1)/cardsPerRow)*(cardH+cardGap)+10;
+
+  // Stage distribution cards
+  ensureSpace(120);
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(13);
+  doc.setTextColor(30,58,95);
+  doc.text('Stage Distribution',margin,y);
+  y+=18;
+  const stageData=Object.entries(active.reduce((acc,s)=>{const k=s.appStage||'Not Set';acc[k]=(acc[k]||0)+1;return acc;},{})).sort((a,b)=>b[1]-a[1]);
+  const sColors=[[88,166,255],[63,185,80],[210,153,34],[248,81,73],[188,142,249],[121,192,255],[86,211,100],[255,166,87]];
+  const stCardW=140,stCardH=45,stPerRow=Math.max(1,Math.floor((pageWidth-margin*2+cardGap)/(stCardW+cardGap)));
+  stageData.forEach((sd,i)=>{
+    const col=i%stPerRow,row=Math.floor(i/stPerRow);
+    const cx=margin+col*(stCardW+cardGap),cy=y+row*(stCardH+cardGap),clr=sColors[i%sColors.length];
+    doc.setFillColor(248,251,255);
+    doc.setDrawColor(...clr);
+    doc.setLineWidth(1);
+    doc.roundedRect(cx,cy,stCardW,stCardH,4,4,'FD');
+    doc.setFillColor(...clr);
+    doc.rect(cx,cy,stCardW,3,'F');
+    doc.setFont('helvetica','bold');
+    doc.setFontSize(16);
+    doc.setTextColor(...clr);
+    doc.text(String(sd[1]),cx+8,cy+22);
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(7);
+    doc.setTextColor(74,112,152);
+    const stLabel=sd[0].length>24?sd[0].slice(0,24)+'...':sd[0];
+    doc.text(stLabel,cx+8,cy+34);
+  });
+  y+=Math.ceil(Math.max(stageData.length,1)/stPerRow)*(stCardH+cardGap)+10;
+
+  // Student overview page
+  doc.addPage();
+  y=margin;
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(14);
+  doc.setTextColor(29,78,216);
+  doc.text('Student Overview',margin,y);
+  y+=16;
+  doc.setFont('helvetica','normal');
+  doc.setFontSize(9);
+  doc.setTextColor(74,112,152);
+  doc.text(dateStr+' at '+timeStr+' — '+active.length+' active students',margin,y);
+  y+=14;
+
+  const overviewRows=active.map((s,i)=>[
+    String(i+1),
+    safe(s.name),
+    safe(s.situation),
+    [safe(s.country),safe(s.intake)].filter(v=>v!=='—').join(' / ')||'—',
+    s.defer==='Y'?'Deferred':s.defer==='N'?'No':'—',
+    safe(s.appStage),
+    bankText(s),
+    gsOrCoeText(s),
+    intakeStatus(s)
+  ]);
+
+  doc.autoTable({
+    startY:y,
+    head:[['#','Student Name','Present Situation','Country / Intake / Year','Deferral Status','Stage','Bank Status','GS / COE Status','This Intake Status']],
+    body:overviewRows,
+    theme:'grid',
+    margin:{left:margin,right:margin},
+    styles:{font:'helvetica',fontSize:8,cellPadding:4,textColor:[30,58,95],lineColor:[219,234,254],lineWidth:0.5,overflow:'linebreak',valign:'top'},
+    headStyles:{fillColor:[37,99,235],textColor:[255,255,255],fontStyle:'bold',fontSize:7},
+    alternateRowStyles:{fillColor:[248,251,255]},
+    columnStyles:{
+      0:{cellWidth:24},
+      1:{cellWidth:78,fontStyle:'bold'},
+      2:{cellWidth:170},
+      3:{cellWidth:92},
+      4:{cellWidth:66},
+      5:{cellWidth:95},
+      6:{cellWidth:78},
+      7:{cellWidth:84},
+      8:{cellWidth:62}
+    }
+  });
+
+  const pages=doc.getNumberOfPages();
+  for(let i=1;i<=pages;i++){
+    doc.setPage(i);
+    doc.setDrawColor(37,99,235);
+    doc.setLineWidth(0.5);
+    doc.line(margin,pageHeight-28,pageWidth-margin,pageHeight-28);
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(8);
+    doc.setTextColor(138,171,200);
+    doc.text('HBD Services · Student File Report · '+dateStr+' at '+timeStr,margin,pageHeight-14);
+    doc.text('Page '+i+' of '+pages,pageWidth-margin,pageHeight-14,{align:'right'});
+  }
+
+  doc.save('HBD_Student_File_Report_'+iso(now)+'.pdf');
+  addLog('Exported PDF');
 }
 
 
@@ -2327,6 +2572,28 @@ function confirmImport(){
 // UTILITIES
 // ════════════════════════════════════════════════════════════
 function closeMo(id){document.getElementById(id).classList.remove('open');if(id==='remind-complete-mo')reminderCompleteIdx=null;}
+function initModalClickListeners(){
+  document.querySelectorAll('.mo').forEach(modal=>{
+    modal.addEventListener('click',e=>{
+      if(e.target===modal){modal.classList.remove('open');if(modal.id==='remind-complete-mo')reminderCompleteIdx=null;}
+    });
+  });
+  document.querySelectorAll('.addinfo-overlay').forEach(modal=>{
+    modal.addEventListener('click',e=>{
+      if(e.target===modal)modal.classList.remove('open');
+    });
+  });
+  document.querySelectorAll('.search-overlay').forEach(modal=>{
+    modal.addEventListener('click',e=>{
+      if(e.target===modal)modal.classList.remove('open');
+    });
+  });
+}
+
+function openWhatsAppModal(){
+  renderWhatsAppPanel();
+  const m=document.getElementById('wa-mo');if(m)m.classList.add('open');
+}
 function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 function dl(content,filename,type){const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([content],{type}));a.download=filename;a.click();}
 function iso(d){return d.toISOString().slice(0,10);}
@@ -2334,6 +2601,91 @@ function fmtTime(d){return d.toLocaleTimeString([],{hour:'2-digit',minute:'2-dig
 function fmtDateTime(d){return d.toLocaleDateString('en-GB',{weekday:'short',year:'numeric',month:'short',day:'numeric'})+' '+fmtTime(d);}
 function iSort(s){if(!s)return 999999;const p=s.split(' ');return p.length!==2?999999:parseInt(p[1])*100+MOS.indexOf(p[0]);}
 function fmtAge(ts){if(!ts)return{cls:'age-old',label:'Never'};const mins=Math.floor((Date.now()-ts)/60000);const h=Math.floor(mins/60),d=Math.floor(h/24),w=Math.floor(d/7),mo=Math.floor(d/30);let label;if(mins<1)label='Just now';else if(mins<60)label=`${mins}m ago`;else if(h<24)label=`${h}h ago`;else if(d<7)label=`${d}d ago`;else if(d<30)label=`${w}w ${d%7}d ago`;else label=`${mo}mo ago`;return{cls:d<3?'age-fresh':d<7?'age-warn':'age-old',label};}
+const WA_TEMPLATE_KEY='hbd_wa_templates_v1';
+function normalizeWhatsAppNumber(v){return String(v||'').replace(/[^0-9]/g,'');}
+function ensureBanglaPrefix(digits){
+  if(!digits) return digits;
+  // If already has Bangladesh country code, leave as-is
+  if(digits.startsWith('880')) return digits;
+  // If starts with leading 0 (local format), replace with 880
+  if(digits.startsWith('0')) return '880'+digits.slice(1);
+  // If looks like a 10-digit local mobile (without leading 0), prefix 880
+  if(digits.length===10) return '880'+digits;
+  // Otherwise, leave unchanged
+  return digits;
+}
+function buildWhatsAppLink(phone,message=''){let digits=normalizeWhatsAppNumber(phone);if(!digits)return '';digits=ensureBanglaPrefix(digits);const msg=encodeURIComponent(message||'');return `https://wa.me/${digits}${msg?`?text=${msg}`:''}`;}
+function ensureWhatsAppTemplates(){if(Array.isArray(waTemplates)&&waTemplates.length)return;try{waTemplates=JSON.parse(localStorage.getItem(WA_TEMPLATE_KEY)||'[]');if(!Array.isArray(waTemplates))waTemplates=[];}catch(e){waTemplates=[];}}
+function renderWhatsAppPanel(){
+  const sel=document.getElementById('wa-student-select');
+  const chips=document.getElementById('wa-student-chips');
+  const tplSel=document.getElementById('wa-template-select');
+  const tplList=document.getElementById('wa-template-list');
+  if(!sel||!tplSel) return; // require at minimum select and template select
+  ensureWhatsAppTemplates();
+  const active=students.filter(s=>s.status!=='Discontinued').sort((a,b)=>a.name.localeCompare(b.name));
+  sel.innerHTML='<option value="">-- Select active student --</option>'+active.map(s=>`<option value="${s.id}"${String(s.id)===String(waSelectedStudentId)?' selected':''}>${esc(s.name)}${s.phone?` — ${esc(s.phone)}`:''}</option>`).join('');
+  if(chips) chips.innerHTML=active.map(s=>`<button class="wa-chip${String(s.id)===String(waSelectedStudentId)?' active':''}" onclick="selectWhatsAppStudent('${s.id}')">${esc(s.name)}</button>`).join('')||'<div style="color:var(--tm);font-size:12px;font-style:italic">No active students</div>';
+  tplSel.innerHTML='<option value="">-- Select template --</option>'+waTemplates.map(t=>`<option value="${esc(t.id)}">${esc(t.name)}</option>`).join('');
+  if(tplList) tplList.innerHTML=waTemplates.length?waTemplates.map(t=>`<div class="wa-template-item"><div><strong>${esc(t.name)}</strong><div>${esc(t.message)}</div></div><button class="btn btn-del btn-sm" onclick="deleteWhatsAppTemplate('${t.id}')">Delete</button></div>`).join(''):'<div style="color:var(--tm);font-size:12px;font-style:italic">No templates saved yet</div>';
+}
+function selectWhatsAppStudent(id){
+  waSelectedStudentId=id||'';
+  const sel=document.getElementById('wa-student-select');if(sel)sel.value=id||'';
+  const student=students.find(s=>String(s.id)===String(id));
+  if(student&&document.getElementById('wa-custom-number'))document.getElementById('wa-custom-number').value=student.phone||'';
+  renderWhatsAppPanel();
+}
+function applyWhatsAppTemplate(id){
+  ensureWhatsAppTemplates();
+  const tpl=waTemplates.find(t=>String(t.id)===String(id));
+  if(!tpl)return;
+  document.getElementById('wa-template-name').value=tpl.name||'';
+  document.getElementById('wa-message').value=tpl.message||'';
+}
+function saveWhatsAppTemplate(){
+  ensureWhatsAppTemplates();
+  const name=(document.getElementById('wa-template-name').value||'').trim();
+  const message=(document.getElementById('wa-message').value||'').trim();
+  if(!name||!message)return alert('Please enter a template name and message.');
+  const existing=waTemplates.find(t=>t.name.toLowerCase()===name.toLowerCase());
+  if(existing)existing.message=message;
+  else waTemplates.unshift({id:Date.now()+Math.random(),name,message});
+  localStorage.setItem(WA_TEMPLATE_KEY,JSON.stringify(waTemplates));
+  renderWhatsAppPanel();
+}
+function deleteWhatsAppTemplate(id){ensureWhatsAppTemplates();waTemplates=waTemplates.filter(t=>String(t.id)!==String(id));localStorage.setItem(WA_TEMPLATE_KEY,JSON.stringify(waTemplates));renderWhatsAppPanel();}
+function clearWhatsAppComposer(){
+  const ids=['wa-template-name','wa-message','wa-custom-number'];
+  ids.forEach(id=>{const el=document.getElementById(id);if(el)el.value='';});
+  const tpl=document.getElementById('wa-template-select');if(tpl)tpl.value='';
+  waSelectedStudentId='';renderWhatsAppPanel();
+}
+function openWhatsAppFromDashboard(){
+  const student=students.find(s=>String(s.id)===String(waSelectedStudentId));
+  const custom=(document.getElementById('wa-custom-number')?document.getElementById('wa-custom-number').value.trim():'');
+  const message=(document.getElementById('wa-message').value||'').trim();
+  if(student){
+    const sdigits=normalizeWhatsAppNumber(student.phone||'');
+    if(!sdigits) return alert('Selected student has no phone number. Please add one to the student record or enter a number manually.');
+    const link=buildWhatsAppLink(student.phone, message);
+    window.open(link,'_blank');
+    return;
+  }
+  // no student selected — try custom number
+  if(!custom) return alert('Please select a student or enter a phone number first.');
+  const link=buildWhatsAppLink(custom, message);
+  if(!link) return alert('Please enter a valid phone number.');
+  window.open(link,'_blank');
+}
+function openStudentWhatsApp(idx){
+  const s=students[idx];
+  const sd=normalizeWhatsAppNumber(s.phone||'');
+  if(!sd) return alert('Selected student has no phone number. Please add one first.');
+  const link=buildWhatsAppLink(s.phone||'',`Hello ${s.name||''}`.trim());
+  window.open(link,'_blank');
+}
+
 function tick(){const n=new Date();document.getElementById('clock').textContent=String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0')+':'+String(n.getSeconds()).padStart(2,'0');const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];document.getElementById('cdate').textContent=days[n.getDay()]+', '+n.getDate()+' '+MOS[n.getMonth()]+' '+n.getFullYear();const fd=document.getElementById('fdate');if(fd)fd.textContent=n.toLocaleDateString('en-GB',{year:'numeric',month:'long',day:'numeric'});const dd=document.getElementById('dash-date');if(dd)dd.textContent=days[n.getDay()]+', '+n.getDate()+' '+MOS[n.getMonth()]+' '+n.getFullYear()+' — '+String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0');}
 tick();setInterval(tick,1000);
 
