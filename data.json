@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:40:45.652Z",
+    "saved": "2026-04-11T09:41:19.489Z",
     "version": 8,
     "count": 39
   },
@@ -370,7 +370,7 @@
       "email": "hafsaoyshe121@gmail.com"
     },
     {
-      "appStage": "GS Preparation Ongoing",
+      "appStage": "GS assessment preparation started",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "6 months",
@@ -378,10 +378,10 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "N",
-      "gsStatus": "Not Applied",
+      "gsStatus": "",
       "id": 1775372567768.2964,
       "intake": "June 2026",
-      "lastUpdated": 1775784533215,
+      "lastUpdated": 1775900477474,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Hasan Molla",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900477474,
+      "msg": "Updated: Hasan Molla"
+    },
     {
       "ts": 1775900443649,
       "msg": "Updated: Gazi MD Shahabuddin"
