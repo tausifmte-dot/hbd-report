@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:45:01.783Z",
+    "saved": "2026-04-11T09:45:34.020Z",
     "version": 8,
     "count": 39
   },
@@ -1184,7 +1184,7 @@
       "uniApplications": []
     },
     {
-      "appStage": "GS Rejected",
+      "appStage": "GS assessment reapplied for another university",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
@@ -1192,22 +1192,22 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
-      "gsStatus": "Rejected",
+      "gsStatus": "Applied",
       "id": 1775372567768.766,
       "intake": "June 2026",
-      "lastUpdated": 1775440821268,
+      "lastUpdated": 1775900732017,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Shampa Banik",
       "phone": "8801727211428",
-      "remarks": "Student spouse has visa refusal from USA so VU ECA rejected their GS ",
+      "remarks": "Student spouse has visa refusal from USA so VU ECA rejected their GS",
       "remarksHistory": [
         {
           "text": "Student spouse has visa refusal from USA so VU ECA rejected their GS ",
           "ts": 1775390692095
         }
       ],
-      "situation": "Need to submit Latrobe GS ",
+      "situation": "Waiting for G.S. decision from the University of Latrobe",
       "situationHistory": [
         {
           "text": "Need to submit Latrobe GS ",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900732017,
+      "msg": "Updated: Shampa Banik"
+    },
     {
       "ts": 1775900699780,
       "msg": "Updated: Saidul Islam Saeed"
