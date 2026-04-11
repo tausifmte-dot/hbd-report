@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:32:59.964Z",
+    "saved": "2026-04-11T09:33:59.969Z",
     "version": 8,
     "count": 39
   },
@@ -1150,9 +1150,9 @@
     {
       "id": 14712282400,
       "name": "Samiha Akhter",
-      "country": "",
+      "country": "New Zealand",
       "intake": "June 2026",
-      "status": "Active",
+      "status": "Discontinued",
       "appStage": "Not yet",
       "phone": "8801755677657",
       "email": "samiha.akhter92@gmail.com",
@@ -1168,7 +1168,7 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 0,
+      "lastUpdated": 1775899988059,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1218,9 +1218,9 @@
     {
       "id": 44712282400,
       "name": "Shams Arefin Rimon",
-      "country": "",
+      "country": "Australia",
       "intake": "February 2026",
-      "status": "Active",
+      "status": "Discontinued",
       "appStage": "Submitted",
       "phone": "8801818375748",
       "email": "msalam1764@gmail.com",
@@ -1236,7 +1236,7 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 0,
+      "lastUpdated": 1775899998306,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1247,7 +1247,7 @@
     {
       "id": 9712282400,
       "name": "Sharair Hossen Emon",
-      "country": "",
+      "country": "New Zealand",
       "intake": "June 2026",
       "status": "Active",
       "appStage": "Not yet",
@@ -1265,7 +1265,7 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 0,
+      "lastUpdated": 1775900007146,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1276,9 +1276,9 @@
     {
       "id": 35712282400,
       "name": "Sheikh Fahim Islam Fahim",
-      "country": "",
+      "country": "Australia",
       "intake": "February 2026",
-      "status": "Active",
+      "status": "Discontinued",
       "appStage": "Submitted",
       "phone": "8801610583803",
       "email": "thesheikhfahim@gmail.com",
@@ -1294,7 +1294,7 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 0,
+      "lastUpdated": 1775900022234,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1577,6 +1577,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900037966,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775899977953,
       "msg": "Auto-saved"
