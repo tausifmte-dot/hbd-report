@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:29:21.582Z",
+    "saved": "2026-04-11T09:30:48.649Z",
     "version": 8,
-    "count": 41
+    "count": 40
   },
   "students": [
     {
@@ -724,35 +724,6 @@
       "visaPrep": "",
       "visaNext": "",
       "lastUpdated": 1775899692314,
-      "remarks": "",
-      "situation": "",
-      "remarksHistory": [],
-      "situationHistory": [],
-      "applicationCompletions": [],
-      "uniApplications": []
-    },
-    {
-      "id": 39712282400,
-      "name": "Md. Munsur Alam",
-      "country": "",
-      "intake": "February 2026",
-      "status": "Active",
-      "appStage": "Submitted",
-      "phone": "8801988316307",
-      "email": "mdmunsuralamcou@gmail.com",
-      "uniCount": 0,
-      "moreUni": "N",
-      "moreUniDate": "",
-      "bankMatured": "",
-      "bankMonths": "",
-      "bankExpectedDate": "",
-      "defer": "N",
-      "gsApplied": "N",
-      "gsStatus": "",
-      "coe": "N",
-      "visaPrep": "",
-      "visaNext": "",
-      "lastUpdated": 0,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1628,6 +1599,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775899846648,
+      "msg": "Removed: Md. Munsur Alam"
+    },
     {
       "ts": 1775899759572,
       "msg": "Removed: Mahmudul Hasan Mahi"
