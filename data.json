@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:43:14.348Z",
+    "saved": "2026-04-11T09:43:39.631Z",
     "version": 8,
     "count": 39
   },
@@ -676,7 +676,7 @@
       "email": "masud1808@gmail.com"
     },
     {
-      "appStage": "Visa Submitted",
+      "appStage": "Visa lodged",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
@@ -687,12 +687,12 @@
       "gsStatus": "Cleared",
       "id": 1775372567768.3384,
       "intake": "June 2026",
-      "lastUpdated": 1775440751374,
+      "lastUpdated": 1775900617620,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Mahin Ahmed",
       "phone": "8801877670530",
-      "remarks": "Visa Submitted on 2nd April ",
+      "remarks": "Visa Submitted on 2nd April",
       "remarksHistory": [
         {
           "text": "Visa Submitted on 2nd April ",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900617621,
+      "msg": "Updated: Mahin Ahmed"
+    },
     {
       "ts": 1775900592336,
       "msg": "Updated: Limon Ahmed"
