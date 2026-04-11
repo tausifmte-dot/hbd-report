@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T11:10:57.416Z",
+    "saved": "2026-04-11T11:12:57.427Z",
     "version": 8,
     "count": 39
   },
@@ -1513,11 +1513,21 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "N",
-      "lastUpdated": 1775905827719,
-      "remarks": "",
-      "situation": "",
-      "remarksHistory": [],
-      "situationHistory": [],
+      "lastUpdated": 1775905953598,
+      "remarks": "Applied through other agency",
+      "situation": "This is student applied for New Zealand through another agency and after having a Australian visa rejected from us he applied to New Zealand institutions through us as well. When we found that he applied through another agency we confronted him and he said that he will proceed with the other agency.",
+      "remarksHistory": [
+        {
+          "ts": 1775905953598,
+          "text": "Applied through other agency"
+        }
+      ],
+      "situationHistory": [
+        {
+          "ts": 1775905951926,
+          "text": "This is student applied for New Zealand through another agency and after having a Australian visa rejected from us he applied to New Zealand institutions through us as well. When we found that he applied through another agency we confronted him and he said that he will proceed with the other agency."
+        }
+      ],
       "applicationCompletions": [],
       "uniApplications": [],
       "stageHistory": [
@@ -1620,6 +1630,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775905975423,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775905855414,
       "msg": "Auto-saved"
