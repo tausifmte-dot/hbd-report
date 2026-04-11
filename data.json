@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:50:07.058Z",
+    "saved": "2026-04-11T09:51:06.782Z",
     "version": 8,
     "count": 39
   },
@@ -1068,10 +1068,10 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
-      "gsStatus": "Applied",
+      "gsStatus": "Cleared",
       "id": 1775372567768.202,
       "intake": "June 2026",
-      "lastUpdated": 1775900699780,
+      "lastUpdated": 1775901052211,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Saidul Islam Saeed",
@@ -1591,6 +1591,14 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775901064773,
+      "msg": "Manual save — 03:51 PM"
+    },
+    {
+      "ts": 1775901063405,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775901005056,
       "msg": "Manual save — 03:50 PM"
