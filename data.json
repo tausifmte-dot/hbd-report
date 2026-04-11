@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:42:39.760Z",
+    "saved": "2026-04-11T09:43:14.348Z",
     "version": 8,
     "count": 39
   },
@@ -598,23 +598,23 @@
       "email": "mdkawsarkhan4941@gmail.com"
     },
     {
-      "appStage": "Tuition Fee & OSHC Paid",
+      "appStage": "Visa SOP writing",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
-      "coe": "N",
+      "coe": "Y",
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
       "gsStatus": "Cleared",
       "id": 1775372567768.6907,
       "intake": "June 2026",
-      "lastUpdated": 1775440727736,
+      "lastUpdated": 1775900592335,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Limon Ahmed",
       "phone": "8801317152973",
-      "remarks": "Waiting for COE ",
+      "remarks": "",
       "remarksHistory": [
         {
           "text": "Waiting for COE ",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900592336,
+      "msg": "Updated: Limon Ahmed"
+    },
     {
       "ts": 1775900557757,
       "msg": "Updated: Kawsar Khan"
