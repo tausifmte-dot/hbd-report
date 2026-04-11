@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T13:47:03.436Z",
+    "saved": "2026-04-11T13:47:28.457Z",
     "version": 8,
     "count": 39
   },
@@ -1292,7 +1292,7 @@
       "uniCount": 0,
       "moreUni": "N",
       "moreUniDate": "",
-      "bankMatured": "Y",
+      "bankMatured": "havent opened yet",
       "bankMonths": "More than 3 months",
       "bankExpectedDate": "",
       "defer": "N",
@@ -1301,7 +1301,7 @@
       "coe": "N",
       "visaPrep": "On Hold",
       "visaNext": "Y",
-      "lastUpdated": 1775915219464,
+      "lastUpdated": 1775915224083,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1685,6 +1685,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775915246453,
+      "msg": "Manual save — 07:47 PM"
+    },
     {
       "ts": 1775915221434,
       "msg": "Auto-saved"
