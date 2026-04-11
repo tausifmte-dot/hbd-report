@@ -1,12 +1,12 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:34:34.595Z",
+    "saved": "2026-04-11T09:35:59.972Z",
     "version": 8,
     "count": 39
   },
   "students": [
     {
-      "appStage": "Looking for Universities",
+      "appStage": "Application submitted",
       "bankExpectedDate": "2026-07-05",
       "bankMatured": "Y",
       "bankMonths": "More than 3 months",
@@ -16,8 +16,8 @@
       "gsApplied": "N",
       "gsStatus": "Not Applied",
       "id": 1775372567768.8447,
-      "intake": "June 2026",
-      "lastUpdated": 1775784563679,
+      "intake": "July 2026",
+      "lastUpdated": 1775900151875,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Amrito Kumar",
@@ -60,7 +60,14 @@
           "ts": 1775784563679
         }
       ],
-      "email": "amritokumar943@gmail.com"
+      "email": "amritokumar943@gmail.com",
+      "stageHistory": [
+        {
+          "stage": "Application submitted",
+          "enteredDate": 1775900134483,
+          "duration": 0
+        }
+      ]
     },
     {
       "appStage": "Havent made up his mind yet",
@@ -1577,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900157953,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775900072583,
       "msg": "Manual save — 03:34 PM"
