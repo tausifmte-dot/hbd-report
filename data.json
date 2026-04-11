@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:41:59.338Z",
+    "saved": "2026-04-11T09:42:39.760Z",
     "version": 8,
     "count": 39
   },
@@ -549,7 +549,7 @@
       "email": "jhbaijet@gmail.com"
     },
     {
-      "appStage": "GS Submitted",
+      "appStage": "GS assessment applied",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "3 months",
@@ -557,22 +557,22 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
-      "gsStatus": "",
+      "gsStatus": "Applied",
       "id": 1775372567768.7424,
       "intake": "June 2026",
-      "lastUpdated": 1775453794239,
+      "lastUpdated": 1775900557756,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Kawsar Khan",
       "phone": "+880 1775-022818",
-      "remarks": "Waiting for Torrens to clear GS  ",
+      "remarks": "Waiting for Torrens to clear GS",
       "remarksHistory": [
         {
           "text": "Waiting for Torrens to clear GS  ",
           "ts": 1775396144491
         }
       ],
-      "situation": "The ownership document and other required documents have been emailed.",
+      "situation": "Waiting for GS's decision.",
       "situationHistory": [
         {
           "ts": 1775453794239,
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900557757,
+      "msg": "Updated: Kawsar Khan"
+    },
     {
       "ts": 1775900517337,
       "msg": "Updated: Jannatul Fardhous"
