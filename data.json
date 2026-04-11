@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:36:59.955Z",
+    "saved": "2026-04-11T09:38:51.077Z",
     "version": 8,
     "count": 39
   },
@@ -109,18 +109,18 @@
       "email": "argha.das@northsouth.edu"
     },
     {
-      "appStage": "GS Preparation Ongoing",
+      "appStage": "University shortlisting ongoing",
       "bankExpectedDate": "",
       "bankMatured": "Y",
-      "bankMonths": "More than 3 months",
+      "bankMonths": "3 months",
       "coe": "N",
       "country": "Australia",
       "defer": "N",
       "gsApplied": "N",
-      "gsStatus": "Not Applied",
+      "gsStatus": "",
       "id": 1775372567768.4783,
       "intake": "June 2026",
-      "lastUpdated": 1775518961688,
+      "lastUpdated": 1775900329066,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Ashfaque Hossain",
@@ -132,7 +132,7 @@
           "ts": 1775390624118
         }
       ],
-      "situation": "According to the office documentation team, the student is not compaying but student is saying they confirmed that all is ready before eid ul ftr 2026",
+      "situation": "According to the office documentation team, the student is not complying with the office, but student says they confirmed that all is ready before Eid al-Fitr 2026.",
       "situationHistory": [
         {
           "text": "According to the office documentation team, the student is not compaying but student is saying they confirmed that all is ready before eid ul ftr 2026",
@@ -140,9 +140,9 @@
         }
       ],
       "status": "Active",
-      "uniCount": 2,
+      "uniCount": 4,
       "visaNext": "Y",
-      "visaPrep": "On Hold",
+      "visaPrep": "Waiting for Unconditional Offer / COE",
       "uniApplications": [
         {
           "country": "Australia",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900329067,
+      "msg": "Updated: Ashfaque Hossain"
+    },
     {
       "ts": 1775900217954,
       "msg": "Auto-saved"
