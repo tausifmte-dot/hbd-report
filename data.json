@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:31:59.965Z",
+    "saved": "2026-04-11T09:32:59.964Z",
     "version": 8,
     "count": 39
   },
@@ -903,7 +903,7 @@
       "uniApplications": []
     },
     {
-      "appStage": "Documentation Stage",
+      "appStage": "Writing visa SOP",
       "bankExpectedDate": "2026-04-22",
       "bankMatured": "N",
       "bankMonths": "3 months",
@@ -914,7 +914,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.296,
       "intake": "June 2026",
-      "lastUpdated": 1775440782466,
+      "lastUpdated": 1775899949642,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Nusrat Jahan Eva",
@@ -939,14 +939,21 @@
       "visaPrep": "On Hold",
       "uniApplications": [],
       "applicationCompletions": [],
-      "email": "nusrate228@gmail.com"
+      "email": "nusrate228@gmail.com",
+      "stageHistory": [
+        {
+          "stage": "Writing visa SOP",
+          "enteredDate": 1775899949642,
+          "duration": 0
+        }
+      ]
     },
     {
       "id": 38712282400,
       "name": "Qazi Zulfiquer Ahmed Jafree",
-      "country": "",
+      "country": "Australia",
       "intake": "February 2026",
-      "status": "Active",
+      "status": "Discontinued",
       "appStage": "Submitted",
       "phone": "8801622659286",
       "email": "qaziahmeed123@gmail.com",
@@ -962,7 +969,7 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 0,
+      "lastUpdated": 1775899963802,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1114,9 +1121,9 @@
     {
       "id": 36712282400,
       "name": "Saiyda hossin hafsa",
-      "country": "",
+      "country": "Australia",
       "intake": "February 2026",
-      "status": "Active",
+      "status": "Discontinued",
       "appStage": "Submitted",
       "phone": "8801609178145",
       "email": "saiydahossin019@gmail.com",
@@ -1132,7 +1139,7 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 0,
+      "lastUpdated": 1775899973746,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1570,6 +1577,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775899977953,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775899917962,
       "msg": "Auto-saved"
