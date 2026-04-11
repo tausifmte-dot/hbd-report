@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:45:34.020Z",
+    "saved": "2026-04-11T09:47:31.068Z",
     "version": 8,
     "count": 39
   },
@@ -1362,30 +1362,30 @@
       "email": "snigdhaislamsanta@gmail.com"
     },
     {
-      "appStage": "GS Preparation Ongoing",
+      "appStage": "GS assessment preparation started",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 3 months",
       "coe": "N",
       "country": "Australia",
       "defer": "N",
-      "gsApplied": "Y",
-      "gsStatus": "Not Applied",
+      "gsApplied": "N",
+      "gsStatus": "",
       "id": 1775372567768.9941,
       "intake": "June 2026",
-      "lastUpdated": 1775440831160,
+      "lastUpdated": 1775900849062,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Tanjedul Sarker",
       "phone": "8801757391739",
-      "remarks": "Student couldn't made up his mind ",
+      "remarks": "Student couldn't made up his mind",
       "remarksHistory": [
         {
           "text": "Student couldn't made up his mind ",
           "ts": 1775390702703
         }
       ],
-      "situation": "Started GS documents recently ",
+      "situation": "Student received a conditional offer letter from Southern Cross University one month ago. The student did not want to go there because the annual tuition fee is too much for him. After many arguments, the student finally decided to proceed with Southern Cross University for his G.S. to be submitted one week ago.",
       "situationHistory": [
         {
           "text": "Started GS documents recently ",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900849062,
+      "msg": "Updated: Tanjedul Sarker"
+    },
     {
       "ts": 1775900732017,
       "msg": "Updated: Shampa Banik"
