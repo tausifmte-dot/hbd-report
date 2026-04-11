@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T13:43:56.551Z",
+    "saved": "2026-04-11T13:45:03.429Z",
     "version": 8,
     "count": 39
   },
@@ -1339,10 +1339,10 @@
       "uniApplications": []
     },
     {
-      "appStage": "Looking for Universities",
+      "appStage": "Conditional offer letter issued",
       "bankExpectedDate": "",
       "bankMatured": "Y",
-      "bankMonths": "More than 3 months",
+      "bankMonths": "More than 6 months",
       "coe": "N",
       "country": "New Zealand",
       "defer": "N",
@@ -1350,7 +1350,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.7961,
       "intake": "June 2026",
-      "lastUpdated": 1775784499252,
+      "lastUpdated": 1775915100694,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Snigdha Islam Santa",
@@ -1366,12 +1366,17 @@
           "ts": 1775390695959
         }
       ],
-      "situation": "",
+      "situation": "Student received conditional of a letter from University of Canterbury New Zealand. Need to ride Visa SOP to submit visa application.",
       "status": "Active",
       "uniCount": 1,
       "visaNext": "Y",
       "visaPrep": "On Hold",
-      "situationHistory": [],
+      "situationHistory": [
+        {
+          "ts": 1775915100694,
+          "text": "Student received conditional of a letter from University of Canterbury New Zealand. Need to ride Visa SOP to submit visa application."
+        }
+      ],
       "uniApplications": [
         {
           "country": "New Zealand",
@@ -1388,7 +1393,14 @@
           "ts": 1775784499251
         }
       ],
-      "email": "snigdhaislamsanta@gmail.com"
+      "email": "snigdhaislamsanta@gmail.com",
+      "stageHistory": [
+        {
+          "stage": "Conditional offer letter issued",
+          "enteredDate": 1775915045889,
+          "duration": 0
+        }
+      ]
     },
     {
       "appStage": "GS assessment preparation started",
@@ -1666,6 +1678,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775915101426,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775915034550,
       "msg": "Manual save — 07:43 PM"
