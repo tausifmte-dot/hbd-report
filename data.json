@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:01:55.971Z",
+    "saved": "2026-04-11T09:07:17.828Z",
     "version": 8,
     "count": 42
   },
@@ -74,7 +74,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.3816,
       "intake": "June 2026",
-      "lastUpdated": 1775440608753,
+      "lastUpdated": 1775898392002,
       "moreUni": "Y",
       "moreUniDate": "2026-04-30",
       "name": "Argha Das",
@@ -93,7 +93,7 @@
           "ts": 1775390622423
         }
       ],
-      "status": "Active but Unsure",
+      "status": "Discontinued",
       "uniCount": 0,
       "visaNext": "N",
       "visaPrep": "On Hold",
@@ -1657,6 +1657,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775898435826,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775898113956,
       "msg": "Manual save — 03:01 PM"
