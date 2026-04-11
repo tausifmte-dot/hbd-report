@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:55:39.226Z",
+    "saved": "2026-04-11T09:55:48.793Z",
     "version": 8,
     "count": 39
   },
@@ -1065,7 +1065,7 @@
       "email": "otzsunny555@gmail.com"
     },
     {
-      "appStage": "GS assessment reapplied for another university",
+      "appStage": "GS assessment cleared",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
@@ -1076,7 +1076,7 @@
       "gsStatus": "Cleared",
       "id": 1775372567768.202,
       "intake": "June 2026",
-      "lastUpdated": 1775901329971,
+      "lastUpdated": 1775901345410,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Saidul Islam Saeed",
@@ -1103,6 +1103,11 @@
       "applicationCompletions": [],
       "email": "fahadsart.bd2@gmail.com",
       "stageHistory": [
+        {
+          "stage": "GS assessment cleared",
+          "enteredDate": 1775901345410,
+          "duration": 0
+        },
         {
           "stage": "GS assessment reapplied for another university",
           "enteredDate": 1775901329971,
@@ -1608,6 +1613,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775901346786,
+      "msg": "Manual save — 03:55 PM"
+    },
     {
       "ts": 1775901337222,
       "msg": "Manual save — 03:55 PM"
