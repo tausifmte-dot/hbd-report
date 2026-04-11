@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T13:42:03.370Z",
+    "saved": "2026-04-11T13:42:14.361Z",
     "version": 8,
     "count": 39
   },
@@ -1430,7 +1430,7 @@
       "email": "tanjedulsarker03@gmail.com"
     },
     {
-      "appStage": "University shortlisting ongoing",
+      "appStage": "Conditional offer letter received",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 3 months",
@@ -1441,7 +1441,7 @@
       "gsStatus": "",
       "id": 1775372567768.7288,
       "intake": "February 2027",
-      "lastUpdated": 1775914915873,
+      "lastUpdated": 1775914929682,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Tanjima Tuba",
@@ -1470,7 +1470,14 @@
       ],
       "uniApplications": [],
       "applicationCompletions": [],
-      "email": "tanzimtuba90@gmail.com"
+      "email": "tanzimtuba90@gmail.com",
+      "stageHistory": [
+        {
+          "stage": "Conditional offer letter received",
+          "enteredDate": 1775914929682,
+          "duration": 0
+        }
+      ]
     },
     {
       "id": 42712282400,
@@ -1655,6 +1662,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775914932360,
+      "msg": "Manual save — 07:42 PM"
+    },
     {
       "ts": 1775914921367,
       "msg": "Auto-saved"
