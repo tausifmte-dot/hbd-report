@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:43:52.227Z",
+    "saved": "2026-04-11T09:45:01.783Z",
     "version": 8,
     "count": 39
   },
@@ -1053,7 +1053,7 @@
       "email": "otzsunny555@gmail.com"
     },
     {
-      "appStage": "GS Submitted",
+      "appStage": "GS assessment cleared",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
@@ -1061,16 +1061,16 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
-      "gsStatus": "Rejected",
+      "gsStatus": "Applied",
       "id": 1775372567768.202,
       "intake": "June 2026",
-      "lastUpdated": 1775440802823,
+      "lastUpdated": 1775900699780,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Saidul Islam Saeed",
       "phone": "8801887896612",
-      "remarks": "",
-      "situation": "Waiting for GS Decisions",
+      "remarks": "Student cleared his G.S. from the University of Wollongong, Australia in Master of International Relations",
+      "situation": "Students need to pay tuition deposit and health insurance payment",
       "situationHistory": [
         {
           "text": "Waiting for GS Decisions",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900699780,
+      "msg": "Updated: Saidul Islam Saeed"
+    },
     {
       "ts": 1775900630217,
       "msg": "Updated: Mahin Ahmed"
