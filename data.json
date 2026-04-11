@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T13:41:03.366Z",
+    "saved": "2026-04-11T13:41:33.649Z",
     "version": 8,
     "count": 39
   },
@@ -1489,11 +1489,16 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 1775914827718,
+      "lastUpdated": 1775914886270,
       "remarks": "",
-      "situation": "",
+      "situation": "She applied through other agencies after getting a rejection for Australia from us. She made us apply for her in a New Zealand institution while applying through other agency which we found out through B2B and after confrontation she closed her application with us.",
       "remarksHistory": [],
-      "situationHistory": [],
+      "situationHistory": [
+        {
+          "ts": 1775914886270,
+          "text": "She applied through other agencies after getting a rejection for Australia from us. She made us apply for her in a New Zealand institution while applying through other agency which we found out through B2B and after confrontation she closed her application with us."
+        }
+      ],
       "applicationCompletions": [],
       "uniApplications": [],
       "stageHistory": [
@@ -1646,6 +1651,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775914891647,
+      "msg": "Manual save — 07:41 PM"
+    },
     {
       "ts": 1775914861362,
       "msg": "Auto-saved"
