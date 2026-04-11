@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:33:59.969Z",
+    "saved": "2026-04-11T09:34:34.595Z",
     "version": 8,
     "count": 39
   },
@@ -1430,9 +1430,9 @@
     {
       "id": 42712282400,
       "name": "TANVIN JAHAN",
-      "country": "",
+      "country": "New Zealand",
       "intake": "June 2026",
-      "status": "Active",
+      "status": "Discontinued",
       "appStage": "Submitted",
       "phone": "8801973763509",
       "email": "tanvinjahan123@gmail.com",
@@ -1448,7 +1448,7 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 0,
+      "lastUpdated": 1775900056818,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1459,9 +1459,9 @@
     {
       "id": 41712282400,
       "name": "TOUHIDUL ISLAM PARVEZ",
-      "country": "",
+      "country": "New Zealand",
       "intake": "February 2026",
-      "status": "Active",
+      "status": "Discontinued",
       "appStage": "Submitted",
       "phone": "8801640010102",
       "email": "itahidul391@gmail.com",
@@ -1477,7 +1477,7 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 0,
+      "lastUpdated": 1775900062919,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1577,6 +1577,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900072583,
+      "msg": "Manual save — 03:34 PM"
+    },
     {
       "ts": 1775900037966,
       "msg": "Auto-saved"
