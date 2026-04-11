@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T13:39:50.265Z",
+    "saved": "2026-04-11T13:41:03.366Z",
     "version": 8,
     "count": 39
   },
@@ -1474,7 +1474,7 @@
       "country": "New Zealand",
       "intake": "June 2026",
       "status": "Discontinued",
-      "appStage": "Submitted",
+      "appStage": "Conditional offer letter issued",
       "phone": "8801973763509",
       "email": "tanvinjahan123@gmail.com",
       "uniCount": 0,
@@ -1489,13 +1489,20 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 1775900056818,
+      "lastUpdated": 1775914827718,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
       "situationHistory": [],
       "applicationCompletions": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "stageHistory": [
+        {
+          "stage": "Conditional offer letter issued",
+          "enteredDate": 1775914827718,
+          "duration": 0
+        }
+      ]
     },
     {
       "id": 41712282400,
@@ -1639,6 +1646,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775914861362,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775914788236,
       "msg": "Manual save — 07:39 PM"
