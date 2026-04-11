@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-10T10:30:03.365Z",
+    "saved": "2026-04-11T02:29:12.355Z",
     "version": 8,
     "count": 27
   },
@@ -494,14 +494,14 @@
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
-      "coe": "N",
+      "coe": "Y",
       "country": "Australia",
       "defer": "N",
       "gsApplied": "Y",
       "gsStatus": "Cleared",
       "id": 1775372567768.6907,
       "intake": "July 2026",
-      "lastUpdated": 1775440727736,
+      "lastUpdated": 1775874548534,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Limon Ahmed",
@@ -1115,6 +1115,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775874550354,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775817001349,
       "msg": "Manual save — 04:30 PM"
