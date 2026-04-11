@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:47:31.068Z",
+    "saved": "2026-04-11T09:48:47.203Z",
     "version": 8,
     "count": 39
   },
@@ -1401,7 +1401,7 @@
       "email": "tanjedulsarker03@gmail.com"
     },
     {
-      "appStage": "GS Preparation Ongoing",
+      "appStage": "Conditional offer letter received",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 3 months",
@@ -1409,16 +1409,16 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "N",
-      "gsStatus": "Not Applied",
+      "gsStatus": "",
       "id": 1775372567768.7288,
-      "intake": "June 2025",
-      "lastUpdated": 1775440838009,
+      "intake": "",
+      "lastUpdated": 1775900925201,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Tanjima Tuba",
       "phone": "8801618391398",
       "remarks": "",
-      "situation": "Student is attempting PTE again to meet requirement ",
+      "situation": "Since the student doesn't have the required P.T. score, she is attempting again to get her G.S. cleared.",
       "situationHistory": [
         {
           "text": "Student is attempting PTE again to meet requirement ",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900925201,
+      "msg": "Updated: Tanjima Tuba"
+    },
     {
       "ts": 1775900849062,
       "msg": "Updated: Tanjedul Sarker"
