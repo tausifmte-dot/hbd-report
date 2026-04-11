@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:35:59.972Z",
+    "saved": "2026-04-11T09:36:17.981Z",
     "version": 8,
     "count": 39
   },
@@ -17,7 +17,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.8447,
       "intake": "July 2026",
-      "lastUpdated": 1775900151875,
+      "lastUpdated": 1775900167082,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Amrito Kumar",
@@ -42,8 +42,8 @@
       ],
       "status": "Active",
       "uniCount": 1,
-      "visaNext": "Y",
-      "visaPrep": "On Hold",
+      "visaNext": "N",
+      "visaPrep": "Waiting for Unconditional Offer / COE",
       "uniApplications": [
         {
           "country": "Australia",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900175970,
+      "msg": "Manual save — 03:36 PM"
+    },
     {
       "ts": 1775900157953,
       "msg": "Auto-saved"
