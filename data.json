@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:43:39.631Z",
+    "saved": "2026-04-11T09:43:52.227Z",
     "version": 8,
     "count": 39
   },
@@ -676,7 +676,7 @@
       "email": "masud1808@gmail.com"
     },
     {
-      "appStage": "Visa lodged",
+      "appStage": "University shortlisting ongoing",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
@@ -687,7 +687,7 @@
       "gsStatus": "Cleared",
       "id": 1775372567768.3384,
       "intake": "June 2026",
-      "lastUpdated": 1775900617620,
+      "lastUpdated": 1775900630217,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Mahin Ahmed",
@@ -699,7 +699,7 @@
           "ts": 1775390665719
         }
       ],
-      "situation": "",
+      "situation": "Waiting for visa decision.",
       "status": "Active",
       "uniCount": 3,
       "visaNext": "Y",
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900630217,
+      "msg": "Updated: Mahin Ahmed"
+    },
     {
       "ts": 1775900617621,
       "msg": "Updated: Mahin Ahmed"
