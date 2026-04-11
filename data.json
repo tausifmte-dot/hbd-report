@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T13:41:33.649Z",
+    "saved": "2026-04-11T13:42:03.370Z",
     "version": 8,
     "count": 39
   },
@@ -1441,14 +1441,18 @@
       "gsStatus": "",
       "id": 1775372567768.7288,
       "intake": "February 2027",
-      "lastUpdated": 1775905727807,
+      "lastUpdated": 1775914915873,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Tanjima Tuba",
       "phone": "8801618391398",
       "remarks": "She will take her English language test at the end of April",
-      "situation": "Since the student doesn't have the required P.T. score, she is attempting again to get her G.S. cleared.",
+      "situation": "She will sit for PTE exam by the end of April 2026",
       "situationHistory": [
+        {
+          "ts": 1775914915873,
+          "text": "She will sit for PTE exam by the end of April 2026"
+        },
         {
           "text": "Student is attempting PTE again to meet requirement ",
           "ts": 1775390715255
@@ -1651,6 +1655,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775914921367,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775914891647,
       "msg": "Manual save — 07:41 PM"
