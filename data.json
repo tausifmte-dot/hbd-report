@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:51:58.955Z",
+    "saved": "2026-04-11T09:53:32.031Z",
     "version": 8,
     "count": 39
   },
@@ -704,7 +704,12 @@
       "uniCount": 3,
       "visaNext": "Y",
       "visaPrep": "Ready",
-      "situationHistory": [],
+      "situationHistory": [
+        {
+          "ts": 1775901003285,
+          "text": "Waiting for visa decision."
+        }
+      ],
       "uniApplications": [],
       "applicationCompletions": [],
       "email": "mahinsnx100@gmail.com",
@@ -1071,7 +1076,7 @@
       "gsStatus": "Cleared",
       "id": 1775372567768.202,
       "intake": "June 2026",
-      "lastUpdated": 1775901052211,
+      "lastUpdated": 1775901210023,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Saidul Islam Saeed",
@@ -1087,8 +1092,13 @@
       "status": "Active",
       "uniCount": 5,
       "visaNext": "Y",
-      "visaPrep": "On Hold",
-      "remarksHistory": [],
+      "visaPrep": "Waiting for Unconditional Offer / COE",
+      "remarksHistory": [
+        {
+          "ts": 1775901052211,
+          "text": "Student cleared his G.S. from the University of Wollongong, Australia in Master of International Relations"
+        }
+      ],
       "uniApplications": [],
       "applicationCompletions": [],
       "email": "fahadsart.bd2@gmail.com"
@@ -1591,6 +1601,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775901210023,
+      "msg": "Updated: Saidul Islam Saeed"
+    },
     {
       "ts": 1775901116954,
       "msg": "Manual save — 03:51 PM"
