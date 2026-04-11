@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:40:02.354Z",
+    "saved": "2026-04-11T09:40:45.652Z",
     "version": 8,
     "count": 39
   },
@@ -263,7 +263,7 @@
       "email": "siddikaarpita@gmail.com"
     },
     {
-      "appStage": "GS Preparation Ongoing",
+      "appStage": "Conditional offer letter received",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "3 months",
@@ -271,22 +271,22 @@
       "country": "Australia",
       "defer": "N",
       "gsApplied": "N",
-      "gsStatus": "Not Applied",
+      "gsStatus": "",
       "id": 1775372567768.747,
       "intake": "June 2026",
-      "lastUpdated": 1775440638576,
+      "lastUpdated": 1775900443649,
       "moreUni": "Y",
-      "moreUniDate": "2026-04-07",
+      "moreUniDate": "2026-04-10",
       "name": "Gazi MD Shahabuddin",
       "phone": "8801687877853",
-      "remarks": "Need to bring an updated language score ",
+      "remarks": "Need to bring an updated language score",
       "remarksHistory": [
         {
           "text": "Need to bring an updated language score ",
           "ts": 1775390634278
         }
       ],
-      "situation": "need to retake speaking in IELTS again ",
+      "situation": "need to retake speaking in IELTS again",
       "situationHistory": [
         {
           "text": "need to retake speaking in IELTS again ",
@@ -295,7 +295,7 @@
       ],
       "status": "Active",
       "uniCount": 2,
-      "visaNext": "Y",
+      "visaNext": "N",
       "visaPrep": "On Hold",
       "uniApplications": [],
       "applicationCompletions": [],
@@ -1584,6 +1584,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775900443649,
+      "msg": "Updated: Gazi MD Shahabuddin"
+    },
     {
       "ts": 1775900400353,
       "msg": "Updated: Fatema Siddika Arpita"
