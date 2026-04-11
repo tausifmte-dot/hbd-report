@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T09:07:17.828Z",
+    "saved": "2026-04-11T09:27:59.968Z",
     "version": 8,
     "count": 42
   },
@@ -297,9 +297,9 @@
     {
       "id": 33712282400,
       "name": "Habibur Rahman",
-      "country": "",
+      "country": "Australia",
       "intake": "February 2026",
-      "status": "Active",
+      "status": "Discontinued",
       "appStage": "Submitted",
       "phone": "8801537540644",
       "email": "habibur.rahman09@northsouth.edu",
@@ -315,7 +315,7 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 0,
+      "lastUpdated": 1775899656570,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -422,9 +422,9 @@
     {
       "id": 40712282400,
       "name": "Himel Babu",
-      "country": "",
+      "country": "New Zealand",
       "intake": "February 2026",
-      "status": "Active",
+      "status": "Discontinued",
       "appStage": "Submitted",
       "phone": "8801686768829",
       "email": "fxchimel70@gmail.com",
@@ -440,7 +440,7 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 0,
+      "lastUpdated": 1775899669445,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1657,6 +1657,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775899677965,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775898435826,
       "msg": "Auto-saved"
