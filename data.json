@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T11:08:49.810Z",
+    "saved": "2026-04-11T11:10:57.416Z",
     "version": 8,
     "count": 39
   },
@@ -1496,9 +1496,9 @@
       "id": 41712282400,
       "name": "TOUHIDUL ISLAM PARVEZ",
       "country": "New Zealand",
-      "intake": "February 2026",
+      "intake": "June 2026",
       "status": "Discontinued",
-      "appStage": "Submitted",
+      "appStage": "Conditional offer letter issued",
       "phone": "8801640010102",
       "email": "itahidul391@gmail.com",
       "uniCount": 0,
@@ -1512,14 +1512,21 @@
       "gsStatus": "",
       "coe": "N",
       "visaPrep": "",
-      "visaNext": "",
-      "lastUpdated": 1775900062919,
+      "visaNext": "N",
+      "lastUpdated": 1775905827719,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
       "situationHistory": [],
       "applicationCompletions": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "stageHistory": [
+        {
+          "stage": "Conditional offer letter issued",
+          "enteredDate": 1775905812862,
+          "duration": 0
+        }
+      ]
     },
     {
       "appStage": "Documents from student are pending",
@@ -1613,6 +1620,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775905855414,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775905727808,
       "msg": "Updated: Tanjima Tuba"
