@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T15:17:36.979Z",
+    "saved": "2026-04-12T15:18:47.916Z",
     "version": 8,
     "count": 39
   },
@@ -81,7 +81,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.3816,
       "intake": "June 2026",
-      "lastUpdated": 1775898392002,
+      "lastUpdated": 1776007116356,
       "moreUni": "Y",
       "moreUniDate": "2026-04-30",
       "name": "Argha Das",
@@ -93,8 +93,12 @@
           "ts": 1775390622423
         }
       ],
-      "situation": "According to him, he couldn't decide whether he or his spouse would be main applicant ",
+      "situation": "He could not bring required English proficiency score and I have requested him to consider other destination but she could not made up his mind whether he or he is spouse will be the primary applicant. \n\nLater on he stopped communicating with us. \n\nSo I have discontinued this file",
       "situationHistory": [
+        {
+          "ts": 1776007116356,
+          "text": "He could not bring required English proficiency score and I have requested him to consider other destination but she could not made up his mind whether he or he is spouse will be the primary applicant. \n\nLater on he stopped communicating with us. \n\nSo I have discontinued this file"
+        },
         {
           "text": "According to him, he couldn't decide whether he or his spouse would be main applicant ",
           "ts": 1775390622423
@@ -1732,6 +1736,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776007125914,
+      "msg": "Manual save — 09:18 PM"
+    },
     {
       "ts": 1776007054970,
       "msg": "Auto-saved"
