@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T15:08:55.996Z",
+    "saved": "2026-04-12T15:09:55.997Z",
     "version": 8,
     "count": 39
   },
@@ -942,7 +942,7 @@
       "uniApplications": []
     },
     {
-      "appStage": "Writing visa SOP",
+      "appStage": "Unconditional offer letter issued",
       "bankExpectedDate": "2026-04-22",
       "bankMatured": "N",
       "bankMonths": "3 months",
@@ -953,7 +953,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.296,
       "intake": "June 2026",
-      "lastUpdated": 1775899949642,
+      "lastUpdated": 1776006552618,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Nusrat Jahan Eva",
@@ -981,9 +981,14 @@
       "email": "nusrate228@gmail.com",
       "stageHistory": [
         {
+          "stage": "Unconditional offer letter issued",
+          "enteredDate": 1776006552618,
+          "duration": 0
+        },
+        {
           "stage": "Writing visa SOP",
           "enteredDate": 1775899949642,
-          "duration": 0
+          "duration": 1
         }
       ]
     },
@@ -1008,11 +1013,16 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 1775899963802,
+      "lastUpdated": 1776006539486,
       "remarks": "",
-      "situation": "",
+      "situation": "I have made many attempts to contact with this student but she did not respond to any of my calls or WhatsApp text.",
       "remarksHistory": [],
-      "situationHistory": [],
+      "situationHistory": [
+        {
+          "ts": 1776006539486,
+          "text": "I have made many attempts to contact with this student but she did not respond to any of my calls or WhatsApp text."
+        }
+      ],
       "applicationCompletions": [],
       "uniApplications": []
     },
@@ -1700,6 +1710,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776006593992,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776006533992,
       "msg": "Auto-saved"
