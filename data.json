@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T15:03:55.867Z",
+    "saved": "2026-04-12T15:05:56.008Z",
     "version": 8,
     "count": 39
   },
@@ -1224,11 +1224,16 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 1775899988059,
+      "lastUpdated": 1776006326851,
       "remarks": "",
-      "situation": "",
+      "situation": "All those the student open the file with us but they never shared any academic or necessary documents to submit their application. Student wish to apply with her spouse and one child and we charged 80000 bdt for her spouse as after visa service charge. \n\nAfter many follows and not receiving the bear minimum documents to apply for a conditioner offer letter they have confirmed that they will not proceed and working with another agency as there is no service charge for anybody at all. So I discontinued this file",
       "remarksHistory": [],
-      "situationHistory": [],
+      "situationHistory": [
+        {
+          "ts": 1776006326851,
+          "text": "All those the student open the file with us but they never shared any academic or necessary documents to submit their application. Student wish to apply with her spouse and one child and we charged 80000 bdt for her spouse as after visa service charge. \n\nAfter many follows and not receiving the bear minimum documents to apply for a conditioner offer letter they have confirmed that they will not proceed and working with another agency as there is no service charge for anybody at all. So I discontinued this file"
+        }
+      ],
       "applicationCompletions": [],
       "uniApplications": []
     },
@@ -1676,6 +1681,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776006353963,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776006233859,
       "msg": "Auto-saved"
