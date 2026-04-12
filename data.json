@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T15:10:55.995Z",
+    "saved": "2026-04-12T15:17:05.113Z",
     "version": 8,
     "count": 39
   },
@@ -463,11 +463,16 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 1775899669445,
+      "lastUpdated": 1776006966274,
       "remarks": "",
-      "situation": "",
+      "situation": "Student had to separate GS rejections with us for February 2026 intake. \n\nHis father broke the FDR and student confirmed that he will not proceed anymore",
       "remarksHistory": [],
-      "situationHistory": [],
+      "situationHistory": [
+        {
+          "ts": 1776006966274,
+          "text": "Student had to separate GS rejections with us for February 2026 intake. \n\nHis father broke the FDR and student confirmed that he will not proceed anymore"
+        }
+      ],
       "applicationCompletions": [],
       "uniApplications": []
     },
@@ -1722,6 +1727,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776006994972,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776006653993,
       "msg": "Auto-saved"
