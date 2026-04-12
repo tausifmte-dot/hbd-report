@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T14:57:34.718Z",
+    "saved": "2026-04-12T15:03:55.867Z",
     "version": 8,
     "count": 39
   },
@@ -1292,11 +1292,16 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 1775899998306,
+      "lastUpdated": 1776006193027,
       "remarks": "",
-      "situation": "",
+      "situation": "Student had a unconditional offer letter from tafe nsw with us for Feb 26 intake but he applied with another agency for another University. After the previous counselor left I need a follow up and you confirm that he already lodged his visa application for the February 2026 with another agency",
       "remarksHistory": [],
-      "situationHistory": [],
+      "situationHistory": [
+        {
+          "ts": 1776006193027,
+          "text": "Student had a unconditional offer letter from tafe nsw with us for Feb 26 intake but he applied with another agency for another University. After the previous counselor left I need a follow up and you confirm that he already lodged his visa application for the February 2026 with another agency"
+        }
+      ],
       "applicationCompletions": [],
       "uniApplications": []
     },
@@ -1671,6 +1676,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776006233859,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776005852716,
       "msg": "Manual save — 08:57 PM"
