@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T15:05:56.008Z",
+    "saved": "2026-04-12T15:07:55.990Z",
     "version": 8,
     "count": 39
   },
@@ -1136,7 +1136,7 @@
       ]
     },
     {
-      "appStage": "Documentation Stage",
+      "appStage": "Unconditional offer letter issued",
       "bankExpectedDate": "2026-04-22",
       "bankMatured": "N",
       "bankMonths": "",
@@ -1147,7 +1147,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.7246,
       "intake": "June 2026",
-      "lastUpdated": 1775440812058,
+      "lastUpdated": 1776006471006,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Saira Sadia",
@@ -1172,7 +1172,14 @@
       "visaPrep": "On Hold",
       "uniApplications": [],
       "applicationCompletions": [],
-      "email": "sadiasaira791@gmail.com"
+      "email": "sadiasaira791@gmail.com",
+      "stageHistory": [
+        {
+          "stage": "Unconditional offer letter issued",
+          "enteredDate": 1776006471006,
+          "duration": 0
+        }
+      ]
     },
     {
       "id": 36712282400,
@@ -1195,11 +1202,16 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 1775899973746,
+      "lastUpdated": 1776006457797,
       "remarks": "",
-      "situation": "",
+      "situation": "Unfortunately this is student is from 2024 batch and she applied for torrents University. After almost 1 and a half month student applied for European University as torrents did not issue any offer letter for that student since she did not have  one semester transcript.",
       "remarksHistory": [],
-      "situationHistory": [],
+      "situationHistory": [
+        {
+          "ts": 1776006457797,
+          "text": "Unfortunately this is student is from 2024 batch and she applied for torrents University. After almost 1 and a half month student applied for European University as torrents did not issue any offer letter for that student since she did not have  one semester transcript."
+        }
+      ],
       "applicationCompletions": [],
       "uniApplications": []
     },
@@ -1681,6 +1693,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776006473988,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776006353963,
       "msg": "Auto-saved"
