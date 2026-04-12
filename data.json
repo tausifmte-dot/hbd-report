@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T11:57:41.185Z",
+    "saved": "2026-04-12T11:58:40.634Z",
     "version": 8,
     "count": 39
   },
@@ -208,7 +208,7 @@
       "email": "farhanarini899@gmail.com"
     },
     {
-      "appStage": "GS assessment documentation requested",
+      "appStage": "Confirmation of enrollment received",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 3 months",
@@ -219,7 +219,7 @@
       "gsStatus": "",
       "id": 1775372567768.403,
       "intake": "June 2026",
-      "lastUpdated": 1775995052797,
+      "lastUpdated": 1775995111561,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Fatema Siddika Arpita",
@@ -262,6 +262,11 @@
       "applicationCompletions": [],
       "email": "siddikaarpita@gmail.com",
       "stageHistory": [
+        {
+          "stage": "Confirmation of enrollment received",
+          "enteredDate": 1775995111561,
+          "duration": 0
+        },
         {
           "stage": "GS assessment documentation requested",
           "enteredDate": 1775995052797,
@@ -1704,6 +1709,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775995118633,
+      "msg": "Manual save — 05:58 PM"
+    },
     {
       "ts": 1775995059183,
       "msg": "Manual save — 05:57 PM"
