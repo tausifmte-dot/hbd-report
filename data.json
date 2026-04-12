@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T15:25:50.220Z",
+    "saved": "2026-04-12T15:29:20.217Z",
     "version": 8,
     "count": 39
   },
@@ -754,17 +754,17 @@
     {
       "id": 34712282400,
       "name": "Mahin Prodhan",
-      "country": "Australia",
-      "intake": "February 2026",
-      "status": "Discontinued",
-      "appStage": "Submitted",
+      "country": "New Zealand",
+      "intake": "October 2026",
+      "status": "Active",
+      "appStage": "Application submitted",
       "phone": "8801938797201",
       "email": "mdmahin24252627@gmail.com",
       "uniCount": 0,
       "moreUni": "N",
       "moreUniDate": "",
-      "bankMatured": "",
-      "bankMonths": "",
+      "bankMatured": "Y",
+      "bankMonths": "More than 3 months",
       "bankExpectedDate": "",
       "defer": "N",
       "gsApplied": "N",
@@ -772,13 +772,25 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 1775899692314,
+      "lastUpdated": 1776007753810,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
       "situationHistory": [],
       "applicationCompletions": [],
-      "uniApplications": []
+      "uniApplications": [],
+      "stageHistory": [
+        {
+          "stage": "Application submitted",
+          "enteredDate": 1776007732673,
+          "duration": 0
+        },
+        {
+          "stage": "Application submitted by agent",
+          "enteredDate": 1776007714123,
+          "duration": 0
+        }
+      ]
     },
     {
       "appStage": "Looking for Universities",
@@ -1732,6 +1744,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776007758214,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776007548215,
       "msg": "Auto-saved"
