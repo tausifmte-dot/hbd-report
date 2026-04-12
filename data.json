@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T14:55:27.077Z",
+    "saved": "2026-04-12T14:56:27.083Z",
     "version": 8,
     "count": 39
   },
@@ -1357,11 +1357,16 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 1776005723193,
+      "lastUpdated": 1776005772350,
       "remarks": "",
-      "situation": "This is student fail to bring minimum English language proficiency score to proceed with University application. \n\nLater on we have requested his decision for applying to another countries like Malaysia but he has confirmed that he has already applied for European country",
+      "situation": "The student fail to bring minimum English language professions is code to proceed with University application. He confirm that she will proceed with European universities application hence the discontinuation with us.",
       "remarksHistory": [],
-      "situationHistory": [],
+      "situationHistory": [
+        {
+          "ts": 1776005772350,
+          "text": "The student fail to bring minimum English language professions is code to proceed with University application. He confirm that she will proceed with European universities application hence the discontinuation with us."
+        }
+      ],
       "applicationCompletions": [],
       "uniApplications": []
     },
@@ -1661,6 +1666,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776005785075,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776005725074,
       "msg": "Auto-saved"
