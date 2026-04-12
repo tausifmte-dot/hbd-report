@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T03:56:35.175Z",
+    "saved": "2026-04-12T05:03:34.625Z",
     "version": 8,
     "count": 39
   },
@@ -1365,7 +1365,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.7961,
       "intake": "June 2026",
-      "lastUpdated": 1775915113771,
+      "lastUpdated": 1775970183073,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Snigdha Islam Santa",
@@ -1381,12 +1381,16 @@
           "ts": 1775390695959
         }
       ],
-      "situation": "Student received conditional of a letter from University of Canterbury New Zealand. Need to ride Visa SOP to submit visa application.",
+      "situation": "Received offer letter from University of Canterbury, New Zealand.",
       "status": "Active",
       "uniCount": 1,
       "visaNext": "Y",
       "visaPrep": "Waiting for Unconditional Offer / COE",
       "situationHistory": [
+        {
+          "ts": 1775970183073,
+          "text": "Received offer letter from University of Canterbury, New Zealand."
+        },
         {
           "ts": 1775915100694,
           "text": "Student received conditional of a letter from University of Canterbury New Zealand. Need to ride Visa SOP to submit visa application."
@@ -1693,6 +1697,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775970212612,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775966193159,
       "msg": "Auto-saved"
