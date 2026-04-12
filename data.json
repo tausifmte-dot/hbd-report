@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T15:07:55.990Z",
+    "saved": "2026-04-12T15:08:55.996Z",
     "version": 8,
     "count": 39
   },
@@ -1051,7 +1051,7 @@
       "email": "jrrakib2003@gmail.com"
     },
     {
-      "appStage": "Visa Preparation Ongoing",
+      "appStage": "Unconditional offer letter issued",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "6 months",
@@ -1062,7 +1062,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.3218,
       "intake": "June 2026",
-      "lastUpdated": 1775440796595,
+      "lastUpdated": 1776006493067,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Sadek Mahbub Sunny",
@@ -1082,7 +1082,14 @@
       "remarksHistory": [],
       "uniApplications": [],
       "applicationCompletions": [],
-      "email": "otzsunny555@gmail.com"
+      "email": "otzsunny555@gmail.com",
+      "stageHistory": [
+        {
+          "stage": "Unconditional offer letter issued",
+          "enteredDate": 1776006493067,
+          "duration": 0
+        }
+      ]
     },
     {
       "appStage": "GS assessment cleared",
@@ -1693,6 +1700,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776006533992,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776006473988,
       "msg": "Auto-saved"
