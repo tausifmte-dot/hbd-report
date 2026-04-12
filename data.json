@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T14:56:27.083Z",
+    "saved": "2026-04-12T14:57:27.088Z",
     "version": 8,
     "count": 39
   },
@@ -1371,7 +1371,7 @@
       "uniApplications": []
     },
     {
-      "appStage": "Conditional offer letter issued",
+      "appStage": "Unconditional offer letter issued",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
@@ -1382,7 +1382,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.7961,
       "intake": "June 2026",
-      "lastUpdated": 1775970183073,
+      "lastUpdated": 1776005835736,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Snigdha Islam Santa",
@@ -1432,9 +1432,14 @@
       "email": "snigdhaislamsanta@gmail.com",
       "stageHistory": [
         {
+          "stage": "Unconditional offer letter issued",
+          "enteredDate": 1776005835736,
+          "duration": 0
+        },
+        {
           "stage": "Conditional offer letter issued",
           "enteredDate": 1775915045889,
-          "duration": 0
+          "duration": 1
         }
       ]
     },
@@ -1666,6 +1671,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776005845081,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776005785075,
       "msg": "Auto-saved"
