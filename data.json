@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-11T13:47:28.457Z",
+    "saved": "2026-04-12T03:55:34.763Z",
     "version": 8,
     "count": 39
   },
@@ -467,7 +467,7 @@
       "gsStatus": "Applied",
       "id": 1775372567768.7937,
       "intake": "June 2026",
-      "lastUpdated": 1775900517337,
+      "lastUpdated": 1775966082443,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Jannatul Fardhous",
@@ -479,8 +479,12 @@
           "ts": 1775390640840
         }
       ],
-      "situation": "All documents are sent, & follow up email has been sent",
+      "situation": "I have sent the revised financial metrics as asked by GSP.",
       "situationHistory": [
+        {
+          "ts": 1775966082443,
+          "text": "I have sent the revised financial metrics as asked by GSP."
+        },
         {
           "ts": 1775451867541,
           "text": "All documents are sent, & follow up email has been sent"
@@ -1685,6 +1689,14 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775966132759,
+      "msg": "Auto-saved"
+    },
+    {
+      "ts": 1775966082444,
+      "msg": "Present situation updated: Jannatul Fardhous"
+    },
     {
       "ts": 1775915246453,
       "msg": "Manual save — 07:47 PM"
