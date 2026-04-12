@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T17:37:39.568Z",
+    "saved": "2026-04-12T17:38:18.722Z",
     "version": 8,
     "count": 39
   },
@@ -1061,7 +1061,7 @@
       "uniApplications": []
     },
     {
-      "appStage": "Documentation Stage",
+      "appStage": "Unconditional offer letter issued",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "3 months",
@@ -1072,7 +1072,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.8186,
       "intake": "June 2026",
-      "lastUpdated": 1775440789430,
+      "lastUpdated": 1776015494544,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Rakibul Islam",
@@ -1092,7 +1092,14 @@
       "situationHistory": [],
       "uniApplications": [],
       "applicationCompletions": [],
-      "email": "jrrakib2003@gmail.com"
+      "email": "jrrakib2003@gmail.com",
+      "stageHistory": [
+        {
+          "stage": "Unconditional offer letter issued",
+          "enteredDate": 1776015494544,
+          "duration": 0
+        }
+      ]
     },
     {
       "appStage": "Unconditional offer letter issued",
@@ -1744,6 +1751,14 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776015496719,
+      "msg": "Manual save — 11:38 PM"
+    },
+    {
+      "ts": 1776015494725,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776015457567,
       "msg": "Manual save — 11:37 PM"
