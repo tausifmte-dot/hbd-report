@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T15:29:20.217Z",
+    "saved": "2026-04-12T15:29:45.626Z",
     "version": 8,
     "count": 39
   },
@@ -770,9 +770,9 @@
       "gsApplied": "N",
       "gsStatus": "",
       "coe": "N",
-      "visaPrep": "",
-      "visaNext": "",
-      "lastUpdated": 1776007753810,
+      "visaPrep": "Waiting for Unconditional Offer / COE",
+      "visaNext": "Y",
+      "lastUpdated": 1776007771937,
       "remarks": "",
       "situation": "",
       "remarksHistory": [],
@@ -1744,6 +1744,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776007783624,
+      "msg": "Manual save — 09:29 PM"
+    },
     {
       "ts": 1776007758214,
       "msg": "Auto-saved"
