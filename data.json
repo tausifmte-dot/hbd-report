@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T11:58:40.634Z",
+    "saved": "2026-04-12T11:59:01.283Z",
     "version": 8,
     "count": 39
   },
@@ -212,14 +212,14 @@
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 3 months",
-      "coe": "N",
+      "coe": "Y",
       "country": "Australia",
       "defer": "Y",
       "gsApplied": "N",
       "gsStatus": "",
       "id": 1775372567768.403,
       "intake": "June 2026",
-      "lastUpdated": 1775995111561,
+      "lastUpdated": 1775995128726,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Fatema Siddika Arpita",
@@ -240,7 +240,7 @@
       ],
       "status": "Active",
       "uniCount": 3,
-      "visaNext": "N",
+      "visaNext": "Y",
       "visaPrep": "On Hold",
       "uniApplications": [
         {
@@ -1709,6 +1709,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775995139278,
+      "msg": "Manual save — 05:58 PM"
+    },
     {
       "ts": 1775995118633,
       "msg": "Manual save — 05:58 PM"
