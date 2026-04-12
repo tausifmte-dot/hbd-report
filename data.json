@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T05:03:34.625Z",
+    "saved": "2026-04-12T11:57:37.991Z",
     "version": 8,
     "count": 39
   },
@@ -208,7 +208,7 @@
       "email": "farhanarini899@gmail.com"
     },
     {
-      "appStage": "Conditional offer letter received",
+      "appStage": "GS assessment documentation requested",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 3 months",
@@ -219,7 +219,7 @@
       "gsStatus": "",
       "id": 1775372567768.403,
       "intake": "June 2026",
-      "lastUpdated": 1775905586985,
+      "lastUpdated": 1775995052797,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Fatema Siddika Arpita",
@@ -260,7 +260,14 @@
         }
       ],
       "applicationCompletions": [],
-      "email": "siddikaarpita@gmail.com"
+      "email": "siddikaarpita@gmail.com",
+      "stageHistory": [
+        {
+          "stage": "GS assessment documentation requested",
+          "enteredDate": 1775995052797,
+          "duration": 0
+        }
+      ]
     },
     {
       "appStage": "Conditional offer letter received",
@@ -1697,6 +1704,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1775995055991,
+      "msg": "Manual save — 05:57 PM"
+    },
     {
       "ts": 1775970212612,
       "msg": "Auto-saved"
