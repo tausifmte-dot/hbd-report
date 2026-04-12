@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T12:00:14.122Z",
+    "saved": "2026-04-12T14:55:27.077Z",
     "version": 8,
     "count": 39
   },
@@ -1357,9 +1357,9 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 1775900022234,
+      "lastUpdated": 1776005723193,
       "remarks": "",
-      "situation": "",
+      "situation": "This is student fail to bring minimum English language proficiency score to proceed with University application. \n\nLater on we have requested his decision for applying to another countries like Malaysia but he has confirmed that he has already applied for European country",
       "remarksHistory": [],
       "situationHistory": [],
       "applicationCompletions": [],
@@ -1661,6 +1661,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776005725074,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1775995212117,
       "msg": "Auto-saved"
