@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T15:09:55.997Z",
+    "saved": "2026-04-12T15:10:55.995Z",
     "version": 8,
     "count": 39
   },
@@ -810,7 +810,7 @@
       "email": "bhuiyanp03@gmail.com"
     },
     {
-      "appStage": "Cond. Offer Received",
+      "appStage": "Unconditional offer letter issued",
       "bankExpectedDate": "2026-07-31",
       "bankMatured": "N",
       "bankMonths": "3 months",
@@ -821,7 +821,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.0063,
       "intake": "June 2026",
-      "lastUpdated": 1775440764998,
+      "lastUpdated": 1776006649641,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Moon Sarkar",
@@ -846,7 +846,14 @@
       "visaPrep": "On Hold",
       "uniApplications": [],
       "applicationCompletions": [],
-      "email": "moonsarkar612@gmail.com"
+      "email": "moonsarkar612@gmail.com",
+      "stageHistory": [
+        {
+          "stage": "Unconditional offer letter issued",
+          "enteredDate": 1776006649641,
+          "duration": 0
+        }
+      ]
     },
     {
       "appStage": "Under Review",
@@ -933,11 +940,16 @@
       "coe": "N",
       "visaPrep": "",
       "visaNext": "",
-      "lastUpdated": 1775899879194,
+      "lastUpdated": 1776006627924,
       "remarks": "",
-      "situation": "",
+      "situation": "Student could not secure fund. He formally told us that he will not continue.",
       "remarksHistory": [],
-      "situationHistory": [],
+      "situationHistory": [
+        {
+          "ts": 1776006627924,
+          "text": "Student could not secure fund. He formally told us that he will not continue."
+        }
+      ],
       "applicationCompletions": [],
       "uniApplications": []
     },
@@ -1710,6 +1722,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776006653993,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776006593992,
       "msg": "Auto-saved"
