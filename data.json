@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-13T05:46:53.077Z",
+    "saved": "2026-04-13T05:48:05.391Z",
     "version": 8,
     "count": 39
   },
@@ -633,7 +633,7 @@
       "email": "mdkawsarkhan4941@gmail.com"
     },
     {
-      "appStage": "Visa SOP writing",
+      "appStage": "Confirmation of enrollment received",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
@@ -644,7 +644,7 @@
       "gsStatus": "Cleared",
       "id": 1775372567768.6907,
       "intake": "June 2026",
-      "lastUpdated": 1775900592335,
+      "lastUpdated": 1776059282174,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Limon Ahmed",
@@ -669,7 +669,14 @@
       "visaPrep": "Pending from Counsellor",
       "uniApplications": [],
       "applicationCompletions": [],
-      "email": "limonahmed134500@gmail.com"
+      "email": "limonahmed134500@gmail.com",
+      "stageHistory": [
+        {
+          "stage": "Confirmation of enrollment received",
+          "enteredDate": 1776059282174,
+          "duration": 0
+        }
+      ]
     },
     {
       "appStage": "Under Review",
@@ -1756,6 +1763,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776059283389,
+      "msg": "Auto-saved"
+    },
     {
       "ts": 1776059211075,
       "msg": "Manual save — 11:46 AM"
