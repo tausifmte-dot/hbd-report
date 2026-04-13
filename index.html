@@ -239,17 +239,102 @@ html {
   flex-wrap: wrap;
 }
 
-.clock-sm {
-  font-family: 'DM Mono', monospace;
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--text-primary);
-  white-space: nowrap;
+/* ── MODERN CLOCK ── */
+.clock-widget{
+  display:flex;flex-direction:column;align-items:flex-end;gap:1px;
+}
+.clock-digits{
+  font-family:'DM Mono',monospace;
+  font-size:18px;font-weight:700;
+  letter-spacing:2px;
+  color:var(--b600);
+  background:linear-gradient(135deg,var(--b50),var(--b100));
+  border:1px solid var(--b200);
+  border-radius:8px;
+  padding:3px 10px;
+  white-space:nowrap;
+  box-shadow:0 2px 8px rgba(37,99,235,0.12);
+}
+body.dark .clock-digits{
+  background:linear-gradient(135deg,rgba(37,99,235,0.15),rgba(37,99,235,0.08));
+  border-color:var(--b600);
+  color:var(--b400);
+}
+.clock-sep{
+  color:var(--b600);animation:clockBlink 1s step-end infinite;
+}
+@keyframes clockBlink{
+  0%,100%{opacity:1}50%{opacity:0.2}
+}
+.clock-date-line{
+  font-size:10px;color:var(--ts);font-weight:500;white-space:nowrap;
 }
 
-.date-sm {
-  font-size: 12px;
-  color: var(--text-secondary);
+/* ── EXCHANGE RATE STRIP ── */
+.fx-strip{
+  display:flex;gap:6px;align-items:center;flex-wrap:wrap;
+}
+.fx-chip{
+  display:flex;align-items:center;gap:4px;
+  background:linear-gradient(135deg,var(--b50),rgba(255,255,255,0.9));
+  border:1px solid var(--b200);
+  border-radius:20px;
+  padding:3px 9px;
+  font-size:11px;font-weight:600;
+  color:var(--tp);
+  white-space:nowrap;
+  box-shadow:0 1px 4px rgba(37,99,235,0.08);
+  transition:all 0.3s ease;
+}
+body.dark .fx-chip{
+  background:rgba(30,41,59,0.8);
+  border-color:var(--b200);
+}
+.fx-chip .fx-rate{
+  color:var(--b600);font-size:12px;font-weight:700;
+}
+.fx-chip .fx-flag{font-size:13px;}
+.fx-loading{font-size:10px;color:var(--tm);font-style:italic;}
+
+/* ── MODAL ANIMATIONS ── */
+@keyframes moBackdropIn{
+  from{opacity:0}to{opacity:1}
+}
+@keyframes moBackdropOut{
+  from{opacity:1}to{opacity:0}
+}
+@keyframes moSlideIn{
+  from{opacity:0;transform:translateY(-24px) scale(0.94)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes moSlideOut{
+  from{opacity:1;transform:translateY(0) scale(1)}
+  to{opacity:0;transform:translateY(12px) scale(0.95)}
+}
+.mo{transition:none;}
+.mo.open{
+  animation:moBackdropIn 0.22s ease both;
+}
+.mo.open .modal,
+.mo.open .addinfo-modal{
+  animation:moSlideIn 0.32s cubic-bezier(.22,.68,0,1.2) both;
+}
+.mo.mo-closing{
+  animation:moBackdropOut 0.2s ease both;
+  pointer-events:none;
+}
+.mo.mo-closing .modal,
+.mo.mo-closing .addinfo-modal{
+  animation:moSlideOut 0.2s ease both;
+}
+
+/* ── PAGE TRANSITIONS ── */
+@keyframes pageSlideIn{
+  from{opacity:0;transform:translateY(10px)}
+  to{opacity:1;transform:translateY(0)}
+}
+.page-view.active{
+  animation:pageSlideIn 0.3s cubic-bezier(.22,.68,0,1.1) both;
 }
 
 .save-pill {
@@ -496,6 +581,23 @@ html {
 .btn-hero{padding:10px 20px;font-size:13px;font-weight:700;border-radius:999px;box-shadow:0 6px 16px #93c5fd}
 .info-grid .sc.clickable{cursor:pointer;transition:transform .18s,box-shadow .18s}
 .info-grid .sc.clickable:hover{transform:translateY(-2px);box-shadow:var(--gs-hover)}
+
+/* ── STAT CARD ANIMATIONS ── */
+@keyframes fadeSlideUp{
+  from{opacity:0;transform:translateY(18px) scale(0.97);}
+  to{opacity:1;transform:translateY(0) scale(1);}
+}
+@keyframes numPop{
+  0%{transform:scale(1)}
+  50%{transform:scale(1.18)}
+  100%{transform:scale(1)}
+}
+.sc.anim-in{
+  animation:fadeSlideUp 0.42s cubic-bezier(.22,.68,0,1.2) both;
+}
+.sc.anim-in:hover .sv{
+  animation:numPop 0.3s ease;
+}
 .stat-modal-list,.overview-list{display:flex;flex-direction:column;gap:8px;max-height:420px;overflow-y:auto}
 .stat-item,.overview-item{padding:10px 12px;border-radius:10px;background:var(--b50);border:1px solid var(--b100)}
 .stat-item-head,.overview-item-head{display:flex;justify-content:space-between;gap:8px;align-items:flex-start;margin-bottom:4px}
@@ -784,9 +886,9 @@ body.dark .gl-group-item:hover{background:rgba(52,211,153,0.08)}
   </div>
   <div class="nav-right">
     <button class="btn btn-primary btn-sm" onclick="openWhatsAppModal()">WhatsApp</button>
-    <div>
-      <div class="clock-sm" id="clock">00:00:00</div>
-      <div class="date-sm" id="cdate"></div>
+    <div class="clock-widget">
+      <div class="clock-digits" id="clock"><span id="ch">00</span><span class="clock-sep" id="csep">:</span><span id="cm">00</span><span class="clock-sep">:</span><span id="cs">00</span></div>
+      <div class="clock-date-line" id="cdate"></div>
     </div>
     <span class="save-pill saved" id="save-pill">Saved</span>
     <button class="btn btn-save btn-sm" onclick="manualSave()">&#10003; Save</button>
@@ -796,6 +898,13 @@ body.dark .gl-group-item:hover{background:rgba(52,211,153,0.08)}
       <button class="theme-btn active" onclick="setTheme('light')">Light</button>
       <button class="theme-btn" onclick="setTheme('dark')">Dark</button>
     </div>
+  </div>
+</div>
+
+<!-- EXCHANGE RATE STRIP -->
+<div style="padding:6px 0 0 0;display:flex;justify-content:flex-end;margin-bottom:6px">
+  <div class="fx-strip" id="fx-strip">
+    <span class="fx-loading" id="fx-status">💱 Loading rates...</span>
   </div>
 </div>
 
@@ -1636,7 +1745,8 @@ function updateSummary(){
     {cls:'wn',val:discontinued.length,lbl:'Discontinued',f:'disc',key:'disc::all'}
   ];
   
-  document.getElementById('info-grid').innerHTML=overallStats.map(c=>`<div class="sc ${c.cls} clickable" onclick="openStatModal('${esc(c.key)}')"><div class="sv">${c.val}</div><div class="sc-lbl">${esc(c.lbl)}</div></div>`).join('');
+  document.getElementById('info-grid').innerHTML=overallStats.map((c,i)=>`<div class="sc ${c.cls} clickable anim-in" style="animation-delay:${i*60}ms" onclick="openStatModal('${esc(c.key)}')"><div class="sv" data-target="${c.val}">0</div><div class="sc-lbl">${esc(c.lbl)}</div></div>`).join('');
+  setTimeout(()=>animateCounters(document.getElementById('info-grid')),80);
   
   // Country-specific statistics containers - populate and display
   const auContainer=document.getElementById('au-stats-container');
@@ -1655,6 +1765,12 @@ function updateSummary(){
   auContainer.style.display='block';
   caContainer.style.display='block';
   nzContainer.style.display='block';
+  // Animate country stat counters after a short delay
+  setTimeout(()=>{
+    animateCounters(auContainer);
+    animateCounters(caContainer);
+    animateCounters(nzContainer);
+  },120);
 }
 
 // AUSTRALIA STATS BUILDER
@@ -1676,7 +1792,7 @@ function buildAustraliaStats(pool){
     {lbl:'Expecting Visa This Intake',val:auPool.filter(s=>s.visaNext==='Y').length, key:'au::visa_next', bg:'rgba(124,58,237,0.08)', bd:'#7c3aed'}
   ];
   
-  return `<div style="margin:16px 0"><div style="font-weight:700;color:var(--tp);margin-bottom:12px;font-size:14px">🇦🇺 Australia — Destination Statistics</div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px">${stats.map(s=>`<div class="sc def clickable" onclick="openStatModal('${s.key}')" style="background:${s.bg||'rgba(37,99,235,0.08)'};border-left:3px solid ${s.bd||'var(--b600)'}"><div class="sv">${s.val}</div><div class="sc-lbl">${s.lbl}</div></div>`).join('')}</div></div>`;
+  return `<div style="margin:16px 0"><div style="font-weight:700;color:var(--tp);margin-bottom:12px;font-size:14px">🇦🇺 Australia — Destination Statistics</div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px">${stats.map((s,i)=>`<div class="sc def clickable anim-in" style="animation-delay:${i*50}ms;background:${s.bg||'rgba(37,99,235,0.08)'};border-left:3px solid ${s.bd||'var(--b600)'}" onclick="openStatModal('${s.key}')"><div class="sv" data-target="${s.val}">0</div><div class="sc-lbl">${s.lbl}</div></div>`).join('')}</div></div>`;
 }
 
 // CANADA STATS BUILDER
@@ -1698,7 +1814,7 @@ function buildCanadaStats(pool){
     {lbl:'Expecting Visa This Intake',val:caPool.filter(s=>s.visaNext==='Y').length, key:'ca::visa_next'}
   ];
   
-  return `<div style="margin:16px 0"><div style="font-weight:700;color:var(--tp);margin-bottom:12px;font-size:14px">🇨🇦 Canada — Destination Statistics</div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px">${stats.map(s=>`<div class="sc def clickable" onclick="openStatModal('${s.key}')" style="background:rgba(5,150,105,0.08);border-left:3px solid var(--ok)"><div class="sv">${s.val}</div><div class="sc-lbl">${s.lbl}</div></div>`).join('')}</div></div>`;
+  return `<div style="margin:16px 0"><div style="font-weight:700;color:var(--tp);margin-bottom:12px;font-size:14px">🇨🇦 Canada — Destination Statistics</div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px">${stats.map((s,i)=>`<div class="sc def clickable anim-in" style="animation-delay:${i*50}ms;background:${s.bg||'rgba(5,150,105,0.08)'};border-left:3px solid ${s.bd||'var(--ok)'}" onclick="openStatModal('${s.key}')"><div class="sv" data-target="${s.val}">0</div><div class="sc-lbl">${s.lbl}</div></div>`).join('')}</div></div>`;
 }
 
 // NEW ZEALAND STATS BUILDER
@@ -1717,7 +1833,29 @@ function buildNewZealandStats(pool){
     {lbl:'Expecting Visa This Intake',val:nzPool.filter(s=>s.visaNext==='Y').length, key:'nz::visa_next', bg:'rgba(217,119,6,0.15)', bd:'#d97706'}
   ];
   
-  return `<div style="margin:16px 0"><div style="font-weight:700;color:var(--tp);margin-bottom:12px;font-size:14px">🇳🇿 New Zealand — Destination Statistics</div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px">${stats.map(s=>`<div class="sc def clickable" onclick="openStatModal('${s.key}')" style="background:rgba(217,119,6,0.08);border-left:3px solid var(--wn)"><div class="sv">${s.val}</div><div class="sc-lbl">${s.lbl}</div></div>`).join('')}</div></div>`;
+  return `<div style="margin:16px 0"><div style="font-weight:700;color:var(--tp);margin-bottom:12px;font-size:14px">🇳🇿 New Zealand — Destination Statistics</div><div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px">${stats.map((s,i)=>`<div class="sc def clickable anim-in" style="animation-delay:${i*50}ms;background:${s.bg||'rgba(217,119,6,0.08)'};border-left:3px solid ${s.bd||'var(--wn)'}" onclick="openStatModal('${s.key}')"><div class="sv" data-target="${s.val}">0</div><div class="sc-lbl">${s.lbl}</div></div>`).join('')}</div></div>`;
+}
+
+function animateCounters(container){
+  if(!container)return;
+  container.querySelectorAll('.sv[data-target]').forEach(el=>{
+    const target=parseInt(el.dataset.target,10);
+    if(isNaN(target)){el.textContent='0';return;}
+    if(target===0){el.textContent='0';return;}
+    let current=0;
+    const duration=700;
+    const startTime=performance.now();
+    const easeOut=t=>1-Math.pow(1-t,3);
+    const tick=now=>{
+      const elapsed=now-startTime;
+      const progress=Math.min(elapsed/duration,1);
+      current=Math.round(easeOut(progress)*target);
+      el.textContent=current;
+      if(progress<1)requestAnimationFrame(tick);
+      else el.textContent=target;
+    };
+    requestAnimationFrame(tick);
+  });
 }
 
 function toggleCountryStats(country){
@@ -2823,7 +2961,15 @@ function confirmImport(){
 // ════════════════════════════════════════════════════════════
 // UTILITIES
 // ════════════════════════════════════════════════════════════
-function closeMo(id){document.getElementById(id).classList.remove('open');if(id==='remind-complete-mo')reminderCompleteIdx=null;}
+function closeMo(id){
+  const el=document.getElementById(id);
+  if(!el)return;
+  el.classList.add('mo-closing');
+  setTimeout(()=>{
+    el.classList.remove('open','mo-closing');
+    if(id==='remind-complete-mo')reminderCompleteIdx=null;
+  },200);
+}
 function initModalClickListeners(){
   document.querySelectorAll('.mo').forEach(modal=>{
     modal.addEventListener('click',e=>{
@@ -2938,8 +3084,65 @@ function openStudentWhatsApp(idx){
   window.open(link,'_blank');
 }
 
-function tick(){const n=new Date();document.getElementById('clock').textContent=String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0')+':'+String(n.getSeconds()).padStart(2,'0');const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];document.getElementById('cdate').textContent=days[n.getDay()]+', '+n.getDate()+' '+MOS[n.getMonth()]+' '+n.getFullYear();const fd=document.getElementById('fdate');if(fd)fd.textContent=n.toLocaleDateString('en-GB',{year:'numeric',month:'long',day:'numeric'});const dd=document.getElementById('dash-date');if(dd)dd.textContent=days[n.getDay()]+', '+n.getDate()+' '+MOS[n.getMonth()]+' '+n.getFullYear()+' — '+String(n.getHours()).padStart(2,'0')+':'+String(n.getMinutes()).padStart(2,'0');}
+function tick(){
+  const n=new Date();
+  const hh=String(n.getHours()).padStart(2,'0');
+  const mm=String(n.getMinutes()).padStart(2,'0');
+  const ss=String(n.getSeconds()).padStart(2,'0');
+  const chEl=document.getElementById('ch');const cmEl=document.getElementById('cm');const csEl=document.getElementById('cs');
+  if(chEl)chEl.textContent=hh;
+  if(cmEl)cmEl.textContent=mm;
+  if(csEl)csEl.textContent=ss;
+  const days=['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+  const dateStr=days[n.getDay()]+' '+n.getDate()+' '+MOS[n.getMonth()];
+  const cdEl=document.getElementById('cdate');if(cdEl)cdEl.textContent=dateStr;
+  const fd=document.getElementById('fdate');if(fd)fd.textContent=n.toLocaleDateString('en-GB',{year:'numeric',month:'long',day:'numeric'});
+  const dd=document.getElementById('dash-date');if(dd)dd.textContent=days[n.getDay()]+', '+n.getDate()+' '+MOS[n.getMonth()]+' '+n.getFullYear()+' — '+hh+':'+mm;
+}
 tick();setInterval(tick,1000);
+
+// ── EXCHANGE RATES (AUD/NZD/CAD → BDT) ──
+const FX_CACHE_KEY='hbd_fx_cache';
+const FX_CURRENCIES=[{code:'aud',flag:'🇦🇺',label:'AUD'},{code:'nzd',flag:'🇳🇿',label:'NZD'},{code:'cad',flag:'🇨🇦',label:'CAD'}];
+async function fetchExchangeRates(){
+  const strip=document.getElementById('fx-strip');
+  const status=document.getElementById('fx-status');
+  // Try cache first (15 min)
+  try{
+    const cached=JSON.parse(localStorage.getItem(FX_CACHE_KEY)||'{}');
+    if(cached.ts&&(Date.now()-cached.ts)<900000&&cached.rates){
+      renderFxStrip(cached.rates);return;
+    }
+  }catch(e){}
+  if(status)status.textContent='💱 Fetching rates...';
+  try{
+    // Fetch from free API — no key needed
+    const res=await fetch('https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/bdt.json');
+    if(!res.ok)throw new Error();
+    const data=await res.json();
+    const bdtRates=data.bdt; // bdt.aud = 1 BDT in AUD → invert for AUD per BDT
+    const rates={};
+    FX_CURRENCIES.forEach(c=>{
+      if(bdtRates[c.code])rates[c.code]=Math.round(1/bdtRates[c.code]);
+    });
+    localStorage.setItem(FX_CACHE_KEY,JSON.stringify({ts:Date.now(),rates}));
+    renderFxStrip(rates);
+  }catch(e){
+    if(status)status.textContent='⚠ Rates unavailable';
+  }
+}
+function renderFxStrip(rates){
+  const strip=document.getElementById('fx-strip');
+  if(!strip)return;
+  strip.innerHTML=FX_CURRENCIES.map(c=>{
+    const rate=rates[c.code];
+    return rate?`<div class="fx-chip"><span class="fx-flag">${c.flag}</span><span>1 ${c.label} =</span><span class="fx-rate">${rate} ৳</span></div>`:
+                `<div class="fx-chip"><span class="fx-flag">${c.flag}</span><span class="fx-loading">${c.label} N/A</span></div>`;
+  }).join('')+'<span style="font-size:9px;color:var(--tm);align-self:center">Live BDT</span>';
+}
+// Fetch on load, then every 15 min
+fetchExchangeRates();
+setInterval(fetchExchangeRates,900000);
 
 // ════════════════════════════════════════════════════════════
 // NZ GREEN LIST (Requirement #7 — embedded)
