@@ -1291,9 +1291,9 @@ const GS_STAT=['Applied','Cleared','Rejected'];
 const APP_STAGES=['','Documents from student are pending','Looking for Universities','Havent made up his mind yet','Language test retake required','With Agent','Submitted to Uni','Agent asked for new inf.','Under Review','Cond. Offer Received','GS Preparation Ongoing','GS Interview Pending','GS Submitted','Revised inf requested for GS','Uncond Offer Received','Tuition Fee & OSHC Paid','Tuition Fee & OHSC payment Pending','COE Received','1st Intrv Pending','Visa Preparation Ongoing','Documentation Stage','Visa Submitted','Rejected by University','Student Left HBD','Misinformed counsellor','GS Rejected','Refund Requested','Scholarship Applied','Refund Processed','Refund Under Review'];
 
 const COUNTRY_STAGES={
-  'Australia':['University shortlisting ongoing','Application submitted directly','Application given to agent','Application submitted by agent','Additional information requested by agent','Conditional offer letter received','GS assessment documentation requested','GS assessment preparation started','GS assessment completed','GS assessment applied','GS assessment rejected','GS assessment reapplied for another university','GS assessment cleared','Unconditional offer letter received','Tuition fees and OSHC paid','Confirmation of enrollment received','Visa SOP writing','Visa lodged','Visa refused','Visa granted'],
-  'Canada':['Looking for university','Waiting for student to provide documents','Writing admission statement of purpose','Receiving conditional offer letter','Making tuition deposit','Receiving letter of acceptance','Writing visa statement of purpose','Preparing documentations for visa submission','Submitting this application','Confirming biometrics','Receiving passport request','Visa rejected'],
-  'New Zealand':['Waiting for documents from student side to submit application','Need to look for universities','Applications are with agents for review','New information requested by the agent','Application submitted','Conditional offer letter issued','All conditions are met & submitted','Unconditional offer letter issued','Waiting for bank solvency to get matured','Preparing documents Visa submission','Writing visa SOP','Visa lodged','New information requested by the visa officer','Visa Interview Schedule','This is an interview attended','Visa Refused','Approve in principle has been issued','Need to make tuition deposit','Tuition fee paid','Electronic visa document received','Visa issued'],
+  'Australia':['University shortlisting ongoing','Application submitted directly','Application given to agent','Application submitted by agent','Additional information requested by agent','Conditional offer letter received','GS assessment preparation started','GS assessment applied','GS assessment rejected','GS assessment reapplied for another university','GS assessment cleared','Unconditional offer letter received','Tuition fees and OSHC paid','Confirmation of enrollment received','Visa lodged','Visa refused','Visa granted'],
+  'Canada':['Looking for university','Waiting for student to provide documents','Writing admission statement of purpose','Receiving conditional offer letter','Tuition deposit paid','Received LOA','Preparing documentations for visa submission','Visa Lodged','Biometrics Done','Received passport Request','Visa rejected'],
+  'New Zealand':['Waiting for documents from student side to submit application','Need to look for universities','Applications are with agents for review','New information requested by the agent','Application submitted','Conditional offer letter issued','Unconditional offer letter issued','Waiting for bank solvency to get matured','Preparing documents Visa submission','Visa lodged','New information requested by the visa officer','Visa Interview Schedule','Visa Refused','Approve in principle has been issued','Need to make tuition deposit','Tuition fee paid','Electronic visa document received','Visa issued'],
   'United Kingdom':APP_STAGES,
   'Malaysia':APP_STAGES
 };
@@ -1687,12 +1687,14 @@ function buildCanadaStats(pool){
   const stats=[
     {lbl:'Total Active CA',val:caPool.length, key:'country::Canada'},
     {lbl:'Offer Letters Received',val:caPool.filter(s=>s.appStage==='Receiving conditional offer letter').length, key:'ca::stage::Receiving conditional offer letter'},
-    {lbl:'Tuition Deposit Made',val:caPool.filter(s=>s.appStage==='Making tuition deposit').length, key:'ca::stage::Making tuition deposit'},
-    {lbl:'Letter of Acceptance',val:caPool.filter(s=>s.appStage==='Receiving letter of acceptance').length, key:'ca::stage::Receiving letter of acceptance'},
+    {lbl:'Tuition Deposit Paid',val:caPool.filter(s=>s.appStage==='Tuition deposit paid').length, key:'ca::stage::Tuition deposit paid'},
+    {lbl:'Received LOA',val:caPool.filter(s=>s.appStage==='Received LOA').length, key:'ca::stage::Received LOA'},
     {lbl:'Documentation Prepared',val:caPool.filter(s=>s.appStage==='Preparing documentations for visa submission').length, key:'ca::stage::Preparing documentations for visa submission'},
-    {lbl:'Visa Applications Submitted',val:caPool.filter(s=>s.appStage==='Submitting this application').length, key:'ca::stage::Submitting this application'},
-    {lbl:'Passport Request/Visa Granted',val:caPool.filter(s=>s.appStage==='Receiving passport request').length, key:'ca::stage::Receiving passport request'},
+    {lbl:'Visa Lodged',val:caPool.filter(s=>s.appStage==='Visa Lodged').length, key:'ca::stage::Visa Lodged'},
+    {lbl:'Biometrics Done',val:caPool.filter(s=>s.appStage==='Biometrics Done').length, key:'ca::stage::Biometrics Done'},
+    {lbl:'Received Passport Request',val:caPool.filter(s=>s.appStage==='Received passport Request').length, key:'ca::stage::Received passport Request'},
     {lbl:'Visa Rejected',val:caPool.filter(s=>s.appStage==='Visa rejected').length, key:'ca::stage::Visa rejected'},
+    {lbl:'Fund >6 Months Matured',val:caPool.filter(s=>s.bankMatured==='Y'&&s.bankMonths&&(s.bankMonths.includes('6')||s.bankMonths.includes('More than 6'))).length, key:'ca::fund_matured', bg:'rgba(13,148,136,0.08)', bd:'#0d9488'},
     {lbl:'Expecting Visa This Intake',val:caPool.filter(s=>s.visaNext==='Y').length, key:'ca::visa_next'}
   ];
   
@@ -1707,11 +1709,11 @@ function buildNewZealandStats(pool){
   const stats=[
     {lbl:'Total Active NZ',val:nzPool.length, key:'country::New Zealand'},
     {lbl:'Conditional Offer Issued',val:nzPool.filter(s=>s.appStage==='Conditional offer letter issued').length, key:'nz::stage::Conditional offer letter issued'},
-    {lbl:'Visa Interview Pending',val:nzPool.filter(s=>s.appStage==='Visa Interview Schedule').length, key:'nz::stage::Visa Interview Schedule'},
     {lbl:'Unconditional Offer Issued',val:nzPool.filter(s=>s.appStage==='Unconditional offer letter issued').length, key:'nz::stage::Unconditional offer letter issued'},
     {lbl:'Visa Lodged',val:nzPool.filter(s=>s.appStage==='Visa lodged').length, key:'nz::stage::Visa lodged'},
     {lbl:'Approve in Principle Issued',val:nzPool.filter(s=>s.appStage==='Approve in principle has been issued').length, key:'nz::stage::Approve in principle has been issued'},
     {lbl:'Tuition Fee Paid',val:nzPool.filter(s=>s.appStage==='Tuition fee paid').length, key:'nz::stage::Tuition fee paid'},
+    {lbl:'Fund >3 Months Matured',val:nzPool.filter(s=>s.bankMatured==='Y'&&s.bankMonths&&(s.bankMonths.includes('More than')||s.bankMonths.includes('6'))).length, key:'nz::fund_matured', bg:'rgba(13,148,136,0.08)', bd:'#0d9488'},
     {lbl:'Expecting Visa This Intake',val:nzPool.filter(s=>s.visaNext==='Y').length, key:'nz::visa_next', bg:'rgba(217,119,6,0.15)', bd:'#d97706'}
   ];
   
@@ -1750,7 +1752,9 @@ function getStatEntries(key){
   if(key==='au::gs_prep') return make(pool.filter(s=>s.country==='Australia' && ['GS assessment documentation requested','GS assessment preparation started','GS assessment completed'].includes(s.appStage)), 'Preparing GS Documents', s=>`Stage: ${s.appStage}`);
   if(key==='au::fund_matured') return make(pool.filter(s=>s.country==='Australia' && s.bankMatured==='Y'&&s.bankMonths&&(s.bankMonths.includes('More than')||s.bankMonths.includes('6'))), 'Fund >3 Months Matured', s=>`Bank: ${s.bankMonths}`);
   if(key==='au::visa_next') return make(pool.filter(s=>s.country==='Australia'&&s.visaNext==='Y'),'Expecting Visa This Intake (AU)',s=>`Stage: ${s.appStage||'Not set'}`);
+  if(key==='ca::fund_matured') return make(pool.filter(s=>s.country==='Canada' && s.bankMatured==='Y'&&s.bankMonths&&(s.bankMonths.includes('6')||s.bankMonths.includes('More than 6'))), 'Fund >6 Months Matured (CA)', s=>`Bank: ${s.bankMonths}`);
   if(key==='ca::visa_next') return make(pool.filter(s=>s.country==='Canada'&&s.visaNext==='Y'),'Expecting Visa This Intake (CA)',s=>`Stage: ${s.appStage||'Not set'}`);
+  if(key==='nz::fund_matured') return make(pool.filter(s=>s.country==='New Zealand' && s.bankMatured==='Y'&&s.bankMonths&&(s.bankMonths.includes('More than')||s.bankMonths.includes('6'))), 'Fund >3 Months Matured (NZ)', s=>`Bank: ${s.bankMonths}`);
   if(key==='nz::visa_next') return make(pool.filter(s=>s.country==='New Zealand'&&s.visaNext==='Y'),'Expecting Visa This Intake (NZ)',s=>`Stage: ${s.appStage||'Not set'}`);
   if(key.indexOf('::stage::')!==-1){
     const parts=key.split('::');
