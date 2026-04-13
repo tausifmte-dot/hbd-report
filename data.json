@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-12T17:38:18.722Z",
+    "saved": "2026-04-13T05:46:53.077Z",
     "version": 8,
     "count": 39
   },
@@ -208,18 +208,18 @@
       "email": "farhanarini899@gmail.com"
     },
     {
-      "appStage": "Confirmation of enrollment received",
+      "appStage": "Conditional offer letter received",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 3 months",
-      "coe": "Y",
+      "coe": "N",
       "country": "Australia",
       "defer": "Y",
       "gsApplied": "N",
       "gsStatus": "",
       "id": 1775372567768.403,
       "intake": "June 2026",
-      "lastUpdated": 1775995128726,
+      "lastUpdated": 1776059206493,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Fatema Siddika Arpita",
@@ -262,6 +262,11 @@
       "applicationCompletions": [],
       "email": "siddikaarpita@gmail.com",
       "stageHistory": [
+        {
+          "stage": "Conditional offer letter received",
+          "enteredDate": 1776059200261,
+          "duration": 0
+        },
         {
           "stage": "Confirmation of enrollment received",
           "enteredDate": 1775995111561,
@@ -1751,6 +1756,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776059211075,
+      "msg": "Manual save — 11:46 AM"
+    },
     {
       "ts": 1776015496719,
       "msg": "Manual save — 11:38 PM"
