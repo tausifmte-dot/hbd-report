@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-13T05:48:51.637Z",
+    "saved": "2026-04-13T05:51:15.296Z",
     "version": 8,
     "count": 39
   },
@@ -1320,7 +1320,7 @@
       "uniApplications": []
     },
     {
-      "appStage": "GS assessment reapplied for another university",
+      "appStage": "University shortlisting ongoing",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 6 months",
@@ -1331,7 +1331,7 @@
       "gsStatus": "Applied",
       "id": 1775372567768.766,
       "intake": "June 2026",
-      "lastUpdated": 1775900732017,
+      "lastUpdated": 1776059473282,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Shampa Banik",
@@ -1352,7 +1352,7 @@
       ],
       "status": "Active",
       "uniCount": 3,
-      "visaNext": "Y",
+      "visaNext": "N",
       "visaPrep": "On Hold",
       "uniApplications": [],
       "applicationCompletions": [],
@@ -1763,6 +1763,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776059473282,
+      "msg": "Updated: Shampa Banik"
+    },
     {
       "ts": 1776059329635,
       "msg": "Manual save — 11:48 AM"
