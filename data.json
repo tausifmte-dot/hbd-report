@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-13T05:51:25.425Z",
+    "saved": "2026-04-13T06:28:47.858Z",
     "version": 8,
     "count": 39
   },
@@ -353,7 +353,7 @@
       "uniApplications": []
     },
     {
-      "appStage": "1st Intrv Pending",
+      "appStage": "Conditional offer letter issued",
       "bankExpectedDate": "2026-05-01",
       "bankMatured": "Y",
       "bankMonths": "3 months",
@@ -364,7 +364,7 @@
       "gsStatus": "Not Applied",
       "id": 1775372567768.704,
       "intake": "June 2026",
-      "lastUpdated": 1775440670225,
+      "lastUpdated": 1776061724454,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Hafsa Islam Oyshe",
@@ -389,7 +389,14 @@
       "visaPrep": "On Hold",
       "uniApplications": [],
       "applicationCompletions": [],
-      "email": "hafsaoyshe121@gmail.com"
+      "email": "hafsaoyshe121@gmail.com",
+      "stageHistory": [
+        {
+          "stage": "Conditional offer letter issued",
+          "enteredDate": 1776061724454,
+          "duration": 0
+        }
+      ]
     },
     {
       "appStage": "GS assessment preparation started",
@@ -1763,6 +1770,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776061725854,
+      "msg": "Manual save — 12:28 PM"
+    },
     {
       "ts": 1776059483380,
       "msg": "Updated: Tanjima Tuba"
