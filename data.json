@@ -1,6 +1,6 @@
 {
   "_meta": {
-    "saved": "2026-04-13T05:51:15.296Z",
+    "saved": "2026-04-13T05:51:20.963Z",
     "version": 8,
     "count": 39
   },
@@ -1536,7 +1536,7 @@
       ]
     },
     {
-      "appStage": "GS assessment preparation started",
+      "appStage": "University shortlisting ongoing",
       "bankExpectedDate": "",
       "bankMatured": "Y",
       "bankMonths": "More than 3 months",
@@ -1547,7 +1547,7 @@
       "gsStatus": "",
       "id": 1775372567768.9941,
       "intake": "June 2026",
-      "lastUpdated": 1775915024192,
+      "lastUpdated": 1776059478893,
       "moreUni": "N",
       "moreUniDate": "",
       "name": "Tanjedul Sarker",
@@ -1572,7 +1572,7 @@
       ],
       "status": "Active",
       "uniCount": 3,
-      "visaNext": "Y",
+      "visaNext": "N",
       "visaPrep": "On Hold",
       "uniApplications": [],
       "applicationCompletions": [],
@@ -1763,6 +1763,10 @@
     }
   ],
   "log": [
+    {
+      "ts": 1776059478894,
+      "msg": "Updated: Tanjedul Sarker"
+    },
     {
       "ts": 1776059473282,
       "msg": "Updated: Shampa Banik"
